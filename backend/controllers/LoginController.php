@@ -7,6 +7,7 @@ use app\models\Admin;
 
 class LoginController extends Controller
 {
+	public $layout=false;
 	//登录页面
 	public function actionIndex(){
 		return $this->renderpartial('login.html');		

@@ -6,6 +6,7 @@ use yii\web\Controller;
 
 class IndexController extends Controller
 {
+	public $layout=false;
 	public function actionIndex(){
 		$session=Yii::$app->session;
 		$admin_name=$session->get('admin_name');
