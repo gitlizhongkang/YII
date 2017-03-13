@@ -43,12 +43,10 @@ use yii\helpers\Url;
 					<a href="javascript:;">企业管理</a>
 					<div class="ifame-item-sub">
 						<ul>
-							<li class="active"><a href="系统管理/config.html" target="content">职位列表</a></li>
-							<li><a href="系统管理/admin_music.html" target="content">待审核职位</a></li>
-							<li><a href="系统管理/admin_cardTemplate.html" target="content">企业列表</a></li>
-							<li><a href="系统管理/index_tj.html" target="content">待认证企业</a></li>
-							<li><a href="系统管理/index_tj.html" target="content">订单管理</a></li>
-							<li><a href="系统管理/index_tj.html" target="content">企业推广</a></li>
+						    <li><a href="<?=Url::to(['company/company-list'])?>" target="content">企业列表</a></li>
+							<li class="active"><a href="<?=Url::to(['company/job-list'])?>" target="content">职位列表</a></li>
+							<li><a href="<?=Url::to(['company/order-manage'])?>" target="content">订单管理</a></li>
+							<li><a href="<?=Url::to(['company/company-spread'])?>" target="content">企业推广</a></li>
 						</ul>
 					</div>
 				</li>
