@@ -1,0 +1,100 @@
+<?php
+use yii\helpers\Url;
+use yii\widgets\LinkPager;
+use yii\widgets\ActiveForm;
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/content.css" />
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body marginwidth="0" marginheight="0">
+	<div class="container">
+		<div class="public-nav">您当前的位置：<a href="">广告管理</a>><a href="">广告位列表</a></div>
+		<div class="public-content">
+			<div class="public-content-cont">
+				<table class="public-cont-table">
+					<tr>
+						<th style="width:30%"><input type="checkbox" name="check_all">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;广告位名称</th>
+						<th style="width:15%">数量</th>
+						<th style="width:15%">价格</th>
+						<th style="width:30%">操作</th>
+					</tr>
+					<tbody class='type'>
+					<?php
+						foreach($adcategory as $k=>$v){
+						?>
+							<tr id="<?=$v['category_id']?>">
+							<td align="left">
+							<input type="checkbox" value="<?=$v['category_id']?>" name="t_id">
+							<?=$v['categoryname']?>
+							</td>
+							<td><?=$v['num']?></td>					
+							<td><?=$v['expense']?></td>					
+							<td>
+								<div class="table-fun">
+									<a href="<?=Url::to(['ad/cate-update','id'=>$v['category_id']])?>">修改</a>
+									<a href="<?=Url::to(['ad/cate-del','ids'=>$v['category_id']])?>">删除</a>
+								</div>
+							</td>
+							</tr>
+							<?php
+						}
+					?>
+					<div class="table-fun">
+					<a href="<?=Url::to(['ad/add-cate'])?>">添加</a>
+					<a href="javascript:;" class='del_all'>删除</a>
+					</div>						
+					</tbody>					
+				</table>		
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	 $(function(){	
+          //全选 全不选
+        $(document).on('click','input[name=check_all]',function(){
+            if($(this).prop('checked')==true){
+              $('input[name=t_id]').prop('checked',true) ;
+            }else{
+                $('input[name=t_id]').prop('checked',false) ;
+            }
+        });
+        // 批删  button
+        $(document).on('click','.del_all',function(){
+           var res=window.confirm('你到底删不删啊！！！');
+            if(res){
+               var obj=$(this);
+               var tr=$('input[name=t_id]');
+               var str='';
+                for(var i=0;i<tr.length;i++) {
+                    if (tr.eq(i).prop('checked') == true) {
+                        str+=','+tr.eq(i).val();
+                    }
+                }
+                str=str.substr(1);
+                $.ajax({
+                    type:'get',
+                    url:"<?=Url::to(['ad/cate-del'])?>",
+                    data: {
+                        'ids': str
+                    },
+                    dataType:'json',
+                    success:function(msg){
+                        if(msg==1){
+                        	alert('删除成功');
+                        }else{
+                            alert('删除失败');
+                        }
+                    }
+                })
+            }
+        });
+    })
+</script>
