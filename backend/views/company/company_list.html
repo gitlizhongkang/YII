@@ -1,5 +1,6 @@
 <?php
 use yii\widgets\LinkPager;
+use yii\helpers\Url;
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,7 +8,18 @@ use yii\widgets\LinkPager;
 <meta name="author" content="拉勾CMS" />
 <title></title>
 <link href="css/common.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript"  src="js/jquery.min.js"></script>
+    <style type="text/css">
+        .mask {
+            position: absolute; top: 0px; background-color: #777;
+            z-index: 1; left: 0px;
+            opacity:0.1;
+        }
+
+    </style>
+<script type="text/javascript">
+    var url="<?= Url::to(['company/set-audit'])?>";
+</script>
+    <script type="text/javascript"  src="js/jquery.min.js"></script>
 <script type="text/javascript"  src="js/Company/company.js"></script>
 </head>
 <body style="background-color:#E0F0FE">
@@ -18,25 +30,25 @@ use yii\widgets\LinkPager;
 </div>
 <div class="seltpye_x">
 		<div class="left">认证状态</div>	
-		<div class="right">
-			<a href="" >不限</a>
-			<a href="">认证通过</a>
-			<a href="" >等待认证</a>
-			<a href="" >认证未通过</a>
-			<a href="" >未认证</a>
+		<div class="right audit">
+			<a href="<?= Url::to(['company/company-list','audit'=>'','time'=>$time])?>" audit=""  <?php if($audit==""){?> class="select" <?php } ?> >不限</a>
+			<a href="<?= Url::to(['company/company-list','audit'=>'1','time'=>$time])?>" audit="1" <?php if($audit=="1"){?> class="select" <?php } ?>>认证通过</a>
+			<a href="<?= Url::to(['company/company-list','audit'=>'2','time'=>$time])?>" audit="2" <?php if($audit=="2"){?> class="select" <?php } ?>>等待认证</a>
+			<a href="<?= Url::to(['company/company-list','audit'=>'3','time'=>$time])?>" audit="3" <?php if($audit=="3"){?> class="select" <?php } ?>>认证未通过</a>
+			<a href="<?= Url::to(['company/company-list','audit'=>'0','time'=>$time])?>" audit="0" <?php if($audit=="4"){?> class="select" <?php } ?>>未认证</a>
 			<div class="clear"></div>
 		</div>
 		<div class="clear"></div>
   </div>
-  <div class="seltpye_x">
+  <div class="seltpye_x ">
 		<div class="left">添加时间</div>	
-		<div class="right">
-		<a href="" >不限</a>
-		<a href="" >三天内</a>
-		<a href="" >一周内</a>
-		<a href="" >一月内</a>
-		<a href="" >半年内</a>
-		<a href="" >一年内</a>
+		<div class="right addtime">
+		<a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>''])?>" time="" <?php if($time==""){?> class="select" <?php } ?>>不限</a>
+		<a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'3'])?>" time="3" <?php if($time=="3"){?> class="select" <?php } ?>>三天内</a>
+		<a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'7'])?>" time="7" <?php if($time=="7"){?> class="select" <?php } ?>>一周内</a>
+		<a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'30'])?>" time="30" <?php if($time=="30"){?> class="select" <?php } ?>>一月内</a>
+		<a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'180'])?>" time="180" <?php if($time=="180"){?> class="select" <?php } ?>>半年内</a>
+		<a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'360'])?>" time="360" <?php if($time=="360"){?> class="select" <?php } ?>>一年内</a>
 		<div class="clear"></div>
 		</div>
 		<div class="clear"></div>
@@ -110,9 +122,9 @@ use yii\widgets\LinkPager;
 	<table width="100%" border="0" cellspacing="10" cellpadding="0" class="admin_list_btm">
       <tr>
         <td>
-        <input type="button" name="" value="认证企业" class="admin_submit"  id="ButAudit" />
-		<input type="button" name="" value="刷新" class="admin_submit"  id="Butrefresh" />
-		<input type="button" name="" value="删除" class="admin_submit"   id="ButDel"/>
+        <input type="button" name="" value="认证企业" oc="OpAuditLayer" class="admin_submit"  id="ButAudit" />
+		<input type="button" name="" value="刷新" oc="OprefreshLayer" class="admin_submit"  id="Butrefresh" />
+		<input type="button" name="" value="删除" oc="OpDelLayer" class="admin_submit"   id="ButDel"/>
 		</td>
       </tr>
   </table>
@@ -122,8 +134,10 @@ use yii\widgets\LinkPager;
     ?>
 </div>
 </div>
-<div style="display:none" id="OpDelLayer">
-<table width="100%" border="0" align="center" cellpadding="0" cellspacing="6" >
+<div id="mask" class="mask" style="display:none;"></div>
+<div style="display:none;background:white; border:1px solid #8c8c8c;Box-shadow:0 0 10px 10px #c0c0c0;" id="OpDelLayer">
+    <p style="background:#b7ccfd; height:30px;"><span style="margin-left:10px;">请选择</span></p>
+<table style="padding-left:20px; margin-top:20px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="6" >
     <tr>
       <td height="30" colspan="2"><strong  style="color:#0066CC; font-size:14px;">你确定要删除吗？</strong></td>
       </tr>
@@ -131,23 +145,25 @@ use yii\widgets\LinkPager;
       <td width="20" height="25">&nbsp;</td>
       <td><label>
         <input name="delete_company" type="checkbox" id="delete_company" value="yes" checked="checked" />
-        删除企业资料</label></td>
+        <span style="color:green;">删除企业资料</span></label></td>
     </tr>
 	<tr>
       <td height="25">&nbsp;</td>
       <td><label>
         <input name="delete_jobs" type="checkbox" id="delete_jobs" value="yes" checked="checked"/>
-        删除此企业发布的招聘信息</label></td>
+          <span style="color:green;">删除此企业发布的招聘信息</span></label></td>
     </tr>
 	<tr>
 	  <td height="25">&nbsp;</td>
-	  <td><input type="submit" name="delete" value="确定" class="admin_submit"    /></td>
+	  <td><input type="submit" name="delete" value="确定" class="admin_submit"    />
+       <input type="reset" name="OpDelLayer" value="取消" class="admin_submit"    /></td>
 	  </tr>
   </table>
 </div>
 <!-- -->
-<div style="display:none" id="OprefreshLayer">
-<table width="100%" border="0" align="center" cellpadding="0" cellspacing="6" >
+<div style="display:none;background:white; border:1px solid #8c8c8c;Box-shadow:0 0 10px 10px #c0c0c0;" id="OprefreshLayer">
+    <p style="background:#b7ccfd; height:30px;"><span style="margin-left:10px;">请选择</span></p>
+<table style="padding-left:20px; margin-top:20px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="6" >
     <tr>
       <td height="30" colspan="2"><strong  style="color:#0066CC; font-size:14px;">刷新该企业的职位：</strong></td>
       </tr>
@@ -159,13 +175,15 @@ use yii\widgets\LinkPager;
     </tr>
 	 <tr>
       <td height="25">&nbsp;</td>
-      <td><input type="submit" name="set_refresh" value="确定" class="admin_submit"    /></td>
+      <td><input type="submit" name="set_refresh" value="确定" class="admin_submit"    />
+          <input type="reset" name="OprefreshLayer" value="取消" class="admin_submit"    /></td>
     </tr>
   </table>
 </div>
 <!-- -->
-<div style="display:none" id="OpAuditLayer">
- <table width="100%" border="0" align="center" cellpadding="0" cellspacing="6" >
+<div style="display:none;background:white; border:1px solid #8c8c8c;Box-shadow:0 0 10px 10px #c0c0c0;"  id="OpAuditLayer">
+    <p style="background:#b7ccfd; height:30px;"><span style="margin-left:10px;">请选择</span></p>
+ <table style="padding-left:20px; margin-top:20px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="6" >
     <tr>
       <td width="20" height="30">&nbsp;</td>
       <td height="30"><strong  style="color:#0066CC; font-size:14px;">将所选企业设置为：</strong></td>
@@ -203,12 +221,13 @@ use yii\widgets\LinkPager;
 	<tr style="display:none" id="reason">
       <td width="40" height="25" >理由：</td>
       <td>
-         <textarea name="reason" id="reason" cols="50" style="font-size:12px"></textarea>            
+         <textarea name="reason"  cols="50" style="font-size:12px"></textarea>
       </td>
     </tr>
     <tr>
       <td height="25">&nbsp;</td>
-      <td><input type="submit" name="set_audit" value="确定" class="admin_submit"    /></td>
+      <td><input type="submit" name="set_audit" value="确定" class="admin_submit" />
+          <input type="reset" name="OpAuditLayer" value="取消" class="admin_submit" /></td>
     </tr>		  
   </table>
 </div>
