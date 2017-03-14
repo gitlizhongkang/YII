@@ -63,7 +63,6 @@ class Company extends \yii\db\ActiveRecord
             [['nature', 'trade', 'province', 'city', 'street', 'scale', 'registered', 'currency', 'address', 'contact', 'telphone', 'landline_tel', 'email', 'website', 'logo', 'map_x', 'map_y', 'certificate_img'], 'string', 'max' => 255],
         ];
     }
-
     /**
      * @inheritdoc
      */

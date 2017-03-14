@@ -1,19 +1,4 @@
 $(function(){
-    var last_href= $(".pagination a").attr("href");
-    var audit="";
-    var time="";
-    for(var i=0;i<$(".addtime a").length;i++){
-        if($(".addtime a").eq(i).attr("class")=="select"){
-            time=$(".addtime a").eq(i).attr("time");
-            $(".pagination a").attr("href",last_href+"&audit="+audit+"&time="+time);
-        }
-    }
-    for(var i=0;i<$(".audit a").length;i++){
-        if($(".audit a").eq(i).attr("class")=="select"){
-            audit=$(".addtime a").eq(i).attr("time");
-            $(".pagination a").attr("href",last_href+"&audit="+audit+"&time="+time);
-        }
-    }
     $("#fail").click(function(){
         $("#reason").show();
     });
@@ -94,6 +79,5 @@ $(function(){
              }
           }
       })
-
     })
 })
