@@ -8086,3 +8086,425 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1489409200.458
     'REQUEST_TIME' => 1489409200
 ]
+2017-03-13 13:59:17 [127.0.0.1][-][u508r9bmh5hvr3qv1lslkjg556][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: ad/cate-update' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('cate-update', Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/cate-update', Array)
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-13 13:59:17 [127.0.0.1][-][u508r9bmh5hvr3qv1lslkjg556][info][application] $_GET = [
+    'r' => 'ad/cate-update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => '6deed1ec5c3635ebaf967ff6a036bb7fbbf3814ac9fc2345244dd007790c9cc0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"aQAGDzWMKdW5_GvXsBlZkUq5idiZbzO7\";}'
+    'advanced-backend' => 'u508r9bmh5hvr3qv1lslkjg556'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'rr8'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=ad%2Fposition'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=6deed1ec5c3635ebaf967ff6a036bb7fbbf3814ac9fc2345244dd007790c9cc0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22aQAGDzWMKdW5_GvXsBlZkUq5idiZbzO7%22%3B%7D; advanced-backend=u508r9bmh5hvr3qv1lslkjg556'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '51075'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fcate-update&id=1'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fcate-update&id=1'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489409957.943
+    'REQUEST_TIME' => 1489409957
+]
+2017-03-14 02:07:39 [127.0.0.1][-][1vsqjdlnlkjq94bpu8tnvp2bg2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: ad/cate-update' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('cate-update', Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/cate-update', Array)
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-14 02:07:39 [127.0.0.1][-][1vsqjdlnlkjq94bpu8tnvp2bg2][info][application] $_GET = [
+    'r' => 'ad/cate-update'
+    'id' => '21'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'h7ae'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=ad%2Fposition'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '50355'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fcate-update&id=21'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fcate-update&id=21'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489453659.458
+    'REQUEST_TIME' => 1489453659
+]
+2017-03-14 02:35:27 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\AdCategory::c_id' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('c_id')
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Model.php(983): yii\db\BaseActiveRecord->__get('c_id')
+#2 D:\xampp\htdocs\nine\YII\backend\views\ad\update_adcate.html(20): yii\base\Model->offsetGet('c_id')
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(328): require('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(backend\controllers\AdController))
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('update_adcate.h...', Array, Object(backend\controllers\AdController))
+#7 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(148): yii\base\Controller->render('update_adcate.h...', Array)
+#8 [internal function]: backend\controllers\AdController->actionCateUpdate()
+#9 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#11 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('cate-update', Array)
+#12 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/cate-update', Array)
+#13 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2017-03-14 02:35:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/cate-update'
+    'id' => '28'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=ad%2Fposition'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '51214'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fcate-update&id=28'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fcate-update&id=28'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489455327.39
+    'REQUEST_TIME' => 1489455327
+]
+2017-03-14 02:36:32 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\AdCategory::c_id' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('c_id')
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Model.php(983): yii\db\BaseActiveRecord->__get('c_id')
+#2 D:\xampp\htdocs\nine\YII\backend\views\ad\update_adcate.html(20): yii\base\Model->offsetGet('c_id')
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(328): require('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(backend\controllers\AdController))
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('update_adcate.h...', Array, Object(backend\controllers\AdController))
+#7 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(148): yii\base\Controller->render('update_adcate.h...', Array)
+#8 [internal function]: backend\controllers\AdController->actionCateUpdate()
+#9 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#11 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('cate-update', Array)
+#12 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/cate-update', Array)
+#13 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2017-03-14 02:36:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/cate-update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=ad%2Fposition'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '51247'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fcate-update&id=1'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fcate-update&id=1'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489455392.534
+    'REQUEST_TIME' => 1489455392
+]
+2017-03-14 02:38:02 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Missing argument 1 for yii\db\BaseActiveRecord::findAll(), called in D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php on line 131 and defined' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\BaseActiveRecord.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\BaseActiveRecord.php(114): yii\base\ErrorHandler->handleError(2, 'Missing argumen...', 'D:\\xampp\\htdocs...', 114, Array)
+#1 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(131): yii\db\BaseActiveRecord::findAll()
+#2 [internal function]: backend\controllers\AdController->actionPosition()
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('position', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/position', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2017-03-14 02:38:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/position'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/?r=index'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '51295'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fposition'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fposition'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489455482.335
+    'REQUEST_TIME' => 1489455482
+]
+2017-03-14 02:45:44 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot redeclare backend\controllers\AdController::actionCateUpdate()' in D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php:152
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-14 02:45:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/position'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/?r=index'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '51493'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fposition'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fposition'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489455944.802
+    'REQUEST_TIME' => 1489455944
+]

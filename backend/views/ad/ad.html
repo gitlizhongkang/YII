@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 </head>
 <body>
 <body marginwidth="0" marginheight="0">
-	<div class="container">
+	<div class="container" style="background-color:#E0F0FE">
 		<div class="public-nav">您当前的位置：<a href="">广告管理</a>><a href="">广告列表</a></div>
 		<div class="public-content">
 			<div class="public-content-cont">
@@ -90,8 +90,8 @@ use yii\widgets\ActiveForm;
 							<td><img src="<?=$v['img_url']?>" style='width: 80px;'></td>			
 							<td>
 								<div class="table-fun">
-									<a href="<?=Url::to(['ad/update-ad','id'=>$v['ad_id']])?>">修改</a>
-									<a href="<?=Url::to(['ad/ad-delete','ids'=>$v['ad_id']])?>">删除</a>
+									<a href="<?=Url::to(['ad/update-ad','id'=>$v['ad_id']])?>" style="background-color:#ccc;width: 50px;text-align: center;border: 1px solid black;">修改</a>
+									<a href="javascript:;" style="background-color:#ccc;width: 50px;text-align: center;border: 1px solid black;" id='del'>删除</a>
 								</div>
 							</td>
 							</tr>
@@ -99,7 +99,7 @@ use yii\widgets\ActiveForm;
 						}
 					?>
 					<div class="table-fun">
-					<a class='del_all'>删除</a>
+					<a class='del_all' style="background-color:#ccc;width: 80px;text-align: center;border: 1px solid black;">删除所选</a>
 					</div>						
 					</tbody>					
 				</table>
@@ -147,6 +147,35 @@ $(function(){
                 success:function(msg){
                     if(msg==1){
                     	alert('删除成功');
+                    	for(var i=0;i<tr.length;i++) {
+			                    if (tr.eq(i).prop('checked') == true) {
+			                       tr.eq(i).parents('tr').remove();
+			                    }
+			                }
+                    }else{
+                        alert('删除失败');
+                    }
+                }
+            })
+        }
+    });
+    // 单删  
+    $(document).on('click','#del',function(){
+       var res=window.confirm('你到底删不删啊！！！');
+        if(res){
+           var obj=$(this);
+           var str=obj.parents('tr').attr('id');
+            $.ajax({
+                type:'get',
+                url:"<?=Url::to(['ad/ad-delete'])?>",
+                data: {
+                    'ids': str
+                },
+                dataType:'json',
+                success:function(msg){
+                    if(msg==1){
+                    	alert('删除成功');
+                    	obj.parents('tr').remove();
                     }else{
                         alert('删除失败');
                     }

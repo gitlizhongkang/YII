@@ -1,0 +1,142 @@
+a:9:{s:6:"config";a:5:{s:10:"phpVersion";s:6:"5.6.30";s:10:"yiiVersion";s:6:"2.0.11";s:11:"application";a:5:{s:3:"yii";s:6:"2.0.11";s:4:"name";s:14:"My Application";s:7:"version";s:3:"1.0";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:5:{s:7:"version";s:6:"5.6.30";s:6:"xdebug";b:0;s:3:"apc";b:0;s:8:"memcache";b:1;s:9:"memcached";b:0;}s:10:"extensions";a:5:{s:24:"yiisoft/yii2-swiftmailer";a:3:{s:4:"name";s:24:"yiisoft/yii2-swiftmailer";s:7:"version";s:7:"2.0.6.0";s:5:"alias";a:1:{s:16:"@yii/swiftmailer";s:56:"D:\xampp\htdocs\nine\YII\vendor/yiisoft/yii2-swiftmailer";}}s:22:"yiisoft/yii2-bootstrap";a:3:{s:4:"name";s:22:"yiisoft/yii2-bootstrap";s:7:"version";s:7:"2.0.6.0";s:5:"alias";a:1:{s:14:"@yii/bootstrap";s:54:"D:\xampp\htdocs\nine\YII\vendor/yiisoft/yii2-bootstrap";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:7:"2.0.7.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:50:"D:\xampp\htdocs\nine\YII\vendor/yiisoft/yii2-debug";}}s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.0.5.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:48:"D:\xampp\htdocs\nine\YII\vendor/yiisoft/yii2-gii";}}s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.3.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:50:"D:\xampp\htdocs\nine\YII\vendor/yiisoft/yii2-faker";}}}}s:7:"request";a:14:{s:7:"flashes";a:0:{}s:10:"statusCode";i:200;s:14:"requestHeaders";a:9:{s:4:"host";s:9:"localhost";s:10:"user-agent";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0";s:6:"accept";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:15:"accept-language";s:35:"zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3";s:15:"accept-encoding";s:13:"gzip, deflate";s:7:"referer";s:46:"http://localhost/nine/YII/backend/web/?r=index";s:6:"cookie";s:308:"Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2";s:10:"connection";s:10:"keep-alive";s:25:"upgrade-insecure-requests";s:1:"1";}s:15:"responseHeaders";a:2:{s:12:"X-Powered-By";s:10:"PHP/5.6.30";s:12:"Content-Type";s:24:"text/html; charset=UTF-8";}s:5:"route";s:8:"ad/index";s:6:"action";s:47:"backend\controllers\AdController::actionIndex()";s:12:"actionParams";a:0:{}s:11:"requestBody";a:0:{}s:6:"SERVER";a:42:{s:7:"MIBDIRS";s:24:"D:/xampp/php/extras/mibs";s:10:"MYSQL_HOME";s:16:"\xampp\mysql\bin";s:12:"OPENSSL_CONF";s:31:"D:/xampp/apache/bin/openssl.cnf";s:20:"PHP_PEAR_SYSCONF_DIR";s:10:"\xampp\php";s:5:"PHPRC";s:10:"\xampp\php";s:3:"TMP";s:10:"\xampp\tmp";s:9:"HTTP_HOST";s:9:"localhost";s:15:"HTTP_USER_AGENT";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:20:"HTTP_ACCEPT_LANGUAGE";s:35:"zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:46:"http://localhost/nine/YII/backend/web/?r=index";s:11:"HTTP_COOKIE";s:308:"Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:30:"HTTP_UPGRADE_INSECURE_REQUESTS";s:1:"1";s:4:"PATH";s:380:"C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Lenovo\Lenovo Home\;C:\Program Files\TortoiseSVN\bin;D:\Git\cmd;D:\xampp\mysql\bin;D:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\Lenovo\Lenovo Home\DCMainWin.exe;C:\Users\Administrator\AppData\Roaming\Composer\vendor\bin;D:\xampp\php;";s:10:"SystemRoot";s:10:"C:\Windows";s:7:"COMSPEC";s:27:"C:\Windows\system32\cmd.exe";s:7:"PATHEXT";s:53:".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC";s:6:"WINDIR";s:10:"C:\Windows";s:16:"SERVER_SIGNATURE";s:95:"<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+";s:15:"SERVER_SOFTWARE";s:47:"Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30";s:11:"SERVER_NAME";s:9:"localhost";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:9:"127.0.0.1";s:13:"DOCUMENT_ROOT";s:15:"D:/xampp/htdocs";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:0:"";s:21:"CONTEXT_DOCUMENT_ROOT";s:15:"D:/xampp/htdocs";s:12:"SERVER_ADMIN";s:33:"webmaster@dummy-host2.example.com";s:15:"SCRIPT_FILENAME";s:46:"D:/xampp/htdocs/nine/YII/backend/web/index.php";s:11:"REMOTE_PORT";s:5:"50790";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:3:"GET";s:12:"QUERY_STRING";s:12:"r=ad%2Findex";s:11:"REQUEST_URI";s:44:"/nine/YII/backend/web/index.php?r=ad%2Findex";s:11:"SCRIPT_NAME";s:31:"/nine/YII/backend/web/index.php";s:8:"PHP_SELF";s:31:"/nine/YII/backend/web/index.php";s:18:"REQUEST_TIME_FLOAT";d:1489454722.191;s:12:"REQUEST_TIME";i:1489454722;}s:3:"GET";a:1:{s:1:"r";s:8:"ad/index";}s:4:"POST";a:0:{}s:6:"COOKIE";a:3:{s:39:"Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6";s:32:"1487941036,1488418812,1488507881";s:13:"_csrf-backend";s:139:"b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:"_csrf-backend";i:1;s:32:"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y";}";s:16:"advanced-backend";s:26:"1vsqjdlnlkjq94bpu8tnvp2bg2";}s:5:"FILES";a:0:{}s:7:"SESSION";a:0:{}}s:3:"log";a:1:{s:8:"messages";a:18:{i:0;a:6:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1489454722.2119789;i:4;a:0:{}i:5;i:1876248;}i:1;a:6:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1489454722.2119789;i:4;a:0:{}i:5;i:1878072;}i:2;a:6:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1489454722.21698;i:4;a:0:{}i:5;i:2283816;}i:3;a:6:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1489454722.2179799;i:4;a:0:{}i:5;i:2403528;}i:4;a:6:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1489454722.2189801;i:4;a:0:{}i:5;i:2443312;}i:5;a:6:{i:0;s:56:"Pretty URL not enabled. Using default URL parsing logic.";i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1489454722.2219801;i:4;a:0:{}i:5;i:2730120;}i:6;a:6:{i:0;s:27:"Route requested: 'ad/index'";i:1;i:8;i:2;s:34:"yii\web\Application::handleRequest";i:3;d:1489454722.2219801;i:4;a:0:{}i:5;i:2729680;}i:7;a:6:{i:0;s:22:"Route to run: ad/index";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1489454722.2239799;i:4;a:0:{}i:5;i:2914768;}i:8;a:6:{i:0;s:63:"Running action: backend\controllers\AdController::actionIndex()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1489454722.2239799;i:4;a:0:{}i:5;i:2925448;}i:9;a:6:{i:0;s:38:"SELECT COUNT(*) FROM `lg_ad` WHERE 1=1";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2399809;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:49;s:8:"function";s:5:"count";s:5:"class";s:12:"yii\db\Query";s:4:"type";s:2:"->";}}i:5;i:4505600;}i:10;a:6:{i:0;s:66:"Opening DB connection: mysql:host=192.168.1.88;dbname=training_one";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1489454722.2399809;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:49;s:8:"function";s:5:"count";s:5:"class";s:12:"yii\db\Query";s:4:"type";s:2:"->";}}i:5;i:4511192;}i:15;a:6:{i:0;s:66:"SELECT * FROM `lg_ad` WHERE 1=1 ORDER BY `show_order` DESC LIMIT 3";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.260982;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4523120;}i:18;a:6:{i:0;s:30:"SHOW FULL COLUMNS FROM `lg_ad`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2639821;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4550024;}i:21;a:6:{i:0;s:611:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad' AND kcu.table_name = 'lg_ad'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2789831;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4582968;}i:24;a:6:{i:0;s:30:"SELECT * FROM `lg_ad_category`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2829831;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4618040;}i:27;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `lg_ad_category`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2849841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4641256;}i:30;a:6:{i:0;s:629:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad_category' AND kcu.table_name = 'lg_ad_category'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2949841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4651616;}i:33;a:6:{i:0;s:70:"Rendering view file: D:\xampp\htdocs\nine\YII\backend\views\ad\ad.html";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1489454722.299984;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:56;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:4773736;}}}s:9:"profiling";a:3:{s:6:"memory";i:5502304;s:4:"time";d:0.11100602149963379;s:8:"messages";a:16:{i:11;a:6:{i:0;s:66:"Opening DB connection: mysql:host=192.168.1.88;dbname=training_one";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1489454722.2399809;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:49;s:8:"function";s:5:"count";s:5:"class";s:12:"yii\db\Query";s:4:"type";s:2:"->";}}i:5;i:4512704;}i:12;a:6:{i:0;s:66:"Opening DB connection: mysql:host=192.168.1.88;dbname=training_one";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1489454722.254982;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:49;s:8:"function";s:5:"count";s:5:"class";s:12:"yii\db\Query";s:4:"type";s:2:"->";}}i:5;i:4521256;}i:13;a:6:{i:0;s:38:"SELECT COUNT(*) FROM `lg_ad` WHERE 1=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.254982;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:49;s:8:"function";s:5:"count";s:5:"class";s:12:"yii\db\Query";s:4:"type";s:2:"->";}}i:5;i:4520096;}i:14;a:6:{i:0;s:38:"SELECT COUNT(*) FROM `lg_ad` WHERE 1=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.260982;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:49;s:8:"function";s:5:"count";s:5:"class";s:12:"yii\db\Query";s:4:"type";s:2:"->";}}i:5;i:4521672;}i:16;a:6:{i:0;s:66:"SELECT * FROM `lg_ad` WHERE 1=1 ORDER BY `show_order` DESC LIMIT 3";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.260982;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4525144;}i:17;a:6:{i:0;s:66:"SELECT * FROM `lg_ad` WHERE 1=1 ORDER BY `show_order` DESC LIMIT 3";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2629819;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4530288;}i:19;a:6:{i:0;s:30:"SHOW FULL COLUMNS FROM `lg_ad`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2639821;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4551944;}i:20;a:6:{i:0;s:30:"SHOW FULL COLUMNS FROM `lg_ad`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.277983;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4566696;}i:22;a:6:{i:0;s:611:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad' AND kcu.table_name = 'lg_ad'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2789831;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4585976;}i:23;a:6:{i:0;s:611:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad' AND kcu.table_name = 'lg_ad'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2819829;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4587752;}i:25;a:6:{i:0;s:30:"SELECT * FROM `lg_ad_category`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2829831;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4619976;}i:26;a:6:{i:0;s:30:"SELECT * FROM `lg_ad_category`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2849841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4632184;}i:28;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `lg_ad_category`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2849841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4643216;}i:29;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `lg_ad_category`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2949841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4649816;}i:31;a:6:{i:0;s:629:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad_category' AND kcu.table_name = 'lg_ad_category'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2949841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4654648;}i:32;a:6:{i:0;s:629:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad_category' AND kcu.table_name = 'lg_ad_category'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2979839;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4656424;}}}s:2:"db";a:1:{s:8:"messages";a:14:{i:13;a:6:{i:0;s:38:"SELECT COUNT(*) FROM `lg_ad` WHERE 1=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.254982;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:49;s:8:"function";s:5:"count";s:5:"class";s:12:"yii\db\Query";s:4:"type";s:2:"->";}}i:5;i:4520096;}i:14;a:6:{i:0;s:38:"SELECT COUNT(*) FROM `lg_ad` WHERE 1=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.260982;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:49;s:8:"function";s:5:"count";s:5:"class";s:12:"yii\db\Query";s:4:"type";s:2:"->";}}i:5;i:4521672;}i:16;a:6:{i:0;s:66:"SELECT * FROM `lg_ad` WHERE 1=1 ORDER BY `show_order` DESC LIMIT 3";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.260982;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4525144;}i:17;a:6:{i:0;s:66:"SELECT * FROM `lg_ad` WHERE 1=1 ORDER BY `show_order` DESC LIMIT 3";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2629819;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4530288;}i:19;a:6:{i:0;s:30:"SHOW FULL COLUMNS FROM `lg_ad`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2639821;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4551944;}i:20;a:6:{i:0;s:30:"SHOW FULL COLUMNS FROM `lg_ad`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.277983;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4566696;}i:22;a:6:{i:0;s:611:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad' AND kcu.table_name = 'lg_ad'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2789831;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4585976;}i:23;a:6:{i:0;s:611:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad' AND kcu.table_name = 'lg_ad'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2819829;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:52;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4587752;}i:25;a:6:{i:0;s:30:"SELECT * FROM `lg_ad_category`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2829831;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4619976;}i:26;a:6:{i:0;s:30:"SELECT * FROM `lg_ad_category`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2849841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4632184;}i:28;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `lg_ad_category`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2849841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4643216;}i:29;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `lg_ad_category`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2949841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4649816;}i:31;a:6:{i:0;s:629:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad_category' AND kcu.table_name = 'lg_ad_category'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2949841;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4654648;}i:32;a:6:{i:0;s:629:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'lg_ad_category' AND kcu.table_name = 'lg_ad_category'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1489454722.2979839;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php";s:4:"line";i:55;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:4656424;}}}s:6:"assets";a:3:{s:27:"yii\widgets\ActiveFormAsset";a:9:{s:10:"sourcePath";s:51:"D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2/assets";s:2:"js";a:1:{i:0;s:17:"yii.activeForm.js";}s:7:"depends";a:1:{i:0;s:16:"yii\web\YiiAsset";}s:8:"basePath";s:52:"D:\xampp\htdocs\nine\YII\backend\web\assets\9f5b15ee";s:7:"baseUrl";s:37:"/nine/YII/backend/web/assets/9f5b15ee";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:16:"yii\web\YiiAsset";a:9:{s:10:"sourcePath";s:51:"D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2/assets";s:2:"js";a:1:{i:0;s:6:"yii.js";}s:7:"depends";a:1:{i:0;s:19:"yii\web\JqueryAsset";}s:8:"basePath";s:52:"D:\xampp\htdocs\nine\YII\backend\web\assets\9f5b15ee";s:7:"baseUrl";s:37:"/nine/YII/backend/web/assets/9f5b15ee";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:19:"yii\web\JqueryAsset";a:9:{s:10:"sourcePath";s:49:"D:\xampp\htdocs\nine\YII/vendor\bower/jquery/dist";s:2:"js";a:1:{i:0;s:9:"jquery.js";}s:8:"basePath";s:52:"D:\xampp\htdocs\nine\YII\backend\web\assets\ea513ec8";s:7:"baseUrl";s:37:"/nine/YII/backend/web/assets/ea513ec8";s:7:"depends";a:0:{}s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}}s:4:"mail";a:0:{}s:8:"timeline";a:2:{s:5:"start";d:1489454722.1999791;s:3:"end";d:1489454722.3109851;}s:7:"summary";a:9:{s:3:"tag";s:13:"58c746823537c";s:3:"url";s:60:"http://localhost/nine/YII/backend/web/index.php?r=ad%2Findex";s:4:"ajax";i:0;s:6:"method";s:3:"GET";s:2:"ip";s:9:"127.0.0.1";s:4:"time";i:1489454722;s:10:"statusCode";i:200;s:8:"sqlCount";i:7;s:9:"mailCount";i:0;}}

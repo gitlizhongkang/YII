@@ -7,6 +7,7 @@ use app\models\Ad;
 use app\models\AdCategory;
 use yii\data\Pagination;
 use yii\web\UploadedFile;
+use yii\helpers\Url;
 
 class AdController extends Controller
 {
@@ -61,10 +62,8 @@ class AdController extends Controller
 		$res=Ad::deleteall('ad_id in('.$id.')');
 		if($res){
 			echo 1;
-			return $this->redirect(['/ad/index']);
 		}else{
 			echo 0;
-			return $this->redirect(['/ad/index']);
 		}
 	}
 	//修改广告
@@ -87,11 +86,9 @@ class AdController extends Controller
 		$arr['deadline']=strtotime($arr['deadline']);
 		$res->setAttributes($arr);
 		if($res->save()){
-			// echo '<script>alert("修改成功！！！");</script>';
-			return $this->redirect(['/ad/index']);
+			echo '<script>alert("修改成功！！！");location.href="'.Url::to(['ad/index']).'"</script>';
 		}else{
-			// echo '<script>alert("修改失败！！！");</script>';
-			return $this->redirect(['/ad/update-ad']);
+			echo '<script>alert("修改失败！！！");location.href="'.Url::to(['ad/update-do']).'"</script>';
 		}
 	}
 	//添加广告
@@ -141,12 +138,28 @@ class AdController extends Controller
 		$res=AdCategory::deleteall('category_id in('.$id.')');
 		if($res){
 			echo 1;
-			return $this->redirect(['/ad/position']);
 		}else{
 			echo 0;
-			return $this->redirect(['/ad/position']);
 		}
 	}
+	//修改广告位
+	public function actionCateUpdate(){
+		$id=Yii::$app->request->get('id');
+		$data['res']=AdCategory::findOne($id);
+		return $this->render('update_adcate.html',$data);
+	}	
+	//修改广告位  入库
+	public function actionCateUpdateDo(){
+		$id=Yii::$app->request->get('id');
+		$arr=Yii::$app->request->post();
+		$res=AdCategory::findOne($id);
+		$res->setAttributes($arr);
+		if($res){
+			echo '<script>alert("修改成功！！！");location.href="'.Url::to(['ad/position']).'"</script>';
+		}else{
+			echo '<script>alert("修改失败！！！");location.href="'.Url::to(['ad/cate-update']).'"</script>';
+		}
+	}	
 	//添加广告位
 	public function actionAddCate(){
 		return $this->render('add_adcate.html');

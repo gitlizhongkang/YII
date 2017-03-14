@@ -10,38 +10,21 @@ use yii\helpers\Url;
 <link rel="stylesheet" href="css/content.css" />
 </head>
 <body marginwidth="0" marginheight="0">
-		<div class="container">
+		<div class="container" style="background-color:#E0F0FE">
 			<div class="public-nav">您当前的位置：<a href="">管理首页</a>><a href="">修改广告位</a></div>
 			<div class="public-content">
 				<div class="public-content-header">
 					<h3>修改广告位</h3>
 				</div>
 			<div class="public-content-cont">
-				<form action="<?=Url::to(['ad/update_adcate_do','id'=>$res['c_id']])?>" method="post">
+				<form action="<?=Url::to(['ad/cate-update-do','id'=>$res['category_id']])?>" method="post">
 					<div class="form-group">
 						<label for="">广告位名称</label>
 						<input class="form-input-txt" type="text" name="categoryname" value="<?=$res['categoryname']?>"/>
 					</div>
 					<div class="form-group">
-						<label for="">类型</label>
-						<input type="radio" name="type_id" value="1" 
-						<?php 
-						if($res['type_id']==1){
-							echo 'checked';
-						}
-						 ?>
-						/>文字
-						<input type="radio" name="type_id" value="2"
-						<?php 
-						if($res['type_id']==2){
-							echo 'checked';
-						}
-						 ?>
-						/>图片
-					</div>
-					<div class="form-group">
-						<label for="">调用名</label>
-						<input class="form-input-txt" type="text" name="alias" value="<?=$res['alias']?>"/>
+						<label for="">数量</label>
+						<input class="form-input-txt" type="text" name="alias" value="<?=$res['num']?>"/>
 					</div>
 					<div class="form-group">
 						<label for="">售价</label>
