@@ -1,5 +1,4 @@
 <?php
-
 namespace app\models;
 
 use Yii;
@@ -64,7 +63,6 @@ class Company extends \yii\db\ActiveRecord
             [['nature', 'trade', 'province', 'city', 'street', 'scale', 'registered', 'currency', 'address', 'contact', 'telphone', 'landline_tel', 'email', 'website', 'logo', 'map_x', 'map_y', 'certificate_img'], 'string', 'max' => 255],
         ];
     }
-
     /**
      * @inheritdoc
      */
@@ -105,14 +103,21 @@ class Company extends \yii\db\ActiveRecord
             'certificate_img' => 'Certificate Img',
         ];
     }
-    public function getList()
+    public function getList($where)
     {
-        $arr=Company::find();
+        $arr=Company::find()->where($where);
         $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>2]);
-        $list=Company::find()->offset($pages->offset)->limit($pages->limit)->all();
+        $list=Company::find()->where($where)->offset($pages->offset)->limit($pages->limit)->all();
         $info['pages']=$pages;
         $info['list']=$list;
         return $info;
+    }
+    //修改认证
+    public function setAudit($id,$audit)
+    {
+        $data =Company::find()->where(['id'=>$id])->one();
+        $data->audit= $audit;
+        return $data->save();
     }
 
 }
