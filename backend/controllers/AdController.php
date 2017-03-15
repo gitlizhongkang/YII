@@ -3,7 +3,7 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use app\models\Ad;
+use common\models\Ad;
 use app\models\AdCategory;
 use yii\data\Pagination;
 use yii\web\UploadedFile;
@@ -28,7 +28,7 @@ class AdController extends Controller
 				$where.=" and deadline<'$time'";
 			}else{
 				$times=$time+$d_time;
-				$where.=" and deadline<'$times'";
+				$where.=" and deadline<'$times' and deadline>'$time'";
 			}			
 		}
 		if(!empty($status)){

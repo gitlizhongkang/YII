@@ -8508,3 +8508,379 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1489455944.802
     'REQUEST_TIME' => 1489455944
 ]
+2017-03-14 13:00:42 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php:846
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php(846): PDOStatement->execute()
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\ActiveRecord.php(296): yii\db\Command->execute()
+#2 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(62): yii\db\ActiveRecord::deleteAll('ad_id in()')
+#3 [internal function]: backend\controllers\AdController->actionAdDelete()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('ad-delete', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/ad-delete', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+The SQL being executed was: DELETE FROM `lg_ad` WHERE ad_id in()' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `lg...')
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\ActiveRecord.php(296): yii\db\Command->execute()
+#2 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(62): yii\db\ActiveRecord::deleteAll('ad_id in()')
+#3 [internal function]: backend\controllers\AdController->actionAdDelete()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('ad-delete', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/ad-delete', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+)
+
+2017-03-14 13:00:41 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/ad-delete'
+    'ids' => ''
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'advanced-frontend' => 'na2qq2e3fj1kr8ik92sts5jo45'
+    '_csrf-frontend' => '693d7b0bb76f0fc71f5463ea7277f713b793fa1d33e4dc61bf3bfe3661cc5abda:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"3ALDGC0YfC0QAvcC42kY5Tk62XdHvw9z\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=ad%2Findex'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2; advanced-frontend=na2qq2e3fj1kr8ik92sts5jo45; _csrf-frontend=693d7b0bb76f0fc71f5463ea7277f713b793fa1d33e4dc61bf3bfe3661cc5abda%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223ALDGC0YfC0QAvcC42kY5Tk62XdHvw9z%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '59184'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fad-delete&ids='
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fad-delete&ids='
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489492841.875
+    'REQUEST_TIME' => 1489492841
+]
+2017-03-14 13:02:02 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php:846
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php(846): PDOStatement->execute()
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\ActiveRecord.php(296): yii\db\Command->execute()
+#2 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(62): yii\db\ActiveRecord::deleteAll('ad_id in()')
+#3 [internal function]: backend\controllers\AdController->actionAdDelete()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('ad-delete', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/ad-delete', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+The SQL being executed was: DELETE FROM `lg_ad` WHERE ad_id in()' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `lg...')
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\ActiveRecord.php(296): yii\db\Command->execute()
+#2 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(62): yii\db\ActiveRecord::deleteAll('ad_id in()')
+#3 [internal function]: backend\controllers\AdController->actionAdDelete()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('ad-delete', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/ad-delete', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+)
+
+2017-03-14 13:02:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/ad-delete'
+    'ids' => ''
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'advanced-frontend' => 'na2qq2e3fj1kr8ik92sts5jo45'
+    '_csrf-frontend' => '693d7b0bb76f0fc71f5463ea7277f713b793fa1d33e4dc61bf3bfe3661cc5abda:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"3ALDGC0YfC0QAvcC42kY5Tk62XdHvw9z\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=ad%2Findex'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2; advanced-frontend=na2qq2e3fj1kr8ik92sts5jo45; _csrf-frontend=693d7b0bb76f0fc71f5463ea7277f713b793fa1d33e4dc61bf3bfe3661cc5abda%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223ALDGC0YfC0QAvcC42kY5Tk62XdHvw9z%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '59370'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fad-delete&ids='
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fad-delete&ids='
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489492922.35
+    'REQUEST_TIME' => 1489492922
+]
+2017-03-14 13:04:06 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php:846
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php(846): PDOStatement->execute()
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\ActiveRecord.php(296): yii\db\Command->execute()
+#2 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(62): yii\db\ActiveRecord::deleteAll('ad_id in()')
+#3 [internal function]: backend\controllers\AdController->actionAdDelete()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('ad-delete', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/ad-delete', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+The SQL being executed was: DELETE FROM `lg_ad` WHERE ad_id in()' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `lg...')
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\ActiveRecord.php(296): yii\db\Command->execute()
+#2 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(62): yii\db\ActiveRecord::deleteAll('ad_id in()')
+#3 [internal function]: backend\controllers\AdController->actionAdDelete()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('ad-delete', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/ad-delete', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+)
+
+2017-03-14 13:04:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/ad-delete'
+    'ids' => ''
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'advanced-frontend' => 'na2qq2e3fj1kr8ik92sts5jo45'
+    '_csrf-frontend' => '693d7b0bb76f0fc71f5463ea7277f713b793fa1d33e4dc61bf3bfe3661cc5abda:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"3ALDGC0YfC0QAvcC42kY5Tk62XdHvw9z\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=ad%2Findex'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2; advanced-frontend=na2qq2e3fj1kr8ik92sts5jo45; _csrf-frontend=693d7b0bb76f0fc71f5463ea7277f713b793fa1d33e4dc61bf3bfe3661cc5abda%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223ALDGC0YfC0QAvcC42kY5Tk62XdHvw9z%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '59668'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fad-delete&ids='
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fad-delete&ids='
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489493046.246
+    'REQUEST_TIME' => 1489493046
+]
+2017-03-14 13:04:12 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php:846
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php(846): PDOStatement->execute()
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\ActiveRecord.php(296): yii\db\Command->execute()
+#2 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(62): yii\db\ActiveRecord::deleteAll('ad_id in()')
+#3 [internal function]: backend\controllers\AdController->actionAdDelete()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('ad-delete', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/ad-delete', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+The SQL being executed was: DELETE FROM `lg_ad` WHERE ad_id in()' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `lg...')
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\db\ActiveRecord.php(296): yii\db\Command->execute()
+#2 D:\xampp\htdocs\nine\YII\backend\controllers\AdController.php(62): yii\db\ActiveRecord::deleteAll('ad_id in()')
+#3 [internal function]: backend\controllers\AdController->actionAdDelete()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('ad-delete', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('ad/ad-delete', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\nine\YII\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+)
+
+2017-03-14 13:04:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/ad-delete'
+    'ids' => ''
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    '_csrf-backend' => 'b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"9NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y\";}'
+    'advanced-backend' => '1vsqjdlnlkjq94bpu8tnvp2bg2'
+    'advanced-frontend' => 'na2qq2e3fj1kr8ik92sts5jo45'
+    '_csrf-frontend' => '693d7b0bb76f0fc71f5463ea7277f713b793fa1d33e4dc61bf3bfe3661cc5abda:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"3ALDGC0YfC0QAvcC42kY5Tk62XdHvw9z\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=ad%2Findex'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; _csrf-backend=b789f1467b879923432c606f44d450fb48201200ec985af4d823fbbfccb9ac7ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%229NTvfTh1NSSHJYmBqRPgGlc8eQhwEf6y%22%3B%7D; advanced-backend=1vsqjdlnlkjq94bpu8tnvp2bg2; advanced-frontend=na2qq2e3fj1kr8ik92sts5jo45; _csrf-frontend=693d7b0bb76f0fc71f5463ea7277f713b793fa1d33e4dc61bf3bfe3661cc5abda%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223ALDGC0YfC0QAvcC42kY5Tk62XdHvw9z%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '59701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Fad-delete&ids='
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Fad-delete&ids='
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489493052.536
+    'REQUEST_TIME' => 1489493052
+]
