@@ -2164,3 +2164,68 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1489667491.647
     'REQUEST_TIME' => 1489667491
 ]
+2017-03-16 20:54:32 [127.0.0.1][-][ib1j413prcfonb62g3a0sv01t1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "order/order-manage".' in D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('order/order-man...', Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-16 20:54:32 [127.0.0.1][-][ib1j413prcfonb62g3a0sv01t1][info][application] $_GET = [
+    'r' => 'order/order-manage'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '26e8c4df3a73f39318b305b4c7c836181cbd17a67b75e8a79ab10fa599eeb61ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"tNP7tIUn2yflJ4oq6n0D1XOWdrdJtOlw\";}'
+    'advanced-backend' => 'ib1j413prcfonb62g3a0sv01t1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'm9b8'
+    'admin_name' => 'lizhongkang'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=26e8c4df3a73f39318b305b4c7c836181cbd17a67b75e8a79ab10fa599eeb61ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22tNP7tIUn2yflJ4oq6n0D1XOWdrdJtOlw%22%3B%7D; advanced-backend=ib1j413prcfonb62g3a0sv01t1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56644'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=order%2Forder-manage'
+    'REQUEST_URI' => '/index.php?r=order%2Forder-manage'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489668872.121
+    'REQUEST_TIME' => 1489668872
+]
