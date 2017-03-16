@@ -68,38 +68,42 @@ use yii\widgets\ActiveForm;
         });
         // 批删  button
         $(document).on('click','.del_all',function(){
-           var res=window.confirm('你到底删不删啊！！！');
-            if(res){
-               var obj=$(this);
-               var tr=$('input[name=t_id]');
-               var str='';
-                for(var i=0;i<tr.length;i++) {
-                    if (tr.eq(i).prop('checked') == true) {
-                        str+=','+tr.eq(i).val();
+            var obj=$(this);
+            var tr=$('input[name=t_id]');
+            var str='';
+            for(var i=0;i<tr.length;i++) {
+                if (tr.eq(i).prop('checked') == true) {
+                    str+=','+tr.eq(i).val();
+                }
+            }
+            str=str.substr(1);
+            if(str!=''){
+                var res=window.confirm('你到底删不删啊！！！');
+                if(res){             
+                $.ajax({
+                type:'get',
+                url:"<?=Url::to(['ad/cate-del'])?>",
+                data: {
+                    'ids': str
+                },
+                dataType:'json',
+                success:function(msg){
+                    if(msg==1){
+                        alert('删除成功');
+                        for(var i=0;i<tr.length;i++) {
+                                if (tr.eq(i).prop('checked') == true) {
+                                   tr.eq(i).parents('tr').remove();
+                                }
+                            }
+                    }else{
+                        alert('删除失败');
                     }
                 }
-                str=str.substr(1);
-                $.ajax({
-                    type:'get',
-                    url:"<?=Url::to(['ad/cate-del'])?>",
-                    data: {
-                        'ids': str
-                    },
-                    dataType:'json',
-                    success:function(msg){
-                        if(msg==1){
-                        	alert('删除成功');
-                        	for(var i=0;i<tr.length;i++) {
-			                    if (tr.eq(i).prop('checked') == true) {
-			                       tr.eq(i).parents('tr').remove();
-			                    }
-			                }
-                        }else{
-                            alert('删除失败');
-                        }
-                    }
-                })
-            }
+            }) 
+        }
+        }else{
+            alert('请选择要删除的广告');
+        }                     
         });
             // 单删  
         $(document).on('click','#del',function(){
