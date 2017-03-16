@@ -51,13 +51,13 @@ use yii\helpers\Url;
 					</div>
 				</li>
 				<li class="public-ifame-item">
-					<a href="javascript:;">个人管理</a>
+					<a href="javascript:;">用户管理</a>
 					<div class="ifame-item-sub">
 						<ul>
-							<li><a href="信息管理/article_manage.html" target="content">企业推广</a></li>
-							<li><a href="信息管理/cate_manage.html" target="content">待审核简历</a></li>
-							<li><a href="信息管理/cate_manage.html" target="content">个人列表</a></li>
-							<li><a href="信息管理/cate_manage.html" target="content">照片简历</a></li>
+							<li><a href="<?= Url::to(['user/index'])?>" target="content">用户列表</a></li>
+							<li><a href="<?= Url::to(['user/photo'])?>" target="content">照片列表</a></li>
+							<li><a href="<?= Url::to(['resume/index'])?>" target="content">简历列表</a></li>
+							<li><a href="<?= Url::to(['resume/audit'])?>" target="content">待审核简历</a></li>
 						</ul>
 					</div>
 				</li>
