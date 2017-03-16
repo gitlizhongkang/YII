@@ -4,10 +4,12 @@ namespace frontend\controllers;
 use Yii;
 use yii\web\Controller;
 use common\models\Ad;
+use backend\models\JobCategory;
 
 class IndexController extends Controller
 {
 	public $layout='/header';
+<<<<<<< HEAD
 public function tree($cat_info,$parentid = 0,$leave=0)
     {
         static $tree = array();
@@ -40,6 +42,12 @@ public function tree($cat_info,$parentid = 0,$leave=0)
     //     echo str_repeat("--",$value['leave']).$value['categoryname']."<br>";
     // }die;
 
+=======
+	public function actionIndex(){		
+		$ad=new Ad;
+		$data['lun']=$ad->show1();
+		$data['middle']=$ad->show2();		
+>>>>>>> cd4732f09b9318004147a949b886278be77223ee
 		return $this->render('index.html',$data);
 	}
 

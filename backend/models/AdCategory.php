@@ -56,4 +56,19 @@ class AdCategory extends \yii\db\ActiveRecord
     {
         return $this->findOne($category_id);
     }
+    //添加广告位
+    public function add($arr){
+        $this->setAttributes($arr);
+        return $this->save();
+    }
+    //修改广告位
+    public function updateCate($id,$arr){
+        $res=$this->findOne($id);
+        $res->setAttributes($arr);
+        return $res->save();
+    }
+    //删除广告位
+    public function deleteCate($id){
+        return $this->deleteall('category_id in('.$id.')');
+    }
 }

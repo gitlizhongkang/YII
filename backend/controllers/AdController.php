@@ -59,8 +59,8 @@ class AdController extends Controller
 	//删除广告
 	public function actionAdDelete(){
 		$id=Yii::$app->request->get('ids');
-		$res=Ad::deleteall('ad_id in('.$id.')');
-		if($res){
+		$ad=new Ad;		
+		if($ad->deleteAd($id)){
 			echo 1;
 		}else{
 			echo 0;
@@ -69,39 +69,56 @@ class AdController extends Controller
 	//修改广告
 	public function actionUpdateAd(){
 		$id=Yii::$app->request->get('id');
-		$res=Ad::find()->where(['ad_id'=>$id])->asArray()->one();
-		// print_r($res);die;
+		$ad=new Ad;	
+		$res=$ad->selectOne($id);
 		$res['starttime']=date('Y-m-d',$res['starttime']);
 		$res['deadline']=date('Y-m-d',$res['deadline']);
-		$res1=Adcategory::find()->all();
-		// print_r($res1);die;
-		return  $this->render('update_ad.html',['res'=>$res,'res1'=>$res1]);
+		$res1=$ad->select();	
+		return  $this->render('update_ad.html',['res'=>$res,'res1'=>$res1,'model'=>$ad]);
 	}
 	//修改广告入库
 	public function actionUpdateAdDo(){
-		$id=Yii::$app->request->get('id');
 		$arr=Yii::$app->request->post();
-		$res=Ad::find()->where(['ad_id'=>$id])->one();
-		$arr['starttime']=strtotime($arr['starttime']);
+		unset($arr['Ad']);
+		$ad=new Ad;	
+		$imginfo=$ad->img_url = UploadedFile::getInstances($ad, 'img_url');
+        //获取上传文件信息
+        if(!empty($imginfo)){
+        	$img_name=$imginfo[0]->name;
+        	$img_path='uploads/'.$img_name;
+        	$arr['img_url']=$imginfo[0];
+        	if($ad->upload($arr)){
+        		$arr['img_url']=$img_path;
+        	}else{
+        		echo '<script>alert("上传失败！！！");location.href="'.Url::to(['ad/update-do']).'"</script>';
+        	} 
+        }      
+    	$arr['starttime']=strtotime($arr['starttime']);
 		$arr['deadline']=strtotime($arr['deadline']);
-		$res->setAttributes($arr);
-		if($res->save()){
-			echo '<script>alert("修改成功！！！");location.href="'.Url::to(['ad/index']).'"</script>';
-		}else{
-			echo '<script>alert("修改失败！！！");location.href="'.Url::to(['ad/update-do']).'"</script>';
-		}
+		$arr['addtime']=time();			
+		$category=new AdCategory;
+		$re=$category->selectName($arr['category_id']);
+		$arr['categoryname']=$re['categoryname'];
+		$id=$arr['id'];
+		unset($arr['id']);
+    	if($ad->updateAd($id,$arr)){
+    		echo '<script>alert("修改成功！！！");location.href="'.Url::to(['ad/index']).'"</script>';
+    	}else{
+    		echo '<script>alert("修改失败！！！");location.href="'.Url::to(['ad/update-do']).'"</script>';
+    	}
 	}
 	//添加广告
 	public function actionAdd(){
 		$data['model']=new Ad;
-		$data['adcategory']=Adcategory::find()->all();
+		$model=new AdCategory;
+		$data['adcategory']=$model->select();
  		return $this->render('add_ad.html',$data);
 	}
 	//添加广告 入库 上传logo
 	public function actionAdDo(){
 		$arr=Yii::$app->request->post();
 		unset($arr['Ad']);
-		$model = new Ad();
+		$model = new Ad;
 		//图片上传
         $imginfo=$model->img_url = UploadedFile::getInstances($model, 'img_url');
         //获取上传文件信息
@@ -116,8 +133,7 @@ class AdController extends Controller
 			$category=new AdCategory;
 			$re=$category->selectName($arr['category_id']);
 			$arr['categoryname']=$re['categoryname'];
-        	$model->setAttributes($arr);
-        	if($model->save()){
+        	if($model->add($arr)){
         		return $this->redirect(['/ad/index']);
         	}else{
         		var_dump($model->errors);
@@ -129,14 +145,15 @@ class AdController extends Controller
 	}
 	//广告位列表展示
 	public function actionPosition(){
-		$data['adcategory']=Adcategory::find()->all();
+		$model = new AdCategory();
+		$data['adcategory']=$model->select();
 		return $this->render('ad_position.html',$data);
 	}
 	//删除广告位
 	public function actionCateDel(){
 		$id=Yii::$app->request->get('ids');
-		$res=AdCategory::deleteall('category_id in('.$id.')');
-		if($res){
+		$model = new AdCategory();
+		if($model->deleteCate($id)){
 			echo 1;
 		}else{
 			echo 0;
@@ -145,16 +162,16 @@ class AdController extends Controller
 	//修改广告位
 	public function actionCateUpdate(){
 		$id=Yii::$app->request->get('id');
-		$data['res']=AdCategory::findOne($id);
+		$model = new AdCategory();
+		$data['res']=$model->selectName($id);
 		return $this->render('update_adcate.html',$data);
 	}	
 	//修改广告位  入库
 	public function actionCateUpdateDo(){
 		$id=Yii::$app->request->get('id');
 		$arr=Yii::$app->request->post();
-		$res=AdCategory::findOne($id);
-		$res->setAttributes($arr);
-		if($res){
+		$model = new AdCategory();
+		if($model->updateCate($id,$arr)){
 			echo '<script>alert("修改成功！！！");location.href="'.Url::to(['ad/position']).'"</script>';
 		}else{
 			echo '<script>alert("修改失败！！！");location.href="'.Url::to(['ad/cate-update']).'"</script>';
@@ -168,8 +185,7 @@ class AdController extends Controller
 	public function actionAddCateDo(){
 		$arr=Yii::$app->request->post();
 		$model = new AdCategory();
-		$model->setAttributes($arr);
-		$model->save();
+		$model->add($arr);
 		return $this->redirect(['/ad/position']);
 	}
 

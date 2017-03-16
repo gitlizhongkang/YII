@@ -10,8 +10,8 @@ use yii\helpers\Url;
 <link rel="stylesheet" href="css/content.css" />
 </head>
 <body marginwidth="0" marginheight="0">
-		<div class="container" style="background-color:#E0F0FE">
-			<div class="public-nav">您当前的位置：<a href="">管理首页</a>><a href="">修改广告位</a></div>
+		<div class="container" style="background-color:#f0f8fd;border: 1px solid #ccc;">
+			<div class="public-nav">您当前的位置：<a href="">管理首页</a>><a href="" style="color:blue">修改广告位</a></div>
 			<div class="public-content">
 				<div class="public-content-header">
 					<h3>修改广告位</h3>
@@ -24,7 +24,7 @@ use yii\helpers\Url;
 					</div>
 					<div class="form-group">
 						<label for="">数量</label>
-						<input class="form-input-txt" type="text" name="alias" value="<?=$res['num']?>"/>
+						<input class="form-input-txt" type="text" name="num" value="<?=$res['num']?>"/>
 					</div>
 					<div class="form-group">
 						<label for="">售价</label>
