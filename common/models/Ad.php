@@ -102,12 +102,14 @@ class Ad extends \yii\db\ActiveRecord
     public function deleteAd($id){
         return $this->deleteall('ad_id in('.$id.')');
     }
+    //广告位轮播图显示
     public function show1(){
         $time=time();
-        return $this->find()->where(['>','deadline',$time])->andWhere(['category_id'=>1])->all();
+        return $this->find()->where(['>','deadline',$time])->andWhere(['categoryname'=>'首页图片轮番广告'])->andWhere(['is_display'=>1])->all();
     }
+     //广告位中部格子显示
      public function show2(){
         $time=time();
-       return $this->find()->where(['>','deadline',$time])->andWhere(['category_id'=>2])->all();
+       return $this->find()->where(['>','deadline',$time])->andWhere(['categoryname'=>'首页中部格子广告'])->andWhere(['is_display'=>1])->all();
     }
 }

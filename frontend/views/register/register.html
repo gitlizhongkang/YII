@@ -1,4 +1,7 @@
-﻿<!DOCTYPE HTML>
+﻿<?php
+use yii\helpers\Url;
+?>
+<!DOCTYPE HTML>
 <html>
 <head>
 <script id="allmobilize" charset="utf-8" src="style/js/allmobilize.min.js"></script>
@@ -37,32 +40,32 @@ var youdao_conv_id = 271546;
         	<a href="h/"><img src="style/images/logo_white.png" width="285" height="62" alt="拉勾招聘" /></a>
             <div id="cloud_s"><img src="style/images/cloud_s.png" width="81" height="52" alt="cloud" /></div>
             <div id="cloud_m"><img src="style/images/cloud_m.png" width="136" height="95"  alt="cloud" /></div>
-        </div>        
-    	<input type="hidden" id="resubmitToken" value="9b207beb1e014a93bc852b7ba450db27" />		
+        </div>        	
 		<div class="login_box">
-        	<form id="loginForm">
+        	<form id="loginForm"  method='post'>
+        	 <input type="hidden" name="<?= \Yii::$app->request->csrfParam; ?>"  id="_csrf" value="<?= \Yii::$app->request->getCsrfToken();?>" />	
         		<ul class="register_radio clearfix">
 		            <li>
 		            	找工作
 		              	<input type="radio" value="0" name="type" /> 
 		            </li>
 		            <li>
-		           	           招人
+		           	    招人
 		              	<input type="radio" value="1" name="type" /> 
 		            </li>
-		        </ul> 
+		        </ul>        
             	<input type="text" id="email" name="email" tabindex="1" placeholder="请输入常用邮箱地址" />
                 <span class="error" style="display:none;" id="beError"></span>
                 <input type="password" id="password" name="password" tabindex="2" placeholder="请输入密码" />
             	<label class="fl registerJianJu" for="checkbox">
-            		<input type="checkbox" id="checkbox" name="checkbox" checked  class="checkbox valid" />我已阅读并同意<a href="h/privacy.html" target="_blank">《拉勾用户协议》</a>
+            		<input type="checkbox" id="checkbox"  checked  class="checkbox valid" />我已阅读并同意<a href="h/privacy.html" target="_blank">《拉勾用户协议》</a>
            		</label>
                 <input type="submit" id="submitLogin" value="注 &nbsp; &nbsp; 册" />
-                
+                <!-- 
                 <input type="hidden" id="callback" name="callback" value=""/>
                 <input type="hidden" id="authType" name="authType" value=""/>
                 <input type="hidden" id="signature" name="signature" value=""/>
-                <input type="hidden" id="timestamp" name="timestamp" value=""/>
+                <input type="hidden" id="timestamp" name="timestamp" value=""/> -->
             </form>
             <div class="login_right">
             	<div>已有拉勾帐号</div>
@@ -132,18 +135,18 @@ var youdao_conv_id = 271546;
 			    		var type =$('input[type="radio"]:checked',form).val();
 			    		var email =$('#email').val();
 			    		var password =$('#password').val();
-			    		var resubmitToken = $('#resubmitToken').val();
+			    		// var resubmitToken = $('#resubmitToken').val();
 			    		
-			    		var callback = $('#callback').val();
-			    		var authType = $('#authType').val();
-			    		var signature = $('#signature').val();
-			    		var timestamp = $('#timestamp').val();
+			    		// var callback = $('#callback').val();
+			    		// var authType = $('#authType').val();
+			    		// var signature = $('#signature').val();
+			    		// var timestamp = $('#timestamp').val();
 			    		
 			    		$(form).find(":submit").attr("disabled", true);
 
 			            $.ajax({
 			            	type:'POST',
-			            	data: {email:email,password:password,type:type,resubmitToken:resubmitToken, callback:callback, authType:authType, signature:signature, timestamp:timestamp},
+			            	data: {email:email,password:password,type:type},
 			            	url:ctx+'/user/register.json',
 			            	dataType:'json'
 			            }).done(function(result) {
