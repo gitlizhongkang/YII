@@ -19,13 +19,17 @@ class RegisterController extends Controller
 				$data['last_login_time']=time();
 				$data['last_login_ip']=$_SERVER['REMOTE_ADDR'];
 				$user=new User;
-				$user->add($arr);
+				$uid=$user->add($arr);
 			}elseif($arr['type']==1){
 				$data['reg_time']=time();
 				$data['reg_ip']=$_SERVER['REMOTE_ADDR'];
 				$members=new Members;
-				$members->add($data);
+				$uid=$members->add($data);
 			}
+			$info['email']=$arr['email'];
+			$info['uid']=$arr['uid'];
+			$session=Yii::$app->session;
+			$session->set('uid',$info);
 			return $this->redirect(['/index/index']);
 		}else{
 			return $this->render('register.html');

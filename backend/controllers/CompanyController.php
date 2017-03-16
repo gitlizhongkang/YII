@@ -5,7 +5,7 @@ use Yii;
 use yii\web\Controller;
 use app\models\Company;
 use app\models\AuditReason;
-use app\models\Job;
+use app\models\Jobs;
 use yii\data\Pagination;
 
 class CompanyController extends Controller
@@ -35,35 +35,52 @@ class CompanyController extends Controller
         $id=Yii::$app->request->get("id");
         $reason=Yii::$app->request->get("reason");
         $model=new Company;
-        $res=$model->setAudit($id,$audit);
+        if($audit==3){
+            $time=time();
+            $data=array('company_id'=>$id,'reason'=>$reason,'addtime'=>$time);
+            $mod=new AuditReason;
+            $mod->add($data);
+        }
+
+        $res=$model->setAudit($id,"audit",$audit);
        if($res){
-           $msg=1;
+          $msg="操作成功";
        }else{
-           $msg=2;
+          $msg="操作失败";
        }
-       if($audit==3){
-           $time=time();
-           $data=array('company_id'=>$id,'reason'=>$reason,'addtime'=>$time);
-           $mod=new AuditReason;
-           $mod->add($data);
-           $msg=1;
-       }
-       echo $msg;
+        return $this->render('../result/result.html',array(
+            'message'=>$msg,
+            'links'=>array(
+                array('上一操作',"company/company-list"),
+            ),
+        ));
+    }
+    //删除企业
+    public function actionDelCompany()
+    {
+        $id=Yii::$app->request->get("id");
+        $del_jobs=Yii::$app->request->get("del_jobs");
+        $model=new Company;
+        $res= $model->del($id);
+        if($res){
+            $msg="操作成功";
+        }else{
+            $msg="操作失败";
+        }
+//       if($del_jobs!=''){
+//
+//       }
+        return $this->render('../result/result.html',array(
+            'message'=>$msg,
+            'links'=>array(
+                array('上一操作',"company/company-list"),
+            ),
+        ));
+    }
+    //修改企业信息
+    public function actionEditCompany()
+    {
+        $id=Yii::$app->request->get("id");
 
     }
-  //职位列表
-   public function actionJobList()
-   {
-   	 echo 1;die;
-   }
-  //订单管理
-   public function actionOrderManage()
-   {
-   	 echo 1;die;
-   }
-  //企业推广
-   public function actionCompanySpread()
-   {
-   	echo 1;die;
-   }
 }

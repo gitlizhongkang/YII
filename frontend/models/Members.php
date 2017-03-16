@@ -61,6 +61,7 @@ class Members extends \yii\db\ActiveRecord
     }
     public function add($arr){
         $this->setAttributes($arr);
-        return $this->save();
+        $this->save();
+        return $this->attributes['id']
     }
 }

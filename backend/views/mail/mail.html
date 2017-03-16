@@ -1,0 +1,39 @@
+<?php
+use yii\helpers\Url;
+?>
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+<form action="http://www.back.com/index.php?r=mail/do-email" method="post" >
+    <table style=" margin-bottom:3px;" cellspacing="10" cellpadding="1" width="100%" border="0">
+        <tbody>
+        <tr>
+            <td width="100" align="right">发件人:</td>
+            <td><input   name="from" value="<?php echo $companyname?>"  type="text"></td>
+        </tr>
+        <tr>
+            <td width="100" align="right">收件人地址:</td>
+            <td><input   name="email" value="<?php echo $email?>"  type="text"></td>
+        </tr>
+        <tr>
+            <td width="100" align="right">邮件标题:</td>
+            <td><input id="email"  name="subject" value="" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="100" align="right">邮件内容:</td>
+            <td>
+                <textarea id="body" name="body" style="width: 700px; height: 300px;"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td align="right"> </td>
+            <td><input id="check" name="check" value="立即发送" type="submit"></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+</html>
