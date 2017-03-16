@@ -30705,3 +30705,371 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1489661271.585
     'REQUEST_TIME' => 1489661271
 ]
+2017-03-16 13:03:16 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50732 bytes' 
+
+in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 88, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-16 13:03:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    'advanced-frontend' => 'ou6l7pim5nlvjf4rceiibuccr4'
+    '_csrf-frontend' => '3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S\";}'
+    'advanced-backend' => 'gam3mai7osm4r0619brpi0pnn7'
+    '_csrf-backend' => '3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"d4DANU26EY19wPaTI2BTb1TxQU2TokuJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'xg5u'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; advanced-frontend=ou6l7pim5nlvjf4rceiibuccr4; _csrf-frontend=3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S%22%3B%7D; advanced-backend=gam3mai7osm4r0619brpi0pnn7; _csrf-backend=3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22d4DANU26EY19wPaTI2BTb1TxQU2TokuJ%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '49508'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=index'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489665796.726
+    'REQUEST_TIME' => 1489665796
+]
+2017-03-16 13:03:16 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50732 bytes' 
+
+in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 88, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-16 13:03:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    'advanced-frontend' => 'ou6l7pim5nlvjf4rceiibuccr4'
+    '_csrf-frontend' => '3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S\";}'
+    'advanced-backend' => 'gam3mai7osm4r0619brpi0pnn7'
+    '_csrf-backend' => '3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"d4DANU26EY19wPaTI2BTb1TxQU2TokuJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'xg5u'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=index'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; advanced-frontend=ou6l7pim5nlvjf4rceiibuccr4; _csrf-frontend=3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S%22%3B%7D; advanced-backend=gam3mai7osm4r0619brpi0pnn7; _csrf-backend=3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22d4DANU26EY19wPaTI2BTb1TxQU2TokuJ%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '49508'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Fmain'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=index%2Fmain'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489665796.898
+    'REQUEST_TIME' => 1489665796
+]
+2017-03-16 13:03:55 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50732 bytes' 
+
+in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 88, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-16 13:03:55 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    'advanced-frontend' => 'ou6l7pim5nlvjf4rceiibuccr4'
+    '_csrf-frontend' => '3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S\";}'
+    'advanced-backend' => 'gam3mai7osm4r0619brpi0pnn7'
+    '_csrf-backend' => '3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"d4DANU26EY19wPaTI2BTb1TxQU2TokuJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'xg5u'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; advanced-frontend=ou6l7pim5nlvjf4rceiibuccr4; _csrf-frontend=3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S%22%3B%7D; advanced-backend=gam3mai7osm4r0619brpi0pnn7; _csrf-backend=3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22d4DANU26EY19wPaTI2BTb1TxQU2TokuJ%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '49677'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=index'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489665835.855
+    'REQUEST_TIME' => 1489665835
+]
+2017-03-16 13:03:56 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50732 bytes' 
+
+in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 88, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-16 13:03:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    'advanced-frontend' => 'ou6l7pim5nlvjf4rceiibuccr4'
+    '_csrf-frontend' => '3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S\";}'
+    'advanced-backend' => 'gam3mai7osm4r0619brpi0pnn7'
+    '_csrf-backend' => '3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"d4DANU26EY19wPaTI2BTb1TxQU2TokuJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'xg5u'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=index'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; advanced-frontend=ou6l7pim5nlvjf4rceiibuccr4; _csrf-frontend=3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S%22%3B%7D; advanced-backend=gam3mai7osm4r0619brpi0pnn7; _csrf-backend=3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22d4DANU26EY19wPaTI2BTb1TxQU2TokuJ%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '49677'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Fmain'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=index%2Fmain'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489665836.02
+    'REQUEST_TIME' => 1489665836
+]
+2017-03-16 13:03:58 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50732 bytes' 
+
+in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 88, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-16 13:03:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'ad/index'
+]
+
+$_COOKIE = [
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1487941036,1488418812,1488507881'
+    'advanced-frontend' => 'ou6l7pim5nlvjf4rceiibuccr4'
+    '_csrf-frontend' => '3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S\";}'
+    'advanced-backend' => 'gam3mai7osm4r0619brpi0pnn7'
+    '_csrf-backend' => '3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"d4DANU26EY19wPaTI2BTb1TxQU2TokuJ\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/backend/web/index.php?r=index'
+    'HTTP_COOKIE' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1487941036,1488418812,1488507881; advanced-frontend=ou6l7pim5nlvjf4rceiibuccr4; _csrf-frontend=3834961fe9c0d12d2eea8206fd55de6532e6168c170d15077ca22e360c2f043ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aw1dJFz9F0KxxyBzkwN7bVYfdipS1L7S%22%3B%7D; advanced-backend=gam3mai7osm4r0619brpi0pnn7; _csrf-backend=3dc6f518725de1c27df707d12fb6b3cd0ac36b2715e2f46e71197947ffd7f566a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22d4DANU26EY19wPaTI2BTb1TxQU2TokuJ%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/backend/web/index.php'
+    'REMOTE_PORT' => '49677'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ad%2Findex'
+    'REQUEST_URI' => '/nine/YII/backend/web/index.php?r=ad%2Findex'
+    'SCRIPT_NAME' => '/nine/YII/backend/web/index.php'
+    'PHP_SELF' => '/nine/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489665838.34
+    'REQUEST_TIME' => 1489665838
+]
