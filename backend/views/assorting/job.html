@@ -1,0 +1,150 @@
+<?php
+use yii\helpers\Url;
+?>
+<head>
+<meta content="text/html; charset=utf-8" />
+<link href="cas/css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="cas/js/jquery-1.9.1.min.js"></script>
+
+</head>
+
+<script type="text/javascript">
+$(function()
+{
+  //全选/全不全
+  $(document).on('click','#chk',function(){
+    if ($(this).prop('checked') == true) {
+      $("[name=bb]:checkbox").prop('checked',true);
+    }else {
+      $("[name=bb]:checkbox").prop('checked',false);
+    }
+  })   
+
+//隐藏子分类         
+    var tr = $('.cat');         
+    for (var i = 0;i<tr.size();i++) 
+    {        
+        if (tr.eq(i).attr('parentid') != 0) 
+        {         
+            tr.eq(i).hide();            
+        }         
+	}
+
+    //无限极分类展开         
+	    $(document).on('click','img[title="展开"]',function()
+	    {
+		    $(this).attr('src','cas/images/left_d.gif');
+		    $(this).attr('title',"收起");
+
+		    var id = $(this).parents('tr').attr('id');
+		    var tr = $('.cat');
+		    for(var i=0;i<tr.size();i++)         
+		    { 
+		    	
+		        if(tr.eq(i).attr('parentid') == id)
+		         {
+		          
+		            tr.eq(i).show();     
+		         }
+		    } 
+		});  
+//递归合并 
+function hide(id,obj) 
+{   
+     obj.attr('src','cas/images/left_e.gif');    
+     obj.attr('title',"展开");
+     var tr = $('.cat');
+     for(var i = 0; i<tr.size(); i++)
+     { 
+
+        if(tr.eq(i).attr('parentid') == id)         
+        {  
+            tr.eq(i).hide();             
+            tr.eq(i).find('b img').attr('src','cas/images/left_e.gif'); 
+            tr.eq(i).find('b img').attr('title','展开');
+            var cat_id_d = tr.eq(i).attr('id');
+            hide(cat_id_d,obj);
+        }  
+    }  
+}
+
+$(document).on('click','img[title="收起"]',function()
+    { 
+        var obj =$(this); 
+        var id = $(this).parents('tr').attr('id');
+        hide(id,obj)
+    });
+
+
+});
+</script>
+
+
+
+
+<div class="admin_main_nr_dbox">
+<div class="pagetit"><div class="clear"></div></div>
+<div class="toptip"><h2>职业分类：</h2></div>
+
+  <form id="form1" name="form1" method="post" action="?act=jobs_all_save">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="list" class="link_lan"  >
+<!-- 全选begin -->
+<tr>
+	  <td height="26" class="admin_list_tit admin_list_first" >
+		  <label id="categorychkAll"><input type="checkbox" id="chk" />全选</label>
+	  </td>
+	  <td width="160"   align="center"  class="admin_list_tit">排序</td>
+	   <td width="260"   align="center" class="admin_list_tit">操作</td>
+</tr>
+<!-- 全选end -->
+
+<?php foreach ($job_job as $key => $value): ?>
+
+<tr class="cat" id="<?= $value['id'];?>" parentid="<?= $value['parentid'];?>">
+	<td class="admin_list admin_list_first">
+
+<input type="checkbox"  name='bb' value="<?= $value['id'];?>" id="<?= $value['id'];?>"  class="Bcheck">
+		 <input name="save_id[]" type="hidden" value="<?= $value['id'];?>" />
+<?php echo str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;',$value['leave'])?>
+<b><img src="cas/images/left_e.gif" title="展开" border="0" align="absmiddle"  parentid="<?= $value['parentid'];?>" class="leftimg pointer"/><b/>
+
+	<input name="categoryname[]" type="text" value="<?= $value['categoryname'];?>" parentid="<?= $value['parentid'];?>"  class="input_text_150" style="color:#0066CC;  "/>
+		<span style="color:#CCCCCC">(id:<?= $value['id'];?>)</span>	  
+	</td>
+
+	<td align="center"  class="admin_list">
+		<input name="category_order[]" type="text"  value="<?= $value['category_order'];?>" class="input_text_50"/>
+	</td>
+	 <td class="admin_list">
+    <a href="<?=Url::to(['assorting/jobadd'])?>&parentid=<?= $value['id'];?>">此类下加子类</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <a onclick="return confirm('你确定要删除吗？')" href="#">删除</a>
+       </td>
+</tr>
+<?php endforeach ?>
+		  <tr >
+			  <td  class="admin_list"  style="padding-left:10px; color:#FF6600">
+			  <img src="cas/images/act_add.gif" border="0" align="absmiddle"  style=" margin:5px;" />
+			  <span class="AddCatPid"   style=" text-decoration:underline; cursor:pointer">增加顶级分类</span>
+			  </td>
+			   <td align="center"  class="admin_list">&nbsp;
+			   
+			  </td>
+			  <td class="admin_list"  >&nbsp;
+			  
+			    </td>
+				
+			</tr>
+    </table>
+	<table width="100%" border="0" cellspacing="10"  class="admin_list_btm">
+<tr>
+      
+        <td width="305" align="right">
+	  
+	    </td>
+      </tr>
+  </table>
+  </form>
+</div>
+</body>
+</html>

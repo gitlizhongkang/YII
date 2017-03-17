@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use Yii;
 use yii\web\UploadedFile;
@@ -81,5 +81,35 @@ class Ad extends \yii\db\ActiveRecord
         } else {
             return false;
         }
+    }
+    //根据id查询
+    public function selectOne($ad_id)
+    {
+        return $this->findOne($ad_id);
+    }
+     //添加广告
+    public function add($arr){
+        $this->setAttributes($arr);
+        return $this->save();
+    }
+    //修改广告
+    public function updateAd($id,$arr){
+        $res=$this->findOne($id);
+        $res->setAttributes($arr);
+        return $res->save();
+    }
+    //删除广告
+    public function deleteAd($id){
+        return $this->deleteall('ad_id in('.$id.')');
+    }
+    //广告位轮播图显示
+    public function show1(){
+        $time=time();
+        return $this->find()->where(['>','deadline',$time])->andWhere(['categoryname'=>'首页图片轮番广告'])->andWhere(['is_display'=>1])->all();
+    }
+     //广告位中部格子显示
+     public function show2(){
+        $time=time();
+       return $this->find()->where(['>','deadline',$time])->andWhere(['categoryname'=>'首页中部格子广告'])->andWhere(['is_display'=>1])->all();
     }
 }
