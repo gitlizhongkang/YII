@@ -59,9 +59,18 @@ class Members extends \yii\db\ActiveRecord
             'qq_blind_time' => 'Qq Blind Time',
         ];
     }
+    //添加
     public function add($arr){
         $this->setAttributes($arr);
         $this->save();
-        return $this->attributes['id']
+        return $this->attributes['uid'];
     }
+    //验证邮箱
+    public function checkEmail($email){
+        return $this->find()->where(['email'=>$email])->one();
+    }
+    //登录验证
+    public function checkLogin($email,$pwd){
+        return $this->find()->where(['and', 'email="$email"', 'password="$pwd"'])->one();
+    }           
 }
