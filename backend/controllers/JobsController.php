@@ -3,9 +3,9 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use app\models\Company;
-use app\models\AuditReason;
-use app\models\Jobs;
+use backend\models\Company;
+use backend\models\AuditReason;
+use backend\models\Jobs;
 use yii\data\Pagination;
 
 class JobsController extends Controller
@@ -21,12 +21,20 @@ class JobsController extends Controller
             $where.=" and audit=$audit";
         }
         if($time!=''){
-            $addtime=time()-$time*24*3600;
-            $where.=" and now()-addtime<=$addtime";
+            $now_time=time();
+            $addtime=$time*24*3600;
+            $where.=" and $now_time-addtime<=$addtime";
         }
         if($dead!=''){
-            $dead=time()-$time*24*3600;
-            $where.=" and now()-setmeal_deadline<=$dead";
+            $now_time=time();
+            if($dead==1){
+                $where.=" and $now_time>deadline";
+            }else if($dead==2){
+                $where.=" and $now_time<deadline";
+            }else{
+                $dead1=$dead*24*3600;
+                $where.=" and deadline-$now_time<=$dead1";
+            }
         }
         $model=new Jobs;
         $jobsList=$model->getList($where);

@@ -68,13 +68,12 @@ $(function(){
     //删除功能
     $("input[name=delete]").click(function(){
         var ids="";
-        var del_jobs="";
         for(var i=0;i<$("input[id=y_id]").length;i++){
             if($("input[id=y_id]").eq(i).is(":checked")==true){
                 ids+=","+$("input[id=y_id]").eq(i).val();
             }
         };
         ids=ids.substr(1);
-        location.href=del_url+"&id="+ids;
+         location.href=del_url+"&id="+ids;
     })
 })
