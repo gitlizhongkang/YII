@@ -30,31 +30,37 @@ $this->params['breadcrumbs'][] = $this->title;
             'password',
             'tel',
             'email:email',
-            'head_ic',
-            'last_login_time:datetime',
+            [
+                'attribute'=>'head_ic',
+                'value'=>$model->head_ic,
+                'format' => ['image', ['width'=>'60', 'height'=>'40']],
+            ],
+            ['attribute'=>'last_login_time', 'format'=>['date', 'php:Y-m-d H:i:s']],
             'last_login_ip',
+            'userinfo.name',
+            'userinfo.sex',
+            [
+                'attribute'=>'sex',
+                'value'=>function($model) {
+                    if(isset($model->getRelatedRecords()['userinfo']))
+                    return $model->getRelatedRecords()['userinfo']->sex == 0 ? '女' : '男';
+                }
+            ],
+            'userinfo.birthday',
+            'userinfo.birthland',
+            'userinfo.residence',
+            'userinfo.education',
+            'userinfo.experience',
+            [
+                'attribute'=>'marriage',
+                'value'=>function($model) {
+                    if(isset($model->getRelatedRecords()['userinfo']))
+                    return $model->getRelatedRecords()['userinfo']->marriage == 0 ? '未婚' : '已婚';
+                }
+            ],
+            ['attribute'=>'userinfo.reg_time', 'format'=>['date', 'php:Y-m-d H:i:s']],
         ],
     ]) ?>
 
-    <?php
-    if($model->getRelatedRecords()['userinfo'])
-    {
-        echo DetailView::widget([
-            'model' => $model->getRelatedRecords()['userinfo'],
-            'attributes' => [
-                'user_id',
-                'name',
-                'sex',
-                'birthday',
-                'birthland',
-                'residence',
-                'education',
-                'experience',
-                'marriage',
-                'reg_time',
-            ],
-        ]);
-    }
-    ?>
-
+    联查 地区
 </div>

@@ -33,13 +33,7 @@ use yii\helpers\Url;
             ],
             'id',
             'account',
-            [
-                'attribute' => 'password',//必须是attribute 才能表格列值搜索功能
-                'value' => function($row) {
-                    return "<span class='_update'>$row->password</span>";//Html::tag('span',$row->password,['class'=>'_update'])
-                },
-                'format' => 'html',
-            ],
+            'password',
             'tel',
             'email:email',
             [
@@ -48,8 +42,15 @@ use yii\helpers\Url;
             ],
             ['attribute'=>'last_login_time', 'format'=>['date', 'php:Y-m-d H:i:s']],
             'last_login_ip',
-            'status',
-            'userinfo.name',
+            [
+                'attribute' => 'status',//必须是attribute 才能表格列值搜索功能
+                'value' => function($row) {
+                    return "<span class='_update'>$row->status</span>";//Html::tag('span',$row->password,['class'=>'_update'])
+                },
+                'footer' => '(1正常|2封号)',
+                'format' => 'html',
+            ],
+            /*'userinfo.name',
             [
                 'attribute' => 'userinfo.sex',
                 'value' => function($row) {
@@ -57,7 +58,7 @@ use yii\helpers\Url;
                         return $row->getRelatedRecords()['userinfo']->sex == 0 ? '女' : '男';
                     }
                 }
-            ],
+            ],*/
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header'=> '<a href="javascript:;">操作</a>',
@@ -106,9 +107,9 @@ use yii\helpers\Url;
             var id = $(this).parents('tr').attr('data-key');
 
 
-            if(oldValue == newValue)
+            if(oldValue == newValue || (newValue != 1 && newValue != 2))
             {
-                _self.parent().html('<span class="_update">'+newValue+'</span>')
+                _self.parent().html('<span class="_update">'+oldValue+'</span>')
             }
             else
             {

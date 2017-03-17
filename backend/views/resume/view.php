@@ -12,11 +12,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="resume-view">
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+       <!--<?/*= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) */?> -->
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => '确认删除吗?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -25,22 +25,35 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             'uid',
             'click',
             'audit',
             'display',
             'title',
             'name',
-            'photo',
-            'sex',
+            [
+                'attribute'=>'photo_id',
+                'value'=>$model->photo_id,
+                'format' => ['image', ['width'=>'60', 'height'=>'40']],
+            ],
+            [
+                'attribute'=>'sex',
+                'value'=>function($model) {
+                    return $model->sex == 0 ? '女' : '男';
+                }
+            ],
             'height',
             'birthday',
             'tel',
             'email:email',
             'residence',
             'birthland',
-            'marriage',
+            [
+                'attribute'=>'marriage',
+                'value'=>function($model) {
+                    return $model->marriage == 0 ? '未婚' : '已婚';
+                }
+            ],
             'nature',
             'experience',
             'education',
@@ -49,9 +62,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'wage',
             'good_at',
             'specialty',
-            'addtime:datetime',
-            'refreshtime:datetime',
+            ['attribute'=>'addtime', 'format'=>['date', 'php:Y-m-d H:i:s']],
+            ['attribute'=>'refreshtime', 'format'=>['date', 'php:Y-m-d H:i:s']],
         ],
     ]) ?>
 
+    联查 地区 职位 照片
 </div>

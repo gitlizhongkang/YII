@@ -12,10 +12,12 @@ use yii\helpers\Url;
 <script src="js/jquery.min.js"></script>
 <div class="resume-index">
 
-    <p>
-        <?= Html::a('Create Resume', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <h1>Resume</h1>
 
+   <!-- <p>
+        <?/*= Html::a('Create Resume', ['create'], ['class' => 'btn btn-success']) */?>
+    </p>
+-->
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -29,19 +31,19 @@ use yii\helpers\Url;
                 ],
                 'id',
                 'uid',
-                'click',
                 [
                     'attribute' => 'audit',
                     'value' => function($row)
                     {
                         if($row->audit == 1) {
-                            return "<span class='_update'>审核中</span>";
+                            return "<span class='_update'>1</span>";
                         }elseif($row->audit == 2) {
-                            return "<span class='_update'>已审核</span>";
+                            return "<span class='_update'>2</span>";
                         }else{
-                            return "<span class='_update'>审核未通过</span>";
+                            return "<span class='_update'>3</span>";
                         }
                     },
+                    'footer' => '<a href="javascript:;" id="update-all">全部审核</a>(1审核中|2通过|3未通过)',
                     'format' => 'html',
                 ],
                 [
@@ -52,47 +54,14 @@ use yii\helpers\Url;
                 ],
                 'title',
                 'name',
-                [
-                    'attribute' => 'photo',
-                    'format' => ['image', ['width'=>'60', 'height'=>'40',]],
-                ],
-                [
-                    'attribute' => 'sex',
-                    'value' => function($row) {
-                        return $row->sex == 1 ? '男' : '女';
-                    }
-                ],
-                'height',
-                'birthday',
                 'tel',
                 'email:email',
-                'residence',
-                'birthland',
-                [
-                    'attribute' => 'marriage',
-                    'value' => function($row)
-                    {
-                        if($row->marriage == 1) {
-                            return '保密';
-                        }elseif($row->marriage == 2) {
-                            return '未婚';
-                        }else{
-                            return '已婚';
-                        }
-                    }
-                ],
-                'nature',
-                'experience',
-                'education',
-                'major',
-                'intention_jobs_id',
-                'wage',
-                //'good_at',
-                //'specialty',
+                'category.categoryname',
                 ['attribute'=>'addtime', 'format'=>['date', 'php:Y-m-d H:i:s']],
                 ['attribute'=>'refreshtime', 'format'=>['date', 'php:Y-m-d H:i:s']],
                 [
                     'class' => 'yii\grid\ActionColumn',
+                    'template' => '{view}  {delete}',
                     'header'=> '<a href="javascript:;">操作</a>',
                 ],
             ],
@@ -109,6 +78,7 @@ use yii\helpers\Url;
             $(this).parents('tr').toggleClass('checked');
         });
 
+
         //即点即改
         $(document).on('click','._update',function () {
 
@@ -118,7 +88,6 @@ use yii\helpers\Url;
             par.html('<input type="text" id="_self" value="'+oldValue+'" size="6">');
             par.children('input').focus();
         });
-
         $(document).on('blur','#_self',function () {
 
             var _self = $(this);
@@ -147,32 +116,65 @@ use yii\helpers\Url;
             }
         });
 
+        //批量修改
+        $('#update-all').click(function () {
+            var url = "<?= Url::to(['resume/update-all'])?>";
+            var tr = $('.checked');
+            var ids = select(tr);
+            var num = prompt('请选择审核选项(2 |通过, 3 |未通过)');
+            if(num != 2 && num != 3)
+            {
+                alert('请输入正确数字');
+                return false;
+            }
+            $.get(url,{ids:ids,data:num},function (map) {
+                if(map.done == 1)
+                {
+                    for(var i = tr.size(); i >= 0; i--)
+                    {
+                        tr.eq(i).find('._update').html(num);
+                    }
+                    alert(map.msg);
+                }
+                else
+                {
+                    alert(map.msg);
+                }
+            })
+        });
+
 
         //ajax批删
         $('#delete-all').click(function () {
             var url = "<?= Url::to(['resume/delete-all'])?>";
             var tr = $('.checked');
-            var ids = '';
-            for(var i = 0; i<tr.size(); i++)
-            {
-                ids += ',' + tr.eq(i).attr('data-key');
-            }
+            var ids = select(tr);
 
-            ids = ids.substr(1);
             $.get(url,{ids:ids},function (map) {
-                if(map == 1)
+                if(map.done == 1)
                 {
                     for(var i = tr.size(); i >= 0; i--)
                     {
                         tr.eq(i).remove();
                     }
+                    alert(map.msg);
                 }
                 else
                 {
-                    alert('删除失败');
+                    alert(map.msg);
                 }
             })
-        })
+        });
+
+        function select(tr) {
+            var ids = '';
+            for(var i = 0; i<tr.size(); i++)
+            {
+                ids += ',' + tr.eq(i).attr('data-key');
+            }
+            ids = ids.substr(1);
+            return ids;
+        }
     })
 </script>
 

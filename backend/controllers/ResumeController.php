@@ -3,11 +3,11 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\Resume;
-use app\models\ResumeCurd;
+use common\models\Resume;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\Response;
 
 /**
  * ResumeController implements the CRUD actions for Resume model.
@@ -37,7 +37,7 @@ class ResumeController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ResumeCurd();
+        $searchModel = new Resume();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -65,7 +65,7 @@ class ResumeController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    /*public function actionCreate()
     {
         $model = new Resume();
 
@@ -76,7 +76,7 @@ class ResumeController extends Controller
                 'model' => $model,
             ]);
         }
-    }
+    }*/
 
 
     /**
@@ -85,7 +85,7 @@ class ResumeController extends Controller
      * @param string $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    /*public function actionUpdate($id)
     {
         $model = $this->findModel($id);
 
@@ -95,6 +95,41 @@ class ResumeController extends Controller
             return $this->render('update', [
                 'model' => $model,
             ]);
+        }
+    }*/
+
+    public function actionUpdateOne()
+    {
+        $get = Yii::$app->request->get();
+
+        $model = $this->findModel($get['id']);
+        $model->setAttributes(['audit'=>$get['data']]);
+
+        //返回json数据
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        if ($model->save()) {
+            return ['done' => 1, 'msg' => '修改成功'];
+        }
+        else
+        {
+            return ['done' => 0, 'msg' => '修改失败'];
+        }
+    }
+
+    public function actionUpdateAll()
+    {
+        $get = Yii::$app->request->get();
+        $id = explode(',',$get['ids']);
+
+
+        //返回json数据
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        if (Resume::updateAll(['audit'=>$get['data']],['id'=>$id])) {
+            return ['done' => 1, 'msg' => '修改成功'];
+        }
+        else
+        {
+            return ['done' => 0, 'msg' => '修改失败'];
         }
     }
 
@@ -110,6 +145,22 @@ class ResumeController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionDeleteAll()
+    {
+        $get = Yii::$app->request->get();
+        $id = explode(',',$get['ids']);
+
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        if(Resume::deleteAll(['id'=>$id]))
+        {
+            return ['done' => 1, 'msg' => '删除成功'];
+        }
+        else
+        {
+            return ['done' => 0, 'msg' => '删除失败'];
+        }
     }
 
 
