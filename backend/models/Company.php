@@ -1,5 +1,5 @@
 <?php
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 use yii\data\Pagination;
@@ -106,9 +106,9 @@ class Company extends \yii\db\ActiveRecord
     }
     public function getList($where)
     {
-        $arr=Company::find()->where($where);
+        $arr=Company::find()->select("*")->join('JOIN','lg_members', 'lg_members.uid=lg_company.u_id')->where($where);
         $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>2]);
-        $list=Company::find()->select("*")->join('JOIN','lg_members', 'lg_members.uid=lg_company.u_id')->where($where)->offset($pages->offset)->limit($pages->limit)->asArray()->all();
+        $list=$arr->offset($pages->offset)->limit($pages->limit)->asArray()->all();
         $info['pages']=$pages;
         $info['list']=$list;
         return $info;

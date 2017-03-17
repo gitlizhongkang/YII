@@ -1,5 +1,5 @@
 <?php
-namespace app\models;
+namespace backend\models;
 use Yii;
 
 class Mail extends \yii\db\ActiveRecord {

@@ -1,0 +1,71 @@
+<?php
+use yii\widgets\LinkPager;
+use yii\helpers\Url;
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="拉勾CMS" />
+    <title></title>
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+</head>
+<div class="admin_main_nr_dbox">
+    <div class="toptip">
+        <h2>提示：</h2>
+        <p>您可以通过添加备注来区分订单。</p>
+    </div>
+    <div class="toptit">查看订单</div>
+    <form id="Form1" name="Form1" method="post" action="<?= Url::to(['order/note-set'])?>">
+        <table width="100%" border="0" cellpadding="4" cellspacing="0"  >
+            <input type="hidden" value="<?php echo $list['id']?>" name="id">
+            <tr>
+                <td width="160" height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">付款状态：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed"> <?php if($list['is_paid']==1){?><span style="color: #FF6600">待付款...</span><?php }else{ ?><span style="color: #009900">已完成<?php }?></span></td>
+            </tr>
+            <tr>
+                <td height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">申请充值会员：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed"><?php echo $list['username']?> </td>
+            </tr>
+            <tr>
+                <td height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">应付款金额：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed" >￥<span style="color:#0033CC; font-size:20px;"><?php echo $list['amount'] ?></span> 元</td>
+            </tr>
+            <tr>
+                <td height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">订单说明：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed" ><span style="color:#0033CC"> <?php echo $list['description']?></span></td>
+            </tr>
+            <tr>
+                <td height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">支付方式：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed" > <?php echo $list['payment_name']?></td>
+            </tr>
+            <tr>
+                <td height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">订单单号：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed" > <?php echo $list['oid']?><input type="hidden" name="oid"  value="" /></td>
+            </tr>
+            <tr>
+                <td height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">申请时间：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed" ><?php echo date("Y-m-d",$list['addtime'])?></td>
+            </tr>
+            <tr>
+            <tr>
+                <td height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">执行充值时间：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed" ><?php echo date("Y-m-d",$list['payment_time'])?></td>
+            </tr>
+            <tr>
+                <td height="30" align="right" style=" border-bottom:1px #CCCCCC dashed">添加备注：</td>
+                <td style=" border-bottom:1px #CCCCCC dashed" >
+                    <textarea name="notes" style="width:300px; height:50px; font-size:12px; line-height:180%" onpropertychange="if(this.value.length>120){this.value=this.value.slice(0,120)}"><?php echo $list['notes']?></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td height="30" align="right" >&nbsp;</td>
+                <td height="80" ><span style="font-size:14px;">
+        <input name="submit3" type="submit" class="admin_submit"    value="修改备注"/>
+        <input name="submit22" type="button" class="admin_submit"    value="返 回" onclick="window.location.href=''"/>
+      </span></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
