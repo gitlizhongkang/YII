@@ -28,8 +28,20 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'account',
             'password',
-            'tel',
-            'email:email',
+            [
+                'attribute' => 'tel',
+                'value' => function($row) {
+                    return $row->tel_audit == 0 ? $row->tel.'<span style="color: red">(未验证)</span>' : $row->tel.'<span style="color: green">(已验证)</span>';
+                },
+                'format' => 'html',
+            ],
+            [
+                'attribute' => 'email',
+                'value' => function($row) {
+                    return $row->email_audit == 0 ? $row->email.'<span style="color: red">(未验证)</span>' : $row->email.'<span style="color: green">(已验证)</span>';
+                },
+                'format' => 'html',
+            ],
             [
                 'attribute'=>'head_ic',
                 'value'=>$model->head_ic,

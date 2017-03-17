@@ -35,7 +35,19 @@ use yii\helpers\Url;
             'account',
             'password',
             'tel',
+            [
+                'attribute' => 'tel_audit',
+                'value' => function($row) {
+                    return $row->tel_audit == 0 ? '未验证' : '已验证';
+                }
+            ],
             'email:email',
+            [
+                'attribute' => 'email_audit',
+                'value' => function($row) {
+                    return $row->tel_audit == 0 ? '未验证' : '已验证';
+                }
+            ],
             [
                 'attribute' => 'head_ic',
                 'format' => ['image', ['width'=>'60', 'height'=>'40']],
@@ -79,14 +91,14 @@ use yii\helpers\Url;
 </div>
 
 
-
-
-
 <script>
     $(function () {
         //选择之后添加一个识别类
         $('._check').click(function () {
             $(this).parents('tr').toggleClass('checked');
+        });
+        $('.select-on-check-all').click(function () {
+            $('._check').parents('tr').toggleClass('checked');
         });
 
         //即点即改

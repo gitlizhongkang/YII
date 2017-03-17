@@ -35,7 +35,7 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['last_login_time','status'], 'integer'],
+            [['tel_audit','email_audit','last_login_time','status'], 'integer'],
             [['account', 'email'], 'string', 'max' => 50],
             [['password', 'last_login_ip'], 'string', 'max' => 32],
             [['tel'], 'string', 'max' => 11],
@@ -54,7 +54,9 @@ class User extends \yii\db\ActiveRecord
             'account' => 'Account',
             'password' => 'Password',
             'tel' => 'Tel',
+            'tel_audit' =>'Tel_audit',
             'email' => 'Email',
+            'email_audit' => 'Email_audit',
             'head_ic' => 'Head Ic',
             'last_login_time' => 'Last Login Time',
             'last_login_ip' => 'Last Login Ip',
@@ -130,6 +132,8 @@ class User extends \yii\db\ActiveRecord
             'id' => $this->id,
             'last_login_time' => $this->last_login_time,
             'status' => $this->status,
+            'tel_audit' => $this->tel_audit,
+            'email_audit' => $this->email_audit,
             //'lg_user_info.sex' => $this->getAttribute('userinfo.sex'),
         ]);
         $query->andFilterWhere(['like', 'account', $this->account])

@@ -7,6 +7,7 @@ use common\models\UserPhoto;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\Response;
 
 /**
  * UserPhotoController implements the CRUD actions for UserPhoto model.
@@ -46,6 +47,46 @@ class UserPhotoController extends Controller
 
 
     /**
+     * Updates an existing Resume model.
+     */
+
+    public function actionUpdateOne()
+    {
+        $get = Yii::$app->request->get();
+
+        $model = $this->findModel($get['id']);
+        $model->setAttributes(['status'=>$get['data']]);
+
+        //返回json数据
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        if ($model->save()) {
+            return ['done' => 1, 'msg' => '修改成功'];
+        }
+        else
+        {
+            return ['done' => 0, 'msg' => '修改失败'];
+        }
+    }
+
+    public function actionUpdateAll()
+    {
+        $get = Yii::$app->request->get();
+        $id = explode(',',$get['ids']);
+
+
+        //返回json数据
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        if (UserPhoto::updateAll(['status'=>$get['data']],['id'=>$id])) {
+            return ['done' => 1, 'msg' => '修改成功'];
+        }
+        else
+        {
+            return ['done' => 0, 'msg' => '修改失败'];
+        }
+    }
+
+
+    /**
      * Deletes an existing UserPhoto model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -56,6 +97,22 @@ class UserPhotoController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionDeleteAll()
+    {
+        $get = Yii::$app->request->get();
+        $id = explode(',',$get['ids']);
+
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        if(Resume::deleteAll(['id'=>$id]))
+        {
+            return ['done' => 1, 'msg' => '删除成功'];
+        }
+        else
+        {
+            return ['done' => 0, 'msg' => '删除失败'];
+        }
     }
 
     /**

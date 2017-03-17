@@ -77,6 +77,9 @@ use yii\helpers\Url;
         $('._check').click(function () {
             $(this).parents('tr').toggleClass('checked');
         });
+        $('.select-on-check-all').click(function () {
+            $('._check').parents('tr').toggleClass('checked');
+        });
 
 
         //即点即改
@@ -95,9 +98,9 @@ use yii\helpers\Url;
             var url = "<?= Url::to(['resume/update-one'])?>";
             var id = $(this).parents('tr').attr('data-key');
 
-            if(oldValue == newValue)
+            if(oldValue == newValue  || (newValue != 1 && newValue != 2 && newValue != 3))
             {
-                _self.parent().html('<span class="_update">'+newValue+'</span>')
+                _self.parent().html('<span class="_update">'+oldValue+'</span>')
             }
             else
             {
@@ -121,8 +124,8 @@ use yii\helpers\Url;
             var url = "<?= Url::to(['resume/update-all'])?>";
             var tr = $('.checked');
             var ids = select(tr);
-            var num = prompt('请选择审核选项(2 |通过, 3 |未通过)');
-            if(num != 2 && num != 3)
+            var num = prompt('请选择审核选项(1 |审核中, 2 |通过, 3 |未通过)');
+            if(num != 1 && num != 2 && num != 3)
             {
                 alert('请输入正确数字');
                 return false;
