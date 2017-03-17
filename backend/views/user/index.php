@@ -33,7 +33,7 @@ use yii\helpers\Url;
             ],
             'id',
             'account',
-            'password',
+            //'password',
             'tel',
             [
                 'attribute' => 'tel_audit',

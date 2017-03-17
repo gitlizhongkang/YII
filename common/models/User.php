@@ -37,7 +37,8 @@ class User extends \yii\db\ActiveRecord
         return [
             [['tel_audit','email_audit','last_login_time','status'], 'integer'],
             [['account', 'email'], 'string', 'max' => 50],
-            [['password', 'last_login_ip'], 'string', 'max' => 32],
+            [[ 'last_login_ip'], 'string', 'max' => 32],
+            [[ 'password'], 'string', 'max' => 255],
             [['tel'], 'string', 'max' => 11],
             //[['head_ic'], 'string', 'max' => 100],
             //[['userinfo.name', 'userinfo.sex'], 'safe'],
