@@ -34,7 +34,6 @@ class JobsCategory extends \yii\db\ActiveRecord
             [['parentid', 'category_order'], 'integer'],
             [['content'], 'string'],
             [['categoryname'], 'string', 'max' => 80],
-            [['stat_jobs', 'stat_resume'], 'string', 'max' => 15],
         ];
     }
 
@@ -48,8 +47,6 @@ class JobsCategory extends \yii\db\ActiveRecord
             'parentid' => 'Parentid',
             'categoryname' => 'Categoryname',
             'category_order' => 'Category Order',
-            'stat_jobs' => 'Stat Jobs',
-            'stat_resume' => 'Stat Resume',
             'content' => 'Content',
         ];
     }

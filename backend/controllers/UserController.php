@@ -4,9 +4,7 @@ namespace backend\controllers;
 
 
 use Yii;
-use app\models\User;
-use app\models\UserInfo;
-use app\models\UserCurd;
+use common\models\User;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -40,7 +38,7 @@ class UserController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new UserCurd();
+        $searchModel = new User();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
 
@@ -151,7 +149,7 @@ class UserController extends Controller
         $get = Yii::$app->request->get();
 
         $model = $this->findModel($get['id']);
-        $model->setAttributes(['password'=>$get['data']]);
+        $model->setAttributes(['status'=>$get['data']]);
 
         //返回json数据
         Yii::$app->response->format = Response::FORMAT_JSON;

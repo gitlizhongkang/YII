@@ -5,70 +5,58 @@ use yii\grid\GridView;
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\ResumeCurd */
+/* @var $searchModel common\models\UserPhoto */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 ?>
 <script src="js/jquery.min.js"></script>
-<div class="resume-index">
+<div class="user-photo-index">
 
-    <h1>Resume</h1>
+    <h1>User Photos</h1>
 
-   <!-- <p>
-        <?/*= Html::a('Create Resume', ['create'], ['class' => 'btn btn-success']) */?>
-    </p>
--->
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'showFooter' => true,   //显示脚部
-        'columns' =>
+        'columns' => [
             [
-                [
-                    'class'         => 'yii\grid\CheckboxColumn',   //复选 全选
-                    'cssClass'      => '_check',
-                    'footer'        => '<a href="javascript:;" id="delete-all">全部删除</a>',
-                ],
-                'id',
-                'uid',
-                [
-                    'attribute' => 'audit',
-                    'value' => function($row)
-                    {
-                        if($row->audit == 1) {
-                            return "<span class='_update'>1</span>";
-                        }elseif($row->audit == 2) {
-                            return "<span class='_update'>2</span>";
-                        }else{
-                            return "<span class='_update'>3</span>";
-                        }
-                    },
-                    'footer' => '<a href="javascript:;" id="update-all">全部审核</a>(1审核中|2通过|3未通过)',
-                    'format' => 'html',
-                ],
-                [
-                    'attribute' => 'display',
-                    'value' => function($row) {
-                            return $row->display == 1 ? '公开' : '保密';
-                    }
-                ],
-                'title',
-                'name',
-                'tel',
-                'email:email',
-                'category.categoryname',
-                ['attribute'=>'addtime', 'format'=>['date', 'php:Y-m-d H:i:s']],
-                ['attribute'=>'refreshtime', 'format'=>['date', 'php:Y-m-d H:i:s']],
-                [
-                    'class' => 'yii\grid\ActionColumn',
-                    'template' => '{view}  {delete}',
-                    'header'=> '<a href="javascript:;">操作</a>',
-                ],
+                'class'         => 'yii\grid\CheckboxColumn',   //复选 全选
+                'cssClass'      => '_check',
+                'footer'        => '<a href="javascript:;" id="delete-all">全部删除</a>',
             ],
+
+            'id',
+            'user_id',
+            [
+                'attribute' => 'photo',
+                'format' => ['image' , ['width'=>'90', 'height'=>'70']]
+            ],
+            [
+                'attribute' => 'status',
+                'value' => function($row)
+                {
+                    if($row->status == 1) {
+                        return "<span class='_update'>1</span>";
+                    }elseif($row->status == 2) {
+                        return "<span class='_update'>2</span>";
+                    }else{
+                        return "<span class='_update'>3</span>";
+                    }
+                },
+                'footer' => '<a href="javascript:;" id="update-all">全部审核</a>(1审核中|2通过|3未通过)',
+                'format' => 'html',
+            ],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{delete}',
+                'header'=> '<a href="javascript:;">操作</a>',
+            ],
+        ],
         'emptyText'=>'当前没有简历',
         'emptyTextOptions'=>['style'=>'color:red;font-weight:bold'],
     ]); ?>
 </div>
+
 
 
 <script>
@@ -95,10 +83,10 @@ use yii\helpers\Url;
 
             var _self = $(this);
             var newValue = _self.val();
-            var url = "<?= Url::to(['resume/update-one'])?>";
+            var url = "<?= Url::to(['user-photo/update-one'])?>";
             var id = $(this).parents('tr').attr('data-key');
 
-            if(oldValue == newValue  || (newValue != 1 && newValue != 2 && newValue != 3))
+            if(oldValue == newValue || (newValue != 1 && newValue != 2 && newValue != 3))
             {
                 _self.parent().html('<span class="_update">'+oldValue+'</span>')
             }
@@ -121,15 +109,17 @@ use yii\helpers\Url;
 
         //批量修改
         $('#update-all').click(function () {
-            var url = "<?= Url::to(['resume/update-all'])?>";
+            var url = "<?= Url::to(['user-photo/update-all'])?>";
             var tr = $('.checked');
             var ids = select(tr);
             var num = prompt('请选择审核选项(1 |审核中, 2 |通过, 3 |未通过)');
+
             if(num != 1 && num != 2 && num != 3)
             {
                 alert('请输入正确数字');
                 return false;
             }
+
             $.get(url,{ids:ids,data:num},function (map) {
                 if(map.done == 1)
                 {
@@ -180,4 +170,3 @@ use yii\helpers\Url;
         }
     })
 </script>
-

@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Resume;
+use common\models\UserPhoto;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 
 /**
- * ResumeController implements the CRUD actions for Resume model.
+ * UserPhotoController implements the CRUD actions for UserPhoto model.
  */
-class ResumeController extends Controller
+class UserPhotoController extends Controller
 {
     public $layout = 'zhudi';
     /**
@@ -30,14 +30,13 @@ class ResumeController extends Controller
         ];
     }
 
-
     /**
-     * Lists all Resume models.
+     * Lists all UserPhoto models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new Resume();
+        $searchModel = new UserPhoto();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -48,62 +47,15 @@ class ResumeController extends Controller
 
 
     /**
-     * Displays a single Resume model.
-     * @param string $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-
-    /**
-     * Creates a new Resume model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    /*public function actionCreate()
-    {
-        $model = new Resume();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
-    }*/
-
-
-    /**
      * Updates an existing Resume model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param string $id
-     * @return mixed
      */
-    /*public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
-    }*/
 
     public function actionUpdateOne()
     {
         $get = Yii::$app->request->get();
 
         $model = $this->findModel($get['id']);
-        $model->setAttributes(['audit'=>$get['data']]);
+        $model->setAttributes(['status'=>$get['data']]);
 
         //返回json数据
         Yii::$app->response->format = Response::FORMAT_JSON;
@@ -124,7 +76,7 @@ class ResumeController extends Controller
 
         //返回json数据
         Yii::$app->response->format = Response::FORMAT_JSON;
-        if (Resume::updateAll(['audit'=>$get['data']],['id'=>$id])) {
+        if (UserPhoto::updateAll(['status'=>$get['data']],['id'=>$id])) {
             return ['done' => 1, 'msg' => '修改成功'];
         }
         else
@@ -135,9 +87,9 @@ class ResumeController extends Controller
 
 
     /**
-     * Deletes an existing Resume model.
+     * Deletes an existing UserPhoto model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $id
+     * @param integer $id
      * @return mixed
      */
     public function actionDelete($id)
@@ -163,17 +115,16 @@ class ResumeController extends Controller
         }
     }
 
-
     /**
-     * Finds the Resume model based on its primary key value.
+     * Finds the UserPhoto model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param string $id
-     * @return Resume the loaded model
+     * @param integer $id
+     * @return UserPhoto the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Resume::findOne($id)) !== null) {
+        if (($model = UserPhoto::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

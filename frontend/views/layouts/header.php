@@ -1,3 +1,8 @@
+<?php
+use yii\helpers\Url;
+$session=\Yii::$app->session;
+$user=$session->get('user');
+?>
 <!DOCTYPE HTML>
 <html xmlns:wb="http://open.weibo.com/wb">
 <head>
@@ -47,11 +52,27 @@ var youdao_conv_id = 271546;
     			<li ><a href="jianli.html" rel="nofollow">我的简历</a></li>
 	    		<li ><a href="create.html" rel="nofollow">发布职位</a></li>
 	    	</ul>
+            <?php if(!empty($user)){ ?>
+             <dl class="collapsible_menu">
+                <dt>
+                    <span><?=$user['email']?></span> 
+                    <span class="red dn" id="noticeDot-0"></span>
+                    <i></i>
+                </dt>
+                <?php if($user['type']==0){ ?>
+                    <dd><a rel="nofollow" href="person">个人中心</a></dd>
+               <?php }else{ ?>
+                    <dd><a rel="nofollow" href="">企业中心</a></dd>
+                <?php } ?>
+                    <dd class="logout"><a rel="nofollow" href="<?=Url::to(['register/logout'])?>">退出</a></dd>
+            </dl>
+            <?php }else{ ?>
         	<ul class="loginTop">
-            	<li><a href="login.html" rel="nofollow">登录</a></li> 
+            	<li><a href="<?=Url::to(['register/login'])?>" rel="nofollow">登录</a></li> 
             	<li>|</li>
-            	<li><a href="register.html" rel="nofollow">注册</a></li>
+            	<li><a href="<?=Url::to(['register/index'])?>" rel="nofollow">注册</a></li>
             </ul>
+            <?php }?>
         </div>
-    </div><!-- end #header -->
+    </div>
     <?php echo $content; ?>
