@@ -70,6 +70,7 @@ class Company extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'u_id'=>'U Id',
             'companyname' => 'Companyname',
             'nature' => 'Nature',
             'trade' => 'Trade',
@@ -107,17 +108,26 @@ class Company extends \yii\db\ActiveRecord
     {
         $arr=Company::find()->where($where);
         $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>2]);
-        $list=Company::find()->where($where)->offset($pages->offset)->limit($pages->limit)->all();
+        $list=Company::find()->select("*")->join('JOIN','lg_members', 'lg_members.uid=lg_company.u_id')->where($where)->offset($pages->offset)->limit($pages->limit)->asArray()->all();
         $info['pages']=$pages;
         $info['list']=$list;
         return $info;
     }
-    //修改认证
-    public function setAudit($id,$audit)
+    //修改
+    public function setAudit($id,$key,$value)
     {
         $data =Company::find()->where(['id'=>$id])->one();
-        $data->audit= $audit;
+        $data->$key= $value;
         return $data->save();
     }
-
+    //删除企业资料
+    public function del($id)
+    {
+        return Company::deleteAll("id in ($id)");
+    }
+    //查询单条企业信息
+    public function getOne($id)
+    {
+        return Company::find()->where(['id'=>$id])->one();
+    }
 }

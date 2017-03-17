@@ -10,7 +10,8 @@ class IndexController extends Controller
 {
 	public $layout='/header';
 
-	    public function actionIndex(){		
+	public function actionIndex()
+	{
 		$ad=new Ad;
 		$data['lun']=$ad->show1();
 		$data['middle']=$ad->show2();		

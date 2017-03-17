@@ -19,15 +19,15 @@ $(function(){
         }
     })
     //认证企业 刷新 删除
-    $("#ButAudit,#ButDel").mouseover(function(){
+    $("#ButAudit,#Butrefresh,#ButDel").mouseover(function(){
         $(this).css("background-color","gold");
     })
-    $("#ButAudit,#ButDel").mouseout(function(){
+    $("#ButAudit,#Butrefresh,#ButDel").mouseout(function(){
         $(this).css("background-color","");
     })
-    $("#ButAudit,#ButDel").click(function(){
+    $("#ButAudit,#Butrefresh,#ButDel").click(function(){
         if($("#form1 :checkbox").is(":checked")==false){
-           alert("请先选择");
+            alert("请先选择企业");
         }else{
             var oc="#"+$(this).attr("oc");
             $("#mask").css("height",$(document).height());
@@ -47,23 +47,23 @@ $(function(){
     })
     //认证企业
     $("input[name=set_audit]").click(function(){
-       var reason="";
+        var reason="";
         var ids=0;
-       for(var i=0;i<$("input[id=y_id]").length;i++){
-           if($("input[id=y_id]").eq(i).is(":checked")==true){
-              ids++;
-           }
-       }
-      if(ids>1){
-           alert("请选择一个即可");
-           return;
-      }
-      var id=$("input[id=y_id]:checked").val();
-      var audit=$("input[name=audit]:checked").val();
-      if(audit==3){
-          reason=$("textarea[name=reason]").val();
-      }
-     location.href=url+"&id="+id+"&audit="+audit+"&reason="+reason;
+        for(var i=0;i<$("input[id=y_id]").length;i++){
+            if($("input[id=y_id]").eq(i).is(":checked")==true){
+                ids++;
+            }
+        }
+        if(ids>1){
+            alert("请选择一个企业即可");
+            return;
+        }
+        var id=$("input[id=y_id]:checked").val();
+        var audit=$("input[name=audit]:checked").val();
+        if(audit==3){
+            reason=$("textarea[name=reason]").val();
+        }
+        location.href=url+"&id="+id+"&audit="+audit+"&reason="+reason;
     })
     //删除功能
     $("input[name=delete]").click(function(){
@@ -75,6 +75,9 @@ $(function(){
             }
         };
         ids=ids.substr(1);
-        location.href=del_url+"&id="+ids;
+        if($("#delete_jobs").is(":checked")==true){
+            del_jobs=1;
+        }
+        location.href=del_url+"&id="+ids+"&del_jobs="+del_jobs;
     })
 })
