@@ -1,0 +1,37 @@
+<?php
+use yii\helpers\Url;
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<form action="http://www.backetend.com/web/index.php?r=auth-item/add" method="post">
+	<input type="hidden" name="parent" value="<?=$parent?>">
+	<h3>用户管理:<?=$parent?></h3>
+	<table><span style="margin-left: 0px; font-size: 16px;"><b>后台首页:</b><input type="checkbox" name="child[]" value="<?=$group['0']['0']['name']?>" <?php if($group['0']['0']['status']==1){echo 'checked';}?>><?=$group['0']['0']['description']?></span></table>
+	<div>
+	<div style="float:left;">
+	<table style="width: 300px;margin-left: 50px">
+		<h4 style="display: block;">权限与用户：</h4>
+		<?php foreach($group['1'] as $v){?>
+		<tr><td><input type="checkbox" name="child[]" value="<?=$v['name']?>" <?php if($v['status']==1){echo 'checked';}?>></td><td><?=$v['description']?></td></tr>
+		<?php }?>
+	</table>
+	</div>
+	<div style="float:left;">
+	<table style="width: 300px;float:left;padding-left: 50px" >
+		<h4>角色管理</h4>
+		<?php foreach($group['2'] as $v){?>
+		<tr><td><input type="checkbox" name="child[]" value="<?=$v['name']?>" <?php if($v['status']==1){echo 'checked';}?>></td><td><?=$v['description']?></td></tr>
+		<?php }?>
+	</table>
+	</div>
+	</div>
+	<input type="submit"  value="修改">
+	</form>
+</body>
+</html>

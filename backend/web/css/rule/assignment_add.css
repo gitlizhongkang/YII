@@ -1,0 +1,80 @@
+.admin_main_nr_dbox {
+    background-color: #ffffff;
+    border: 1px solid #95aadb;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 10px;
+	}
+	.toptip h2 {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dfedf7;
+    border-top: 1px solid #dfedf7;
+    color: #000000;
+    display: block;
+    font-size: 12px;
+    font-weight: 100;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+	}
+	form, p, h1, h2, h3, h4, li, ul {
+	    margin: 0;
+	    padding: 0;
+	}
+	.toptit {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dfedf7;
+    border-top: 1px solid #dfedf7;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+	}
+	body {
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+	}
+	.input_text_200 {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f9f9f9;
+    border-color: #666666 #cccccc #cccccc #666666;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    height: 20px;
+    line-height: 16px;
+    padding: 3px;
+    width: 200px;
+	}
+	.LocalDataMultiC label, input, button, select, textarea {
+	    font-weight: normal;
+	    vertical-align: middle;
+	}
+	input {
+	    font-family: Arial,Helvetica,sans-serif;
+	    font-size: 12px;
+	    vertical-align: middle;
+	}
+	.admin_submit {
+    background-image: url("../../images/rule/admin_submit.jpg");
+    border: 0 none;
+    font-size: 12px;
+    height: 27px;
+    line-height: 27px;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    margin-top: 4px;
+    text-align: center;
+    width: 85px;
+	}
+	.LocalDataMultiC label, input, button, select, textarea {
+	    font-weight: normal;
+	    vertical-align: middle;
+	}

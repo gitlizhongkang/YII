@@ -1,0 +1,57 @@
+<?php
+	use yii\helpers\Html;
+	use yii\helpers\Url;
+?>
+<link href="css/rule/assignment_add.css" rel="stylesheet" type="text/css" />
+<body style="background-color:#f2f2f2">
+
+<div class="admin_main_nr_dbox">
+<div class="toptip">
+<h2>提示：</h2>
+<p>
+通过管理员设置，您可以进行编辑管理员资料、权限、密码以及删除管理员等操作；
+</p>
+</div>  
+ <div class="toptit">新增管理员</div>
+ 
+    <form id="form1" name="form1" method="post" action="http://www.backetend.com/web/index.php?r=auth-assignment/add">
+  <table width="100%" border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF"  >
+    <tr>
+      <td width="120" height="30" align="right" bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed">用户名：</td>
+      <td bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed"><input name="admin_name" type="text" class="input_text_200" id="admin_name" maxlength="25" value=""/></td>
+    </tr>
+    <tr>
+      <td height="30" align="right" bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed">密码：</td>
+      <td bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed" ><input name="password" type="password" class="input_text_200" id="password" maxlength="25" value=""/></td>
+    </tr>
+    <tr>
+      <td height="30" align="right" bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed">再次输入密码：</td>
+      <td bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed" ><input name="password1" type="password" class="input_text_200" id="password1" maxlength="25" value=""/></td>
+    </tr>
+	  <tr>
+      <td height="30" align="right" bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed">角色：</td>
+      <td bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed" >
+		<select name="item_name" id="">
+		<?php foreach($roleList as $val){?>
+			<option value="<?=$val['parent']?>"><?=$val['parent']?></option>
+		<?php } ;?>
+		</select>
+      </td>
+    </tr>
+     <tr>
+      <td width="120" height="30" align="right" bgcolor="#FFFFFF" style=" border-bottom:1px #CCCCCC dashed">简介：</td>
+      <td><textarea name="mes" style=" background-color: #f9f9f9;border-color: #666666 #cccccc #cccccc #666666;border-style: solid;border-width: 1px;font-size: 12px;" id="" cols="30" rows="3"></textarea></td>
+    </tr>
+    <tr>
+      <td height="30" align="right" bgcolor="#FFFFFF" >&nbsp;</td>
+      <td height="50" bgcolor="#FFFFFF" > 
+            <input type="submit" class="admin_submit"    value="添加"/>
+        <input name="submit22" type="button" class="admin_submit"    value="返回" onclick="Javascript:window.history.go(-1)"/>
+       </td>
+    </tr>
+  </table>
+    </form>
+</div>
+</div>
+	
+</body>

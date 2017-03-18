@@ -1,11 +1,19 @@
 <?php
 return [
     'components' => [
+        // 'db' => [
+        //     'class' => 'yii\db\Connection',
+        //     'dsn' => 'mysql:host=192.168.1.88;dbname=training_one',
+        //     'username' => 'root',
+        //     'password' => 'kaichela',
+        //     'charset' => 'utf8',
+        //     'tablePrefix' => 'lg_',
+        // ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=192.168.1.88;dbname=training_one',
+            'dsn' => 'mysql:host=localhost;dbname=yiixm',
             'username' => 'root',
-            'password' => 'kaichela',
+            'password' => 'root',
             'charset' => 'utf8',
             'tablePrefix' => 'lg_',
         ],

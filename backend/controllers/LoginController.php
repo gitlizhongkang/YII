@@ -21,8 +21,9 @@ class LoginController extends Controller
 		$CheckCode=Yii::$app->request->post('CheckCode');
 		if($CheckCode==$code){
 			$model=new Admin;		
-		    if($model->checkLogin($admin_name,$pwd)){
+		    if($arr=$model->checkLogin($admin_name,$pwd)){
 		    	$session->set('admin_name',$admin_name);
+		    	$session->set('admin_id',$arr['admin_id']);
 		    	return $this->redirect(['index/index']);
 		    }else{
 		    	echo '用户名或密码不正确';
