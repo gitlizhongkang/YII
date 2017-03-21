@@ -5886,3 +5886,1034 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1489737360.765
     'REQUEST_TIME' => 1489737360
 ]
+2017-03-17 16:38:10 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: resume/audit' in D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('audit', Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('resume/audit', Array)
+#2 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-17 16:38:10 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][info][application] $_GET = [
+    'r' => 'resume/audit'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '3nwj'
+    'admin_name' => 'lizhongkang'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53564'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=resume%2Faudit'
+    'REQUEST_URI' => '/index.php?r=resume%2Faudit'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489739890.763
+    'REQUEST_TIME' => 1489739890
+]
+2017-03-17 16:38:49 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "member/member-list".' in D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('member/member-l...', Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-17 16:38:49 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][info][application] $_GET = [
+    'r' => 'member/member-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '3nwj'
+    'admin_name' => 'lizhongkang'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53571'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=member%2Fmember-list'
+    'REQUEST_URI' => '/index.php?r=member%2Fmember-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489739929.435
+    'REQUEST_TIME' => 1489739929
+]
+2017-03-17 16:40:42 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "member/member-list".' in D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('member/member-l...', Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-17 16:40:42 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][info][application] $_GET = [
+    'r' => 'member/member-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '3nwj'
+    'admin_name' => 'lizhongkang'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53605'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=member%2Fmember-list'
+    'REQUEST_URI' => '/index.php?r=member%2Fmember-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489740042.669
+    'REQUEST_TIME' => 1489740042
+]
+2017-03-17 16:41:21 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "member/member-list".' in D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('member/member-l...', Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-17 16:41:21 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][info][application] $_GET = [
+    'r' => 'member/member-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '3nwj'
+    'admin_name' => 'lizhongkang'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53618'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=member%2Fmember-list'
+    'REQUEST_URI' => '/index.php?r=member%2Fmember-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489740081.613
+    'REQUEST_TIME' => 1489740081
+]
+2017-03-17 19:18:42 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "member/member-list".' in D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('member/member-l...', Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-17 19:18:42 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][info][application] $_GET = [
+    'r' => 'member/member-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '3nwj'
+    'admin_name' => 'lizhongkang'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55622'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=member%2Fmember-list'
+    'REQUEST_URI' => '/index.php?r=member%2Fmember-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489749521.134
+    'REQUEST_TIME' => 1489749521
+]
+2017-03-17 19:19:26 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "member/member-list".' in D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('member/member-l...', Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-17 19:19:26 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][info][application] $_GET = [
+    'r' => 'member/member-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '3nwj'
+    'admin_name' => 'lizhongkang'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=member%2Fmember-list'
+    'REQUEST_URI' => '/index.php?r=member%2Fmember-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489749566.767
+    'REQUEST_TIME' => 1489749566
+]
+2017-03-17 19:19:29 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "member/member-list".' in D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('member/member-l...', Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-17 19:19:29 [127.0.0.1][-][45qb4ljvknrqodcgu664nu36i1][info][application] $_GET = [
+    'r' => 'member/member-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '3nwj'
+    'admin_name' => 'lizhongkang'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=member%2Fmember-list'
+    'REQUEST_URI' => '/index.php?r=member%2Fmember-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489749569.594
+    'REQUEST_TIME' => 1489749569
+]
+2017-03-17 19:19:37 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: membersList' in D:\yii\advanced\backend\views\members\members_list.html:58
+Stack trace:
+#0 D:\yii\advanced\backend\views\members\members_list.html(58): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\yii\\advanced...', 58, Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(328): require('D:\\yii\\advanced...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\yii\\advanced...', Array)
+#3 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\yii\\advanced...', Array, Object(backend\controllers\MembersController))
+#4 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('members_list.ht...', Array, Object(backend\controllers\MembersController))
+#5 D:\yii\advanced\backend\controllers\MembersController.php(30): yii\base\Controller->render('members_list.ht...', Array)
+#6 [internal function]: backend\controllers\MembersController->actionMembersList()
+#7 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('members-list', Array)
+#10 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('members/members...', Array)
+#11 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-03-17 19:19:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'members/members-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55657'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=members%2Fmembers-list'
+    'REQUEST_URI' => '/index.php?r=members%2Fmembers-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489749576.709
+    'REQUEST_TIME' => 1489749576
+]
+2017-03-17 19:20:29 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: id' in D:\yii\advanced\backend\views\members\members_list.html:61
+Stack trace:
+#0 D:\yii\advanced\backend\views\members\members_list.html(61): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\yii\\advanced...', 61, Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(328): require('D:\\yii\\advanced...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\yii\\advanced...', Array)
+#3 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\yii\\advanced...', Array, Object(backend\controllers\MembersController))
+#4 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('members_list.ht...', Array, Object(backend\controllers\MembersController))
+#5 D:\yii\advanced\backend\controllers\MembersController.php(30): yii\base\Controller->render('members_list.ht...', Array)
+#6 [internal function]: backend\controllers\MembersController->actionMembersList()
+#7 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('members-list', Array)
+#10 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('members/members...', Array)
+#11 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-03-17 19:20:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'members/members-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55742'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=members%2Fmembers-list'
+    'REQUEST_URI' => '/index.php?r=members%2Fmembers-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489749628.858
+    'REQUEST_TIME' => 1489749628
+]
+2017-03-17 19:20:47 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: id' in D:\yii\advanced\backend\views\members\members_list.html:90
+Stack trace:
+#0 D:\yii\advanced\backend\views\members\members_list.html(90): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\yii\\advanced...', 90, Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(328): require('D:\\yii\\advanced...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\yii\\advanced...', Array)
+#3 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\yii\\advanced...', Array, Object(backend\controllers\MembersController))
+#4 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('members_list.ht...', Array, Object(backend\controllers\MembersController))
+#5 D:\yii\advanced\backend\controllers\MembersController.php(30): yii\base\Controller->render('members_list.ht...', Array)
+#6 [internal function]: backend\controllers\MembersController->actionMembersList()
+#7 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('members-list', Array)
+#10 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('members/members...', Array)
+#11 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-03-17 19:20:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'members/members-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55745'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=members%2Fmembers-list'
+    'REQUEST_URI' => '/index.php?r=members%2Fmembers-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489749647.59
+    'REQUEST_TIME' => 1489749647
+]
+2017-03-17 19:21:04 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: audit' in D:\yii\advanced\backend\views\members\members_list.html:91
+Stack trace:
+#0 D:\yii\advanced\backend\views\members\members_list.html(91): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\yii\\advanced...', 91, Array)
+#1 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(328): require('D:\\yii\\advanced...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\yii\\advanced...', Array)
+#3 D:\yii\advanced\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\yii\\advanced...', Array, Object(backend\controllers\MembersController))
+#4 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('members_list.ht...', Array, Object(backend\controllers\MembersController))
+#5 D:\yii\advanced\backend\controllers\MembersController.php(30): yii\base\Controller->render('members_list.ht...', Array)
+#6 [internal function]: backend\controllers\MembersController->actionMembersList()
+#7 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('members-list', Array)
+#10 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('members/members...', Array)
+#11 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-03-17 19:21:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'members/members-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55815'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=members%2Fmembers-list'
+    'REQUEST_URI' => '/index.php?r=members%2Fmembers-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489749664.346
+    'REQUEST_TIME' => 1489749664
+]
+2017-03-17 19:21:35 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lg_members.addtime' in 'where clause'' in D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(431): yii\db\Command->queryScalar()
+#3 D:\yii\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(334): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#5 D:\yii\advanced\backend\models\Members.php(67): yii\db\Query->count()
+#6 D:\yii\advanced\backend\controllers\MembersController.php(29): backend\models\Members->getList('<span class="st...')
+#7 [internal function]: backend\controllers\MembersController->actionMembersList()
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lg_members.addtime' in 'where clause'
+The SQL being executed was: SELECT COUNT(*) FROM `lg_members` JOIN `lg_company` ON lg_company.u_id=lg_members.uid WHERE 1=1 and 1489749695-lg_members.addtime<=259200' in D:\yii\advanced\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(431): yii\db\Command->queryScalar()
+#3 D:\yii\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(334): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#5 D:\yii\advanced\backend\models\Members.php(67): yii\db\Query->count()
+#6 D:\yii\advanced\backend\controllers\MembersController.php(29): backend\models\Members->getList('<span class="st...')
+#7 [internal function]: backend\controllers\MembersController->actionMembersList()
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'lg_members.addtime' in 'where clause'
+)
+
+2017-03-17 19:21:35 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'members/members-list'
+    'time' => '3'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=members%2Fmembers-list'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55829'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=members%2Fmembers-list&time=3'
+    'REQUEST_URI' => '/index.php?r=members%2Fmembers-list&time=3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489749695.154
+    'REQUEST_TIME' => 1489749695
+]
+2017-03-17 19:30:11 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lg_members.u_id' in 'on clause'' in D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 D:\yii\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 D:\yii\advanced\backend\models\Members.php(66): yii\db\ActiveQuery->all()
+#5 D:\yii\advanced\backend\controllers\MembersController.php(29): backend\models\Members->getList('<span class="st...')
+#6 [internal function]: backend\controllers\MembersController->actionMembersList()
+#7 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lg_members.u_id' in 'on clause'
+The SQL being executed was: SELECT `lg_company`.`companyname`, `lg_members`.* FROM `lg_members` JOIN `lg_company` ON lg_company.u_id=lg_members.u_id WHERE 1=1' in D:\yii\advanced\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT `lg_comp...')
+#1 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 D:\yii\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 D:\yii\advanced\backend\models\Members.php(66): yii\db\ActiveQuery->all()
+#5 D:\yii\advanced\backend\controllers\MembersController.php(29): backend\models\Members->getList('<span class="st...')
+#6 [internal function]: backend\controllers\MembersController->actionMembersList()
+#7 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'lg_members.u_id' in 'on clause'
+)
+
+2017-03-17 19:30:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'members/members-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56138'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=members%2Fmembers-list'
+    'REQUEST_URI' => '/index.php?r=members%2Fmembers-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489750211.215
+    'REQUEST_TIME' => 1489750211
+]
+2017-03-17 19:33:53 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lg_members.u_id' in 'on clause'' in D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(431): yii\db\Command->queryScalar()
+#3 D:\yii\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(334): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#5 D:\yii\advanced\backend\models\Members.php(67): yii\db\Query->count()
+#6 D:\yii\advanced\backend\controllers\MembersController.php(29): backend\models\Members->getList('<span class="st...')
+#7 [internal function]: backend\controllers\MembersController->actionMembersList()
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lg_members.u_id' in 'on clause'
+The SQL being executed was: SELECT COUNT(*) FROM `lg_members` JOIN `lg_company` ON lg_company.u_id=lg_members.u_id WHERE 1=1' in D:\yii\advanced\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\yii\advanced\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(431): yii\db\Command->queryScalar()
+#3 D:\yii\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(334): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\yii\advanced\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#5 D:\yii\advanced\backend\models\Members.php(67): yii\db\Query->count()
+#6 D:\yii\advanced\backend\controllers\MembersController.php(29): backend\models\Members->getList('<span class="st...')
+#7 [internal function]: backend\controllers\MembersController->actionMembersList()
+#8 D:\yii\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 D:\yii\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 D:\yii\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 D:\yii\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 D:\yii\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\yii\advanced\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'lg_members.u_id' in 'on clause'
+)
+
+2017-03-17 19:33:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'members/members-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56230'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=members%2Fmembers-list'
+    'REQUEST_URI' => '/index.php?r=members%2Fmembers-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489750432.765
+    'REQUEST_TIME' => 1489750432
+]
+2017-03-17 21:12:35 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in D:\yii\advanced\backend\views\members\members_list.html:96
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-17 21:12:35 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'members/members-list'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH\";}'
+    'advanced-backend' => '45qb4ljvknrqodcgu664nu36i1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.back.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.back.com/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_csrf-backend=e4609c23a01a0f6690f369c9000c456bc7fa0b1958ce2179bb9604523a9a8575a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222R8O7hi6ceM9YtPn_4rX3rDVfX5Q0EKH%22%3B%7D; advanced-backend=45qb4ljvknrqodcgu664nu36i1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;D:\\Git\\cmd;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\software\\Git\\cmd;C:\\Users\\kang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.back.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/yii/advanced/backend/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/yii/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '57324'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=members%2Fmembers-list'
+    'REQUEST_URI' => '/index.php?r=members%2Fmembers-list'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1489756355.137
+    'REQUEST_TIME' => 1489756355
+]

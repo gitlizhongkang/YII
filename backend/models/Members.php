@@ -3,7 +3,7 @@
 namespace backend\models;
 
 use Yii;
-
+use yii\data\Pagination;
 /**
  * This is the model class for table "{{%members}}".
  *
@@ -60,5 +60,19 @@ class Members extends \yii\db\ActiveRecord
             'qq_blind_time' => 'Qq Blind Time',
             'points' => 'Points',
         ];
+    }
+    public function getList($where)
+    {
+        $arr=Members::find()->where($where);
+        $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>2]);
+        $list=$arr->offset($pages->offset)->limit($pages->limit)->asArray()->all();
+        $info['pages']=$pages;
+        $info['list']=$list;
+        return $info;
+    }
+    //删除职位资料
+    public function del($id)
+    {
+        return Members::deleteAll("uid in ($id)");
     }
 }

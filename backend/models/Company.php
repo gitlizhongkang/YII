@@ -125,6 +125,11 @@ class Company extends \yii\db\ActiveRecord
     {
         return Company::deleteAll("id in ($id)");
     }
+    //根据uid删除企业
+    public function udel($id)
+    {
+        return Jobs::deleteAll("u_id in ($id)");
+    }
     //查询单条企业信息
     public function getOne($id)
     {

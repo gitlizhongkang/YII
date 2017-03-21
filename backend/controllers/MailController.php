@@ -11,19 +11,16 @@ class MailController extends \yii\web\Controller
     public function actionIndex()
     {
         $email=Yii::$app->request->get("email");
-        $companyname=Yii::$app->request->get("companyname");
-        return $this->render("mail.html",array("email"=>$email,"companyname"=>$companyname));
-
+        return $this->render("mail.html",array("email"=>$email));
     }
     public function  actionDoEmail()
     {
         $email=Yii::$app->request->post("email");
-        $from=Yii::$app->request->post("from");
         $subject=Yii::$app->request->post("subject");
         $body=Yii::$app->request->post("body");
         $mail= Yii::$app->mailer->compose();
         $mail->setTo($email);
-        $mail->setFrom(array("15803586720@163.com"=>$from));
+
         $mail->setSubject($subject);
         $mail->setTextBody($body);
         if($mail->send()){

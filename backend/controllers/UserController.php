@@ -77,7 +77,6 @@ class UserController extends Controller
     {
         $model = new User();
         $post = Yii::$app->request->post();
-
         //文件上传
         if (Yii::$app->request->isPost)
         {
