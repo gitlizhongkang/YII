@@ -19,10 +19,10 @@ use yii\helpers\Url;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         /*//整行的属性
-        'rowOptions'  => function($row)//整行的对象
-        {
-            return ['id' => $row->id,];
-        },*/
+        'rowOptions' => function($model, $key, $index, $grid) {
+        return ['class' => $index % 2 ==0 ? 'label-red' : 'label-green'];
+        },
+        */
         'showFooter' => true,   //显示脚部
         'columns' => [
             [

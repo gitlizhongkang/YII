@@ -8,7 +8,7 @@ use common\models\JobsCategory;
 
 class IndexController extends Controller
 {
-	public $layout='/header';
+	public $layout='header';
 	public function actionIndex(){		
 		$ad=new Ad;
 		$data['lun']=$ad->show1();
