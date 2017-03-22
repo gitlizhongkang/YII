@@ -61,4 +61,8 @@ class Members_charge_log extends \yii\db\ActiveRecord
         $this->setAttributes($data);
         return $this->save();
     }
+    public function get_one($id)
+    {
+       return Members_charge_log::find()->where(array("log_uid"=>$id))->asArray()->all();
+    }
 }

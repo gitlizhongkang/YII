@@ -22,7 +22,7 @@ return [
             ],
             'messageConfig'=>[
                 'charset'=>'UTF-8',
-
+                'from'=>array("15803586720@163.com"=>"follow me"),
             ],
 
         ],
