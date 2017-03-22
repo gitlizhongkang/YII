@@ -14,17 +14,12 @@ use backend\models\Jobs;
 
 class IndexController extends Controller
 {
-<<<<<<< HEAD
 	public $layout='header';
-	public function actionIndex(){		
-=======
-	public $layout='/header';
 	//前台首页		
 	public function actionIndex()
 	{
 		$cache=Yii::$app->cache;
 		//缓存
->>>>>>> 828e1ae08b72b46c61888a1a6d09448a0b615d19
 		$ad=new Ad;
 		$data['lun']=$ad->show1();
 		$data['middle']=$ad->show2();
