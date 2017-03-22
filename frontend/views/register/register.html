@@ -69,7 +69,7 @@ var youdao_conv_id = 271546;
             </form>
             <div class="login_right">
             	<div>已有拉勾帐号</div>
-            	<a  href="login.html"  class="registor_now">直接登录</a>
+            	<a  href="<?=Url::to(['register/login'])?>"  class="registor_now">直接登录</a>
                 <div class="login_others">使用以下帐号直接登录:</div>
                 <a  href=""  target="_blank" class="icon_wb" title="使用新浪微博帐号登录"></a>
                	<a  href=""  class="icon_qq" target="_blank" title="使用腾讯QQ帐号登录" ></a>
@@ -87,7 +87,7 @@ var youdao_conv_id = 271546;
     	
     	$('#email').focus(function(){
     		$('#beError').hide();
-    	});
+    	});    	
     	//验证表单
 	    	 $("#loginForm").validate({
 	    	        rules: {
@@ -97,7 +97,6 @@ var youdao_conv_id = 271546;
 			    	   	email: {
 			    	    	required: true,
 			    	    	email: true,
-			    	    	unique:true
 			    	   	},
 			    	   	password: {
 			    	    	required: true,
@@ -111,8 +110,7 @@ var youdao_conv_id = 271546;
 	    	        	},
 			    	 	email: {
 			    	    	required: "请输入常用邮箱地址",
-			    	    	email: "请输入有效的邮箱地址，如：vivi@lagou.com",
-			    	    	unique:'该邮箱已经注册过'
+			    	    	email: "请输入有效的邮箱地址，如：vivi@lagou.com"
 			    	   	},
 			    	   	password: {
 			    	    	required: "请输入密码",
@@ -130,38 +128,43 @@ var youdao_conv_id = 271546;
 			    		}else{
 			    			label.insertAfter(element);
 			    		};	
-			    	},
-			    	submitHandler:function(form){
-			    		var type =$('input[type="radio"]:checked',form).val();
-			    		var email =$('#email').val();
-			    		var password =$('#password').val();
-			    		// var resubmitToken = $('#resubmitToken').val();
-			    		
-			    		// var callback = $('#callback').val();
-			    		// var authType = $('#authType').val();
-			    		// var signature = $('#signature').val();
-			    		// var timestamp = $('#timestamp').val();
-			    		
-			    		$(form).find(":submit").attr("disabled", true);
-
-			            $.ajax({
-			            	type:'POST',
-			            	data: {email:email,password:password,type:type},
-			            	url:ctx+'/user/register.json',
-			            	dataType:'json'
-			            }).done(function(result) {
-		            		$('#resubmitToken').val(result.resubmitToken);
-			            	if(result.success){
-			            		window.location.href=result.content;			            		
-			            	}else{
-								$('#beError').text(result.msg).show();
-			            	}
-			            	$(form).find(":submit").attr("disabled", false);			           		
-			            });
-			        }  
-	    	});
+			    	}		    	
+	    	});	    	
     });
+    $(function(){
+    	var glob={
+    		'email':false
+    	}
+    	//验证邮箱唯一性
+    	$('#email').blur(function(){
+    		var email=$(this).val();
+    		$.ajax({
+    			type:'get',
+    			url:'<?=Url::to(["register/check-email"])?>',
+    			data:{
+    				email:email
+    			},
+    			success:function(msg){
+    				if(msg==1){
+    					$('#beError').show();
+    					$('#beError').html('邮箱已经存在！！！');
+    					glob.email=false;
+	    			}else{
+	    				glob.email=true;
+	    			}
+    			}
+    		})
+    	});
+    	$('#loginForm').submit(function(){
+	    		$('#email').trigger('blur');
+				if(glob.email==true){
+					return true;
+				}else{
+					return false;
+				}
+				
+			})
+    })
     </script>
 </body>
 </html>
-<!-- <span class="error" for="email" generated="true">请输入常用邮箱地址</span> -->

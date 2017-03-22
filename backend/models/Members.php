@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
@@ -18,6 +18,7 @@ use Yii;
  * @property string $last_login_ip
  * @property string $qq_nick
  * @property integer $qq_blind_time
+ * @property integer $points
  */
 class Members extends \yii\db\ActiveRecord
 {
@@ -35,7 +36,7 @@ class Members extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['reg_time', 'last_login_time', 'qq_blind_time'], 'integer'],
+            [['reg_time', 'last_login_time', 'qq_blind_time', 'points'], 'integer'],
             [['username', 'email', 'mobile', 'password', 'reg_ip', 'last_login_ip', 'qq_nick'], 'string', 'max' => 255],
         ];
     }
@@ -57,20 +58,7 @@ class Members extends \yii\db\ActiveRecord
             'last_login_ip' => 'Last Login Ip',
             'qq_nick' => 'Qq Nick',
             'qq_blind_time' => 'Qq Blind Time',
+            'points' => 'Points',
         ];
     }
-    //添加
-    public function add($arr){
-        $this->setAttributes($arr);
-        $this->save();
-        return $this->attributes['uid'];
-    }
-    //验证邮箱
-    public function checkEmail($email){
-        return $this->find()->where(['email'=>$email])->one();
-    }
-    //登录验证
-    public function checkLogin($email,$pwd){
-        return $this->find()->where(['and', 'email="$email"', 'password="$pwd"'])->one();
-    }           
 }

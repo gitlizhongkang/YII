@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 use yii\data\Pagination;
@@ -135,21 +135,13 @@ class Jobs extends \yii\db\ActiveRecord
     //查询职位
     public function getList($where)
     {
-        $arr=Jobs::find()->where($where);
+        $arr=Jobs::find()->select("*")->join('JOIN','lg_members', 'lg_members.uid=lg_jobs.u_id')->where($where);
         $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>2]);
-        $list=Jobs::find()->select("*")->join('JOIN','lg_members', 'lg_members.uid=lg_jobs.u_id')->where($where)->offset($pages->offset)->limit($pages->limit)->asArray()->all();
+        $list=$arr->offset($pages->offset)->limit($pages->limit)->asArray()->all();
         $info['pages']=$pages;
         $info['list']=$list;
         return $info;
     }
-//    //修改
-//    public function setAudit($id,$key,$value)
-//    {
-//        $data=Jobs::find()->where(['id'=>$id])->one();
-//       // $data->setAttributes(array($key=>$value));
-//        $data->$key= $value;
-//        return $data->save();
-//    }
     //删除职位资料
     public function del($id)
     {

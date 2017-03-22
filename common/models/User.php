@@ -1,31 +1,25 @@
 <?php
+
 namespace common\models;
 
 use Yii;
-use yii\base\NotSupportedException;
-use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
-use yii\web\IdentityInterface;
+use yii\base\Model;
+use yii\data\ActiveDataProvider;
 
 /**
- * User model
+ * This is the model class for table "{{%user}}".
  *
  * @property integer $id
- * @property string $username
- * @property string $password_hash
- * @property string $password_reset_token
+ * @property string $account
+ * @property string $password
+ * @property string $tel
  * @property string $email
- * @property string $auth_key
- * @property integer $status
- * @property integer $created_at
- * @property integer $updated_at
- * @property string $password write-only password
+ * @property string $head_ic
+ * @property integer $last_login_time
+ * @property string $last_login_ip
  */
-class User extends ActiveRecord implements IdentityInterface
+class User extends \yii\db\ActiveRecord
 {
-    const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
-
 
     /**
      * @inheritdoc
@@ -38,152 +32,130 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
-        return [
-            TimestampBehavior::className(),
-        ];
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
-            ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            [['tel_audit','email_audit','last_login_time','status'], 'integer'],
+            [['account', 'email'], 'string', 'max' => 50],
+            [['last_login_ip'], 'string', 'max' => 32],
+            [['password'], 'string', 'max' => 255],
+            [['tel'], 'string', 'max' => 11],
+            //[['head_ic'], 'string', 'max' => 100],
+            //[['userinfo.name', 'userinfo.sex'], 'safe'],
         ];
     }
 
     /**
      * @inheritdoc
      */
-    public static function findIdentity($id)
+    public function attributeLabels()
     {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        return [
+            'id' => 'ID',
+            'account' => 'Account',
+            'password' => 'Password',
+            'tel' => 'Tel',
+            'tel_audit' =>'Tel_audit',
+            'email' => 'Email',
+            'email_audit' => 'Email_audit',
+            'head_ic' => 'Head Ic',
+            'last_login_time' => 'Last Login Time',
+            'last_login_ip' => 'Last Login Ip',
+            'status' => 'Status',
+        ];
     }
 
     /**
-     * @inheritdoc
+     * @inheritdoc 上传
      */
-    public static function findIdentityByAccessToken($token, $type = null)
+    public function upload()
     {
-        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
-    }
-
-    /**
-     * Finds user by username
-     *
-     * @param string $username
-     * @return static|null
-     */
-    public static function findByUsername($username)
-    {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
-    }
-
-    /**
-     * Finds user by password reset token
-     *
-     * @param string $token password reset token
-     * @return static|null
-     */
-    public static function findByPasswordResetToken($token)
-    {
-        if (!static::isPasswordResetTokenValid($token)) {
-            return null;
-        }
-
-        return static::findOne([
-            'password_reset_token' => $token,
-            'status' => self::STATUS_ACTIVE,
-        ]);
-    }
-
-    /**
-     * Finds out if password reset token is valid
-     *
-     * @param string $token password reset token
-     * @return bool
-     */
-    public static function isPasswordResetTokenValid($token)
-    {
-        if (empty($token)) {
+        if ($this->validate() && isset($this->head_ic)) {
+            $file = 'uploads/' . $this->head_ic->baseName . '.' . $this->head_ic->extension;
+            $this->head_ic->saveAs($file);
+            return $file;
+        } else {
             return false;
         }
-
-        $timestamp = (int) substr($token, strrpos($token, '_') + 1);
-        $expire = Yii::$app->params['user.passwordResetTokenExpire'];
-        return $timestamp + $expire >= time();
     }
+
+
+    /**user id关联userinfo user_id模型
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserinfo()
+    {
+        return $this->hasOne(UserInfo::className(), ['user_id' => 'id']);
+    }
+
 
     /**
      * @inheritdoc
      */
-    public function getId()
+    public function scenarios()
     {
-        return $this->getPrimaryKey();
+        return Model::scenarios();
     }
 
     /**
-     * @inheritdoc
-     */
-    public function getAuthKey()
-    {
-        return $this->auth_key;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function validateAuthKey($authKey)
-    {
-        return $this->getAuthKey() === $authKey;
-    }
-
-    /**
-     * Validates password
+     * Creates data provider instance with search query applied
      *
-     * @param string $password password to validate
-     * @return bool if password provided is valid for current user
-     */
-    public function validatePassword($password)
-    {
-        return Yii::$app->security->validatePassword($password, $this->password_hash);
-    }
-
-    /**
-     * Generates password hash from password and sets it to the model
+     * @param array $params
      *
-     * @param string $password
+     * @return ActiveDataProvider
      */
-    public function setPassword($password)
+    public function search($params)
     {
-        $this->password_hash = Yii::$app->security->generatePasswordHash($password);
-    }
+        $query = User::find();//->joinWith('userinfo')
+        //$query->select("lg_user.*, lg_user_info.name,lg_user_info.sex");
 
-    /**
-     * Generates "remember me" authentication key
-     */
-    public function generateAuthKey()
-    {
-        $this->auth_key = Yii::$app->security->generateRandomString();
-    }
 
-    /**
-     * Generates new password reset token
-     */
-    public function generatePasswordResetToken()
-    {
-        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();
-    }
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
 
-    /**
-     * Removes password reset token
-     */
-    public function removePasswordResetToken()
-    {
-        $this->password_reset_token = null;
+        /*$dataProvider->sort->attributes['userinfo.name'] = [
+            'asc' => ['lg_user_info.name' => SORT_ASC],
+            'desc' => ['lg_user_info.name' => SORT_DESC],
+        ];*/
+
+
+        $this->load($params);
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+
+        // grid filtering conditions
+        $query->andFilterWhere([
+            'id' => $this->id,
+            'last_login_time' => $this->last_login_time,
+            'status' => $this->status,
+            'tel_audit' => $this->tel_audit,
+            'email_audit' => $this->email_audit,
+            //'lg_user_info.sex' => $this->getAttribute('userinfo.sex'),
+        ]);
+        $query->andFilterWhere(['like', 'account', $this->account])
+            ->andFilterWhere(['like', 'password', $this->password])
+            ->andFilterWhere(['like', 'tel', $this->tel])
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'head_ic', $this->head_ic])
+            ->andFilterWhere(['like', 'last_login_ip', $this->last_login_ip])
+            //->andFilterWhere(['like', 'lg_user_info.name', $this->getAttribute('userinfo.name')])
+        ;
+
+        return $dataProvider;
+    }
+     //添加
+    public function add($arr){
+        $this->setAttributes($arr);
+        $this->save($arr);
+        return $this->attributes['id'];
+    }
+    //验证邮箱
+    public function checkEmail($email){
+        return $this->find()->where(['email'=>$email])->one();
     }
 }

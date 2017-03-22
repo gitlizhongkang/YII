@@ -3,9 +3,9 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use app\models\Company;
-use app\models\AuditReason;
-use app\models\Jobs;
+use backend\models\Company;
+use backend\models\AuditReason;
+use backend\models\Jobs;
 use yii\data\Pagination;
 
 class CompanyController extends Controller
@@ -21,8 +21,9 @@ class CompanyController extends Controller
          $where.=" and audit=$audit";
      }
      if($time!=''){
-         $addtime=time()-$time*24*3600;
-         $where.=" and now()-addtime<=$addtime";
+         $now_time=time();
+         $addtime=$time*24*3600;
+         $where.=" and $now_time-lg_company.addtime<=$addtime";
      }
      $model=new Company;
      $companyList=$model->getList($where);
@@ -67,9 +68,6 @@ class CompanyController extends Controller
         }else{
             $msg="操作失败";
         }
-//       if($del_jobs!=''){
-//
-//       }
         return $this->render('../result/result.html',array(
             'message'=>$msg,
             'links'=>array(
@@ -77,10 +75,5 @@ class CompanyController extends Controller
             ),
         ));
     }
-    //修改企业信息
-    public function actionEditCompany()
-    {
-        $id=Yii::$app->request->get("id");
 
-    }
 }

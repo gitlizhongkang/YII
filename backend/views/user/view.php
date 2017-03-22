@@ -28,33 +28,51 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'account',
             'password',
-            'tel',
-            'email:email',
-            'head_ic',
-            'last_login_time:datetime',
+            [
+                'attribute' => 'tel',
+                'value' => function($row) {
+                    return $row->tel_audit == 0 ? $row->tel.'<span style="color: red">(未验证)</span>' : $row->tel.'<span style="color: green">(已验证)</span>';
+                },
+                'format' => 'html',
+            ],
+            [
+                'attribute' => 'email',
+                'value' => function($row) {
+                    return $row->email_audit == 0 ? $row->email.'<span style="color: red">(未验证)</span>' : $row->email.'<span style="color: green">(已验证)</span>';
+                },
+                'format' => 'html',
+            ],
+            [
+                'attribute'=>'head_ic',
+                'value'=>$model->head_ic,
+                'format' => ['image', ['width'=>'60', 'height'=>'40']],
+            ],
+            ['attribute'=>'last_login_time', 'format'=>['date', 'php:Y-m-d H:i:s']],
             'last_login_ip',
+            'userinfo.name',
+            'userinfo.sex',
+            [
+                'attribute'=>'sex',
+                'value'=>function($model) {
+                    if(isset($model->getRelatedRecords()['userinfo']))
+                    return $model->getRelatedRecords()['userinfo']->sex == 0 ? '女' : '男';
+                }
+            ],
+            'userinfo.birthday',
+            'userinfo.birthland',
+            'userinfo.residence',
+            'userinfo.education',
+            'userinfo.experience',
+            [
+                'attribute'=>'marriage',
+                'value'=>function($model) {
+                    if(isset($model->getRelatedRecords()['userinfo']))
+                    return $model->getRelatedRecords()['userinfo']->marriage == 0 ? '未婚' : '已婚';
+                }
+            ],
+            ['attribute'=>'userinfo.reg_time', 'format'=>['date', 'php:Y-m-d H:i:s']],
         ],
     ]) ?>
 
-    <?php
-    if($model->getRelatedRecords()['userinfo'])
-    {
-        echo DetailView::widget([
-            'model' => $model->getRelatedRecords()['userinfo'],
-            'attributes' => [
-                'user_id',
-                'name',
-                'sex',
-                'birthday',
-                'birthland',
-                'residence',
-                'education',
-                'experience',
-                'marriage',
-                'reg_time',
-            ],
-        ]);
-    }
-    ?>
-
+    联查 地区
 </div>

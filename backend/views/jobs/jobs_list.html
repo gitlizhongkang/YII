@@ -16,7 +16,6 @@ use yii\helpers\Url;
         }
     </style>
     <script type="text/javascript">
-        var url="<?= Url::to(['jobs/set-audit'])?>";
         var del_url="<?= Url::to(['jobs/del-jobs'])?>";
         var get_audit="<?= $audit?>";
         var get_time="<?= $time?>";
@@ -34,8 +33,8 @@ use yii\helpers\Url;
         <div class="left">审核状态</div>
         <div class="right audit">
             <a href="<?= Url::to(['jobs/jobs-list','audit'=>'','time'=>$time,'dead'=>$dead])?>" audit=""  <?php if($audit==""){?> class="select" <?php } ?> >不限</a>
-            <a href="<?= Url::to(['jobs/jobs-list','audit'=>'2','time'=>$time,'dead'=>$dead])?>" audit="1" <?php if($audit=="1"){?> class="select" <?php } ?>>审核通过</a>
-            <a href="<?= Url::to(['jobs/jobs-list','audit'=>'1','time'=>$time,'dead'=>$dead])?>" audit="2" <?php if($audit=="2"){?> class="select" <?php } ?>>等待审核</a>
+            <a href="<?= Url::to(['jobs/jobs-list','audit'=>'2','time'=>$time,'dead'=>$dead])?>" audit="2" <?php if($audit=="2"){?> class="select" <?php } ?>>审核通过</a>
+            <a href="<?= Url::to(['jobs/jobs-list','audit'=>'1','time'=>$time,'dead'=>$dead])?>" audit="1" <?php if($audit=="1"){?> class="select" <?php } ?>>等待审核</a>
             <a href="<?= Url::to(['jobs/jobs-list','audit'=>'3','time'=>$time,'dead'=>$dead])?>" audit="3" <?php if($audit=="3"){?> class="select" <?php } ?>>审核未通过</a>
             <div class="clear"></div>
         </div>
