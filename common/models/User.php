@@ -35,10 +35,10 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tel_audit','email_audit','last_login_time','status'], 'integer'],
+            [['tel_audit','email_audit','last_login_time','status','code_time'], 'integer'],
             [['account', 'email'], 'string', 'max' => 50],
             [['last_login_ip'], 'string', 'max' => 32],
-            [['password'], 'string', 'max' => 255],
+            [['password','code'], 'string', 'max' => 255],
             [['tel'], 'string', 'max' => 11],
             //[['head_ic'], 'string', 'max' => 100],
             //[['userinfo.name', 'userinfo.sex'], 'safe'],
@@ -62,6 +62,8 @@ class User extends \yii\db\ActiveRecord
             'last_login_time' => 'Last Login Time',
             'last_login_ip' => 'Last Login Ip',
             'status' => 'Status',
+            'code'=>'Code',
+            'code_time'=>'Code Time',
         ];
     }
 
@@ -158,4 +160,15 @@ class User extends \yii\db\ActiveRecord
     public function checkEmail($email){
         return $this->find()->where(['email'=>$email])->one();
     }
+    //添加code
+    public function updateOne($id,$info){
+        $res=$this->find()->where(['id'=>$id])->one();
+        $res->setAttributes($info);
+        return $res->save();
+    }
+     //根据code查询用户信息
+    public function checkCode($code){
+         return $this->find()->where(['code'=>$code])->one();
+    }
+    
 }

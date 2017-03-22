@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 use yii\helpers\Url;
 ?>
 <!DOCTYPE html>
@@ -84,7 +84,7 @@ use yii\helpers\Url;
 					验证手机号
 				</li>
 				<li style="width:59px;margin-left: 73px;">
-					<span class="icon_step step2" style='font-size: 20px;'>02</span>
+					<span class="icon_step step2" style='font-size: 20px; color:green'>02</span>
 					重置密码
 				</li>
 			</ul>
@@ -133,15 +133,15 @@ use yii\helpers\Url;
 					输入邮箱地址
 				</li>
 				<li style="margin-right:53px;width:59px;">
-					<span class="icon_step step2" style='font-size: 20px;'>02</span>
+					<span class="icon_step step1" style='font-size: 20px; color:green'>02</span>
 					验证邮箱
 				</li>
 				<li style="width:59px">
-					<span class="icon_step step3" style='font-size: 20px;'>03</span>
+					<span class="icon_step step1" style='font-size: 20px; color:green'>03</span>
 					重置密码
 				</li>
 			</ul>
-			<div class="form_body" data-view="emailFindStep1" id='tap1'>
+			<!-- <div class="form_body" data-view="emailFindStep1" id='tap1'>
 				<div class="input_item clearfix" data-propertyname="email" data-controltype="Email" style="display: block;">
 					<input class="input input_white" id="email" name="" placeholder="请输入注册时使用的邮箱地址" data-required="required" autocomplete="off" type="text"> 
 					<span class='input_tips' id='email_msg'></span>
@@ -163,17 +163,19 @@ use yii\helpers\Url;
 				<div class="input_item clearfix" style="display:none;" id="gotoVerify">
 					<input class="btn btn_green btn_active btn_block" value="登录邮箱查看" id="step2" type="button">
 				</div>
-			</div>
-			<div class="form_body" style="display:none" id='tap3'>
+			</div> -->
+			<div class="form_body" style="display:block" id='tap3'>
 				<div class="input_item clearfix">
-					<input class="input input_white" id="" name="" placeholder="请输入新密码" data-required="required" autocomplete="off" type="text"> 
+					<input class="input input_white" id="pwd" name="password" placeholder="请输入新密码" data-required="required" autocomplete="off" type="text"> 
 				</div>
 				<div class="input_item clearfix">
-					<input class="input input_white" id="" name="" placeholder="请再次输入新密码" data-required="required" autocomplete="off" type="text"> 
+					<input class="input input_white" id="pwd1" name="" placeholder="请再次输入新密码" data-required="required" autocomplete="off" type="text"> 
 				</div>
 				<div class="input_item clearfix">
-					<input class="btn btn_green btn_active btn_block" value="确定" id="step3" onclick="findByMail('step3')" type="button"> 
+					<input class="btn btn_green btn_active btn_block" value="确定" id="step3" type="button"> 
 				</div>
+				<!-- <input type="hidden" value="<?=$uid?>" name='uid'>
+				<input type="hidden" value="<?=$utype?>" name='utype'> -->
 			</div>
 		</form>
 	</div>
@@ -193,31 +195,31 @@ use yii\helpers\Url;
 </script>
 <script type="text/javascript" src="aaa_files/oss.js"></script>
 <script>
-$('#next1').click(function(){
-	var email=$('#email').val();
-	if(email==''){
-		// $('#email_msg').html('请输入注册时使用的邮箱地址');
+$('#step3').click(function(){
+	var pwd=$('#pwd').val();
+	var pwd1=$('#pwd1').val();
+	if(pwd!=pwd1){
+		alert("两次输入密码不一致");
 	}else{
+		var uid='<?=$uid?>';
+		var utype='<?=$utype?>';
 		$.ajax({
 			type:'get',
-			url:"<?=Url::to(['register/find'])?>",
+			url:"<?=Url::to(['register/update-pwd-do'])?>",
 			data:{
-				email:email
+				pwd:pwd,
+				uid:uid,
+				utype:utype
 			},
 			success:function(msg){
 				if(msg==1){
-					$('#tap1').css('display','none');
-					$('#tap2').css('display','block');
-					$('.des_mail').html(email);
-					$('.step2').css('color','green');
-				}else if(msg==0){
-					alert("该邮箱还未注册过，请先去注册吧");
+					alert("密码重置成功");location.href="<?=Url::to(['register/login'])?>";
 				}else{
-					alert("发送邮件失败");
+					alert("密码重置成功");
 				}
 			}
-		})		
-	}	
+		})
+	}
 })
 </script>
 </body></html>

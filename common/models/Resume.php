@@ -194,4 +194,8 @@ class Resume extends \yii\db\ActiveRecord
 
         return $dataProvider;
     }
+    //查询一个用户的所有简历
+    public function select($u_id){
+        return $this->find()->where(['uid'=>$u_id])->all();
+    }
 }
