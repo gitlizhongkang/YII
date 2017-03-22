@@ -47,7 +47,15 @@ class AuthItemController extends Controller
         $model=new AuthItemChild;
         $arr=$model->getAddAll($powers,$parent);
         if($arr){
-            echo "<script>alert('修改成功');location.href=""</script>";
-        }
+            $msg="修改成功";
+       }else{
+          $msg="修改失败";
+       }
+        return $this->render('../result/result.html',array(
+            'message'=>$msg,
+            'links'=>array(
+                array('上一操作',"auth-item-child/index"),
+            ),
+        ));
     }
 }

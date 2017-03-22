@@ -1,0 +1,208 @@
+<?php
+use yii\helpers\Url;
+?>
+<head>
+<meta content="text/html; charset=utf-8" />
+<link href="cas/css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="cas/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+
+  //全选/全不全
+  $(document).on('click','#chk',function(){
+    if ($(this).prop('checked') == true) {
+      $("[name=bb]:checkbox").prop('checked',true);
+    }else {
+      $("[name=bb]:checkbox").prop('checked',false);
+    }
+  })
+//隐藏子分类         
+    var tr = $('.cat');
+    for (var i = 0;i<tr.size();i++) 
+    {        
+        if (tr.eq(i).attr('parentid') != 0) 
+        {         
+            tr.eq(i).hide();            
+        }         
+  }
+
+    //无限极分类展开         
+      $(document).on('click','img[title="展开"]',function()
+      {
+        $(this).attr('src','cas/images/left_d.gif');
+        $(this).attr('title',"收起");
+
+        var id = $(this).parents('tr').attr('id');
+        var tr = $('.cat');
+        for(var i=0;i<tr.size();i++)         
+        { 
+          
+            if(tr.eq(i).attr('parentid') == id)
+             {
+              
+                tr.eq(i).show();     
+             }
+        } 
+    });  
+//递归合并 
+function hide(id,obj) 
+{   
+     obj.attr('src','cas/images/left_e.gif');    
+     obj.attr('title',"展开");
+     var tr = $('.cat');
+     for(var i = 0; i<tr.size(); i++)
+     { 
+
+        if(tr.eq(i).attr('parentid') == id)         
+        {  
+            tr.eq(i).hide();             
+            tr.eq(i).find('b img').attr('src','cas/images/left_e.gif'); 
+            tr.eq(i).find('b img').attr('title','展开');
+            var cat_id_d = tr.eq(i).attr('id');
+            hide(cat_id_d,obj);
+        }  
+    }  
+}
+
+$(document).on('click','img[title="收起"]',function()
+    { 
+        var obj =$(this); 
+        var id = $(this).parents('tr').attr('id');
+        hide(id,obj)
+    });
+  //全选
+  $('#categorychkAll').click(function(){$("#form1 :checkbox").attr('checked',$("#chk").attr('checked'))});
+
+  function MakeCat(pid)
+  {
+    var tsTimeStamp= new Date().getTime();
+    $.get("admin_ajax.php", {"act":"get_cat_city","tstime":tsTimeStamp,"pid":pid},
+      function (data,textStatus)
+       {  
+        if (data)
+        {
+         var str=data.split("|");
+         var i=1;
+         var html="";
+          for (x in str)
+          {
+          var val=str[x].split(",");
+          html+="<tr class=\"Sclass_"+pid+"\" id=\"Sclass_"+val[0]+"\">";
+            html+="<td  class=\"admin_list\"  style=\"padding-left:53px;\">";
+            html+="<img src=\"images/cat_left1.gif\" border=\"0\" align=\"absmiddle\" />";
+            <!-- html+='<img src="images/left_e.gif" border="0" align="absmiddle" parentid="'+pid+'" id="'+val[0]+'" class="leftimg1 pointer" />'; -->
+            html+="<input type=\"checkbox\" name=\"id[]\" value=\""+val[0]+"\" class=\"Scheck_"+pid+" middle_"+val[0]+" mid\" id=\""+pid+"\"/>";
+          html+="<input name=\"save_id[]\" type=\"hidden\" value=\""+val[0]+"\" />";
+            html+="<input name=\"categoryname[]\" type=\"text\"  value=\""+val[1]+"\" class=\"input_text_150\"/>";
+          html+="<span style=\"color: #CCCCCC\">(id:"+val[0]+")</span></td>";
+            html+="<td align=\"center\"  class=\"admin_list\">";
+            html+="<input name=\"category_order[]\" type=\"text\"  value=\""+val[2]+"\" class=\"input_text_50\"/>";
+            html+="</td>";
+            html+="<td class=\"admin_list\">";      
+            <!-- html+="<a href=\"?act=add_district&parentid="+val[0]+"\">此类下加子类</a>&nbsp;&nbsp;&nbsp;&nbsp;";     -->
+          html+="<a href=\"?act=edit_district&id="+val[0]+"\">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;";  
+          html+="<a onclick=\"return confirm('你确定要删除吗？')\" href=\"?act=del_district&id="+val[0]+"&{#$urltoken#}\">删除</a>";
+          html+="</td>";  
+          html+="</tr>";
+          i++;
+          }
+          html+="<tr class=\"Sclass_"+pid+"\">";
+          html+="<td  class=\"admin_list\"  style=\"padding-left:53px; color:#FF6600\">";
+          html+="<img src=\"images/cat_left2.gif\" border=\"0\" align=\"absmiddle\" />";
+          html+="<img src=\"images/act_add.gif\" border=\"0\" align=\"absmiddle\"  style=\" margin:5px;\" />";
+          html+="<span class=\"AddCat\" id=\""+pid+"\" style=\" text-decoration:underline; cursor:pointer\">增加分类</span>";
+          html+="</td>";
+          html+="<td align=\"center\"  class=\"admin_list\">&nbsp;";             
+          html+="</td>";
+          html+="<td class=\"admin_list\"  >&nbsp;";
+          html+="</td>  ";          
+          html+="</tr>";
+          $("#tr_"+pid).after(html);
+          //如果大类已经选择，则小类也勾选
+          if ($(".Bcheck[id="+pid+"]").attr("checked"))
+          {
+          $(".Scheck_"+pid).attr("checked","true");
+          }
+        }
+       }
+    );
+  }
+});
+</script>
+
+
+
+
+
+<div class="admin_main_nr_dbox">
+<div class="pagetit">
+ 
+  <div class="clear"></div>
+</div>
+<div class="toptip">
+  <h2>提示：</h2>
+  <p>
+正式使用后删除分类会导致与此分类关联的信息类别丢失，修改不会受影响。<br />
+删除顶级级分类将会自动删除此分类下的子分类。<br />
+</p>
+</div>
+  <form id="form1" name="form1" method="post" action="?act=district_all_save">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="list" class="link_lan"  >
+    <tr>
+      <td height="26" class="admin_list_tit admin_list_first" >
+      <label id="categorychkAll"><input type="checkbox" name=" " title="全选/反选" id="chk" />
+      地区分类</label>
+   
+    </td>
+    <td width="160"   align="center"  class="admin_list_tit">排序</td>
+      <td width="260"   align="center" class="admin_list_tit">操作</td>
+    </tr>
+<?php foreach ($craft as $key => $value): ?>
+
+     <tr class="cat" id="<?= $value['id'];?>" parentid="<?= $value['parentid'];?>">
+      <td   class="admin_list admin_list_first" >
+      <input type="checkbox" name="bb" value="<?= $value['id'];?>" id="<?= $value['id'];?>"  class="Bcheck"/>
+<?php echo str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;',$value['leave'])?>
+    <input name="save_id[]" type="hidden" value="<?= $value['id'];?>" />
+<b><img src="cas/images/left_e.gif" title="展开" border="0" align="absmiddle" parentid="<?= $value['parentid'];?>" id="<?= $value['id'];?>" class="leftimg pointer"/><b/>
+    <input name="categoryname[]" type="text" parentid="<?= $value['parentid'];?>" value="<?= $value['categoryname'];?>" class="input_text_150" style="color:#0066CC;   "/>
+    <span style="color:#CCCCCC">(id:<?= $value['id'];?>)</span>    </td>
+     <td align="center"  class="admin_list">
+     <input name="category_order[]" type="text"  value="<?= $value['category_order'];?>" class="input_text_50"/>
+    </td>
+     <td class="admin_list">
+    <a href="<?=Url::to(['assorting/jobadd'])?>&parentid=<?= $value['id'];?>">此类下加子类</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <a onclick="return confirm('你确定要删除吗？')" href="#">删除</a>
+       </td>
+    </tr>
+<?php endforeach ?>
+      <tr >
+        <td  class="admin_list"  style="padding-left:10px; color:#FF6600">
+        <img src="cas/images/act_add.gif" border="0" align="absmiddle"  style=" margin:5px;" />
+        <span class="AddCatPid"   style=" text-decoration:underline; cursor:pointer">增加顶级分类</span>
+        </td>
+         <td align="center"  class="admin_list">&nbsp;
+         
+        </td>
+        <td class="admin_list"  >&nbsp;
+        
+          </td>
+        
+      </tr>
+    </table>
+  <table width="100%" border="0" cellspacing="10"  class="admin_list_btm">
+<tr>
+        <td width="305" align="right">
+    
+      </td>
+      </tr>
+  </table>
+  </form>
+</div>
+
+</body>
+</html>

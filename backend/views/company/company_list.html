@@ -14,10 +14,10 @@ use yii\helpers\Url;
             z-index: 1; left: 0px;
             opacity:0.1;
         }
-
     </style>
 <script type="text/javascript">
     var url="<?= Url::to(['company/set-audit'])?>";
+    var del_url="<?= Url::to(['company/del-company'])?>";
     var get_audit="<?= $audit?>";
     var get_time="<?= $time?>";
 </script>
@@ -61,12 +61,12 @@ use yii\helpers\Url;
       <td  class="admin_list_tit admin_list_first">
       <label id="chkAll"><input type="checkbox" name=" " title="全选/反选" id="chk"/>公司名称</label>
 	  </td>
-	  <td width="12%" class="admin_list_tit">营业执照</td>  
+	  <td width="12%" class="admin_list_tit">营业执照</td>
+        <td width="7%" align="center" class="admin_list_tit">所属用户</td>
       <td width="10%" align="center" class="admin_list_tit">认证状态</td>   
       <td width="7%" align="center" class="admin_list_tit">创建时间</td>
 	  <td width="7%" align="center" class="admin_list_tit">刷新时间</td>
 	  <td width="7%" align="center" class="admin_list_tit">目前积分</td>
-	  <td width="7%" align="center" class="admin_list_tit">套餐名称</td>
 	  <td width="9%" align="center" class="admin_list_tit">简历处理度</td>
       <td align="center" class="admin_list_tit">操作</td>
     </tr>
@@ -75,6 +75,7 @@ use yii\helpers\Url;
       <td class="admin_list admin_list_first" >
         <input name="y_id[]" type="checkbox" id="y_id" value="<?php echo $v['id']?>" />
 		<a href="" target="_blank"><?= $v['companyname']?></a>
+          <a href="<?= Url::to(['mail/index','email'=>$v['email'],'companyname'=>$v['companyname'] ])?>"><img src="images/email.gif"></a>
 	  </td>
       <td  class="admin_list">
 		<?php if(!empty($v['certificate_img'])){?>
@@ -83,6 +84,9 @@ use yii\helpers\Url;
             <span  style="color: #999999">未上传</span>
         <?php } ?>
      </td>
+          <td  class="admin_list">
+              <?php echo $v['username']?>
+          </td>
     <td align="center" class="admin_list">
         <?php if($v['audit']==0){?>
         <span style="color: #999999">未认证</span>
@@ -101,18 +105,16 @@ use yii\helpers\Url;
         <?= date("Y-m-d",$v['refreshtime'])?>
     </td>
     <td align="center" class="admin_list">
-        <span  style="color: black"><?php echo $v['integral']?$v['intergral']:'0' ?>分</span>
-    </td>
-    <td align="center" class="admin_list">
+        <span  style="color: black"><?php echo $v['points']?$v['points']:'0' ?>分</span>
     </td>
     <td align="center" class="admin_list">
         <span  style="color: pink"><?php echo $v['resume_processing'] ?>%</span>
     </td>
     <td width="15%" align="center" class="admin_list">
-    <a href="admin_memberslog.php?uid=">日志</a>
-    <a href="?act=edit_company_profile&id=">修改</a>
-    <a href="?act=meal_log&key_uid=&key_type=2&key_type_cn=UID">充值记录</a>
-    <a href="?act=management&id="  target="_blank"  class="userinfo"  id="">管理</a>
+    <a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'360'])?>">日志</a>
+    <a href="<?= Url::to(['company/edit-company','id'=>$v['id']])?>">修改</a>
+    <a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'360'])?>">充值记录</a>
+    <a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'360'])?>"  target="_blank"  class="userinfo"  id="">管理</a>
     </td>
   </tr>
   <?php }?>
@@ -125,7 +127,7 @@ use yii\helpers\Url;
       <tr>
         <td>
         <input type="button" name="" value="认证企业" oc="OpAuditLayer" class="admin_submit"  id="ButAudit" />
-		<input type="button" name="" value="刷新" oc="OprefreshLayer" class="admin_submit"  id="Butrefresh" />
+		<input type="button" name="" value="暂不开发此功能" oc="OprefreshLayer" class="admin_submit"  id="Butrefresh" />
 		<input type="button" name="" value="删除" oc="OpDelLayer" class="admin_submit"   id="ButDel"/>
 		</td>
       </tr>
@@ -143,43 +145,11 @@ use yii\helpers\Url;
     <tr>
       <td height="30" colspan="2"><strong  style="color:#0066CC; font-size:14px;">你确定要删除吗？</strong></td>
       </tr>
-    <tr>
-      <td width="20" height="25">&nbsp;</td>
-      <td><label>
-        <input name="delete_company" type="checkbox" id="delete_company" value="yes" checked="checked" />
-        <span style="color:green;">删除企业资料</span></label></td>
-    </tr>
-	<tr>
-      <td height="25">&nbsp;</td>
-      <td><label>
-        <input name="delete_jobs" type="checkbox" id="delete_jobs" value="yes" checked="checked"/>
-          <span style="color:green;">删除此企业发布的招聘信息</span></label></td>
-    </tr>
 	<tr>
 	  <td height="25">&nbsp;</td>
 	  <td><input type="submit" name="delete" value="确定" class="admin_submit"    />
        <input type="reset" name="OpDelLayer" value="取消" class="admin_submit"    /></td>
 	  </tr>
-  </table>
-</div>
-<!-- -->
-<div style="display:none;background:white; border:1px solid #8c8c8c;Box-shadow:0 0 10px 10px #c0c0c0;" id="OprefreshLayer">
-    <p style="background:#b7ccfd; height:30px;"><span style="margin-left:10px;">请选择</span></p>
-<table style="padding-left:20px; margin-top:20px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="6" >
-    <tr>
-      <td height="30" colspan="2"><strong  style="color:#0066CC; font-size:14px;">刷新该企业的职位：</strong></td>
-      </tr>
-    <tr>
-      <td width="20" height="25">&nbsp;</td>
-      <td><label>
-        <input name="refresh_jobs" type="checkbox" id="refresh_jobs" value="yes" />
-        同时刷新所选企业的职位</label></td>
-    </tr>
-	 <tr>
-      <td height="25">&nbsp;</td>
-      <td><input type="submit" name="set_refresh" value="确定" class="admin_submit"    />
-          <input type="reset" name="OprefreshLayer" value="取消" class="admin_submit"    /></td>
-    </tr>
   </table>
 </div>
 <!-- -->

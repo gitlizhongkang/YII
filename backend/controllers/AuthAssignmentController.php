@@ -4,7 +4,6 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use app\models\Job;
 use app\models\AuthAssignment;
 use app\models\AuthItemChild;
 use app\models\Admin;

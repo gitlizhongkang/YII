@@ -44,20 +44,20 @@ use yii\helpers\Url;
 					<div class="ifame-item-sub">
 						<ul>
 						    <li><a href="<?=Url::to(['company/company-list'])?>" target="content">企业列表</a></li>
-							<li class="active"><a href="<?=Url::to(['company/job-list'])?>" target="content">职位列表</a></li>
-							<li><a href="<?=Url::to(['company/order-manage'])?>" target="content">订单管理</a></li>
-							<li><a href="<?=Url::to(['company/company-spread'])?>" target="content">企业推广</a></li>
+							<li class="active"><a href="<?=Url::to(['jobs/jobs-list'])?>" target="content">职位列表</a></li>
+							<li><a href="<?=Url::to(['order/order-list'])?>" target="content">订单管理</a></li>
+							<li><a href="<?=Url::to(['member/member-list'])?>" target="content">会员管理</a></li>
 						</ul>
 					</div>
 				</li>
 				<li class="public-ifame-item">
-					<a href="javascript:;">个人管理</a>
+					<a href="javascript:;">用户管理</a>
 					<div class="ifame-item-sub">
 						<ul>
-							<li><a href="信息管理/article_manage.html" target="content">企业推广</a></li>
-							<li><a href="信息管理/cate_manage.html" target="content">待审核简历</a></li>
-							<li><a href="信息管理/cate_manage.html" target="content">个人列表</a></li>
-							<li><a href="信息管理/cate_manage.html" target="content">照片简历</a></li>
+							<li><a href="<?= Url::to(['user/index'])?>" target="content">用户列表</a></li>
+							<li><a href="<?= Url::to(['user-photo/index'])?>" target="content">照片列表</a></li>
+							<li><a href="<?= Url::to(['resume/index'])?>" target="content">简历列表</a></li>
+							<li><a href="<?= Url::to(['resume/audit'])?>" target="content">待审核简历</a></li>
 						</ul>
 					</div>
 				</li>
@@ -72,12 +72,22 @@ use yii\helpers\Url;
 					</div>
 				</li>
 				<li class="public-ifame-item">
+					<a href="javascript:;">分类管理</a>
+					<div class="ifame-item-sub">
+						<ul>
+							<li><a href="<?=Url::to(['assorting/district'])?>" target="content">地区分类</a></li>
+							<li><a href="<?=Url::to(['assorting/job'])?>" target="content">职位分类</a></li>
+							<li><a href="<?=Url::to(['assorting/craft'])?>" target="content">行业分类</a></li>
+							<li><a href="<?=Url::to(['assorting/rests'])?>" target="content">其他分类</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="public-ifame-item">
 					<a href="javascript:;">系统管理</a>
 					<div class="ifame-item-sub">
 						<ul>
 							<li><a href="<?=Url::to(['auth-assignment/index'])?>" target="content">权限管理</a></li>
-							<li><a href="#" target="content">分类管理</a></li>
-							<li><a href="#" target="content">热门关键词</a></li>
+							<li><a href="<?=Url::to(['hots/show'])?>" target="content">热门关键词</a></li>
 						</ul>
 					</div>
 				</li>				
