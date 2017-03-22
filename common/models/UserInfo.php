@@ -25,6 +25,7 @@ class UserInfo extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $birthland;
     public static function tableName()
     {
         return '{{%user_info}}';
@@ -36,7 +37,7 @@ class UserInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'education', 'experience', 'marriage'], 'required'],
+            [['user_id'], 'required'],
             [['user_id', 'marriage', 'reg_time'], 'integer'],
             [['name', 'birthday', 'residence'], 'string', 'max' => 30],
             [['sex'], 'string', 'max' => 3],
@@ -74,4 +75,8 @@ class UserInfo extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }*/
+    public function add($arr){
+        $this->setAttributes($arr);
+        return $this->save($arr);
+    }
 }
