@@ -18,14 +18,14 @@ $(function(){
             $(this).parent("label").css("color","#990000");
         }
     })
-    //认证企业 刷新 删除
-    $("#ButAudit,#Butrefresh,#ButDel").mouseover(function(){
+    //添加  删除
+    $("#ButAdd,#ButDel").mouseover(function(){
         $(this).css("background-color","gold");
     })
-    $("#ButAudit,#Butrefresh,#ButDel").mouseout(function(){
+    $("#ButAdd,#ButDel").mouseout(function(){
         $(this).css("background-color","");
     })
-    $("#ButAudit,#Butrefresh,#ButDel").click(function(){
+    $("#ButAdd,#ButDel").click(function(){
         if($("#form1 :checkbox").is(":checked")==false){
             alert("请先选择企业");
         }else{
@@ -45,39 +45,23 @@ $(function(){
         var name="#"+$(this).attr("name");
         $(name).hide();
     })
-    //认证企业
-    $("input[name=set_audit]").click(function(){
-        var reason="";
-        var ids=0;
-        for(var i=0;i<$("input[id=y_id]").length;i++){
-            if($("input[id=y_id]").eq(i).is(":checked")==true){
-                ids++;
-            }
-        }
-        if(ids>1){
-            alert("请选择一个企业即可");
-            return;
-        }
-        var id=$("input[id=y_id]:checked").val();
-        var audit=$("input[name=audit]:checked").val();
-        if(audit==3){
-            reason=$("textarea[name=reason]").val();
-        }
-        location.href=url+"&id="+id+"&audit="+audit+"&reason="+reason;
-    })
     //删除功能
     $("input[name=delete]").click(function(){
         var ids="";
         var del_jobs="";
+        var del_company="";
         for(var i=0;i<$("input[id=y_id]").length;i++){
             if($("input[id=y_id]").eq(i).is(":checked")==true){
                 ids+=","+$("input[id=y_id]").eq(i).val();
             }
         };
         ids=ids.substr(1);
+        if($("#delete_company").is(":checked")==true){
+            del_company=1;
+        }
         if($("#delete_jobs").is(":checked")==true){
             del_jobs=1;
         }
-        location.href=del_url+"&id="+ids+"&del_jobs="+del_jobs;
+        location.href=del_url+"&id="+ids+"&del_company="+del_company+"&del_jobs="+del_jobs;
     })
 })

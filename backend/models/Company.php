@@ -56,9 +56,8 @@ class Company extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['companyname', 'trade'], 'required'],
             [['contents'], 'string'],
-            [['audit', 'map_open', 'addtime', 'refreshtime', 'click', 'user_status', 'contact_show', ' telephone_show', 'address_show', 'email_show', 'resume_processing'], 'integer'],
+            [['audit','u_id', 'map_open', 'addtime', 'refreshtime', 'click', 'user_status', 'contact_show', ' telephone_show', 'address_show', 'email_show', 'resume_processing'], 'integer'],
             [['companyname'], 'string', 'max' => 60],
             [['nature', 'trade', 'province', 'city', 'street', 'scale', 'registered', 'currency', 'address', 'contact', 'telphone', 'landline_tel', 'email', 'website', 'logo', 'map_x', 'map_y', 'certificate_img'], 'string', 'max' => 255],
         ];
@@ -113,6 +112,15 @@ class Company extends \yii\db\ActiveRecord
         $info['list']=$list;
         return $info;
     }
+    public function getList1($where)
+    {
+        $arr=Company::find()->select("id,companyname,logo,trade,scale,province")->where($where);
+        $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>6]);
+        $list=$arr->offset($pages->offset)->limit($pages->limit)->asArray()->all();
+        $info['pages']=$pages;
+        $info['list']=$list;
+        return $info;
+    }
     //修改
     public function setAudit($id,$key,$value)
     {
@@ -125,9 +133,19 @@ class Company extends \yii\db\ActiveRecord
     {
         return Company::deleteAll("id in ($id)");
     }
+    //根据uid删除企业
+    public function udel($id)
+    {
+        return Jobs::deleteAll("u_id in ($id)");
+    }
     //查询单条企业信息
     public function getOne($id)
     {
         return Company::find()->where(['id'=>$id])->one();
+    }
+    public function add($data)
+    {
+        $this->setAttributes($data);
+        return $this->save();
     }
 }

@@ -64,7 +64,7 @@ var youdao_conv_id = 271546;
     		</a>
     		<ul class="reset" id="navheader">
     			<li class="current"><a href="index.html">首页</a></li>
-    			<li ><a href="companylist.html" >公司</a></li>
+    			<li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
     			<li ><a href="#" target="_blank">论坛</a></li>
     			<li ><a href="jianli.html" rel="nofollow">我的简历</a></li>
 	    		<li ><a href="create.html" rel="nofollow">发布职位</a></li>
@@ -79,7 +79,7 @@ var youdao_conv_id = 271546;
                 <?php if($user['type']==0){ ?>
                     <dd><a rel="nofollow" href="person">个人中心</a></dd>
                <?php }else{ ?>
-                    <dd><a rel="nofollow" href="">企业中心</a></dd>
+                    <dd><a rel="nofollow" href="<?=Url::to(['company/index'])?>">企业中心</a></dd>
                 <?php } ?>
                     <dd class="logout"><a rel="nofollow" href="<?=Url::to(['register/logout'])?>">退出</a></dd>
             </dl>

@@ -1,11 +1,19 @@
 <?php
 namespace frontend\controllers;
 
+use Codeception\Lib\Di;
+use common\models\District;
 use Yii;
 use yii\web\Controller;
 use common\models\Ad;
 use common\models\JobsCategory;
+<<<<<<< HEAD
+use common\models\Category;
+use backend\models\Company;
+use yii\data\Pagination;
+=======
 use backend\models\Jobs;
+>>>>>>> b39e94c25bce4acc875a3ad2c653e6a315a48412
 
 class IndexController extends Controller
 {
@@ -38,6 +46,36 @@ class IndexController extends Controller
 		//最新职位
 		return $this->render('index.html',$data);
 	}
+<<<<<<< HEAD
+	public function actionCompanyList()
+    {
+        $province_id=Yii::$app->request->get("province_id");
+        $scale_id=Yii::$app->request->get("scale_id");
+        $trade_id=Yii::$app->request->get("trade_id");
+        $where="1=1";
+        if($province_id!=''){
+            $where.=" and district_id=$province_id";
+        }
+        if($scale_id!=''){
+            $where.=" and scale_id=$scale_id";
+        }
+        if($trade_id!=''){
+            $where.=" and trade_id=$trade_id";
+        }
+        $data['provincelist']=District::find()->where("parentid = 0")->asArray()->all();
+        $data['scalelist']=Category::find()->where("c_alias = 'QS_scale'")->asArray()->all();
+        $data['tradelist']=Category::find()->where("c_alias = 'QS_trade'")->asArray()->all();
+        $model=new Company;
+        $list=$model->getList1($where);
+        $data['companylist']=$list['list'];
+        $data['pages']=$list['pages'];
+        $data['province_id']=$province_id;
+        $data['scale_id']=$scale_id;
+        $data['trade_id']=$trade_id;
+        return $this->render("companylist.html",$data);
+    }
+
+=======
 	//职位分类重新排序
 	public function get_job($job)
     {
@@ -58,4 +96,5 @@ class IndexController extends Controller
         }
         return $arr;
     }
+>>>>>>> b39e94c25bce4acc875a3ad2c653e6a315a48412
 }
