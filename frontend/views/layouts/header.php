@@ -40,7 +40,6 @@ $user=$session->get('user');
         <script src="style/js/ajaxCross.json" charset="UTF-8"></script>
     </head>
 <body>
-<<<<<<< HEAD
     <!--<link href="service/css/lrtk.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="service/js/lrtk.js"></script>
     <div id='cs_box'>
@@ -83,7 +82,6 @@ $user=$session->get('user');
                     <?php }else{ ?>
                         <dd><a rel="nofollow" href="">企业中心</a></dd>
                     <?php } ?>
-=======
 <link href="service/css/lrtk.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="service/js/lrtk.js"></script>
 <div id='cs_box'>
@@ -126,7 +124,6 @@ $user=$session->get('user');
                <?php }else{ ?>
                     <dd><a rel="nofollow" href="<?=Url::to(['company/index'])?>">企业中心</a></dd>
                 <?php } ?>
->>>>>>> 828e1ae08b72b46c61888a1a6d09448a0b615d19
                     <dd class="logout"><a rel="nofollow" href="<?=Url::to(['register/logout'])?>">退出</a></dd>
                 </dl>
             <?php }else{ ?>
@@ -139,3 +136,4 @@ $user=$session->get('user');
         </div>
     </div>
 <?php echo $content; ?>
+
