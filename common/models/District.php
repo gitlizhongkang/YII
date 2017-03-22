@@ -51,7 +51,9 @@ class District extends \yii\db\ActiveRecord
             'stat_resume' => 'Stat Resume',
         ];
     }
-// 无限极分类，递归
+/**
+ * 无限极分类，递归
+ */
     public function tree($cat_info,$parentid = 0,$leave=0)
     {
         static $tree = array();

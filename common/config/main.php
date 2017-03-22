@@ -25,4 +25,5 @@ return [
              ],
           ],
     ],
+    'language' => 'zh-CN',
 ];

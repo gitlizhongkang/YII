@@ -10,10 +10,11 @@ use backend\models\Jobs;
 class IndexController extends Controller
 {
 	public $layout='/header';
-	//前台首页
-	public function actionIndex(){	
+	//前台首页		
+	public function actionIndex()
+	{
 		$cache=Yii::$app->cache;
-		//缓存	
+		//缓存
 		$ad=new Ad;
 		$data['lun']=$ad->show1();
 		$data['middle']=$ad->show2();
