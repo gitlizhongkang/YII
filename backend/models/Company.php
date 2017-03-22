@@ -113,6 +113,15 @@ class Company extends \yii\db\ActiveRecord
         $info['list']=$list;
         return $info;
     }
+    public function getList1($where)
+    {
+        $arr=Company::find()->select("id,companyname,logo,trade,scale,province")->where($where);
+        $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>6]);
+        $list=$arr->offset($pages->offset)->limit($pages->limit)->asArray()->all();
+        $info['pages']=$pages;
+        $info['list']=$list;
+        return $info;
+    }
     //修改
     public function setAudit($id,$key,$value)
     {
