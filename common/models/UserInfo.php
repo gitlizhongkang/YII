@@ -9,16 +9,17 @@ use Yii;
  *
  * @property integer $user_id
  * @property string $name
- * @property string $sex
+ * @property integer $sex
  * @property string $height
  * @property string $birthday
- * @property string $birthland
+ * @property integer $province_id
+ * @property integer $city_id
+ * @property integer $district_id
  * @property string $residence
  * @property string $education
  * @property string $experience
  * @property integer $marriage
  * @property integer $reg_time
- * @property integer $status
  */
 class UserInfo extends \yii\db\ActiveRecord
 {
@@ -37,13 +38,18 @@ class UserInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+<<<<<<< HEAD
+            [['user_id', 'education', 'experience'], 'required'],
+            [['user_id', 'sex', 'province_id', 'city_id', 'district_id', 'marriage', 'reg_time'], 'integer'],
+            [['name', 'birthday'], 'string', 'max' => 30],
+=======
             [['user_id'], 'required'],
             [['user_id', 'marriage', 'reg_time'], 'integer'],
             [['name', 'birthday', 'residence'], 'string', 'max' => 30],
             [['sex'], 'string', 'max' => 3],
+>>>>>>> 828e1ae08b72b46c61888a1a6d09448a0b615d19
             [['height'], 'string', 'max' => 5],
-            [['birthland'], 'string', 'max' => 255],
-            [['education', 'experience'], 'string', 'max' => 50],
+            [['education', 'experience','residence'], 'string', 'max' => 50],
         ];
     }
 
@@ -58,7 +64,9 @@ class UserInfo extends \yii\db\ActiveRecord
             'sex' => 'Sex',
             'height' => 'Height',
             'birthday' => 'Birthday',
-            'birthland' => 'Birthland',
+            'province_id' => 'Province ID',
+            'city_id' => 'City ID',
+            'district_id' => 'District ID',
             'residence' => 'Residence',
             'education' => 'Education',
             'experience' => 'Experience',
@@ -66,6 +74,8 @@ class UserInfo extends \yii\db\ActiveRecord
             'reg_time' => 'Reg Time',
         ];
     }
+<<<<<<< HEAD
+=======
 
 
     /**
@@ -79,4 +89,5 @@ class UserInfo extends \yii\db\ActiveRecord
         $this->setAttributes($arr);
         return $this->save($arr);
     }
+>>>>>>> 828e1ae08b72b46c61888a1a6d09448a0b615d19
 }

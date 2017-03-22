@@ -54,8 +54,16 @@ class ResumeController extends Controller
      */
     public function actionView($id)
     {
+        $resume = Resume::find()
+            ->select('lg_resume.* , lg_user_photo.photo , lg_jobs_category.categoryname')
+            ->join('INNER JOIN','lg_user_photo','photo_id = lg_user_photo.id')
+            ->join('INNER JOIN','lg_jobs_category','intention_jobs_id = lg_jobs_category.id')
+            ->where(['lg_resume.id'=> $id])
+            ->asArray()
+            ->one();
+        //print_r($resume);die;
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $resume
         ]);
     }
 
