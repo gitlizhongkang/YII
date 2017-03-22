@@ -74,7 +74,11 @@ class JobsCategory extends \yii\db\ActiveRecord
         return  $job_job = $this->tree($cat_info);
        
     }
-
+    public function select1()
+    {
+        return $cat_info = $this->find()->asArray()->all();
+      
+    }
 
 }
 
