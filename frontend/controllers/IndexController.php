@@ -7,13 +7,10 @@ use Yii;
 use yii\web\Controller;
 use common\models\Ad;
 use common\models\JobsCategory;
-<<<<<<< HEAD
 use common\models\Category;
 use backend\models\Company;
 use yii\data\Pagination;
-=======
 use backend\models\Jobs;
->>>>>>> b39e94c25bce4acc875a3ad2c653e6a315a48412
 
 class IndexController extends Controller
 {
@@ -46,7 +43,6 @@ class IndexController extends Controller
 		//最新职位
 		return $this->render('index.html',$data);
 	}
-<<<<<<< HEAD
 	public function actionCompanyList()
     {
         $province_id=Yii::$app->request->get("province_id");
@@ -74,8 +70,6 @@ class IndexController extends Controller
         $data['trade_id']=$trade_id;
         return $this->render("companylist.html",$data);
     }
-
-=======
 	//职位分类重新排序
 	public function get_job($job)
     {
@@ -96,5 +90,4 @@ class IndexController extends Controller
         }
         return $arr;
     }
->>>>>>> b39e94c25bce4acc875a3ad2c653e6a315a48412
 }
