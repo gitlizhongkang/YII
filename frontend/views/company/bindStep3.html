@@ -1,6 +1,9 @@
-﻿</script><script type="text/javascript" async="" src="style/js/conversion.js"></script>
+﻿<?php
+use yii\helpers\Url;
+?>
+<script type="text/javascript" async="" src="style/js/conversion.js"></script>
 <script type="text/javascript">
-var ctx = "h";
+    var blind3 = "<?= Url::to(['company/blind3'])?>";
 console.log(1);
 </script>
 <link href="h/images/favicon.ico" rel="Shortcut Icon">
@@ -31,7 +34,7 @@ var youdao_conv_id = 271546;
                 <dd> 
                 	<div class="os_step_3"></div>
                 	<div class="open_service_success">
-						<?php if($info['msg']==1){  ?>
+						<?php if(isset($msg)){  ?>
 	                	<h3>验证邮件发送成功</h3>
 	                	<h4>请登录邮箱点击邮件内的链接，验证后即可发布职位</h4>
 						<? }else{ ?>

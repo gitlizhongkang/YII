@@ -27,7 +27,12 @@ class CompanyController extends Controller
             return $this->render("bindstep2.html");
         }
         if($companyinfo['check_email']==0){
-            return $this->render("bindstep3.html");
+            if($companyinfo['email_code']==''){
+                return $this->render("bindstep3.html");
+            }else{
+                $info['msg']=1;
+                return $this->render("bindstep3.html",$info);
+            }
         }
     }
     public function actionBlind1()
@@ -101,14 +106,35 @@ class CompanyController extends Controller
         $res=$test->save();
         $mail = Yii::$app->mailer->compose();
         $mail->setTo($companyinfo['email']);	//接收人邮箱
-        $body="点击验证邮箱"."<a href='http://www.front.com/index.php?r=company/check-email/code='>http://www.front.com/index.php?r=company/check-email/code=".$email_code."</a>";
+        $body="点击验证邮箱"."<a href='http://www.front.com/index.php?r=company/check-email&email_code=$email_code'>http://www.front.com/index.php?r=company/check-email&email_code=".$email_code."</a>";
         $mail->setSubject("邮箱验证");	//邮件标题
         $mail->setHtmlBody($body);	//发送内容(可写HTML代码)
         if ($mail->send()){
             $info['msg']=1;
-        }else{
-            $info['msg']=0;
         }
         return $this->render("bindstep3.html",$info);
+    }
+    //验证邮箱
+    public function actionCheckEmail()
+    {
+        $code=Yii::$app->request->get("email_code");
+        $companyinfo=Company::find()->where(["email_code"=>$code])->asArray()->one();
+         if($companyinfo['email_code']){
+             $test=Company::find()->where(["id"=>$companyinfo['id']])->one();
+             $test->email_code="";
+             $test->check_email=1;
+             $res=$test->save();
+             if($res){
+                 $info['msg']="恭喜你，公司邮箱验证完毕，请完善公司信息";
+                 $info['code']=1;
+             }else{
+                 $info['msg']="公司邮箱验证失败,请重新发起验证";
+                 $info['code']=2;
+             }
+         }else{
+             $info['code']=3;
+             $info['msg']='这是什么';
+         }
+        return $this->render('success.html',$info);
     }
 }
