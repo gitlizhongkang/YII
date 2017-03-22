@@ -20,7 +20,6 @@ class MailController extends \yii\web\Controller
         $body=Yii::$app->request->post("body");
         $mail= Yii::$app->mailer->compose();
         $mail->setTo($email);
-
         $mail->setSubject($subject);
         $mail->setTextBody($body);
         if($mail->send()){

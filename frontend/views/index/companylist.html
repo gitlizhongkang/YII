@@ -3,16 +3,43 @@ use yii\widgets\LinkPager;
 use yii\helpers\Url;
 ?>
 <style>
-	.page li {list-style-type:none;float:left;}
-	.link_bk a:link {color: #333333;text-decoration: none;}
-	.page li a{display:block;height:17px;line-height:17px;padding:2px 5px;background-color:#fff;border:1px solid #ccc;text-decoration:none;color:#666666;}
-	.page{list-style:none;margin:0;padding:0;font-family:"����";overflow:hidden;zoom:1;margin-top:20px;}
+	.page li{
+		list-style-type: none;
+		float: left;
+		margin-left: 10px;
+		background: #91cebe none repeat scroll 0 0;
+		color: #fff;
+		float: left;
+		height: 30px;
+		line-height: 30px;
+		margin: 0 10px 10px 0;
+		padding: 0 10px;
+		transition: all 0.2s ease 0s;
+		font
+	}
+	.page li:hover
+	{
+		background-color:#009875;
+	}
+	.page li a:hover{
+		color: white;
+	}
+	.page a {
+		cursor: pointer;
+		text-decoration: none;
+	}
 </style>
 <script>
     $(function(){
         var province_id="<?= $province_id?>";
         var scale_id="<?= $scale_id?>";
         var trade_id="<?= $trade_id?>";
+        for(var i=0;i<$(".page li").length;i++){
+            if($(".page li").eq(i).children('a').html()=="<?php if(isset($_GET['page'])){echo $_GET['page'];}else{echo 1;}?>"){
+                $(".page li").eq(i).children('a').css('color','white');
+                $(".page li").eq(i).css('background','#0d9572');
+            }
+        }
         for(var i=0;i<$(".city li a").length;i++){
             if($(".city li a").eq(i).attr("did")==province_id){
                 $(".city li a").eq(i).attr("class","current");
@@ -204,7 +231,9 @@ var youdao_conv_id = 271546;
 											<?php } ?>
 										</ul>
 
-				<div class="page link_bk"><?php echo LinkPager::widget(['pagination' => $pages]);?></div>
+				<div class="page"><?php
+    echo LinkPager::widget(['pagination' => $pages,'nextPageLabel' => '下一页', 'prevPageLabel' => '上一页','firstPageLabel' => '首页','lastPageLabel' => '尾页','hideOnSinglePage' => false ]);
+					?></div>
             </div>	
             <div class="content_r">
             	<div class="subscribe_side">
