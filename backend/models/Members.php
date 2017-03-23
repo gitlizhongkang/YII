@@ -3,7 +3,7 @@
 namespace backend\models;
 
 use Yii;
-
+use yii\data\Pagination;
 /**
  * This is the model class for table "{{%members}}".
  *
@@ -36,8 +36,8 @@ class Members extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['reg_time', 'last_login_time', 'qq_blind_time', 'points'], 'integer'],
-            [['username', 'email', 'mobile', 'password', 'reg_ip', 'last_login_ip', 'qq_nick'], 'string', 'max' => 255],
+            [['reg_time', 'last_login_time', 'qq_blind_time', 'points','code_time'], 'integer'],
+            [['username', 'email', 'mobile', 'password', 'reg_ip', 'last_login_ip', 'qq_nick','code'], 'string', 'max' => 255],
         ];
     }
 
@@ -59,6 +59,42 @@ class Members extends \yii\db\ActiveRecord
             'qq_nick' => 'Qq Nick',
             'qq_blind_time' => 'Qq Blind Time',
             'points' => 'Points',
+            'code'=>'Code',
+            'code_time'=>'Code Time',
         ];
+    }
+    public function getList($where)
+    {
+        $arr=Members::find()->where($where);
+        $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>2]);
+        $list=$arr->offset($pages->offset)->limit($pages->limit)->asArray()->all();
+        $info['pages']=$pages;
+        $info['list']=$list;
+        return $info;
+    }
+    //删除职位资料
+    public function del($id)
+    {
+        return Members::deleteAll("uid in ($id)");
+    }    
+     //添加
+    public function add($arr){
+        $this->setAttributes($arr);
+        $this->save();
+        return $this->attributes['uid'];
+    }
+    //验证邮箱
+    public function checkEmail($email){
+        return $this->find()->where(['email'=>$email])->one();
+    }
+     //添加code  修改积分
+    public function updateOne($id,$info){
+        $res=$this->find()->where(['uid'=>$id])->one();
+        $res->setAttributes($info);
+        return $res->save();
+    }
+    //根据code查询用户信息
+    public function checkCode($code){
+         return $this->find()->where(['code'=>$code])->one();
     }
 }

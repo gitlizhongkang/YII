@@ -1,0 +1,299 @@
+﻿<?php
+use yii\widgets\LinkPager;
+use yii\helpers\Url;
+?>
+<style>
+	.page li{
+		list-style-type: none;
+		float: left;
+		margin-left: 10px;
+		background: #91cebe none repeat scroll 0 0;
+		color: #fff;
+		float: left;
+		height: 30px;
+		line-height: 30px;
+		margin: 0 10px 10px 0;
+		padding: 0 10px;
+		transition: all 0.2s ease 0s;
+		font
+	}
+	.page li:hover
+	{
+		background-color:#009875;
+	}
+	.page li a:hover{
+		color: white;
+	}
+	.page a {
+		cursor: pointer;
+		text-decoration: none;
+	}
+</style>
+<script>
+    $(function(){
+        var province_id="<?= $province_id?>";
+        var scale_id="<?= $scale_id?>";
+        var trade_id="<?= $trade_id?>";
+        for(var i=0;i<$(".page li").length;i++){
+            if($(".page li").eq(i).children('a').html()=="<?php if(isset($_GET['page'])){echo $_GET['page'];}else{echo 1;}?>"){
+                $(".page li").eq(i).children('a').css('color','white');
+                $(".page li").eq(i).css('background','#0d9572');
+            }
+        }
+        for(var i=0;i<$(".city li a").length;i++){
+            if($(".city li a").eq(i).attr("did")==province_id){
+                $(".city li a").eq(i).attr("class","current");
+                var did=$(".city li a").eq(i).attr("did");
+                $("#province").val(did);
+            }else{
+                $(".city li a").eq(i).attr("class","");
+            }
+        }
+        for(var i=0;i<$(".scale  a").length;i++){
+            if($(".scale  a").eq(i).attr("scale")==scale_id){
+                $(".scale  a").eq(i).attr("class","current");
+                var scale= $(".scale  a").eq(i).attr("scale");
+                $("#scale").val(scale);
+            }else{
+                $(".scale a").eq(i).attr("class","");
+            }
+        }
+        for(var i=0;i<$(".trade li a").length;i++){
+            if($(".trade li a").eq(i).attr("trade")==trade_id){
+                $(".trade li a").eq(i).attr("class","current");
+                var trade=$(".trade li a").attr("trade");
+                $("#trade").val(trade);
+            }else{
+                $(".trade li a").eq(i).attr("class","");
+            }
+        }
+        $(this).parents("li").siblings().find("a").removeAttr("class");
+        $(this).attr("class","current");
+
+        var url="<?= Url::to(['index/company-list'])?>";
+        $(".city li a").click(function(){
+            $(this).parents("li").siblings().find("a").removeAttr("class");
+            var did=$(this).attr("did");
+            $("#province").val(did);
+            window.location.href=url+"&province_id="+$("#province").val()+"&scale_id="+ $("#scale").val()+"&trade_id="+  $("#trade").val();
+        })
+        $(".scale a").click(function(){
+            $(this).parents("li").siblings().find("a").removeAttr("class");
+            var scale=$(this).attr("scale");
+            $("#scale").val(scale);
+            window.location.href=url+"&province_id="+$("#province").val()+"&scale_id="+ $("#scale").val()+"&trade_id="+  $("#trade").val();
+        })
+        $(".trade a").click(function(){
+            $(this).parents("li").siblings().find("a").removeAttr("class");
+            var trade=$(this).attr("trade");
+            $("#trade").val(trade);
+            window.location.href=url+"&province_id="+$("#province").val()+"&scale_id="+ $("#scale").val()+"&trade_id="+  $("#trade").val();
+        })
+
+    })
+</script>
+<script type="text/javascript">
+var ctx = "h";
+console.log(1);
+</script>
+<link rel="Shortcut Icon" href="h/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="style/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="style/css/external.min.css"/>
+<link rel="stylesheet" type="text/css" href="style/css/popup.css"/>
+<script src="style/js/jquery.1.10.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="style/js/jquery.lib.min.js"></script>
+<script src="style/js/ajaxfileupload.js" type="text/javascript"></script>
+<script type="text/javascript" src="style/js/additional-methods.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="style/js/excanvas.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var youdao_conv_id = 271546; 
+</script> 
+<script type="text/javascript" src="style/js/conv.js"></script>
+</head>
+<body>
+<div id="body">
+    <div id="container">
+        <div class="clearfix">
+            <div class="content_l">
+	                <input type="hidden" id="province" name="province" value="0" />
+	                <input type="hidden" id="scale" name="scale" value="" />
+	                <input type="hidden" id="trade" name="trade" value="" />
+	                <dl class="hc_tag">
+						<dl>
+							<dt>公司地点：</dt>
+							<dd>
+								<ul class="workplace reset fr city" id="workplaceSelect">
+									<li >
+										<a href="javascript:void(0)"  class="current" did="" >全国</a>
+									</li>
+									<li >
+										<a href="javascript:void(0)" did="1" >北京</a>
+									</li>
+									<li >
+										<a href="javascript:void(0)" did="2" >上海</a>
+									</li>
+									<li >
+										<a href="javascript:void(0)" did="3" >天津</a>
+									</li>
+									<li >
+										<a href="javascript:void(0)" did="4">重庆</a>
+									</li>
+									<li >
+										<a href="javascript:void(0)" did="5">河北</a>
+									</li>
+									<li >
+										<a href="javascript:void(0)" did="6" >山西</a>
+									</li>
+									<li >
+										<a href="javascript:void(0)" did="7">内蒙</a>
+									</li>
+									<li >
+										<a href="javascript:void(0)" did="8">辽宁</a>
+									</li>
+									<li  class="more" >
+										<div class="triangle citymore_arrow"></div>
+									</li>
+									<li id="box_expectCity" class="searchlist_expectCity dn">
+										<span class="bot"></span>
+										<span class="top"></span>
+										<dl>
+											<dt>全国省份</dt>
+											<dd>
+												<?php foreach($provincelist as $k=>$v){ ?>
+													<span><a href="javascript:;" did="<?php echo $v['id']?>"><?php echo $v['categoryname']?></a></span>
+												<?php } ?>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+	                        <dl>
+	                            <dt>企业规模：</dt>
+	                            <dd id="scaleSelect" class="scale">
+									<a href="javascript:void(0)" class="current" scale="">不限</a>
+									<?php foreach($scalelist as $k=>$v){ ?>
+									<a href="javascript:void(0)" scale="<?php echo $v['c_id']?>"><?php echo $v['c_name']?></a>
+									<?php } ?>
+								</dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>行业领域：</dt>
+								<dd>
+									<ul class="workplace reset fr trade" id="workplaceSelect">
+										<li >
+											<a href="javascript:void(0)"  class="current" trade="">不限</a>
+										</li>
+										<li >
+											<a href="javascript:void(0)" trade="1" >计算机软件/硬件</a>
+										</li>
+										<li >
+											<a href="javascript:void(0)" trade="2" >计算机系统/维修</a>
+										</li>
+										<li >
+											<a href="javascript:void(0)" trade="3" >通信(设备/运营/服务)</a>
+										</li>
+										<li  class="more" >
+
+											<div class="triangle citymore_arrow"></div>
+										</li>
+										<li id="box_expectCity" class="searchlist_expectCity dn">
+											<span class="bot"></span>
+											<span class="top"></span>
+											<dl>
+												<dt>全部行业</dt>
+												<dd>
+													<?php foreach($tradelist as $k=>$v){ ?>
+													<a href="javascript:;" trade="<?php echo $v['c_id']?>"><?php echo $v['c_name']?></a>
+													<?php } ?>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</dd>
+	                        </dl>
+	                    </dd>
+	                </dl>
+	               	                	<ul class="hc_list reset">
+											<?php foreach($companylist as $k=>$v) { ?>
+										<li  <?php if($k%3==0){ ?> style="clear:both;" <?php }?> >
+			                        <a href="h/c/25829.html" target="_blank">
+			                        	<h3 title="<?php echo $v['companyname']?>"><?php echo $v['companyname']?></h3>
+			                        	<div class="comLogo">
+				                        	<img src="style/images/logo_default.png" width="190" height="190" alt="<?php echo $v['companyname']?>" />
+				                        	<ul>
+				                        		<li><?php echo $v['province']?>,<?php echo $v['scale']?></li>
+				                        	</ul>
+			                        	</div>
+			                        </a>
+											<?php } ?>
+										</ul>
+
+				<div class="page"><?php
+    echo LinkPager::widget(['pagination' => $pages,'nextPageLabel' => '下一页', 'prevPageLabel' => '上一页','firstPageLabel' => '首页','lastPageLabel' => '尾页','hideOnSinglePage' => false ]);
+					?></div>
+            </div>	
+            <div class="content_r">
+            	<div class="subscribe_side">
+	            	<a href="subscribe.html" target="_blank">
+	                    <div class="subpos"><span>订阅</span> 职位</div>
+	                    <div class="c7">拉勾网会根据你的筛选条件，定期将符合你要求的职位信息发给你
+	                    </div>
+	                    <div class="count">已有
+	                    		                    		<em>3</em>
+	                    		                    		<em>4</em>
+	                    		                    		<em>2</em>
+	                    		                    		<em>1</em>
+	                    		                    		<em>0</em>
+	                    		                    	人订阅
+	                    </div>
+	                    <i>我也要订阅职位</i>
+	            	</a>
+	            </div> 
+                <div class="greybg qrcode mt20">
+                	<img src="style/images/companylist_qr.png" width="242" height="242" alt="拉勾微信公众号二维码" />
+                    <span class="c7">扫描拉勾二维码，微信轻松搜工作</span>
+                </div>
+               	<!-- <a href="h/speed/speed3.html" target="_blank" class="adSpeed"></a> -->
+                <a href="h/subject/jobguide.html" target="_blank" class="eventAd">
+               		<img src="style/images/subject280.jpg" width="280" height="135" />
+               	</a>
+               	<a href="h/subject/risingPrice.html" target="_blank" class="eventAd">
+               		<img src="style/images/rising280.png" width="280" height="135" />
+               	</a>
+            </div>
+       	</div>
+   	<input type="hidden" value="" name="userid" id="userid" />
+<script type="text/javascript" src="style/js/company_list.min.js"></script>
+<script>
+$(function(){
+	/*分页 */
+ 	 	 				 		$('.Pagination').pager({
+	      currPage: 1,
+	      pageNOName: "pn",
+	      form: "companyListForm",
+	      pageCount: 20,
+	      pageSize: 5
+	});	
+})
+</script>       	
+			<div class="clear"></div>
+			<input type="hidden" id="resubmitToken" value="" />
+	    	<a id="backtop" title="回到顶部" rel="nofollow"></a>
+	    </div><!-- end #container -->
+	</div><!-- end #body -->
+	<div id="footer">
+		<div class="wrapper">
+			<a href="h/about.html" target="_blank" rel="nofollow">联系我们</a>
+		    <a href="h/af/zhaopin.html" target="_blank">互联网公司导航</a>
+		    <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
+		    <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>
+			<div class="copyright">&copy;2013-2014 Lagou <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备14023790号-2</a></div>
+		</div>
+	</div>
+<script type="text/javascript" src="style/js/core.min.js"></script>
+<script type="text/javascript" src="style/js/popup.min.js"></script>
+</body>
+</html>
