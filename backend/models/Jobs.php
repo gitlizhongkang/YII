@@ -135,7 +135,7 @@ class Jobs extends \yii\db\ActiveRecord
     //查询职位
     public function getList($where)
     {
-        $arr=Jobs::find()->select("*")->join('JOIN','lg_members', 'lg_members.uid=lg_jobs.u_id')->where($where);
+        $arr=Jobs::find()->where($where);
         $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>2]);
         $list=$arr->offset($pages->offset)->limit($pages->limit)->asArray()->all();
         $info['pages']=$pages;
@@ -146,6 +146,11 @@ class Jobs extends \yii\db\ActiveRecord
     public function del($id)
     {
         return Jobs::deleteAll("id in ($id)");
+    }
+    //根据uid删除职位
+    public function udel($id)
+    {
+        return Jobs::deleteAll("u_id in ($id)");
     }
     //查询单条企业信息
     public function getOne($id)

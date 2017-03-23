@@ -6,14 +6,14 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Resume */
 
-$this->title = $model->title;
+$this->title = $model['title'];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="resume-view">
 
     <p>
-       <!--<?/*= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) */?> -->
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+       <?= Html::a('Update', ['update', 'id' => $model['id']], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model['id']], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => '确认删除吗?',
@@ -32,14 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'name',
             [
-                'attribute'=>'photo_id',
-                'value'=>$model->photo_id,
+                'attribute'=>'photo',
                 'format' => ['image', ['width'=>'60', 'height'=>'40']],
             ],
             [
                 'attribute'=>'sex',
                 'value'=>function($model) {
-                    return $model->sex == 0 ? '女' : '男';
+                    return $model['sex'] == 0 ? '女' : '男';
                 }
             ],
             'height',
@@ -47,18 +46,36 @@ $this->params['breadcrumbs'][] = $this->title;
             'tel',
             'email:email',
             'residence',
-            'birthland',
+            'province_id',
+            'city_id',
+            'district_id',
             [
                 'attribute'=>'marriage',
                 'value'=>function($model) {
-                    return $model->marriage == 0 ? '未婚' : '已婚';
+                    return $model['marriage'] == 0 ? '未婚' : '已婚';
                 }
             ],
-            'nature',
+            [
+                'attribute'=>'nature',
+                'value'=>function($model) {
+                    if($model['nature'] == 1)
+                    {
+                        return '全职';
+                    }
+                    elseif ($model['nature'] == 2)
+                    {
+                        return '兼职';
+                    }
+                    else
+                    {
+                        return '实习';
+                    }
+                }
+            ],
             'experience',
             'education',
             'major',
-            'intention_jobs_id',
+            'categoryname',
             'wage',
             'good_at',
             'specialty',
@@ -67,5 +84,5 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
-    联查 地区 职位 照片
+    联查 地区
 </div>

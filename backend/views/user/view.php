@@ -50,7 +50,6 @@ $this->params['breadcrumbs'][] = $this->title;
             ['attribute'=>'last_login_time', 'format'=>['date', 'php:Y-m-d H:i:s']],
             'last_login_ip',
             'userinfo.name',
-            'userinfo.sex',
             [
                 'attribute'=>'sex',
                 'value'=>function($model) {
@@ -59,7 +58,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'userinfo.birthday',
-            'userinfo.birthland',
+            'userinfo.province_id',
+            'userinfo.city_id',
+            'userinfo.district_id',
             'userinfo.residence',
             'userinfo.education',
             'userinfo.experience',

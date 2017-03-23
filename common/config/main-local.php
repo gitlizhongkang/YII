@@ -9,14 +9,6 @@ return [
             'charset' => 'utf8',
             'tablePrefix' => 'lg_',
         ],
-        // 'db' => [
-        //     'class' => 'yii\db\Connection',
-        //     'dsn' => 'mysql:host=localhost;dbname=yiixm',
-        //     'username' => 'root',
-        //     'password' => 'root',
-        //     'charset' => 'utf8',
-        //     'tablePrefix' => 'lg_',
-        // ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => false,
@@ -30,7 +22,7 @@ return [
             ],
             'messageConfig'=>[
                 'charset'=>'UTF-8',
-
+                'from'=>array("15803586720@163.com"=>"follow me"),
             ],
 
         ],

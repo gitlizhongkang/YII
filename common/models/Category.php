@@ -5,7 +5,11 @@ namespace common\models;
 use Yii;
 
 /**
+<<<<<<< HEAD
  * This is the model class for table "lg_category".
+=======
+ * This is the model class for table "{{%category}}".
+>>>>>>> caace8c2f3b0a134662978f66cf4e0934beb1b5a
  *
  * @property string $c_id
  * @property string $c_parentid
@@ -24,7 +28,7 @@ class Category extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'lg_category';
+        return '{{%category}}';
     }
 
     /**

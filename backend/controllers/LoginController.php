@@ -5,6 +5,7 @@ use Yii;
 use yii\web\Controller;
 use app\models\Admin;
 
+
 class LoginController extends Controller
 {
 	public $layout=false;
