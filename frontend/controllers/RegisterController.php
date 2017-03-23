@@ -5,6 +5,7 @@ use Yii;
 use yii\web\Controller;
 use backend\models\Members;
 use common\models\User;
+use common\models\UserInfo;
 use yii\helpers\Url;
 use backend\models\Members_charge_log;
 
@@ -23,6 +24,11 @@ class RegisterController extends Controller
 				$user=new User;
 				$uid=$user->add($data);
 				//添加个人用户
+				$userInfo=new UserInfo;
+				$info['user_id']=$uid;
+				$info['reg_time']=time();
+				$aa=$userInfo->add($info);
+				//添加用户详细信息				
 			}elseif($arr['type']==1){
 				$data['reg_time']=time();
 				$data['reg_ip']=$_SERVER['REMOTE_ADDR'];
@@ -87,7 +93,7 @@ class RegisterController extends Controller
 					$info['type']=0;
 					$data['last_login_time']=time();
 					$data['last_login_ip']=$_SERVER['REMOTE_ADDR'];	
-					$members->updateOne($res1['id'],$data);				
+					$user->updateOne($res1['id'],$data);				
 				}elseif(!empty($res2)){
 					$pwd=Yii::$app->security->validatePassword($pwd,$res2['password']);
 					$info['uid']=$res2['uid'];

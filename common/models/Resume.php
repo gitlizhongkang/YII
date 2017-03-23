@@ -24,8 +24,10 @@ use common\models\JobsCategory;
  * @property string $tel
  * @property string $email
  * @property string $residence
- * @property string $birthland
+ * @property integer $province_id
+ * @property integer $city_id
  * @property integer $marriage
+ * @property integer $district_id
  * @property integer $nature
  * @property string $experience
  * @property string $education
@@ -65,14 +67,13 @@ class Resume extends \yii\db\ActiveRecord
     {
         return [
             //[['uid', 'title', 'name', 'sex', 'height', 'birthday', 'tel', 'email', 'experience', 'education', 'major', 'intention_jobs_id', 'wage', 'good_at', 'specialty', 'addtime', 'refreshtime'], 'required'],
-            [['category.categoryname','uid', 'click', 'audit', 'display', 'sex', 'birthday', 'marriage', 'nature', 'intention_jobs_id', 'wage', 'addtime', 'refreshtime','photo_id'], 'integer'],
+            [['category.categoryname','uid', 'click', 'audit', 'display', 'sex', 'birthday', 'marriage', 'nature', 'intention_jobs_id', 'addtime', 'refreshtime','photo_id', 'province_id', 'city_id', 'district_id'], 'integer'],
             [['title'], 'string', 'max' => 80],
-            [['name'], 'string', 'max' => 15],
+            [['name', 'wage'], 'string', 'max' => 30],
             [[ 'tel', 'major'], 'string', 'max' => 50],
             [['height'], 'string', 'max' => 5],
             [['email'], 'string', 'max' => 60],
-            [['residence', 'birthland'], 'string', 'max' => 30],
-            [['experience', 'education'], 'string', 'max' => 10],
+            [['experience', 'education','residence'], 'string', 'max' => 50],
             [['good_at'], 'string', 'max' => 250],
             [['specialty'], 'string', 'max' => 200],
         ];
@@ -99,7 +100,9 @@ class Resume extends \yii\db\ActiveRecord
             'tel' => 'Tel',
             'email' => 'Email',
             'residence' => 'Residence',
-            'birthland' => 'Birthland',
+            'province_id' => 'Province ID',
+            'city_id' => 'City ID',
+            'district_id' => 'District ID',
             'marriage' => 'Marriage',
             'nature' => 'Nature',
             'experience' => 'Experience',
@@ -171,8 +174,10 @@ class Resume extends \yii\db\ActiveRecord
             'birthday' => $this->birthday,
             'marriage' => $this->marriage,
             'nature' => $this->nature,
+            'province_id' => $this->province_id,
+            'city_id' => $this->city_id,
+            'district_id' => $this->district_id,
             'intention_jobs_id' => $this->intention_jobs_id,
-            'wage' => $this->wage,
             'addtime' => $this->addtime,
             'refreshtime' => $this->refreshtime,
             'photo_id', $this->photo_id,
@@ -184,18 +189,31 @@ class Resume extends \yii\db\ActiveRecord
             ->andFilterWhere(['like', 'tel', $this->tel])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'residence', $this->residence])
-            ->andFilterWhere(['like', 'birthland', $this->birthland])
             ->andFilterWhere(['like', 'experience', $this->experience])
             ->andFilterWhere(['like', 'education', $this->education])
             ->andFilterWhere(['like', 'major', $this->major])
+            ->andFilterWhere(['like', 'wage', $this->wage])
             ->andFilterWhere(['like', 'good_at', $this->good_at])
             ->andFilterWhere(['like', 'specialty', $this->specialty])
             ->andFilterWhere(['like', 'lg_jobs_category', $this->getAttribute('category.categoryname')]);
 
         return $dataProvider;
     }
+<<<<<<< HEAD
+
+
+    /**
+     * @brief 查询数据
+     * @param array $condition
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function selectAll($condition = [])
+    {
+        return self::find()->where($condition)->asArray()->all();
+=======
     //查询一个用户的所有简历
     public function select($u_id){
         return $this->find()->where(['uid'=>$u_id])->all();
+>>>>>>> 828e1ae08b72b46c61888a1a6d09448a0b615d19
     }
 }
