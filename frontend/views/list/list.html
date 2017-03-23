@@ -80,52 +80,42 @@ var youdao_conv_id = 271546;
                                 <dl >
                    	<dt>月薪范围 <em ></em></dt>
 	                <dd >
-	                    	                    	<div>2k以下</div>
-	                    	                    	<div>2k-5k</div>
-	                    	                    	<div>5k-10k</div>
-	                    	                    	<div>10k-15k</div>
-	                    	                    	<div>15k-25k</div>
-	                    	                    	<div>25k-50k</div>
-	                    	                    	<div>50k以上</div>
+	                <?php foreach($date['QS_wage'] as $val){?>
+	                    	                    	<div class="QS_wage"><?=$val['c_name']?></div>
+	                <?php }?>	
 	                    	                </dd> 
                 </dl>
                                 <dl >
                    	<dt>工作经验 <em ></em></dt>
 	                <dd >
-	                    	                    	<div>不限</div>
-	                    	                    	<div>应届毕业生</div>
-	                    	                    	<div>1年以下</div>
-	                    	                    	<div>1-3年</div>
-	                    	                    	<div>3-5年</div>
-	                    	                    	<div>5-10年</div>
-	                    	                    	<div>10年以上</div>
+	                <?php foreach($date['QS_experience'] as $val){?>
+	                    	                    	<div class="QS_experience"><?=$val['c_name']?></div>
+	                <?php }?>	
 	                    	                </dd> 
                 </dl>
                                 <dl >
                    	<dt>最低学历 <em ></em></dt>
 	                <dd >
-	                    	                    	<div>不限</div>
-	                    	                    	<div>大专</div>
-	                    	                    	<div>本科</div>
-	                    	                    	<div>硕士</div>
-	                    	                    	<div>博士</div>
+	                <?php foreach($date['QS_education'] as $val){?>
+	                    	                    	<div value="<?=$val['c_id']?>" class="QS_education"><?=$val['c_name']?></div>
+	                <?php }?>	
 	                    	                </dd> 
                 </dl>
                                 <dl >
                    	<dt>工作性质 <em ></em></dt>
 	                <dd >
-	                    	                    	<div>全职</div>
-	                    	                    	<div>兼职</div>
-	                    	                    	<div>实习</div>
+	                <?php foreach($date['QS_jobs_nature'] as $val){?>
+	                    	                    	<div class="QS_jobs_nature"><?=$val['c_name']?></div>
+	                <?php }?>
 	                    	                </dd> 
                 </dl>
                                 <dl >
                    	<dt>发布时间 <em ></em></dt>
 	                <dd >
-	                    	                    	<div>今天</div>
-	                    	                    	<div>3天内</div>
-	                    	                    	<div>一周内</div>
-	                    	                    	<div>一月内</div>
+	                    	                    	<div class="c_time">今天</div>
+	                    	                    	<div class="c_time">3天内</div>
+	                    	                    	<div class="c_time">一周内</div>
+	                    	                    	<div class="c_time">一月内</div><div class="c_time">不限</div>
 	                    	                </dd> 
                 </dl>
                             </div>
@@ -168,17 +158,6 @@ var youdao_conv_id = 271546;
         	        </ul>
         <div class="searchtype_arrow"></div>
         <input type="text" id="search_input" name = "kd"  tabindex="1" value=""  placeholder="请输入职位名称，如：产品经理"  />
-        <input type="hidden" name="spc" id="spcInput" value="1"/>
-        <input type="hidden" name="pl" id="plInput" value=""/>
-        <input type="hidden" name="gj" id="gjInput" value=""/>
-        <input type="hidden" name="xl" id="xlInput" value=""/>
-        <input type="hidden" name="yx" id="yxInput" value=""/>
-        <input type="hidden" name="gx" id="gxInput" value="" />
-        <input type="hidden" name="st" id="stInput" value="" />
-        <input type="hidden" name="labelWords" id="labelWords" value="label" />
-        <input type="hidden" name="lc" id="lc" value="" />
-        <input type="hidden" name="workAddress" id="workAddress" value=""/>
-                <input type="hidden" name="city" id="cityInput" value="全国"/>
                 <input type="submit" id="search_button" value="搜索" />
     </form>
 </div>
@@ -339,11 +318,21 @@ var youdao_conv_id = 271546;
 			                        <br />
 			                        <span><em class="c7">职位诱惑：</em><?=$v['contents']?></span>
 			                        <br />
-			                        <span><?php
-			                        if($cd=(time()-$v['addtime'])>3600*24){?><?=ceil($cd/3600)?>天前发布<?php }elseif($cd=(time()-$v['addtime'])>3600){?>
-									<?=ceil($cd/3600)?>小时前发布<?php }elseif(time()-$v['addtime'] < 3600){ ?>
-									刚刚发布
-									<?php }?>
+			                        <span>
+<?php
+	$cd=time()-$v['addtime'];
+	if($cd>3600*24*30){
+		echo ceil($cd/3600/24/30)."个月前发布";
+	}else if($cd>3600*24*7){
+		echo floor($cd/3600/24/7)."周前发布";
+	}else if($cd>3600*24){
+		echo ceil($cd/3600/24)."日前发布";
+	}else if($cd>3600){
+		echo ceil($cd/3600)."小时前发布";
+	}else if($cd>60){
+		echo ceil($cd/60)."分钟前发布";
+	}
+?>
 			                        </span>
 			                    </div> 
 						        <div class="hot_pos_r">
@@ -378,6 +367,7 @@ var youdao_conv_id = 271546;
 
 <script>
 $(document).ready(function(){
+	//城市选中背景
 	for(var i=0;i<$(".citys").length;i++){
 		if($(".citys").eq(i).html()=="<?=$dq?>"){
 			$(".citys").eq(i).addClass('current');
@@ -389,13 +379,49 @@ $(document).ready(function(){
 			$(".city").eq(i).css('background','#0d9572');
 		} 
 	}
+	//当前页背景
 	for(var i=0;i<$(".page li").length;i++){
 		if($(".page li").eq(i).children('a').html()=="<?php if(isset($_GET['page'])){echo $_GET['page'];}else{echo 1;}?>"){
 			$(".page li").eq(i).children('a').css('color','white');
 			$(".page li").eq(i).css('background','#0d9572');
 		} 
 	}
-
+	//index.php?r=list&yx=1000~1500元/月&gj=1年以下&xl=65&gx=全职
+	//月薪
+	for(var i=0;i<$(".QS_wage").length;i++){
+		if($(".QS_wage").eq(i).html()=="<?php if(isset($_GET['yx'])){echo $_GET['yx'];}else{echo " ";}?>"){
+			$(".QS_wage").eq(i).css('color','white');
+			$(".QS_wage").eq(i).css('background','#0d9572');
+		}
+	}
+	//工作经验
+	for(var i=0;i<$(".QS_experience").length;i++){
+		if($(".QS_experience").eq(i).html()=="<?php if(isset($_GET['gj'])){echo $_GET['gj'];}else{echo " ";}?>"){
+			$(".QS_experience").eq(i).css('color','white');
+			$(".QS_experience").eq(i).css('background','#0d9572');
+		}
+	}
+	//学历
+	for(var i=0;i<$(".QS_education").length;i++){
+		if($(".QS_education").eq(i).attr('value')=="<?php if(isset($_GET['xl'])){echo $_GET['xl'];}else{echo " ";}?>"){
+			$(".QS_education").eq(i).css('color','white');
+			$(".QS_education").eq(i).css('background','#0d9572');
+		}
+	}
+	//工作性质
+	for(var i=0;i<$(".QS_jobs_nature").length;i++){
+		if($(".QS_jobs_nature").eq(i).html()=="<?php if(isset($_GET['gx'])){echo $_GET['gx'];}else{echo " ";}?>"){
+			$(".QS_jobs_nature").eq(i).css('color','white');
+			$(".QS_jobs_nature").eq(i).css('background','#0d9572');
+		}
+	}
+	//时间
+	for(var i=0;i<$(".c_time").length;i++){
+		if($(".c_time").eq(i).html()=="<?php if(isset($_GET['sj'])){echo $_GET['sj'];}else{echo " ";}?>"){
+			$(".c_time").eq(i).css('color','white');
+			$(".c_time").eq(i).css('background','#0d9572');
+		}
+	}
 })
 $(function(){
 	/***************************
@@ -524,6 +550,41 @@ $(document).on('click','.citys',function(){
 	var http ="index.php";
 	var dq=$(this).html();
 	location.href=http+url+"&dq="+dq;
+})
+//月薪
+$(document).on('click','.QS_wage',function(){
+	var url = location.search;
+	var http ="index.php";
+	var yx=$(this).html();
+	location.href=http+url+"&yx="+yx;
+})
+//工作经验
+$(document).on('click','.QS_experience',function(){
+	var url = location.search;
+	var http ="index.php";
+	var gj=$(this).html();
+	location.href=http+url+"&gj="+gj;
+})
+//最低学历
+$(document).on('click','.QS_education',function(){
+	var url = location.search;
+	var http ="index.php";
+	var xl=$(this).attr('value');
+	location.href=http+url+"&xl="+xl;
+})
+//工作性质
+$(document).on('click','.QS_jobs_nature',function(){
+	var url = location.search;
+	var http ="index.php";
+	var gx=$(this).html();
+	location.href=http+url+"&gx="+gx;
+})
+//时间
+$(document).on('click','.c_time',function(){
+	var url = location.search;
+	var http ="index.php";
+	var sj=$(this).html();
+	location.href=http+url+"&sj="+sj;
 })
 function editForm(inputId,inputValue){
 	$("#"+inputId).val(inputValue);

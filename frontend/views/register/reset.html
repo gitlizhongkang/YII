@@ -1,82 +1,223 @@
-﻿<!DOCTYPE HTML>
-<html>
-<head>
-<script id="allmobilize" charset="utf-8" src="style/js/allmobilize.min.js"></script>
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-<link rel="alternate" media="handheld"  />
-<!-- end 云适配 -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>找回密码-拉勾网-最专业的互联网招聘平台</title>
-<meta property="qc:admins" content="23635710066417756375" />
-<meta content="拉勾网是3W旗下的互联网领域垂直招聘网站,互联网职业机会尽在拉勾网" name="description">
+﻿<?php
+use yii\helpers\Url;
+?>
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- meta -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta property="qc:admins" content="23635710066417756375">
+<meta name="baidu-site-verification" content="QIQ6KC1oZ6">
+<meta charset="UTF-8">
+
 <meta content="拉勾,拉勾网,拉勾招聘,拉钩, 拉钩网 ,互联网招聘,拉勾互联网招聘, 移动互联网招聘, 垂直互联网招聘, 微信招聘, 微博招聘, 拉勾官网, 拉勾百科,跳槽, 高薪职位, 互联网圈子, IT招聘, 职场招聘, 猎头招聘,O2O招聘, LBS招聘, 社交招聘, 校园招聘, 校招,社会招聘,社招" name="keywords">
 
-<meta name="baidu-site-verification" content="QIQ6KC1oZ6" />
+<meta content="拉勾网是3W旗下的互联网领域垂直招聘网站" name="description">
 
-<!-- <div class="web_root"  style="display:none">http://www.lagou.com</div> -->
-<script type="text/javascript">
-var ctx = "http://www.lagou.com";
-console.log(1);
+<title>找工作-互联网招聘求职网-拉勾网</title>
+
+<link rel="Shortcut Icon" href="https://img.lagou.com/passport/static/common/static/favicon_faed927.ico">
+
+
+<!-- header/global_domain FE_base.. -->
+
+<script charset="utf-8" src="aaa_files/v.htm"></script>
+<script async="" src="aaa_files/analytics.js"></script>
+<script src="aaa_files/hm.js"></script>
+<script async="" src="aaa_files/a.js"></script><script type="text/javascript">
+(function() {
+    var protocol = window.location.protocol;
+    var host = window.location.host;
+    var baseUrl = protocol + '//' + host;
+
+    window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
+        ctx: protocol + '//www.lagou.com',
+        rctx: protocol + '//hr.lagou.com',
+        crctx: protocol + '//hr.lagou.com/company',
+        pctx: protocol + '//passport.lagou.com',
+        actx: protocol + '//account.lagou.com',
+        paictx: protocol + '//pai.lagou.com',
+        sctx: protocol + '//suggest.lagou.com',
+        zctx: protocol + '//yanzhi.lagou.com',
+        proctx: 'https://pro.lagou.com',
+        lgsctx: protocol + '//img.lagou.com',
+        FE_frontLogin: baseUrl + '//www.lagou.com/frontLogin.do',
+        FE_frontLogout: baseUrl + '//www.lagou.com/frontLogout.do',
+        FE_frontRegister: baseUrl + '//www.lagou.com/frontRegister.do'
+    };
+
+    window.GLOBAL_CDN_DOMAIN = 'img.lagou.com';
+})();
 </script>
-<link rel="Shortcut Icon" href="http://www.lagou.com/images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="style/css/style.css"/>
 
-<script src="style/js/jquery.1.10.1.min.js" type="text/javascript"></script>
-
-<script type="text/javascript" src="style/js/jquery.lib.min.js"></script>
-<script type="text/javascript" src="style/js/core.min.js"></script>
-<script type="text/javascript" src="style/js/analytics.js"></script>
-
+<!-- 页面样式 --><!-- 动态token，防御伪造请求，重复提交 -->
 <script type="text/javascript">
-var youdao_conv_id = 271546; 
-</script> 
-<script type="text/javascript" src="style/js/conv.js"></script>
+    window.X_Anti_Forge_Token = 'b2653ebf-ee8c-47ab-802a-8dd162b928a7';
+    window.X_Anti_Forge_Code = '52555499';
+</script>
+
+<!-- H5	 -->
+<!--[if lt IE 9]>
+  	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+    <link rel="stylesheet" type="text/css" href="aaa_files/step1.css">
 </head>
+<body>
+	<input value="true" id="isVisiable_request_form_verifyCode" type="hidden">
+	<input value="true" id="is_must_show_verify_code" type="hidden">
+<!-- 页面主体START -->
+<header class="sso_header">
+	<a href="http://www.lagou.com/" class="logo"></a>
+</header>
+<section class="content_box" id="findPwd1" style="display: none;">
+	<!-- 通过手机号找回密码 -->
+	<div class="findPwd">
+		<h5 class="change_way"><a rel="nofollow" href="https://passport.lagou.com/login/login.html">返回登录</a><span class="separate">|</span><a class="go_mail" rel="nofollow" href="javascript:;" id="go-mail">通过邮箱找回</a></h5>
+		<form action="" method="">
+			<ul class="form_head clearfix">
+				<li class="active">
+					<span class="icon_step step1" style='font-size: 20px; color:green' >01</span>
+					验证手机号
+				</li>
+				<li style="width:59px;margin-left: 73px;">
+					<span class="icon_step step2" style='font-size: 20px;'>02</span>
+					重置密码
+				</li>
+			</ul>
+			<div class="form_body" data-view="phoneFindStep1">
+				<div class="input_item clearfix" data-propertyname="phone" data-controltype="Phone" style="display: block;">
+					<input class="input input_white" id="" name="" placeholder="请输入注册时使用的手机号" data-required="required" autocomplete="off" type="text"> 
+				</div>
+				<div class="input_item clearfix" data-propertyname="request_form_verifyCode" data-controltype="VerifyCode" style="display: block;">
+					<input class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img class="yzm" src="aaa_files/create.jpg">
+					
+					<a rel="nofollow" href="javascript:;" class="reflash"></a>
+				</div>
+				<div class="input_item clearfix" data-propertyname="verifyCode" data-controltype="PhoneVerificationCode" style="display: block;">
+					<div class="input_group clearfix">
+						<input class="input input_white first_child" id="" name="" placeholder="请输入短信验证码" data-required="required" autocomplete="off" type="text">
+						<input class="btn btn_green btn_active btn_lg last_child" value="获取验证码" data-required="required" type="button">
+					</div>
+				</div>
+				
+				<div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton" style="display: block;">
+					<input class="btn btn_green btn_active btn_block" value="找回密码" type="button">
+				</div>
+			</div>
+			<div class="form_body" style="display:none" data-view="phoneFindStep2">
+				<div class="input_item clearfix" data-propertyname="newpwd" data-controltype="Password" style="display: block;">
+					<input class="input input_white" id="" name="" placeholder="请输入新密码 " data-required="required" autocomplete="off" type="password"> 
+				</div>
+				<div class="input_item clearfix" data-propertyname="newrepwd" data-controltype="RepeatPassword" style="display: block;">
+					<input class="input input_white" id="" name="" placeholder="请再次输入密码" data-required="required" autocomplete="off" type="password"> 
+				</div>
+				<div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton" style="display: block;">
+					<input class="btn btn_green btn_active btn_block" value="确定" type="button">
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+<section class="content_box" id="findPwd2" style="display: block;">
+	<!-- 通过邮箱来找回密码 -->
+	<div class="findPwd">
+		<h5 class="change_way"><a rel="nofollow" href="<?=Url::to(['register/login'])?>">返回登录</a><span class="separate">|</span><a class="go_phone" rel="nofollow" href="javascript:;" id="go-phone">通过手机号找回</a></h5>
+		<form action="" method="">
+			<ul class="form_head clearfix">
+				<li class="active" style="margin-right:42px;">
+					<span class="icon_step step1" style='font-size: 20px; color:green'>01</span>
+					输入邮箱地址
+				</li>
+				<li style="margin-right:53px;width:59px;">
+					<span class="icon_step step2" style='font-size: 20px;'>02</span>
+					验证邮箱
+				</li>
+				<li style="width:59px">
+					<span class="icon_step step3" style='font-size: 20px;'>03</span>
+					重置密码
+				</li>
+			</ul>
+			<div class="form_body" data-view="emailFindStep1" id='tap1'>
+				<div class="input_item clearfix" data-propertyname="email" data-controltype="Email" style="display: block;">
+					<input class="input input_white" id="email" name="" placeholder="请输入注册时使用的邮箱地址" data-required="required" autocomplete="off" type="text"> 
+					<span class='input_tips' id='email_msg'></span>
+				</div>
+				<div class="input_item clearfix" data-propertyname="request_form_verifyCode" data-controltype="VerifyCode" style="display: block;">
+					<input class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img class="yzm" src="aaa_files/create.jpg">
+					
+					<a rel="nofollow" href="javascript:;" class="reflash"></a>
+				</div>
+				<div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton" style="display: block;">
+					<input class="btn btn_green btn_active btn_block" value="找回密码" type="button" id='next1'>
+				</div>
+			</div>
+			<div class="form_body" style="display:none" id='tap2'>
+				<div class="input_item clearfix">
+					<h3 class="reset_mail">密码重置邮件已发送至你的邮箱：<span class="des_mail"></span></h3>
+					<p class="reset_tips">请在24小时内登录你的邮箱接收邮件,链接激活后可重置密码。</p>
+				</div>
+				<div class="input_item clearfix" style="display:none;" id="gotoVerify">
+					<input class="btn btn_green btn_active btn_block" value="登录邮箱查看" id="step2" type="button">
+				</div>
+			</div>
+			<div class="form_body" style="display:none" id='tap3'>
+				<div class="input_item clearfix">
+					<input class="input input_white" id="" name="" placeholder="请输入新密码" data-required="required" autocomplete="off" type="text"> 
+				</div>
+				<div class="input_item clearfix">
+					<input class="input input_white" id="" name="" placeholder="请再次输入新密码" data-required="required" autocomplete="off" type="text"> 
+				</div>
+				<div class="input_item clearfix">
+					<input class="btn btn_green btn_active btn_block" value="确定" id="step3" onclick="findByMail('step3')" type="button"> 
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
 
-<body id="login_bg">
-	<div class="login_wrapper">
-		<div class="login_header">
-        	<a href="index.html"><img src="style/images/logo_white.png" width="285" height="62" alt="拉勾招聘" /></a>
-            <div id="cloud_s"><img src="style/images/cloud_s.png" width="81" height="52" alt="cloud" /></div>
-            <div id="cloud_m"><img src="style/images/cloud_m.png" width="136" height="95"  alt="cloud" /></div>
-        </div>
-        
-    	<input type="hidden" id="resubmitToken" value="" />
-     	<div class="find_psw">
-        	<img src="style/images/psw_step1.png" width="369" height="56" alt="找回密码第一步" />
-            <form id="pswForm" action="http://www.lagou.com/rs.html" method="post">
-           		<input type="text" name="email" id="email" tabindex="1" value="" placeholder="请输入注册时使用的邮箱地址" />
-                                <input type="submit" id="submitLogin" value="找回密码" />
-            </form>
-        </div>
-    </div>
-    
+<footer>
+	<h4 class="slogan">— 专注互联网职业机会 —</h4>
+</footer>
+<!-- 页面主体END --><!-- jquery lib --><!--拉勾UI框架 -->
+<!-- analytics js file --><!-- plat analytics js file -->
+<script type="text/javascript" src="aaa_files/vendor_c7a7c93.js"></script>
+<script type="text/javascript" src="aaa_files/step1.js"></script>
+<script type="text/javascript" src="aaa_files/static_ab40326.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-    	$('#pswForm input[type="text"]').focus(function(){
-    		$(this).siblings('.error').hide();
-    	});
-    	//验证表单
-
-	    	 $("#pswForm").validate({
-	    	        rules: {
-			    	   	email: {
-			    	    	required: true,
-			    	    	email: true
-			    	   	}
-			    	},
-			    	messages: {
-			    	   	email: {
-			    	    	required: "请输入注册时使用的邮箱地址",
-			    	    	email: "请输入有效的邮箱地址，如：vivi@lagou.com"
-			    	   	}
-			    	},
-			    	submitHandler:function(form){ 
-			    		$(form).find(":submit").attr("disabled", true);
-			            form.submit();
-			        }  
-	    	});
-    	});
-    </script>
-</body>
-</html>
+    //login page
+    require(['pc/page/findpassword/main']);
+</script>
+<script type="text/javascript" src="aaa_files/oss.js"></script>
+<script>
+$('#next1').click(function(){
+	var email=$('#email').val();
+	if(email==''){
+		// $('#email_msg').html('请输入注册时使用的邮箱地址');
+	}else{
+		$.ajax({
+			type:'get',
+			url:"<?=Url::to(['register/find'])?>",
+			data:{
+				email:email
+			},
+			success:function(msg){
+				if(msg==1){
+					$('#tap1').css('display','none');
+					$('#tap2').css('display','block');
+					$('.des_mail').html(email);
+					$('.step2').css('color','green');
+				}else if(msg==0){
+					alert("该邮箱还未注册过，请先去注册吧");
+				}else{
+					alert("发送邮件失败");
+				}
+			}
+		})		
+	}	
+})
+</script>
+</body></html>
