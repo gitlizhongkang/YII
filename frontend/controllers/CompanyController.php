@@ -140,8 +140,16 @@ class CompanyController extends Controller
     public function actionGongsi(){
             $CompanyModel=new Company;
             $id=yii::$app->request->get("id");
+            $date['CompanyDetail']=$CompanyModel->getOne1($id);
+            print_r($date);die;
+            
+            return $this->render('gongsi.html');
+        }
+    public function actionGongsi1(){
+            $CompanyModel=new Company;
+            $id=yii::$app->request->get("id");
             $CompanyDetail=$CompanyModel->getOne1($id);
             // print_r($CompanyDetail);die;
-            return $this->render('gongsi.html');
+            return $this->render('gongsi1.html');
         }
 }
