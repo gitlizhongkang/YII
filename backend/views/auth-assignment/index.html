@@ -1,0 +1,133 @@
+<?php
+use yii\helpers\Url;
+?>
+<link href="css/rule/rule.css" rel="stylesheet" type="text/css" />
+<body class="mian_bj">
+<div class="mian_top_01">
+    <div class="mian_top_r"></div>
+    <div class="mian_top_l"></div>
+    <div class="mian_top_c">
+        <ul>
+            <li><a href="<?=Url::to(['auth-assignment/index'])?>"><p>用户管理</p></a></li>
+            <li><a href="<?=Url::to(['auth-item-child/index'])?>"><p>角色管理</p></a></li>
+        </ul>
+    </div>
+    <div class="mian_b">
+        <div class="mian_b1">
+            <a href="<?=Url::to(['auth-assignment/add'])?>" title="添加"><p class="mian_b1_a1"></p></a>
+            <a href="#" title="删除" id='del'><p class="mian_b1_a2"></p></a>
+            <p class="mian_b1_sousuo"><input name="admin_name" type="text"></p>
+            <a href="#" title="搜索" id="soso"><p class="mian_b1_a3"></p></a>
+            <a href="#" title="最后"><p class="mian_b1_a4"></p></a>
+            <a href="#" title="下一页"><p class="mian_b1_a5"></p></a>
+            <p class="mian_b1_list">1 2 3 4……</p>
+            <a href="#" title="上一页"><p class="mian_b1_a6"></p></a>
+            <a href="#" title="最前"><p class="mian_b1_a7"></p></a>
+        </div>
+        <div id="box">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mian_b_bg">
+            <tr>
+                <td width="3%" class="mian_b_bg_lm"><input name="" type="checkbox" value="" id="ass_a">&nbsp;</td>
+                <td width="11%" class="mian_b_bg_lm"><span></span>用户名称</td>
+                <td width="13%" class="mian_b_bg_lm"><span></span>角色权限</td>
+                <td width="10%" class="mian_b_bg_lm"><span></span>创建时间</td>
+                <td width="37%" class="mian_b_bg_lm"><span></span>备注</td>
+                <td colspan="2" class="mian_b_bg_lm"><span></span>操作</td>
+            </tr>
+            
+           <?php foreach($AuthAssignmentList as $val ){?>
+            <tr>
+                <td><input name="" type="checkbox" value="" class="ass_b" user_id="<?=$val['user_id']?>">&nbsp;</td>
+                <td><?=$val['admin_name']?></td>
+                <td><?=$val['item_name']?></td>
+                <td><?=$val['created_at']?></td>
+                <td><?=$val['mes']?></td>
+                <td width="8%" class="mian_b_icon_01"><a href="AddBranch.html">编辑</a></td>
+                <td width="8%" class="mian_b_icon_02"><a href="BranchDetail.html">查看</a></td>
+            </tr>
+            <?php }?>
+            
+            <tr>
+                <td width="3%" class="mian_b_bg_lm"></td>
+                <td width="11%" class="mian_b_bg_lm"><span></span>用户名称</td>
+                <td width="13%" class="mian_b_bg_lm"><span></span>角色权限</td>
+                <td width="10%" class="mian_b_bg_lm"><span></span>创建时间</td>
+                <td width="37%" class="mian_b_bg_lm"><span></span>备注</td>
+                <td colspan="2" class="mian_b_bg_lm"><span></span>操作</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).on('click','#ass_a',function(){
+        if($('.ass_b').prop('checked')==true){
+            $('.ass_b').prop('checked',false);  
+        }else{
+            $('.ass_b').prop('checked',true) ;
+        }
+    })
+    $(document).on('click','#del',function(){
+        if(window.confirm('你确定要删除吗？')){
+            var user_id='';
+            for(var i=0;i<$('.ass_b').length;i++){
+                if($('.ass_b').eq(i).prop('checked')==true){
+                    user_id+=','+$('.ass_b').eq(i).attr('user_id');
+                } 
+            }
+            user_id=user_id.substr(1);
+            $.ajax({
+                type:'post',
+                url:'index.php?r=auth-assignment/delete',
+                data:{user_id:user_id},
+                success:function(date){
+                    if(date == 1){
+                        alert('删除成功');location.href='index.php?r=auth-assignment/index';
+                    }else{
+                        alert('删除失败');
+                    }
+
+                }
+            })
+            //alert("确定");
+            return true;
+        }else{
+            //alert("取消");
+            return false;
+        }
+    })   
+    $(document).on('click','#soso',function(){
+        var admin_name=$('input[name=admin_name]').val();
+        $.ajax({
+            type:'post',
+            url:'index.php?r=auth-assignment/soso',
+            data:{admin_name:admin_name},
+            dataType:'json',
+            error:function(date){ 
+                alert('Forbidden (#403): 对不起，您还没获此操作的权限'); 
+            },
+            success:function(date){
+                if(date==0){
+                    alert("搜索失败");
+                }else{
+                    //将JSON数据转换为对象  
+                    var tr = '<table width="100%" border="0" cellpadding="0" cellspacing="0" class="mian_b_bg"><tr> <td width="3%" class="mian_b_bg_lm"><input name="" type="checkbox" value="" id="ass_a">&nbsp;</td><td width="11%" class="mian_b_bg_lm"><span></span>用户名称</td><td width="13%" class="mian_b_bg_lm"><span></span>角色权限</td><td width="10%" class="mian_b_bg_lm"><span></span>创建时间</td><td width="37%" class="mian_b_bg_lm"><span></span>备注</td><td colspan="2" class="mian_b_bg_lm"><span></span>操作</td></tr>';  
+                    $.each(date,function(k,val){            
+                        tr += "<tr>"  
+                            tr += "<td><input type='checkbox' class='ass_b' user_id="+val.user_id+">&nbsp;</td>";  
+                            tr += "<td>"+val.admin_name+"</td>";
+                            tr += "<td>"+val.item_name+"</td>"; 
+                            tr += "<td>"+val.created_at+"</td>";
+                            tr += "<td>"+val.mes+"</td>";  
+                            tr += '<td width="8%" class="mian_b_icon_01"><a href="AddBranch.html">编辑</a></td><td width="8%" class="mian_b_icon_02"><a href="BranchDetail.html">查看</a></td>';  
+                        tr += '</tr> ';  
+                    }) 
+                    tr+='<tr><td width="3%" class="mian_b_bg_lm"></td><td width="11%" class="mian_b_bg_lm"><span></span>用户名称</td><td width="13%" class="mian_b_bg_lm"><span></span>角色权限</td><td width="10%" class="mian_b_bg_lm"><span></span>创建时间</td><td width="37%" class="mian_b_bg_lm"><span></span>备注</td><td colspan="2" class="mian_b_bg_lm"><span></span>操作</td></tr></table>'; 
+                    $('#box').html(tr);
+                }
+            }
+        })
+    })
+</script>

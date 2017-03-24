@@ -57,9 +57,9 @@ class Company extends \yii\db\ActiveRecord
     {
         return [
             [['contents'], 'string'],
-            [['audit','u_id', 'map_open', 'addtime', 'refreshtime', 'click', 'user_status', 'contact_show', ' telephone_show', 'address_show', 'email_show', 'resume_processing'], 'integer'],
+            [['audit','u_id', 'map_open', 'addtime', 'refreshtime', 'click', 'user_status', 'contact_show', ' telephone_show', 'address_show','scale_id','trade_id', 'email_show', 'resume_processing'], 'integer'],
             [['companyname'], 'string', 'max' => 60],
-            [['nature', 'trade', 'province', 'city', 'street', 'scale', 'registered', 'currency', 'address', 'contact', 'telphone', 'landline_tel', 'email', 'website', 'logo', 'map_x', 'map_y', 'certificate_img'], 'string', 'max' => 255],
+            [['nature', 'trade', 'province', 'city', 'street', 'scale', 'registered', 'currency', 'address', 'contact', 'telphone', 'landline_tel','message','labels', 'email', 'website', 'logo', 'map_x', 'map_y', 'certificate_img'], 'string', 'max' => 255],
         ];
     }
     /**
@@ -77,13 +77,17 @@ class Company extends \yii\db\ActiveRecord
             'city' => 'City',
             'street' => 'Street',
             'scale' => 'Scale',
+            'scale_id' => 'Scale Id',
+            'trade_id' => 'Trade Id',
             'registered' => 'Registered',
             'currency' => 'Currency',
             'address' => 'Address',
+            'message' => 'Message',
             'contact' => 'Contact',
             'telphone' => 'Telphone',
             'landline_tel' => 'Landline Tel',
             'email' => 'Email',
+            'labels' => 'Labels',
             'website' => 'Website',
             'logo' => 'Logo',
             'contents' => 'Contents',
