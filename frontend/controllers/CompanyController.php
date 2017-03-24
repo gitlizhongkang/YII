@@ -40,6 +40,7 @@ class CompanyController extends Controller
         if($companyinfo['logo']==''){
             return $this->redirect(["company/improve1","companyid"=>$companyinfo['id']]);
         }
+
     }
     public function actionBlind1()
     {
@@ -259,7 +260,13 @@ class CompanyController extends Controller
             $data['contents']=$post['companyProfile'];
             $result->setAttributes($data);
             $res=$result->save();
-            return $this->redirect(['improve5'],$data);
+            if($res){
+                $data['code']=1;
+            }else{
+                $data['code']=2;
+                $data['msg']="公司信息完善失败";
+            }
+            return $this->render('result.html',$data);
         }else{
             $companyid=Yii::$app->request->get("companyid");
             if(empty($companyid)){
