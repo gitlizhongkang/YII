@@ -68,7 +68,7 @@ var youdao_conv_id = 271546;
                     	<a id="addMember" class="add_member" href="javascript:void(0)"><i></i>继续添加公司产品</a>
                    		<div class="clear"></div>
                     	<input type="submit" value="保存，下一步" id="step4Submit" class="btn_big fr">
-                    	<a class="btn_cancel fr" href="http://www.front.com/index.php?r=company%2Fimprove5&companyid=<?php echo $companyid;?>">跳过</a>
+                    	<a class="btn_cancel fr" href="<?= Url::to(['company/improve5','companyid'=>$companyid])?>">跳过</a>
                     </form>
                 </dd>
             </dl>
