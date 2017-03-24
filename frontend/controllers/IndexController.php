@@ -7,6 +7,7 @@ use Yii;
 use yii\web\Controller;
 use common\models\Ad;
 use common\models\JobsCategory;
+
 use common\models\Category;
 use backend\models\Company;
 use yii\data\Pagination;
@@ -74,6 +75,7 @@ class IndexController extends Controller
         $data['trade_id']=$trade_id;
         return $this->render("companylist.html",$data);
     }
+
 	//职位分类重新排序
 	public function get_job($job)
     {

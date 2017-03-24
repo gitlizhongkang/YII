@@ -1,6 +1,5 @@
 <?php
 namespace frontend\controllers;
-
 use common\models\District;
 use Yii;
 use yii\web\Controller;
@@ -295,4 +294,9 @@ class CompanyController extends Controller
         }
         echo json_encode($data);
     }
+    public function actionGongsi(){
+            
+            return $this->render('gongsi.html');
+        }
+
 }

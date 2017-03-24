@@ -1,0 +1,32 @@
+<link href="css/rule/rule.css" rel="stylesheet" type="text/css" />
+<body class="mian_bj">
+<div class="mian_top_01">
+<div id="box">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mian_b_bg">
+            <tr>
+                <td width="3%" class="mian_b_bg_lm">ID</td>
+                <td width="11%" class="mian_b_bg_lm"><span></span>热门词汇</td>
+                <td width="13%" class="mian_b_bg_lm"><span></span>方式</td>
+                <td width="10%" class="mian_b_bg_lm"><span></span>搜索次数</td>
+            </tr>
+            
+           <?php foreach($data as $val ){?>
+            <tr>
+                <td><?=$val['id']?></td>
+                <td><?=$val['words']?></td>
+                <td><?=$val['way']?></td>
+                <td><?=$val['num']?></td>
+            </tr>
+            <?php }?>
+            
+            <tr>
+               <td width="3%" class="mian_b_bg_lm">ID</td>
+                <td width="11%" class="mian_b_bg_lm"><span></span>热门词汇</td>
+                <td width="13%" class="mian_b_bg_lm"><span></span>方式</td>
+                <td width="10%" class="mian_b_bg_lm"><span></span>搜索次数</td>
+            </tr>
+        </table>
+        </div>
+        </div>
+        </body>
+        

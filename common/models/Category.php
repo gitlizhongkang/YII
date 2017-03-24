@@ -5,7 +5,11 @@ namespace common\models;
 use Yii;
 
 /**
+<<<<<<< HEAD
+ * This is the model class for table "lg_category".
+=======
  * This is the model class for table "{{%category}}".
+>>>>>>> caace8c2f3b0a134662978f66cf4e0934beb1b5a
  *
  * @property string $c_id
  * @property string $c_parentid
@@ -58,5 +62,11 @@ class Category extends \yii\db\ActiveRecord
             'stat_jobs' => 'Stat Jobs',
             'stat_resume' => 'Stat Resume',
         ];
+    }
+    public function getList(){
+        return $cate=Category::find()->groupBy(['c_alias'])->select('c_alias')->asArray()->all();
+    }
+    public function getArray($c_alias){
+        return $cate=Category::find()->select('c_id,c_name')->where("c_alias = '$c_alias'")->asArray()->all();
     }
 }

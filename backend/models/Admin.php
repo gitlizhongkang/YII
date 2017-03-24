@@ -51,4 +51,18 @@ class Admin extends \yii\db\ActiveRecord
     {
         return Admin::find()->where(['admin_name'=>$admin_name,'pwd'=>$pwd])->one();
     }
+    public function getAdd($date){
+         $this->setAttributes($date); //增加
+         $this ->save();
+    }
+    public function getLastId(){
+        $id = $this->attributes['admin_id'];
+        return $id;
+    }
+    public function getLike($admin_name){
+        // return  $arr=$this->find()->where(['like','item_name',"$item_name"])->asArray()->all();
+        $db=\Yii::$app->db;
+        $arr=$db->createCommand("select * from `auth_assignment` join lg_admin on auth_assignment.user_id = lg_admin.admin_id where admin_name like '%$admin_name%' ")->queryAll();//执行
+        return  $arr;
+    }
 }
