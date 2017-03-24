@@ -15,7 +15,10 @@ use backend\models\Jobs;
 class IndexController extends Controller
 {
 
+
 	public $layout='/header';
+
+
 	//前台首页		
 	public function actionIndex()
 	{

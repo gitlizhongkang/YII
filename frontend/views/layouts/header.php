@@ -58,48 +58,6 @@ $user=$session->get('user');
         });
     </script>-->
 <div id="body">
-    <div id="header">
-        <div class="wrapper">
-            <a href="index.html" class="logo">
-                <img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘" />
-            </a>
-            <ul class="reset" id="navheader">
-                <li class="current"><a href="index.html">首页</a></li>
-                <li ><a href="companylist.html" >公司</a></li>
-                <li ><a href="#" target="_blank">论坛</a></li>
-                <li ><a href="jianli.html" rel="nofollow">我的简历</a></li>
-                <li ><a href="create.html" rel="nofollow">发布职位</a></li>
-            </ul>
-            <?php if(!empty($user)){ ?>
-                <dl class="collapsible_menu">
-                    <dt>
-                        <span><?=$user['email']?></span>
-                        <span class="red dn" id="noticeDot-0"></span>
-                        <i></i>
-                    </dt>
-                    <?php if($user['type']==0){ ?>
-                        <dd><a rel="nofollow" href="person">个人中心</a></dd>
-                    <?php }else{ ?>
-                        <dd><a rel="nofollow" href="">企业中心</a></dd>
-                    <?php } ?>
-<link href="service/css/lrtk.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="service/js/lrtk.js"></script>
-<div id='cs_box'>
-    <span class='cs_title'>在线咨询</span>
-    <span class='cs_close'>x</span>
-    <div class='cs_img'></div>
-    <span class='cs_info'>有什么可以帮到你</span>
-    <div class='cs_btn'>点击咨询</div>
-</div>
-<script type="text/javascript">
-    myEvent(window,'load',function(){
-        cs_box.set({
-            img_path : 'service/images/xixi.jpg',   //设置图片路径
-            qq : '632179652',   //设置QQ号码
-        });
-    });
-</script>
-<div id="body">
 	<div id="header">
     	<div class="wrapper">
     		<a href="index.html" class="logo">
@@ -135,5 +93,22 @@ $user=$session->get('user');
             <?php }?>
         </div>
     </div>
-<?php echo $content; ?>
 
+    <link href="service/css/lrtk.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="service/js/lrtk.js"></script>
+<div id='cs_box'>
+    <span class='cs_title'>在线咨询</span>
+    <span class='cs_close'>x</span>
+    <div class='cs_img'></div>
+    <span class='cs_info'>有什么可以帮到你</span>
+    <div class='cs_btn'>点击咨询</div>
+</div>
+<script type="text/javascript">
+    myEvent(window,'load',function(){
+        cs_box.set({
+            img_path : 'service/images/xixi.jpg',   //设置图片路径
+            qq : '632179652',   //设置QQ号码
+        });
+    });
+</script>
+    <?php echo $content; ?>

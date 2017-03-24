@@ -110,7 +110,7 @@ class RegisterController extends Controller
 						$data['last_login_time']=time();
 						$data['last_login_ip']=$_SERVER['REMOTE_ADDR'];	
 						$data['points']=$res2['points']+5;
-						$members->updatOne($res2['uid'],$data);
+						$members->updateOne($res2['uid'],$data);
 						//修改积分
 					}
 				}				

@@ -6,9 +6,12 @@ use Yii;
 use yii\web\Controller;
 use common\models\Ad;
 use common\models\JobsCategory;
+use common\models\CompanyProduct;
+use common\models\CompanyLeader;
 use common\models\Category;
 use backend\models\Company;
 use yii\data\Pagination;
+use yii\web\UploadedFile;
 
 class CompanyController extends Controller
 {
@@ -33,6 +36,9 @@ class CompanyController extends Controller
                 $info['msg']=1;
                 return $this->render("bindstep3.html",$info);
             }
+        }
+        if($companyinfo['logo']==''){
+            return $this->redirect(["company/improve1","companyid"=>$companyinfo['id']]);
         }
     }
     public function actionBlind1()
@@ -127,6 +133,7 @@ class CompanyController extends Controller
              if($res){
                  $info['msg']="恭喜你，公司邮箱验证完毕，请完善公司信息";
                  $info['code']=1;
+                 $info['companyid']=$companyinfo['id'];
              }else{
                  $info['msg']="公司邮箱验证失败,请重新发起验证";
                  $info['code']=2;
@@ -136,5 +143,151 @@ class CompanyController extends Controller
              $info['msg']='这是什么';
          }
         return $this->render('success.html',$info);
+    }
+    //完善公司资料
+    public function actionImprove1()
+    {
+        if(Yii::$app->request->isPost){
+            $post=Yii::$app->request->post();
+            $data['shortname']=$post['companyShortName'];
+            $data['logo']=$post['logo'];
+            $data['website']=$post['companyUrl'];
+            $data['city']=$post['city'];
+            $data['trade']=$post['trade'];
+            $data['trade_id']=$post['trade_id'];
+            $data['scale_id']=$post['scale_id'];
+            $data['scale']=$post['scale'];
+            $data['message']=$post['message'];
+            $result=Company::find()->where(['id'=>$post['companyId']])->one();
+            $result->setAttributes($data);
+            $res=$result->save();
+            if($res){
+                echo 1;
+            }else{
+                echo 0;
+            }
+        }else{
+            $companyid=Yii::$app->request->get("companyid");
+            if(empty($companyid)){
+                $info['code']=3;
+                $info['msg']='这是什么';
+                return $this->render('success.html',$info);
+            }
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            $uid=$userinfo['uid'];
+            $data['companyinfo']=Company::find()->where(["u_id"=>$uid])->asArray()->one();
+            $data['scalelist']=Category::find()->where("c_alias = 'QS_scale'")->asArray()->all();
+            $data['tradelist']=Category::find()->where("c_alias = 'QS_trade'")->asArray()->all();
+            return $this->render('improve1.html',$data);
+        }
+    }
+    public function actionImprove2()
+{
+    if(Yii::$app->request->isPost){
+        $post=Yii::$app->request->post();
+        $result=Company::find()->where(['id'=>$post['companyId']])->one();
+        $data['labels']=$post['labels'];
+        $result->setAttributes($data);
+        $res=$result->save();
+        if($res){
+            echo 1;
+        }else{
+            echo 0;
+        }
+    }else{
+        $companyid=Yii::$app->request->get("companyid");
+        if(empty($companyid)){
+            $info['code']=3;
+            $info['msg']='这是什么';
+            return $this->render('success.html',$info);
+        }
+        $data['taglist']=Category::find()->where("c_alias = 'QS_jobtag'")->asArray()->all();
+        $data['companyid']=$companyid;
+        return $this->render('improve2.html',$data);
+    }
+}
+    public function actionImprove3()
+    {
+        if(Yii::$app->request->isPost){
+            $post=Yii::$app->request->post();
+            $model=new CompanyLeader();
+            foreach($post['leaderInfos'] as $k=>$v){
+                $_model = clone $model;
+                $_model->setAttributes($v);
+                $_model->save();
+            }
+            return $this->redirect(['improve4','companyid'=>$post['companyId']]);
+        }else{
+            $companyid=Yii::$app->request->get("companyid");
+            if(empty($companyid)){
+                $info['code']=3;
+                $info['msg']='这是什么';
+                return $this->render('success.html',$info);
+            }
+            $data['companyid']=$companyid;
+            return $this->render('improve3.html',$data);
+        }
+    }
+    public function actionImprove4()
+    {
+        if(Yii::$app->request->isPost){
+            $post=Yii::$app->request->post();
+            $model=new CompanyProduct();
+            foreach($post['productInfos'] as $k=>$v){
+            $_model = clone $model;
+            $_model->setAttributes($v);
+            $_model->save();
+            }
+            return $this->redirect(['improve5','companyid'=>$post['companyId']]);
+        }else{
+            $companyid=Yii::$app->request->get("companyid");
+            if(empty($companyid)){
+                $info['code']=3;
+                $info['msg']='这是什么';
+                return $this->render('success.html',$info);
+            }
+            $data['companyid']=$companyid;
+            return $this->render('improve4.html',$data);
+        }
+    }
+    public function actionImprove5()
+    {
+        if(Yii::$app->request->isPost){
+//            $post=Yii::$app->request->post();
+//            $result=new CompanyProduct();
+//            foreach($post['productInfos'] as $k=>$v){
+//                $result->setAttributes($v);
+//                $result->save();
+//            }
+//            $data['companyid']=$post['companyId'];
+//            return $this->redirect(['improve5'],$data);
+        }else{
+            $companyid=Yii::$app->request->get("companyid");
+            if(empty($companyid)){
+                $info['code']=3;
+                $info['msg']='这是什么';
+                return $this->render('success.html',$info);
+            }
+            $data['companyid']=$companyid;
+            return $this->render('improve5.html',$data);
+        }
+    }
+    //处理上传图片
+    public function actionCheckLogo()
+    {
+        $upload=new UploadedFile(); //实例化上传类
+        $name=$upload->getInstanceByName('myfile'); //获取文件原名称
+        $img=$_FILES['myfile']; //获取上传文件参数
+        $upload->tempName=$img['tmp_name']; //设置上传的文件的临时名称
+        $img_path='uploads/'.$name; //设置上传文件的路径名称(这里的数据进行入库)
+        $arr=$upload->saveAs($img_path); //保存文件
+        if($arr){
+            $data['msg']=1;
+            $data['path']=$img_path;
+        }else{
+            $data['msg']=2;
+        }
+        echo json_encode($data);
     }
 }
