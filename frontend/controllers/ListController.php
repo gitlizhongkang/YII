@@ -41,7 +41,7 @@ class ListController extends Controller
 			if($dq=="全国"){
 				$where.="";
 			}else{
-				$where.=" and district_cn = '$dq'";
+				$where.=" and district_cn like '$dq'";
 			}
 			//月薪
 			if($yx==""){
@@ -79,6 +79,7 @@ class ListController extends Controller
 			}else{
 				$where.="";
 			}
+			$where.=" order by addtime desc";
 			$jobs=$JoBModel->getAll($where);
 			// print_r($where);die;
 			$HotsModel=new Hots;
@@ -93,6 +94,7 @@ class ListController extends Controller
 				$date['num']=1;
 				$AddHots=$HotsModel->getAdd($date);
 			}
+			//热搜
 			$Hots=$HotsModel->GetRankList();
 			// print_r($jobs);die;
 			$CateModel=new Category;

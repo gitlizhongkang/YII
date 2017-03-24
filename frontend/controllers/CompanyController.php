@@ -136,8 +136,12 @@ class CompanyController extends Controller
          }
         return $this->render('success.html',$info);
     }
+    //公司詳細信息
     public function actionGongsi(){
-            
+            $CompanyModel=new Company;
+            $id=yii::$app->request->get("id");
+            $CompanyDetail=$CompanyModel->getOne1($id);
+            // print_r($CompanyDetail);die;
             return $this->render('gongsi.html');
         }
 }

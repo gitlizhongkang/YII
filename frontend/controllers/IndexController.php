@@ -9,6 +9,7 @@ use common\models\Ad;
 use common\models\JobsCategory;
 
 use common\models\Category;
+use common\models\Hots;
 use backend\models\Company;
 use yii\data\Pagination;
 use backend\models\Jobs;
@@ -42,6 +43,9 @@ class IndexController extends Controller
 		//最热职位
 		$data['new']=$jobs->select1();
 		//最新职位
+        $HotsModel=new Hots;
+        $data['hots']=$HotsModel->GetRankList();
+         //热搜
 		return $this->render('index.html',$data);
 	}
 	public function actionCompanyList()

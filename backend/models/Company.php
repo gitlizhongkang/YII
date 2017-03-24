@@ -148,4 +148,9 @@ class Company extends \yii\db\ActiveRecord
         $this->setAttributes($data);
         return $this->save();
     }
+    //獲取一條(公司详细详细全)
+      public function getOne1($id)
+    {
+        return Company::find()->where(['id'=>$id])->asArray()->one();
+    }
 }
