@@ -57,4 +57,11 @@ class ResumeJob extends \yii\db\ActiveRecord
     public function selectOne($job_id,$resume_id){
         return $this->find()->where("job_id='$job_id' and resume_id='$resume_id'")->one();
     }
+    //查询某一用户的职位按照职位id分组
+    public function groupJob($id){
+        $sql="select job_id,count('id') from lg_resume_job where company_id=5 group by job_id";
+        $connect=Yii::$app->db;
+        $command=$connect->createCommand($sql);
+        return $command->queryAll(); 
+    }
 }

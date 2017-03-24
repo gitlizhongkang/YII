@@ -63,7 +63,6 @@ class Members extends \yii\db\ActiveRecord
             'code_time'=>'Code Time',
         ];
     }
-<<<<<<< HEAD
     public function getList($where)
     {
         $arr=Members::find()->where($where);
@@ -77,7 +76,7 @@ class Members extends \yii\db\ActiveRecord
     public function del($id)
     {
         return Members::deleteAll("uid in ($id)");
-=======
+    }
      //添加
     public function add($arr){
         $this->setAttributes($arr);
@@ -97,6 +96,16 @@ class Members extends \yii\db\ActiveRecord
     //根据code查询用户信息
     public function checkCode($code){
          return $this->find()->where(['code'=>$code])->one();
->>>>>>> b39e94c25bce4acc875a3ad2c653e6a315a48412
+    }
+    //直接修改积分
+     public function updatePoint($id){
+        $sql="update lg_members set points=points-10 where uid=$id";
+        $connect=Yii::$app->db;
+        $command=$connect->createCommand($sql);
+        return $command->execute();       
+    }
+    //获得某个用户的积分数
+    public function getPoint($id){
+        return $this->find()->select('points')->where(['uid'=>$id])->one();
     }
 }

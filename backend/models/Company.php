@@ -148,4 +148,9 @@ class Company extends \yii\db\ActiveRecord
         $this->setAttributes($data);
         return $this->save();
     }
+     //查询单条企业信息
+    public function get($id)
+    {
+        return Company::find()->where(['u_id'=>$id])->one();
+    }
 }
