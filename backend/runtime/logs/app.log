@@ -46452,3 +46452,927 @@ $_SERVER = [
     'REQUEST_TIME' => 1490100403
 >>>>>>> 372d5e1309bb8cef2470b5e36f698188787290c3
 ]
+2017-03-24 14:42:19 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:42:19 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63094'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337739.025
+    'REQUEST_TIME' => 1490337739
+]
+2017-03-24 14:42:19 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:42:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'login/code'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'nmp8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63094'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=login%2Fcode'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=login%2Fcode'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337739.292
+    'REQUEST_TIME' => 1490337739
+]
+2017-03-24 14:42:27 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:42:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'login/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'cE50TktlNnIaex4RHxxlSicJTSQ4CVM.RgxFLHIxBTwhGxgnLTdMHQ=='
+    'admin_name' => 'admin'
+    'pwd' => 'admin'
+    'CheckCode' => 'nmp8'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'nmp8'
+    'admin_name' => 'admin'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '116'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=login%2Flogin'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=login%2Flogin'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337747.478
+    'REQUEST_TIME' => 1490337747
+]
+2017-03-24 14:42:27 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:42:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'nmp8'
+    'admin_name' => 'admin'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=index%2Findex'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337747.609
+    'REQUEST_TIME' => 1490337747
+]
+2017-03-24 14:42:27 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:42:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'nmp8'
+    'admin_name' => 'admin'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Fmain'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=index%2Fmain'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337747.77
+    'REQUEST_TIME' => 1490337747
+]
+2017-03-24 14:42:33 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:42:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'company/company-list'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63105'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=company%2Fcompany-list'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fcompany-list'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337753.263
+    'REQUEST_TIME' => 1490337753
+]
+2017-03-24 14:43:01 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:43:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'company/set-audit'
+    'id' => '7'
+    'audit' => '3'
+    'reason' => '企业太渣渣'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fcompany-list'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63182'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=company%2Fset-audit&id=7&audit=3&reason=%E4%BC%81%E4%B8%9A%E5%A4%AA%E6%B8%A3%E6%B8%A3'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fset-audit&id=7&audit=3&reason=%E4%BC%81%E4%B8%9A%E5%A4%AA%E6%B8%A3%E6%B8%A3'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337781.164
+    'REQUEST_TIME' => 1490337781
+]
+2017-03-24 14:43:04 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:43:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'company/company-list'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fset-audit&id=7&audit=3&reason=%E4%BC%81%E4%B8%9A%E5%A4%AA%E6%B8%A3%E6%B8%A3'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63182'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=company%2Fcompany-list'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fcompany-list'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337784.316
+    'REQUEST_TIME' => 1490337784
+]
+2017-03-24 14:43:07 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:43:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'company/company-list'
+    'audit' => ''
+    'time' => '360'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fcompany-list'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63182'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=company%2Fcompany-list&audit=&time=360'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fcompany-list&audit=&time=360'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337787.555
+    'REQUEST_TIME' => 1490337787
+]
+2017-03-24 14:43:09 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 67067 bytes' 
+
+in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\\phpStudy7.0\\...', 88, Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('E:\\phpStudy7.0\\...', Array)
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-03-24 14:43:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'company/company-list'
+    'audit' => ''
+    'time' => '360'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fcompany-list&audit=&time=360'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63182'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=company%2Fcompany-list&audit=&time=360'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fcompany-list&audit=&time=360'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337789.204
+    'REQUEST_TIME' => 1490337789
+]
+2017-03-24 14:43:11 [127.0.0.1][-][saacejsjpk0n94nsbmn2paj280][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: company/edit-company' in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('edit-company', Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('company/edit-co...', Array)
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\backend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-24 14:43:11 [127.0.0.1][-][saacejsjpk0n94nsbmn2paj280][info][application] $_GET = [
+    'r' => 'company/edit-company'
+    'id' => '24'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'nmp8'
+    'admin_name' => 'admin'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fcompany-list&audit=&time=360'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63182'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=company%2Fedit-company&id=24'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=company%2Fedit-company&id=24'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337791.626
+    'REQUEST_TIME' => 1490337791
+]
+2017-03-24 14:44:54 [127.0.0.1][-][saacejsjpk0n94nsbmn2paj280][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: jobs/edit-jobs' in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('edit-jobs', Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('jobs/edit-jobs', Array)
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\backend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-24 14:44:54 [127.0.0.1][-][saacejsjpk0n94nsbmn2paj280][info][application] $_GET = [
+    'r' => 'jobs/edit-jobs'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'nmp8'
+    'admin_name' => 'admin'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=jobs%2Fjobs-list'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '63340'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=jobs%2Fedit-jobs&id=1'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=jobs%2Fedit-jobs&id=1'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490337894.752
+    'REQUEST_TIME' => 1490337894
+]
+2017-03-24 15:01:09 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)' in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\common\models\Resume.php:202
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-24 15:01:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'resume/index'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '64573'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=resume%2Findex'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=resume%2Findex'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490338869.284
+    'REQUEST_TIME' => 1490338869
+]
+2017-03-24 15:01:10 [127.0.0.1][-][saacejsjpk0n94nsbmn2paj280][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: resume/audit' in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('audit', Array)
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('resume/audit', Array)
+#2 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\backend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpStudy7.0\WWW\gs\Practical training_one\YII\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-24 15:01:10 [127.0.0.1][-][saacejsjpk0n94nsbmn2paj280][info][application] $_GET = [
+    'r' => 'resume/audit'
+]
+
+$_COOKIE = [
+    '_identity-frontend' => '94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"kB85PmsLc_Jyu30KttNz5fagiNYV9Jem\",2592000]\";}'
+    'advanced-frontend' => 'n5qnbiuaelolgi5t8dhccdvt04'
+    '_csrf-frontend' => '8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1\";}'
+    '_csrf-backend' => '0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo\";}'
+    'advanced-backend' => 'saacejsjpk0n94nsbmn2paj280'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => 'nmp8'
+    'admin_name' => 'admin'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.hb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.hb.com/gs/Practical%20training_one/YII/backend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => '_identity-frontend=94f6bea07bf6bb88379a8f76922d3c6e968ae292595adc736f0fe781a66b955ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kB85PmsLc_Jyu30KttNz5fagiNYV9Jem%22%2C2592000%5D%22%3B%7D; advanced-frontend=n5qnbiuaelolgi5t8dhccdvt04; _csrf-frontend=8fa76e2d605193ce81bc218addd7f3e8f8626304515ef0a017f7d699c3047daba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22wSI-oJaW5RiF6aU2NAmWcLMUet3dQGq1%22%3B%7D; _csrf-backend=0147a98e000a466d21ea50246c2298a8f00bf276d70dec5fda7b35e1af0c31b7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j5j_TyS8WG9jsleL6B1b9T3NQUlifRzo%22%3B%7D; advanced-backend=saacejsjpk0n94nsbmn2paj280'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;E:\\SVN\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Git\\cmd;E:\\phpStudy7.0\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samsung\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.hb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpStudy7.0/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/phpStudy7.0/WWW/gs/Practical training_one/YII/backend/web/index.php'
+    'REMOTE_PORT' => '64581'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=resume%2Faudit'
+    'REQUEST_URI' => '/gs/Practical%20training_one/YII/backend/web/index.php?r=resume%2Faudit'
+    'SCRIPT_NAME' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'PHP_SELF' => '/gs/Practical training_one/YII/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490338870.907
+    'REQUEST_TIME' => 1490338870
+]

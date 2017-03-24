@@ -60,7 +60,6 @@ class JobsCategory extends \yii\db\ActiveRecord
             if($val['parentid'] == $parentid)
             {
                 $val['leave'] = $leave;
-                
                 $tree[] = $val;
                 $this->tree($cat_info,$val['id'],$leave+1);
             }
