@@ -254,14 +254,12 @@ class CompanyController extends Controller
     public function actionImprove5()
     {
         if(Yii::$app->request->isPost){
-//            $post=Yii::$app->request->post();
-//            $result=new CompanyProduct();
-//            foreach($post['productInfos'] as $k=>$v){
-//                $result->setAttributes($v);
-//                $result->save();
-//            }
-//            $data['companyid']=$post['companyId'];
-//            return $this->redirect(['improve5'],$data);
+            $post=Yii::$app->request->post();
+            $result=Company::find()->where(['id'=>$post['companyId']])->one();
+            $data['contents']=$post['companyProfile'];
+            $result->setAttributes($data);
+            $res=$result->save();
+            return $this->redirect(['improve5'],$data);
         }else{
             $companyid=Yii::$app->request->get("companyid");
             if(empty($companyid)){
