@@ -1,4 +1,7 @@
-﻿</script><script type="text/javascript" async="" src="style/js/conversion.js"></script>
+﻿<?php
+use yii\helpers\Url;
+?>
+</script><script type="text/javascript" async="" src="style/js/conversion.js"></script>
 <script type="text/javascript">
 var ctx = "http://www.lagou.com";
 console.log(1);
@@ -31,7 +34,7 @@ var youdao_conv_id = 271546;
                 <dd class="c_notice">
 					<?php if($code==1){ ?>
                 	<h4><?php echo $msg;?></h4>
-                    <a class="greylink" href="create.html">完善公司资料</a>
+                    <a class="greylink" href="<?= Url::to(['company/improve1','companyid'=>$companyid])?>">完善公司资料</a>
 					<?php }else if($code==2) { ?>
 					<h4><?php echo $msg;?></h4>
 					<a class="greylink" href="create.html">点击重新验证</a>

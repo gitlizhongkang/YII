@@ -5,6 +5,10 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'authManager' => [
+		    'class' => 'yii\rbac\DbManager',
+		],
+
         'session'=>[
         	'class'=>'yii\web\Session',
         	'timeout'=>3*24*3600,

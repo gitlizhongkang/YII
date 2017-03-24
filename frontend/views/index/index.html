@@ -169,7 +169,7 @@ if(count($middle)>=($i+1)){
 		    </div>
 		</li>
 		<?php } ?>
-		<a href="list.html" class="btn fr" target="_blank">查看更多</a>
+		<a href="<?=url::to(['list/index'])?>" class="btn fr" target="_blank">查看更多</a>
 	</ul>
 	<ul class="hot_pos hot_posHotPosition reset" style="display:none;">
 	    <?php foreach($new as $k=>$v){?>
@@ -203,7 +203,7 @@ if(count($middle)>=($i+1)){
 		    </div>
 		</li>
 		<?php } ?>
-	    <a href="list.html?city=%E5%85%A8%E5%9B%BD" class="btn fr" target="_blank">查看更多</a>
+	    <a href="<?=Url::to(['list/index'])?>" class="btn fr" target="_blank">查看更多</a>
 	 </ul>
  </div>
             

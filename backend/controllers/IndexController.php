@@ -3,6 +3,7 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
+use backend\controllers\MyController;
 
 class IndexController extends Controller
 {

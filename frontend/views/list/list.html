@@ -1,0 +1,632 @@
+﻿<?php
+use yii\widgets\LinkPager;
+use yii\helpers\Url;
+?>
+<!DOCTYPE HTML>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<script id="allmobilize" charset="utf-8" src="style/js/allmobilize.min.js"></script>
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="alternate" media="handheld"  />
+<!-- end 云适配 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>前端开发全国-职位搜索-拉勾网-最专业的互联网招聘平台</title>
+<meta property="qc:admins" content="23635710066417756375" />
+<meta content="前端开发招聘  全国地区招聘 紫色医疗招聘前端开发,月薪:10k-20k,要求:本科及以上学历,3-5年工作经验。职位诱惑：借移动医疗大势享受坐直升飞机的职场发展 公司规模:15-50人移动互联网 ,健康医疗类公司招聘信息汇总  最新最热门互联网行业招聘信息，尽在拉勾网" name="description">
+<meta content="前端开发招聘,全国地区前端开发招聘,紫色医疗招聘前端开发,移动互联网 类公司招聘信息汇总,健康医疗类公司招聘信息汇总,拉勾招聘,拉勾网,互联网招聘" name="keywords">
+<meta name="baidu-site-verification" content="QIQ6KC1oZ6" />
+
+<!-- <div class="web_root"  style="display:none">h</div> -->
+<script type="text/javascript">
+var ctx = "h";
+console.log(1);
+</script>
+<link rel="Shortcut Icon" href="http://www.lagou.com/h/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="style/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="style/css/external.min.css"/>
+<link rel="stylesheet" type="text/css" href="style/css/popup.css"/>
+<script src="style/js/jquery.1.10.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="style/js/jquery.lib.min.js"></script>
+<script src="style/js/ajaxfileupload.js" type="text/javascript"></script>
+<script type="text/javascript" src="style/js/additional-methods.js"></script>
+<!--[if lte IE 8]>
+    <script type="text/javascript" src="style/js/excanvas.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var youdao_conv_id = 271546; 
+</script>
+<style>
+	.page li{
+		list-style-type: none;
+		float: left;
+		margin-left: 10px;
+		background: #91cebe none repeat scroll 0 0;
+	    color: #fff;
+	    float: left;
+	    height: 30px;
+	    line-height: 30px;
+	    margin: 0 10px 10px 0;
+	    padding: 0 10px;
+	    transition: all 0.2s ease 0s;
+	    font
+	}
+	.page li:hover
+	{ 
+	background-color:#009875;
+	}
+	.page li a:hover{
+		color: white;
+	}
+	.page a {
+    cursor: pointer;
+    text-decoration: none;
+	}
+	* {
+    outline: medium none;
+	}
+	*::-moz-selection {
+	    background: #019875 none repeat scroll 0 0;
+	    color: white;
+	}
+</style>
+<script type="text/javascript" src="style/js/conv.js"></script>
+</head>
+<body>
+<div id="body">
+    <div id="container">
+        
+       	<div class="sidebar">
+       		            <div id="options" class="greybg">
+                                <dl >
+                   	<dt>月薪范围 <em ></em></dt>
+	                <dd >
+	                <?php foreach($date['QS_wage'] as $val){?>
+	                    	                    	<div class="QS_wage"><?=$val['c_name']?></div>
+	                <?php }?>	
+	                    	                </dd> 
+                </dl>
+                                <dl >
+                   	<dt>工作经验 <em ></em></dt>
+	                <dd >
+	                <?php foreach($date['QS_experience'] as $val){?>
+	                    	                    	<div class="QS_experience"><?=$val['c_name']?></div>
+	                <?php }?>	
+	                    	                </dd> 
+                </dl>
+                                <dl >
+                   	<dt>最低学历 <em ></em></dt>
+	                <dd >
+	                <?php foreach($date['QS_education'] as $val){?>
+	                    	                    	<div value="<?=$val['c_id']?>" class="QS_education"><?=$val['c_name']?></div>
+	                <?php }?>	
+	                    	                </dd> 
+                </dl>
+                                <dl >
+                   	<dt>工作性质 <em ></em></dt>
+	                <dd >
+	                <?php foreach($date['QS_jobs_nature'] as $val){?>
+	                    	                    	<div class="QS_jobs_nature"><?=$val['c_name']?></div>
+	                <?php }?>
+	                    	                </dd> 
+                </dl>
+                                <dl >
+                   	<dt>发布时间 <em ></em></dt>
+	                <dd >
+	                    	                    	<div class="c_time">今天</div>
+	                    	                    	<div class="c_time">3天内</div>
+	                    	                    	<div class="c_time">一周内</div>
+	                    	                    	<div class="c_time">一月内</div><div class="c_time">不限</div>
+	                    	                </dd> 
+                </dl>
+                            </div>
+            
+            <!-- QQ群 -->
+            	            		            <div class="qq_group">
+		            	加入<span>前端</span>QQ群
+		            	<div class="f18">跟同行聊聊</div>
+		            	<p>160541839</p>
+		            </div>
+		                                
+            <!-- 对外合作广告位  -->
+             	            		        	<a href="http://www.w3cplus.com/" target="_blank" class="partnersAd">
+		            	<img src="style/images/w3cplus.png" width="230" height="80" alt="w3cplus" />
+		            </a>
+		            <a href="" target="_blank" class="partnersAd">
+		            	<img src="style/images/jquery_school.jpg" width="230" height="80" alt="JQ学校" />
+		            </a>
+		                                	            <a href="http://linux.cn/" target="_blank" class="partnersAd">
+	            	<img src="style/images/linuxcn.png" width="230" height="80" alt="Linux中文社区"  />
+	            </a>
+	            <a href="http://zt.zhubajie.com/zt/makesite? utm_source=lagou.com&utm_medium=referral&utm_campaign=BD-yl" target="_blank" class="partnersAd">
+	            	<img src="style/images/zhubajie.jpg" width="230" height="80" alt="猪八戒" />
+	            </a>
+	            <a href="http://www.imooc.com" target="_blank" class="partnersAd">
+	            	<img src="style/images/muke.jpg" width="230" height="80" alt="幕课网" />
+	            </a>
+	        	       	<!-- 	            <a href="http://www.osforce.cn/" target="_blank" class="partnersAd">
+	            	<img src="style/images/osf-lg.jpg" width="230" height="80" alt="开源力量"  />
+	            </a>
+	         -->
+        </div>
+        
+        <div class="content">
+        	<div id="search_box">
+		<form id="searchForm" name="searchForm" action="<?=Url::to(['list/index'])?>" onsubmit="return false"  method="get">
+        <ul id="searchType">
+        	        	<li data-searchtype="1" class="type_selected">职位</li>
+        	<li data-searchtype="4">公司</li>
+        	        </ul>
+        <div class="searchtype_arrow"></div>
+        <input type="text" id="search_input" name = "kd"  tabindex="1" value=""  placeholder="请输入职位名称，如：产品经理"  />
+                <input type="submit" id="search_button" value="搜索" />
+    </form>
+</div>
+<style>
+.ui-autocomplete{width:488px;background:#fafafa !important;position: relative;z-index:10;border: 2px solid #91cebe;}
+.ui-autocomplete-category{font-size:16px;color:#999;width:50px;position: absolute;z-index:11; right: 0px;/*top: 6px; */text-align:center;border-top: 1px dashed #e5e5e5;padding:5px 0;}
+.ui-menu-item{ *width:439px;vertical-align: middle;position: relative;margin: 0px;margin-right: 50px !important;background:#fff;border-right: 1px dashed #ededed;}
+.ui-menu-item a{display:block;overflow:hidden;}
+</style>
+<script type="text/javascript" src="style/js/search.min.js"></script>
+<dl class="hotSearch">
+	<dt>热门搜索：</dt>
+	<?php foreach($hots as $val){?>
+	<dd><a href="<?=Url::to(['list/index'])?>&fs=<?=$val['way']?>&kw=<?=$val['words']?>"><?=$val['words']?></a></dd>
+	<?php }?>
+</dl>			<div class="breakline"></div>
+            <dl class="workplace" id="workplaceSelect">
+                <dt class="fl">工作地点：</dt>
+               	               	<dd >
+                	<a href="javascript:;" class="citys">全国</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd >
+                	<a href="javascript:;" class="citys" >北京</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd >
+                	<a href="javascript:;" class="citys" >上海</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd >
+                	<a href="javascript:;" class="citys" >广州</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd >
+                	<a href="javascript:;" class="citys" >深圳</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd >
+                	<a href="javascript:;" class="citys" >成都</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd >
+                	<a href="javascript:;" class="citys" >杭州</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd >
+                	<a href="javascript:;" class="citys" >武汉</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd >
+                	<a href="javascript:;" class="citys" >南京</a> 
+                	                	|
+                	               	</dd>
+               	               	<dd  class="more" >
+                	<a href="javascript:;" >其他</a> 
+                	                	<div class="triangle citymore_arrow"></div>
+                	               	</dd>
+               	                <dd id="box_expectCity" class="searchlist_expectCity dn">
+	            	<span class="bot"></span>
+	            	<span class="top"></span>
+		    				    						    			    						    		<dl>
+			    			<dt>ABCDEF</dt>
+			    			<dd>
+			     						     				<span class="city">北京</span>
+			     						     				<span class="city">长春</span>
+			     						     				<span class="city">成都</span>
+			     						     				<span class="city">重庆</span>
+			     						     				<span class="city">长沙</span>
+			     						     				<span class="city">常州</span>
+			     						     				<span class="city">东莞</span>
+			     						     				<span class="city">大连</span>
+			     						     				<span class="city">佛山</span>
+			     						     				<span class="city">福州</span>
+			     						    			</dd>
+			    	  	</dl>
+			    	  				    			    						    		<dl>
+			    			<dt>GHIJ</dt>
+			    			<dd>
+			     						     				<span class="city">贵阳</span>
+			     						     				<span class="city">广州</span>
+			     						     				<span class="city">哈尔滨</span>
+			     						     				<span class="city">合肥</span>
+			     						     				<span class="city">海口</span>
+			     						     				<span class="city">杭州</span>
+			     						     				<span class="city">惠州</span>
+			     						     				<span class="city">金华</span>
+			     						     				<span class="city">济南</span>
+			     						     				<span class="city">嘉兴</span>
+			     						    			</dd>
+			    	  	</dl>
+			    	  				    			    						    		<dl>
+			    			<dt>KLMN</dt>
+			    			<dd>
+			     						     				<span class="city">昆明</span>
+			     						     				<span class="city">廊坊</span>
+			     						     				<span class="city">宁波</span>
+			     						     				<span class="city">南昌</span>
+			     						     				<span class="city">南京</span>
+			     						     				<span class="city">南宁</span>
+			     						     				<span class="city">南通</span>
+			     						    			</dd>
+			    	  	</dl>
+			    	  				    			    						    		<dl>
+			    			<dt>OPQR</dt>
+			    			<dd>
+			     						     				<span class="city">青岛</span>
+			     						     				<span class="city">泉州</span>
+			     						    			</dd>
+			    	  	</dl>
+			    	  				    			    						    		<dl>
+			    			<dt>STUV</dt>
+			    			<dd>
+			     						     				<span class="city">上海</span>
+			     						     				<span class="city">石家庄</span>
+			     						     				<span class="city">绍兴</span>
+			     						     				<span class="city">沈阳</span>
+			     						     				<span class="city">深圳</span>
+			     						     				<span class="city">苏州</span>
+			     						     				<span class="city">天津</span>
+			     						     				<span class="city">太原</span>
+			     						     				<span class="city">台州</span>
+			     						    			</dd>
+			    	  	</dl>
+			    	  				    			    						    		<dl>
+			    			<dt>WXYZ</dt>
+			    			<dd>
+			     						     				<span class="city">武汉</span>
+			     						     				<span class="city">无锡</span>
+			     						     				<span class="city">温州</span>
+			     						     				<span class="city">西安</span>
+			     						     				<span class="city">厦门</span>
+			     						     				<span class="city">烟台</span>
+			     						     				<span class="city">珠海</span>
+			     						     				<span class="city">中山</span>
+			     						     				<span class="city">郑州</span>
+			     						    			</dd>
+			    	  	</dl>
+			    	  				    				    </dd>  
+            </dl>
+         
+            <div id="tip_didi" class="dn">
+            	<span>亲，“嘀嘀打车”已更名为“滴滴打车”了哦，我们已帮您自动跳转~</span>
+            	<a href="javascript:;">我知道了</a>
+            </div>
+            <?php foreach($data['list'] as $v){?>
+            	            <ul class="hot_pos reset">
+	                    		                    			                <li class="odd clearfix">
+			                			                				                	<div class="hot_pos_l">
+			                        <div class="mb10">
+			                            <a href="h/jobs/86989.html" title="<?=$v['jobs_name']?>" target="_blank"><?=$v['jobs_name']?></a> 
+			                            &nbsp;
+			                            <span class="c9"><?=$v['district_cn']?></span>
+			                            			                        </div>
+			                        <span><em class="c7">月薪：</em><?=$v['wage_cn']?></span>
+			                        <span><em class="c7">经验：</em><?=$v['experience_cn']?></span>
+			                        <span><em class="c7">最低学历： </em><?=$v['education_cn']?></span>
+			                        <br />
+			                        <span><em class="c7">职位诱惑：</em><?=$v['contents']?></span>
+			                        <br />
+			                        <span>
+<?php
+	$cd=time()-$v['addtime'];
+	if($cd>3600*24*30){
+		echo ceil($cd/3600/24/30)."个月前发布";
+	}else if($cd>3600*24*7){
+		echo floor($cd/3600/24/7)."周前发布";
+	}else if($cd>3600*24){
+		echo ceil($cd/3600/24)."日前发布";
+	}else if($cd>3600){
+		echo ceil($cd/3600)."小时前发布";
+	}else if($cd>60){
+		echo ceil($cd/60)."分钟前发布";
+	}
+?>
+			                        </span>
+			                    </div> 
+						        <div class="hot_pos_r">
+			                        <div class="apply">
+			                        <a href="toudi.html" target="_blank">投个简历</a>
+			                        				                        </div>
+			                        <div class="mb10"><a href="<?=Url::to(['company/gongsi'])?>&id=<?=$v['id']?>" title="<?=$v['companyname']?>" target="_blank"><?=$v['companyname']?></a></div>
+			                        <span><em class="c7">领域： </em><?=$v['trade_cn']?></span>
+			                        			                        <span><em class="c7">创始人：</em> Lu</span>
+			                        			                        <br />
+			                        <span><em class="c7">阶段： </em>成长型(A轮)</span>
+			                        <span><em class="c7">规模： </em><?=$v['scale_cn']?></span>
+			                        <ul class="companyTags reset">
+			                            			                            				                            		<li>五险一金</li>
+			                            				                            			                            				                            		<li>股票期权</li>
+			                            				                            			                            				                            		<li>年度旅游</li>
+			                            				                            			                        </ul>
+			                    </div>
+			                 </li>
+			                
+	                    		                    			                <li class="clearfix">
+			                			                				                	<div class="hot_pos_l">
+			                
+	                    	            </ul>
+	                    	            <?php }?>
+
+	                        	<div class="page"><?php
+    echo LinkPager::widget(['pagination' => $pages,'nextPageLabel' => '下一页', 'prevPageLabel' => '上一页','firstPageLabel' => '首页','lastPageLabel' => '尾页','hideOnSinglePage' => false ]);
+        ?></div>
+            	                    </div>
+
+
+<script>
+$(document).ready(function(){
+	//城市选中背景
+	for(var i=0;i<$(".citys").length;i++){
+		if($(".citys").eq(i).html()=="<?=$dq?>"){
+			$(".citys").eq(i).addClass('current');
+		}
+	}
+	for(var i=0;i<$(".city").length;i++){
+		if($(".city").eq(i).html()=="<?=$dq?>"){
+			$(".city").eq(i).css('color','white');
+			$(".city").eq(i).css('background','#0d9572');
+		} 
+	}
+	//当前页背景
+	for(var i=0;i<$(".page li").length;i++){
+		if($(".page li").eq(i).children('a').html()=="<?php if(isset($_GET['page'])){echo $_GET['page'];}else{echo 1;}?>"){
+			$(".page li").eq(i).children('a').css('color','white');
+			$(".page li").eq(i).css('background','#0d9572');
+		} 
+	}
+	//index.php?r=list&yx=1000~1500元/月&gj=1年以下&xl=65&gx=全职
+	//月薪
+	for(var i=0;i<$(".QS_wage").length;i++){
+		if($(".QS_wage").eq(i).html()=="<?php if(isset($_GET['yx'])){echo $_GET['yx'];}else{echo " ";}?>"){
+			$(".QS_wage").eq(i).css('color','white');
+			$(".QS_wage").eq(i).css('background','#0d9572');
+		}
+	}
+	//工作经验
+	for(var i=0;i<$(".QS_experience").length;i++){
+		if($(".QS_experience").eq(i).html()=="<?php if(isset($_GET['gj'])){echo $_GET['gj'];}else{echo " ";}?>"){
+			$(".QS_experience").eq(i).css('color','white');
+			$(".QS_experience").eq(i).css('background','#0d9572');
+		}
+	}
+	//学历
+	for(var i=0;i<$(".QS_education").length;i++){
+		if($(".QS_education").eq(i).attr('value')=="<?php if(isset($_GET['xl'])){echo $_GET['xl'];}else{echo " ";}?>"){
+			$(".QS_education").eq(i).css('color','white');
+			$(".QS_education").eq(i).css('background','#0d9572');
+		}
+	}
+	//工作性质
+	for(var i=0;i<$(".QS_jobs_nature").length;i++){
+		if($(".QS_jobs_nature").eq(i).html()=="<?php if(isset($_GET['gx'])){echo $_GET['gx'];}else{echo " ";}?>"){
+			$(".QS_jobs_nature").eq(i).css('color','white');
+			$(".QS_jobs_nature").eq(i).css('background','#0d9572');
+		}
+	}
+	//时间
+	for(var i=0;i<$(".c_time").length;i++){
+		if($(".c_time").eq(i).html()=="<?php if(isset($_GET['sj'])){echo $_GET['sj'];}else{echo " ";}?>"){
+			$(".c_time").eq(i).css('color','white');
+			$(".c_time").eq(i).css('background','#0d9572');
+		}
+	}
+})
+$(function(){
+	/***************************
+ 	 * 分页
+ 	 */
+ 	 						$('.Pagination').pager({
+		      currPage: 1,  
+		      pageNOName: "pn",
+		      form: "searchForm",
+		      pageCount: 30,
+		      pageSize:  5 
+		});
+		
+	$(".workplace dd").not('.more').children('a').click(function(){
+		$('#lc').val(1);
+		editForm("cityInput" , $(this).html());
+	});
+	
+	$("#box_expectCity dd span").click(function(){
+		$('#lc').val(1);
+		editForm("cityInput" , $(this).html());
+	});
+	
+	$('#options dd div').click(function(){
+		var firstName = $(this).parents('dl').children('dt').text();
+		var fn = $.trim(firstName);
+		if (fn=="月薪范围"){
+			editForm("yxInput" , $(this).html());
+		}
+		else if(fn=="工作经验"){
+			editForm("gjInput" , $(this).html());
+		}
+		else if(fn=="最低学历"){
+			editForm("xlInput" , $(this).html());
+		}
+		else if(fn=="工作性质"){
+			editForm("gxInput" , $(this).html());
+		}
+		else if(fn=="发布时间"){
+			editForm("stInput" , $(this).html());
+		}
+	});
+	
+	$('#selected ul').delegate('li span.select_remove','click',function(event){
+		var firstName = $(this).parent('li').find('strong').text();
+		var fn = $.trim(firstName);
+		if (fn=="月薪范围")
+			editForm("yxInput" , "");
+		else if(fn=="工作经验")
+			editForm("gjInput" , "");
+		else if(fn=="最低学历")
+			editForm("xlInput" , "");
+		else if(fn=="工作性质")
+			editForm("gxInput" , "");
+		else if(fn=="发布时间")
+			editForm("stInput" , "");
+	});
+	
+	/* search结果飘绿	*/
+	(function($) {
+		var searchVal = $('#search_input').val();
+		var reg = /\s/g;     
+		searchVal = searchVal.replace(reg, "").split(""); 
+		
+		var resultL = '';
+		var resultR = '';
+		$('.hot_pos li').each(function(){
+			resultL = $('.hot_pos_l a',this).text().split("");
+			$.each(resultL,function(i,v){
+				if($.inArray(v.toLowerCase(),searchVal) != -1 || $.inArray(v.toUpperCase(),searchVal) != -1){
+					resultL[i] = '<span>'+ v +'</span>';
+				}
+			});
+			$('.hot_pos_l a',this).html(resultL.join(''));
+			
+			resultR = $('.hot_pos_r .mb10 a',this).text().split("");
+			$.each(resultR,function(i,v){
+				if($.inArray(v.toLowerCase(),searchVal) != -1 || $.inArray(v.toUpperCase(),searchVal) != -1){
+					resultR[i] = '<span>'+ v +'</span>';
+				}
+			});
+			$('.hot_pos_r .mb10 a',this).html(resultR.join(''));
+		});
+		
+	})(jQuery);
+	
+	//didi tip
+   	if($.cookie('didiTip') != 1 && false){
+		$('#tip_didi').show();
+	}
+	$('#tip_didi a').click(function(){
+		$(this).parent().remove();
+		$.cookie('didiTip',1,{ expires: 30, path: '/'});
+	});
+	
+});
+$(document).on('click','#search_button',function(){
+	alert($("#searchType").children("li").eq(1).html())
+	if($("#searchType").children("li").eq(1).html()=="职位"){
+		var keyword=$('#search_input').val();
+		var keyword = $.trim($('#search_input').val());
+		var reg =  /[`~!@\$%\^\&\*\(\)_<>\?:"\{\},\\\/;'\[\]]/ig;
+		var re = /#/g;
+		var r = /\./g;
+		var kw = keyword.replace(reg," ");
+		location.href="index.php?r=list/index&fs=公司&kw="+kw+"&dq=";
+	}else{
+		var keyword=$('#search_input').val();
+		var keyword = $.trim($('#search_input').val());
+		var reg =  /[`~!@\$%\^\&\*\(\)_<>\?:"\{\},\\\/;'\[\]]/ig;
+		var re = /#/g; 
+		var r = /\./g;
+		var kw = keyword.replace(reg," ");
+		location.href="index.php?r=list/index&fs=职位&kw="+kw+"&dq=";
+	}
+	
+})
+$(document).on('click','.city',function(){
+	var url = location.search;
+	var http ="index.php";
+	var dq=$(this).html();
+	location.href=http+url+"&dq="+dq;
+})
+$(document).on('click','.citys',function(){
+	var url = location.search;
+	var http ="index.php";
+	var dq=$(this).html();
+	location.href=http+url+"&dq="+dq;
+})
+//月薪
+$(document).on('click','.QS_wage',function(){
+	var url = location.search;
+	var http ="index.php";
+	var yx=$(this).html();
+	location.href=http+url+"&yx="+yx;
+})
+//工作经验
+$(document).on('click','.QS_experience',function(){
+	var url = location.search;
+	var http ="index.php";
+	var gj=$(this).html();
+	location.href=http+url+"&gj="+gj;
+})
+//最低学历
+$(document).on('click','.QS_education',function(){
+	var url = location.search;
+	var http ="index.php";
+	var xl=$(this).attr('value');
+	location.href=http+url+"&xl="+xl;
+})
+//工作性质
+$(document).on('click','.QS_jobs_nature',function(){
+	var url = location.search;
+	var http ="index.php";
+	var gx=$(this).html();
+	location.href=http+url+"&gx="+gx;
+})
+//时间
+$(document).on('click','.c_time',function(){
+	var url = location.search;
+	var http ="index.php";
+	var sj=$(this).html();
+	location.href=http+url+"&sj="+sj;
+})
+function editForm(inputId,inputValue){
+	$("#"+inputId).val(inputValue);
+	var keyword = $.trim($('#search_input').val());
+	var reg =  /[`~!@\$%\^\&\*\(\)_<>\?:"\{\},\\\/;'\[\]]/ig;
+	var re = /#/g;
+	var r = /\./g;
+	var kw = keyword.replace(reg," ");
+	var url = location.search;
+	var http ="index.php";
+	// alert(url)=http://www.frontend.com/web/index.php?r=list%2Findex
+	if(kw == ''){
+		location.href=http+url;
+		$('#searchForm').attr('action',"<?=Url::to(['list/index'])?>").submit();	
+	}else{
+		kw = kw.replace(re,'井');
+		kw = kw.replace(r,'。');
+		$('#searchForm').attr('action','list.html'+kw).submit();
+	}
+	$("#searchForm").submit();
+}
+</script>
+
+			<div class="clear"></div>
+			<input type="hidden" id="resubmitToken" value="" />
+	    	<a id="backtop" title="回到顶部" rel="nofollow"></a>
+	    </div><!-- end #container -->
+	</div><!-- end #body -->
+	<div id="footer">
+		<div class="wrapper">
+			<a href="h/about.html" target="_blank" rel="nofollow">联系我们</a>
+		    <a href="h/af/zhaopin.html" target="_blank">互联网公司导航</a>
+		    <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
+		    <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>
+			<div class="copyright">&copy;2013-2014 Lagou <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备14023790号-2</a></div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="style/js/core.min.js"></script>
+<script type="text/javascript" src="style/js/popup.min.js"></script>
+
+<!--  -->
+
+</body>
+</html>
