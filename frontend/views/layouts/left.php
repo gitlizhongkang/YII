@@ -37,10 +37,8 @@ console.log(1);
     		</a>
     		<ul class="reset" id="navheader">
     			<li class="current"><a href="index.html">首页</a></li>
-    			<li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
-    			<li ><a href="#" target="_blank">论坛</a></li>
-    			<li ><a href="jianli.html" rel="nofollow">我的简历</a></li>
-	    		<li ><a href="create.html" rel="nofollow">发布职位</a></li>
+                <li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
+                <li ><a href="<?=Url::to(['list/index'])?>" target="_blank">招聘中心</a></li>
 	    	</ul>
             <?php if(!empty($user)){ ?>
              <dl class="collapsible_menu">
@@ -79,14 +77,23 @@ console.log(1);
 		<dl class="company_center_aside">
 			<dt>我发布的职位</dt>
 			<dd><a href="<?=Url::to(['job/job','type'=>'1'])?>">有效职位</a></dd>
-			<dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">已下线职位</a></dd>
+			<dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">充值订单</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">增值服务</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">企业模板</a></dd>
 		</dl>
+        <dl class="company_center_aside">
+            <dt>会员服务</dt>
+            <dd><a href="<?=Url::to(['category/account','type'=>'1'])?>">我的账户</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">充值订单</a></dd>
+            <dd><a href="<?=Url::to(['category/advert','type'=>'2'])?>">增值服务</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">企业模板</a></dd>
+        </dl>
     	<div class="subscribe_side mt20">
 			<div class="f14">想收到更多更好的简历？</div>
 			<div class="f18 mb10">就用拉勾招聘加速助手 </div>
 			<div>咨询：<a class="f16" href="mailto:jessica@lagou.com">jessica@lagou.com</a></div>
 			<div class="f18 ti2em">010-57286512</div>
-	</div>
+	    </div>
 	<div class="subscribe_side mt20">
     <div class="f14">加入互联网HR交流群</div>
     <div class="f18 mb10">跟同行聊聊</div>

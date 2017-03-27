@@ -1,7 +1,6 @@
 <?php
 namespace frontend\controllers;
 
-
 use Yii;
 use yii\web\Controller;
 use common\models\Ad;
@@ -157,10 +156,80 @@ class JobController extends Controller
 	public function actionDelete(){
 		$id=Yii::$app->request->get('id');
 		$res=Jobs::find()->where(['id'=>$id])->one();
-		return $this->redirect(['job/job']);
+		if($res->delete()){
+			$sql="update lg_resume_job set status='5' where job_id=$id";
+	        $connect=Yii::$app->db;
+	        $command=$connect->createCommand($sql);
+        	echo 1;
+        }else{
+        	echo 0;
+        } 
+	}
+	//职位下线
+	public function actionDown(){
+		$id=Yii::$app->request->get('id');
+		$time=time()-10;
+		$sql="update lg_jobs set deadline='$time' where id=$id";
+        $connect=Yii::$app->db;
+        $command=$connect->createCommand($sql);
+        if($command->execute()){
+        	echo 1;
+        }else{
+        	echo 0;
+        } 
 	}
 	//修改职位
 	public function actionUpdate(){
-		$id=Yii::$app->request->get('id');
+		if(Yii::$app->request->isPost){
+			$arr=Yii::$app->request->post();
+			$arr['tag_cn']=implode(',',$arr['tag_cn']);
+			$arr['require']=implode(',',$arr['require']);
+			$arr['district_cn']=$arr['province'].'/'.$arr['city'].'/'.$arr['place'];
+			$arr['age']=$arr['age1'].'-'.$arr['age2'];
+			$id=$arr['id'];
+			unset($arr['province'],$arr['city'],$arr['place'],$arr['age1'],$arr['age2'],$arr['id']);
+			// print_r($arr);die;
+			$job=new Jobs;
+			$aa=$job->updateJob($id,$arr);
+			//修改职位				
+			if($aa){					
+				return $this->redirect(['job/job','type'=>1]);
+				//修改职位成功
+			}
+		}else{
+			$id=Yii::$app->request->get('id');
+			$arr=Jobs::find()->where(['id'=>$id])->asArray()->one();
+			$arr['tag_cn']=explode(',',$arr['tag_cn']);
+			$arr['require']=explode(',',$arr['require']);
+			$area=explode('/',$arr['district_cn']);
+			$arr['province']=$area[0];
+			$arr['city']=$area[1];
+			$arr['place']=$area[2];
+			$age=explode('-',$arr['age']);
+			$arr['age1']=$age[0];
+			$arr['age2']=$age[1];
+			// print_r($arr);die;
+			$cache=Yii::$app->cache;
+			if(!empty($cache->get('data'))){
+				$data=$cache->get('data');
+			}else{
+				$category=new category;
+				$data['nature']=$category->cate('QS_jobs_nature');
+				$data['education']=$category->cate('QS_education');
+				$data['wage']=$category->cate('QS_wage');
+				$data['experience']=$category->cate('QS_experience');
+				$data['tag']=$category->cate('QS_jobtag');
+				$data['require']=$category->cate('QS_resumetag');
+				$jobCate=new JobsCategory;
+				$data['cate']=$jobCate->select1();
+				$district=new District;
+				$data['area']=$district->parent();
+				$info=$data;
+				unset($info['count']);
+				$cache->set('data',$info);
+			}
+			$data['arr']=$arr;
+			return $this->render('update.html',$data);
+		}											
 	}
 }

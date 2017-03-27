@@ -203,6 +203,7 @@ class Resume extends \yii\db\ActiveRecord
 =======
 
 
+<<<<<<< HEAD
 
     /**
      * @brief 查询数据
@@ -221,6 +222,11 @@ class Resume extends \yii\db\ActiveRecord
     //查询一个用户的所有简历
 >>>>>>> fe4b11fe166b38c77b8d98b2c639a3a8528ebd6e
     public function select($u_id){
+=======
+    //查询一个用户的所有简历
+    public function select($u_id)
+    {
+>>>>>>> b212dda916e3119b2290fc62005c272c88beef09
         return $this->find()->where(['uid'=>$u_id])->all();
     }
 }

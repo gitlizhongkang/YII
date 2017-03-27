@@ -40,23 +40,6 @@ $user=$session->get('user');
         <script src="style/js/ajaxCross.json" charset="UTF-8"></script>
     </head>
 <body>
-    <!--<link href="service/css/lrtk.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="service/js/lrtk.js"></script>
-    <div id='cs_box'>
-        <span class='cs_title'>在线咨询</span>
-        <span class='cs_close'>x</span>
-        <div class='cs_img'></div>
-        <span class='cs_info'>有什么可以帮到你</span>
-        <div class='cs_btn'>点击咨询</div>
-    </div>
-    <script type="text/javascript">
-        myEvent(window,'load',function(){
-            cs_box.set({
-                img_path : 'service/images/xixi.jpg',   //设置图片路径
-                qq : '632179652',   //设置QQ号码
-            });
-        });
-    </script>-->
 <div id="body">
 	<div id="header">
     	<div class="wrapper">
@@ -66,9 +49,7 @@ $user=$session->get('user');
     		<ul class="reset" id="navheader">
     			<li class="current"><a href="<?=Url::to(['index/index'])?>">首页</a></li>
     			<li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
-    			<li ><a href="#" target="_blank">论坛</a></li>
-    			<li ><a href="jianli.html" rel="nofollow">我的简历</a></li>
-	    		<li ><a href="create.html" rel="nofollow">发布职位</a></li>
+    			<li ><a href="<?=Url::to(['list/index'])?>" target="_blank">招聘中心</a></li>
 	    	</ul>
             <?php if(!empty($user)){ ?>
              <dl class="collapsible_menu">
