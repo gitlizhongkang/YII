@@ -1,32 +1,32 @@
 ﻿
 <div id="container">
     <div class="sidebar">
-        <a class="btn_create" href="<?= \yii\helpers\Url::to(['create'])?>">创建新简历</a>
+        <a class="btn_create" href="<?= \yii\helpers\Url::to(['resume/create'])?>">创建新简历</a>
         <dl class="company_center_aside">
             <dt>简历管理</dt>
             <dd class="current">
-                <a href="<?= \yii\helpers\Url::to(['index'])?>">我的简历</a>
+                <a href="<?= \yii\helpers\Url::to(['resume/index'])?>">我的简历</a>
             </dd>
             <dd>
-                <a href="<?= \yii\helpers\Url::to(['use'])?>">已投简历</a>
+                <a href="<?= \yii\helpers\Url::to(['resume/use'])?>">已投简历</a>
             </dd>
             <dd>
-                <a href="<?= \yii\helpers\Url::to(['index'])?>">收藏的职位</a>
+                <a href="<?= \yii\helpers\Url::to(['resume/index'])?>">收藏的职位</a>
             </dd>
             <dd>
-                <a href="<?= \yii\helpers\Url::to(['index'])?>">订阅职位</a>
+                <a href="<?= \yii\helpers\Url::to(['resume/index'])?>">订阅职位</a>
             </dd>
         </dl>
         <dl class="company_center_aside">
             <dt>账号管理</dt>
             <dd>
-                <a href="#">基本资料</a>
+                <a href="<?= \yii\helpers\Url::to(['user/index'])?>">基本资料</a>
             </dd>
             <dd>
-                <a href="#">我的头像</a>
+                <a href="<?= \yii\helpers\Url::to(['user/photo'])?>">我的头像</a>
             </dd>
             <dd>
-                <a href="#">账号安全</a>
+                <a href="<?= \yii\helpers\Url::to(['user/safe'])?>">账号安全</a>
             </dd>
         </dl>
     </div>
@@ -72,7 +72,7 @@
                                 <div class="links">
                                     <a data-deliverid="1686182"  href="javascript:void(0)">修改简历</a>
                                     <a data-deliverid="1686182"  href="javascript:void(0)">删除简历</a>
-                                    <a data-deliverid="1686182"  href="javascript:void(0)">投递</a>
+                                    <a data-deliverid="1686182"  href="javascript:void(0)">查看详情</a>
                                 </div>
                             </div>
                             <div class="contactInfo">
