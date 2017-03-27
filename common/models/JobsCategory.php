@@ -76,8 +76,29 @@ class JobsCategory extends \yii\db\ActiveRecord
     }
     public function select1()
     {
-        return $cat_info = $this->find()->asArray()->all();
+        $cat_info = $this->find()->asArray()->all();
+        return  $job_job = $this->get_job($cat_info);
       
+    }
+    //职位分类重新排序
+    public function get_job($job)
+    {
+        foreach ($job as $k => $v) {
+            if($v['parentid']==0){
+                $arr[$v['categoryname']] = array();
+                foreach ($job as $k1 => $v1) {
+                    if ($v['id'] == $v1['parentid']) {
+                        $arr[$v['categoryname']][$v1['categoryname']] = array();
+                        foreach ($job as $k2 => $v2) {
+                            if ($v1['id'] == $v2['parentid']) {
+                                $arr[$v['categoryname']][$v1['categoryname']][] = $v2['categoryname'];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return $arr;
     }
 
 }

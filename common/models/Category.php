@@ -63,6 +63,10 @@ class Category extends \yii\db\ActiveRecord
             'stat_resume' => 'Stat Resume',
         ];
     }
+    //获取分类
+    public function cate($cate){
+        return $this->find()->where(['c_alias'=>$cate])->all();
+    }
     public function getList(){
         return $cate=Category::find()->groupBy(['c_alias'])->select('c_alias')->asArray()->all();
     }

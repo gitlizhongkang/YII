@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Url;
+?>
 <!DOCTYPE html>
 <html style="">
  <head> 
@@ -16,7 +19,7 @@
   <meta charset="UTF-8" /> 
   <meta content="伙伴网,伙伴网招聘,伙伴网最新招聘信息,伙伴聚力（北京）科技有限公司,伙伴聚力（北京）科技有限公司职位招聘" name="keywords" /> 
   <meta content="伙伴网在拉勾网招聘等你,公司已获得红杉资本、晨兴资本两家全球顶级风险投资商的A轮数百万美金的联合投资,实力见证,品质保证!媒体报道:【一见|伙伴云表格】在中小企业的痛点上浇辣椒..." name="description" /> 
-  <title>【伙伴网_伙伴网招聘】伙伴聚力（北京）科技有限公司招聘信息-拉勾网</title> 
+  <title><?=$Detail['companyname']?>招聘信息-拉勾网</title> 
   <link rel="Shortcut Icon" href="https://www.lgstatic.com/www/static/common/static/favicon_faed927.ico" /> 
   <script type="text/javascript">
 
@@ -120,7 +123,6 @@ style.firebugResetStyles {
     background-color: transparent !important;
 
 }
-
 
 
 .firebugResetStyles:before, .firebugResetStyles:after {
@@ -346,23 +348,27 @@ style.firebugResetStyles {
   <input value="587" id="companyId" type="hidden" /> 
   <div class="top_info"> 
    <div class="top_info_wrap"> 
-    <img src="gongsi/CgYXBlWIQJGAFhr9AAHsORnjH_E334.png" alt="伙伴网Logo" heihgt="164" width="164" /> 
+    <img src="<?=$Detail['logo']?>" alt="<?=$Detail['companyname']?>Logo" heihgt="164" width="164" /> 
     <div class="company_info"> 
      <div class="company_main"> 
-      <h1> <a href="http://www.huoban.com/" class="hovertips" target="_blank" rel="nofollow" title="伙伴聚力（北京）科技有限公司"> 伙伴网 </a> </h1> 
-      <a href="http://www.huoban.com/" class="icon-wrap" target="_blank" rel="nofollow" title="http://www.huoban.com"> <i></i> </a> 
+      <h1> <a href="http://www.huoban.com/" class="hovertips" target="_blank" rel="nofollow" title="<?=$Detail['companyname']?>"><?=$Detail['shortname']?> </a> </h1> 
+      <a href="<?=$Detail['website']?>" class="icon-wrap" target="_blank" rel="nofollow" title="<?=$Detail['website']?>"> <i></i> </a> 
       <a class="identification" title="拉勾认证企业"> <i></i> <span>拉勾认证</span> </a> 
       <div class="company_word">
-        红杉资本、晨兴创投A轮，专注企业数据管理，Discuz!团队原班人马再次创业！ 
+       <?=$Detail['message']?>
       </div> 
      </div> 
      <div class="company_data"> 
       <ul> 
-       <li> <strong> 3个 </strong> <br /> <span class="tipsys" original-title="该公司的在招职位数量"> <span>招聘职位</span><span class="tip"></span> </span> </li> 
+       <li> <strong> <?=$jobs['jobs']?> </strong> <br /> <span class="tipsys" original-title="该公司的在招职位数量"> <span>招聘职位</span><span class="tip"></span> </span> </li> 
        <li> <strong> 99% </strong> <span class="tipsys" original-title="该公司所有职位收到的简历中，在投递后7天内处理完成的简历所占比例"> <span>简历及时处理率</span><span class="tip"></span> </span> </li> 
        <li> <strong> 1天 </strong> <br /> <span class="tipsys" original-title="该公司的所有职位管理者完成简历处理的平均用时"> <span>简历处理用时</span><span class="tip"></span> </span> </li> 
        <li id="mspj" style="cursor:pointer;"> <strong> 136个 </strong> <br /> <span class="tipsys" original-title="该公司收到的面试评价数量"> <span>面试评价</span><span class="tip"></span> </span> </li> 
-       <li> <strong>今天</strong><br /> <span class="tipsys" original-title="该公司职位管理者最近一次登录时间"> <span>企业最近登录</span><span class="tip"></span> </span> </li> 
+       <li> <strong><?php
+                        $ltime=$last_login['last_login_time'];$ctime=time()-$ltime;
+                        if($ctime < 3600*24){echo "今天";}
+                        else if($ctime < 3600*24*3){echo "1天前";}else if($ctime < 3600*24*7){echo "3天前";}else if($ctime < 3600*24*14){echo "一周前";}else if($ctime < 3600*24*21){echo "两周前";}else if($ctime > 3600*24*30){echo "一月前";}
+       ?></strong><br /> <span class="tipsys" original-title="该公司职位管理者最近一次登录时间"> <span>企业最近登录</span><span class="tip"></span> </span> </li> 
       </ul> 
      </div> 
     </div> 
@@ -375,8 +381,8 @@ style.firebugResetStyles {
   <div id="company_navs" class="company_navs"> 
    <div class="company_navs_wrap"> 
     <ul data-pjax=""> 
-     <li class="current"> <a href="https://www.lagou.com/gongsi/587.html" data-lg-tj-id="9100" data-lg-tj-no="0001" data-lg-tj-cid="idnull">公司主页</a> </li> 
-     <li> <a href="https://www.lagou.com/gongsi/j587.html" data-lg-tj-id="9100" data-lg-tj-no="0002" data-lg-tj-cid="idnull">招聘职位（3）</a> </li> 
+     <li class="current"> <a href="<?=URL::to(['company/gongsi'])?>&id=<?=$Detail['id']?>" data-lg-tj-id="9100" data-lg-tj-no="0001" data-lg-tj-cid="idnull">公司主页</a> </li> 
+     <li> <a href="<?=Url::to(['company/gongsi1'])?>&id=<?=$Detail['id']?>" data-lg-tj-id="9100" data-lg-tj-no="0002" data-lg-tj-cid="idnull">招聘职位（<?=$jobs['jobs']?>）</a> </li> 
      <li> <a href="https://www.lagou.com/gongsi/q587.html" data-lg-tj-id="9100" data-lg-tj-no="0003" data-lg-tj-cid="idnull">公司问答</a> <i class="icon_new"></i> </li> 
     </ul> 
     <div class="company_share"> 
@@ -401,14 +407,15 @@ style.firebugResetStyles {
       <div class="item_ltitle">
        公司产品
       </div> 
-      <div class="item_content"> 
+      <div class="item_content">
+      <?php foreach($product as $val){?> 
        <div class="product_content product_item clearfix" data-id="385" data-index="0"> 
-        <img src="gongsi/CgqKkVikPHCARBmQAAApqgqPgKg80.jpg" alt="产品图片" height="180" width="300" /> 
+        <img src="<?=$val['photo']?>" alt="产品图片" height="180" width="300" /> 
         <div class="product_details"> 
          <h4 class="product_url_all"> 
           <div class="product_url"> 
-           <a href="http://www.huoban.com/" class="url_valid" target="_blank" rel="nofollow" title="http://www.huoban.com"> 伙伴云表格 </a> 
-           <a href="http://www.huoban.com/" target="_blank" rel="nofollow" title="http://www.huoban.com"> <i></i> </a> 
+           <a href="<?=$val['productUrl']?>" class="url_valid" target="_blank" rel="nofollow" title="<?=$val['productUrl']?>"><?=$val['product']?></a> 
+           <a href="<?=$val['productUrl']?>" target="_blank" rel="nofollow" title="<?=$val['productUrl']?>"> <i></i> </a> 
           </div> </h4> 
          <ul class="clearfix"> 
           <li>网站</li> 
@@ -417,7 +424,7 @@ style.firebugResetStyles {
          <div class="product_profile mCustomScrollbar _mCS_1">
           <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
            <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;"> 
-            <p>伙伴云表格，针对企业数据管理系统，高度自由化的产品设计，贴合百行百业的企业数据管理及协作需求。www.huoban.com，一个面向未来充满魔力的产品，一个身经百战多次辉煌的团队，期待您的加入！</p> 
+            <p><?=$val['productProfile']?></p> 
            </div>
            <div class="mCSB_scrollTools" style="position: absolute; display: none;">
             <div class="mCSB_draggerContainer">
@@ -430,44 +437,14 @@ style.firebugResetStyles {
           </div>
          </div> 
         </div> 
+       </div>
+       <?php }?>
+       </div>
        </div> 
-       <div class="product_content product_item clearfix" data-id="67017" data-index="1"> 
-        <img src="gongsi/Cgp3O1e0JO2AWos4AAATsyikhyc627.jpg" alt="产品图片" height="180" width="300" /> 
-        <div class="product_details"> 
-         <h4 class="product_url_all"> 
-          <div class="product_url"> 
-           <a href="http://im.tongren.com/" class="url_valid" target="_blank" rel="nofollow" title="http://im.tongren.com/"> 同仁 </a> 
-           <a href="http://im.tongren.com/" target="_blank" rel="nofollow" title="http://im.tongren.com/"> <i></i> </a> 
-          </div> </h4> 
-         <ul class="clearfix"> 
-          <li>网站</li> 
-          <li>移动app</li> 
-         </ul> 
-         <div class="product_profile mCustomScrollbar _mCS_2">
-          <div class="mCustomScrollBox mCS-dark-2" id="mCSB_2" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
-           <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;"> 
-            <p>伙伴集团直属团队。</p> 
-            <p>这是一个卓越的团队，精英们极致coding、深刻理解用户、共同参与产品，以不断自我超越的态度，探索并攻坚具有革命意义的平台级IM。</p> 
-            <p>气场初具，邀请具有同样气味的你！</p> 
-           </div>
-           <div class="mCSB_scrollTools" style="position: absolute; display: none;">
-            <div class="mCSB_draggerContainer">
-             <div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;">
-              <div class="mCSB_dragger_bar" style="position:relative;"></div>
-             </div>
-             <div class="mCSB_draggerRail"></div>
-            </div>
-           </div>
-          </div>
-         </div> 
-        </div> 
-       </div> 
-      </div> 
-     </div> 
      <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/intro/main.less"
---> 
+-->  
      <div class="item_container" id="company_intro"> 
       <div class="item_ltitle">
        公司介绍
@@ -504,11 +481,11 @@ style.firebugResetStyles {
         </div> 
        </div> 
       </div> 
-     </div> 
+    </div>  
      <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/history/main.less"
---> 
+-->    
      <div class="item_container" id="history_container"> 
       <div class="item_ltitle">
        发展历程
@@ -593,11 +570,12 @@ style.firebugResetStyles {
        </ul> 
       </div> 
      </div> 
+ 
      <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/reviews/main.less"
     @require "company-c/modules/reviews-latest/main.less"
---> 
+-->   
      <div class="interview_container item_container" id="interview_container"> 
       <div id="interview_anchor"></div> 
       <div class="item_ltitle">
@@ -1157,6 +1135,7 @@ style.firebugResetStyles {
       </div> 
       <a class="view-more" href="https://www.lagou.com/gongsi/interviewExperiences.html?companyId=587" target="_blank" data-lg-tj-id="9200" data-lg-tj-no="0001" data-lg-tj-cid="idnull" data-lg-tj-track-code="hpage_comment" title="伙伴网怎么样">查看更多</a> 
      </div> 
+
      <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/address/main.less"
@@ -1331,10 +1310,10 @@ style.firebugResetStyles {
      </div> 
      <div class="item_content"> 
       <ul> 
-       <li> <i class="type"></i> <span>企业服务</span> </li> 
+       <li> <i class="type"></i> <span><?=$Detail['trade']?></span> </li> 
        <li> <i class="process"></i> <span>A轮</span> </li> 
-       <li> <i class="number"></i> <span>50-150人</span> </li> 
-       <li> <i class="address"></i> <span>北京</span> </li> 
+       <li> <i class="number"></i> <span><?=$Detail['scale']?></span> </li> 
+       <li> <i class="address"></i> <span><?=$Detail['city']?></span> </li> 
       </ul> 
      </div> 
     </div> 
@@ -1349,11 +1328,12 @@ style.firebugResetStyles {
      <div class="company_mangers_item"> 
       <div class="managelist_wrap"> 
        <ul class="manager_list" style="width: 500px; left: 0px;"> 
-        <li class="item_has rotate_item  rotate_active " style="float: left;"> <img class="item_manger_photo_show" src="gongsi/Cgp3O1e0HRCAeZQ4AAAqEIEVG84699.jpg" alt="创始人头像" height="118" width="118" /> <p class="item_manager_name"> <span>袁兆江</span> </p> <p class="item_manager_title">Co-founder</p> 
+      <?php foreach($leader as $val){?>
+        <li class="item_has rotate_item  rotate_active " style="float: left;"> <img class="item_manger_photo_show" src="<?=$val['photo']?>" alt="创始人头像" height="118" width="118" /> <p class="item_manager_name"> <span><?=$val['name']?></span> </p> <p class="item_manager_title"><?=$val['position']?></p> 
          <div class="item_manager_content mCustomScrollbar _mCS_3">
           <div class="mCustomScrollBox mCS-dark-2" id="mCSB_3" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
            <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
-            <p>毕业于武汉大学。原Discuz!团队产品运营副总裁7年。2013年创办伙伴网</p>
+            <p><?=$val['remark']?></p>
            </div>
            <div class="mCSB_scrollTools" style="position: absolute; display: none;">
             <div class="mCSB_draggerContainer">
@@ -1364,23 +1344,9 @@ style.firebugResetStyles {
             </div>
            </div>
           </div>
-         </div> </li>
-        <li class="item_has rotate_item " style="float: left;"> <img class="item_manger_photo_show" src="gongsi/Cgp3O1e0HTKAc_4bAABYfmZMOc0755.jpg" alt="创始人头像" height="118" width="118" /> <p class="item_manager_name"> <span>戴志康</span> </p> <p class="item_manager_title">Co-founder/CEO</p> 
-         <div class="item_manager_content mCustomScrollbar _mCS_4">
-          <div class="mCustomScrollBox mCS-dark-2" id="mCSB_4" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
-           <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
-            <p>原Discuz!创始人</p>
-           </div>
-           <div class="mCSB_scrollTools" style="position: absolute; display: none;">
-            <div class="mCSB_draggerContainer">
-             <div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;">
-              <div class="mCSB_dragger_bar" style="position:relative;"></div>
-             </div>
-             <div class="mCSB_draggerRail"></div>
-            </div>
-           </div>
-          </div>
-         </div> </li>
+         </div> 
+        </li>
+        <?php }?>
        </ul> 
       </div> 
       <div class="managers-switch-line"> 
@@ -1402,15 +1368,14 @@ style.firebugResetStyles {
      <div class="tags_warp"> 
       <div class="item_content"> 
        <ul class="item_con_ul clearfix"> 
-        <li class="con_ul_li"> Geek </li> 
-        <li class="con_ul_li"> 超爽协作 </li> 
-        <li class="con_ul_li"> 有愿景有落地 </li> 
-        <li class="con_ul_li"> 六险一金 </li> 
-        <li class="con_ul_li"> 领导接地气 </li> 
+      <?php $arr=explode(",",$Detail['labels']); foreach($arr as $val){?>
+        <li class="con_ul_li"> <?=$val?> </li> 
+      <?php }?>
        </ul> 
       </div> 
      </div> 
-    </div> 
+    </div>
+     
     <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/navigator/main.less"

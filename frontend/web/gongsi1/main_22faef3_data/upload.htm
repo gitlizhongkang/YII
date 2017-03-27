@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="upload_data/json2.js"></script>
+<!--<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>-->
+
+    <meta charset="utf-8">
+    <title>jQuery Iframe Transport Plugin Redirect Page</title>
+    <style type="text/css">
+    body,html{
+        margin:0;
+        padding:0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    </style>
+</head>
+<body>
+<input style="width:10px;height:10px;padding:200px 0 0 200px;position:absolute;left:0;top:0;" accept="image/jpeg,image/jpg,image/gif,image/png,image/bmp" id="qimo_picture" name="qimo_picture" onclick="toGetDataFromParent()" onchange="uploadFile()" type="file">
+<script>
+    function isWeiXin(){
+        var ua = window.navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    if(isWeiXin()){
+        document.getElementById("qimo_picture").setAttribute("accept","image/*")
+    }
+    var postData = undefined;
+    //init 聊天窗口
+    if (window.addEventListener) {
+        window.addEventListener("message", getMsgFromParent);
+    } else {
+        window.attachEvent("onmessage", getMsgFromParent);
+    }
+    function toGetDataFromParent(){//去上层获取
+        if(!postData){
+            window.parent && window.parent.postMessage && (window.parent.postMessage("clickBtn", "*"));
+        }
+    }
+    function getMsgFromParent(e){
+        postData = e.data;
+//        document.getElementById("qimo_picture").click();
+    }
+    function postResultMessage(result){
+        window.parent && window.parent.postMessage && (window.parent.postMessage(JSON.stringify(result), "*"));
+    }
+    function validateImageType(imageType) {
+        return imageType.indexOf("jpg") == -1 && imageType.indexOf("png") == -1
+                && imageType.indexOf("bmp") == -1 && imageType.indexOf("jpeg") == -1
+                && imageType.indexOf("gif") == -1
+    }
+    function uploadFile() {
+        var file = document.getElementById("qimo_picture").files[0];
+        if (file) {
+            if (validateImageType(file.type.toLowerCase())) {
+                postResultMessage({type:'uploadQimoImage',errcode: 2, errmsg: "just allow 'jpg' or 'jpeg' or 'bmp' or 'png' or 'gif'"});
+                return false;
+            }
+            if (file.size > 10 * 1024 * 1024) {
+                postResultMessage({
+                    type:'uploadQimoImage',
+                    errcode: 2,
+                    errmsg: "upload file size is too large, it's bigger than maximum of 10M"
+                });
+                return false;
+            }
+
+            var xhr = {};
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            var fd = new FormData();
+            fd.append('data', postData);
+            fd.append("picToUpload", document.getElementById("qimo_picture").files[0]);
+            /* event listeners */
+            xhr.upload.addEventListener("progress", function () {
+            }, false);
+            xhr.addEventListener("load", function (evt) {
+                if (evt.target.status == 200) {
+                    var res = JSON.parse(evt.target.responseText);
+                    if (res.success) {
+                        console.log(res);
+                        postResultMessage({type:'uploadQimoImage',errcode: 0, errmsg: "upload success", data: {imageUrl: res.content}});
+
+                    } else {
+                        postResultMessage({type:'uploadQimoImage',errcode: 2, errmsg: res.message, data: {imageUrl: res.content}});
+                    }
+                } else {
+                    postResultMessage({type:'uploadQimoImage',errcode: -1, errmsg: "service is go wrong"});
+
+                }
+
+            }, false);
+            xhr.addEventListener("error", function (evt) {
+                postResultMessage({type:'uploadQimoImage',errcode: -1, errmsg: evt.target.responseText})
+            }, false);
+            xhr.addEventListener("abort", function () {
+            }, false);
+            /* Be sure to change the url below to the url of your upload server side script */
+            xhr.open("POST", "//webchat.7moor.com/chat");
+            xhr.send(fd);
+
+        }
+    }
+</script>
+
+</body></html>

@@ -2,16 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aca683e5-4551-4407-8cc1-6e595412f2cf" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/main-local.php" afterPath="$PROJECT_DIR$/backend/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/main.php" afterPath="$PROJECT_DIR$/backend/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/IndexController.php" afterPath="$PROJECT_DIR$/backend/controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/LoginController.php" afterPath="$PROJECT_DIR$/backend/controllers/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Admin.php" afterPath="$PROJECT_DIR$/backend/models/Admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/logs/app.log" afterPath="$PROJECT_DIR$/backend/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/index/index.html" afterPath="$PROJECT_DIR$/backend/views/index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/main-local.php" afterPath="$PROJECT_DIR$/common/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/main.php" afterPath="$PROJECT_DIR$/common/config/main.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/0823dd54564e92589a16e0ef9a82d158ccbf4e94.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/15576ce2607d746.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/Janna_Splash_5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/JarvanIV_Splash_0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/JarvanIV_Splash_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/JarvanIV_Splash_2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/JarvanIV_Splash_3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/JarvanIV_Splash_4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/JarvanIV_Splash_5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/Jax_Splash_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/Jax_Splash_2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/Jax_Splash_3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/Karma_Splash_0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/Karthus_Splash_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/Kassadin_Splash_2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/uploads/Rammus_Splash_4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/CompanyLeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/CompanyProduct.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/controllers/JobController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/company/improve1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/company/improve2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/company/improve3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/company/improve4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/company/improve5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/company/result.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/job/create.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/job/positions.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/job/success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/layouts/left.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/style/css/webuploader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Company.php" afterPath="$PROJECT_DIR$/backend/models/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Jobs.php" afterPath="$PROJECT_DIR$/backend/models/Jobs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Members.php" afterPath="$PROJECT_DIR$/backend/models/Members.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/Category.php" afterPath="$PROJECT_DIR$/common/models/Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/District.php" afterPath="$PROJECT_DIR$/common/models/District.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/JobsCategory.php" afterPath="$PROJECT_DIR$/common/models/JobsCategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/Resume.php" afterPath="$PROJECT_DIR$/common/models/Resume.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/frontend/controllers/CompanyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/IndexController.php" afterPath="$PROJECT_DIR$/frontend/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/RegisterController.php" afterPath="$PROJECT_DIR$/frontend/controllers/RegisterController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/TouController.php" afterPath="$PROJECT_DIR$/frontend/controllers/TouController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/ResumeJob.php" afterPath="$PROJECT_DIR$/frontend/models/ResumeJob.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/company/bindStep3.html" afterPath="$PROJECT_DIR$/frontend/views/company/bindStep3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/company/gongsi.html" afterPath="$PROJECT_DIR$/frontend/views/company/gongsi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/company/success.html" afterPath="$PROJECT_DIR$/frontend/views/company/success.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/index/index.html" afterPath="$PROJECT_DIR$/frontend/views/index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/layouts/header.php" afterPath="$PROJECT_DIR$/frontend/views/layouts/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/list/list.html" afterPath="$PROJECT_DIR$/frontend/views/list/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/style/js/jobs.min.js" afterPath="$PROJECT_DIR$/frontend/web/style/js/jobs.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/style/js/step1.min.js" afterPath="$PROJECT_DIR$/frontend/web/style/js/step1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/style/js/step2.min.js" afterPath="$PROJECT_DIR$/frontend/web/style/js/step2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/style/js/step3.min.js" afterPath="$PROJECT_DIR$/frontend/web/style/js/step3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/style/js/step4.min.js" afterPath="$PROJECT_DIR$/frontend/web/style/js/step4.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/style/js/step5.min.js" afterPath="$PROJECT_DIR$/frontend/web/style/js/step5.min.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,76 +70,15 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MyController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/controllers/MyController.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="gongsi.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/views/company/gongsi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main-local.php" pinned="false" current-in-tab="false">
-        <entry file="file://D:/phpStudy/WWW/advanced/common/config/main-local.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/models/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseActiveRecord.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-84">
-              <caret line="137" column="13" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthItemChildController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/controllers/AuthItemChildController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="114">
+              <caret line="1274" column="13" lean-forward="true" selection-start-line="1274" selection-start-column="13" selection-end-line="1274" selection-end-column="13" />
               <folding>
-                <marker date="1489740161148" expanded="true" signature="229:297" ph=" RuleController implements the CRUD actions for AuthRule model. ..." />
-                <marker date="1489740161148" expanded="true" signature="350:1545" ph="{...}" />
-                <marker date="1489740161148" expanded="true" signature="413:536" ph="..." />
-                <marker date="1489740161148" expanded="true" signature="573:756" ph="..." />
-                <marker date="1489740161148" expanded="true" signature="694:719" ph="..." />
-                <marker date="1489740161148" expanded="true" signature="725:750" ph="..." />
-                <marker date="1489740161148" expanded="true" signature="789:1543" ph="{...}" />
-                <marker date="1489740161148" expanded="true" signature="833:1407" ph="..." />
-                <marker date="1489740161148" expanded="true" signature="1043:1367" ph="..." />
-                <marker date="1489740161148" expanded="true" signature="1253:1329" ph="..." />
-                <marker date="1489740161148" expanded="true" signature="1335:1353" ph="..." />
-                <marker date="1489740161148" expanded="true" signature="1373:1387" ph="..." />
+                <element signature="n#style#0;n#img#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthAssignmentController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/controllers/AuthAssignmentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -113,9 +97,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/backend/controllers/AuthAssignmentController.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/MyController.php" />
         <option value="D:/phpStudy/WWW/advanced/common/config/main-local.php" />
         <option value="$PROJECT_DIR$/common/models/User.php" />
+        <option value="$PROJECT_DIR$/backend/controllers/MyController.php" />
+        <option value="$PROJECT_DIR$/frontend/views/company/gongsi.html" />
       </list>
     </option>
   </component>
@@ -147,7 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -170,7 +154,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -184,25 +168,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="advanced" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="advanced" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -216,17 +186,22 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
+              <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,6 +237,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -296,31 +277,32 @@
       <option name="presentableId" value="Default" />
       <updated>1489728868106</updated>
       <workItem from="1489728871937" duration="3065000" />
+      <workItem from="1490412804373" duration="716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3065000" />
+    <option name="totallyTimeSpent" value="3781000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="1" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19288956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19591528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -336,32 +318,95 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/backend/controllers/MyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding>
+            <marker date="1490253280545" expanded="true" signature="1179:1233" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/phpStudy/WWW/advanced/common/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1490172605741" expanded="true" signature="4717:4719" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2603">
+          <caret line="137" column="13" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/AuthItemChildController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="741">
           <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-          <folding>
-            <marker date="1489740161148" expanded="true" signature="229:297" ph=" RuleController implements the CRUD actions for AuthRule model. ..." />
-            <marker date="1489740161148" expanded="true" signature="350:1545" ph="{...}" />
-            <marker date="1489740161148" expanded="true" signature="413:536" ph="..." />
-            <marker date="1489740161148" expanded="true" signature="573:756" ph="..." />
-            <marker date="1489740161148" expanded="true" signature="694:719" ph="..." />
-            <marker date="1489740161148" expanded="true" signature="725:750" ph="..." />
-            <marker date="1489740161148" expanded="true" signature="789:1543" ph="{...}" />
-            <marker date="1489740161148" expanded="true" signature="833:1407" ph="..." />
-            <marker date="1489740161148" expanded="true" signature="1043:1367" ph="..." />
-            <marker date="1489740161148" expanded="true" signature="1253:1329" ph="..." />
-            <marker date="1489740161148" expanded="true" signature="1335:1353" ph="..." />
-            <marker date="1489740161148" expanded="true" signature="1373:1387" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/AuthAssignmentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="665">
           <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+          <folding>
+            <marker date="1490152177159" expanded="true" signature="197:265" ph=" RuleController implements the CRUD actions for AuthRule model. ..." />
+            <marker date="1490152177159" expanded="true" signature="319:1862" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="381:600" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="632:1367" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="677:1231" ph="..." />
+            <marker date="1490152177159" expanded="true" signature="1402:1598" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="1534:1559" ph="..." />
+            <marker date="1490152177159" expanded="true" signature="1565:1590" ph="..." />
+            <marker date="1490152177159" expanded="true" signature="1631:1860" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="1781:1822" ph="..." />
+            <marker date="1490152177159" expanded="true" signature="1828:1853" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/AuthItemChildController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/AuthAssignmentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <folding>
+            <marker date="1490152177159" expanded="true" signature="197:265" ph=" RuleController implements the CRUD actions for AuthRule model. ..." />
+            <marker date="1490152177159" expanded="true" signature="319:1862" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="381:600" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="632:1367" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="677:1231" ph="..." />
+            <marker date="1490152177159" expanded="true" signature="1402:1598" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="1534:1559" ph="..." />
+            <marker date="1490152177159" expanded="true" signature="1565:1590" ph="..." />
+            <marker date="1490152177159" expanded="true" signature="1631:1860" ph="{...}" />
+            <marker date="1490152177159" expanded="true" signature="1781:1822" ph="..." />
+            <marker date="1490152177159" expanded="true" signature="1828:1853" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -369,7 +414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="190" column="7" lean-forward="true" selection-start-line="190" selection-start-column="7" selection-end-line="190" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -377,7 +421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="83" column="26" lean-forward="true" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -385,21 +428,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12934">
           <caret line="58" column="3" lean-forward="true" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/MyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/phpStudy/WWW/advanced/common/config/main-local.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="171">
           <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
           <folding />
         </state>
@@ -407,7 +441,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
+        <state relative-caret-position="2375">
           <caret line="137" column="13" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
           <folding />
         </state>
@@ -416,8 +450,30 @@
     <entry file="file://$PROJECT_DIR$/common/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding />
+          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <marker date="1490172605741" expanded="true" signature="4717:4719" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/MyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding>
+            <marker date="1490253280545" expanded="true" signature="1179:1233" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/company/gongsi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="1274" column="13" lean-forward="true" selection-start-line="1274" selection-start-column="13" selection-end-line="1274" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#img#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
