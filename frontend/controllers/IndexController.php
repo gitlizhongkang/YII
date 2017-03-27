@@ -73,29 +73,5 @@ class IndexController extends Controller
         $data['trade_id']=$trade_id;
         return $this->render("companylist.html",$data);
     }
-<<<<<<< HEAD
-	
-=======
 
-	//职位分类重新排序
-	public function get_job($job)
-    {
-        foreach ($job as $k => $v) {
-            if($v['parentid']==0){
-                $arr[$v['categoryname']] = array();
-                foreach ($job as $k1 => $v1) {
-                    if ($v['id'] == $v1['parentid']) {
-                        $arr[$v['categoryname']][$v1['categoryname']] = array();
-                        foreach ($job as $k2 => $v2) {
-                            if ($v1['id'] == $v2['parentid']) {
-                                $arr[$v['categoryname']][$v1['categoryname']][] = $v2['categoryname'];
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return $arr;
-    }
->>>>>>> 2b7a40d75ba1520f77942f4042fdac97c9d22997
 }
