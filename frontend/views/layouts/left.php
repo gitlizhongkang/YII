@@ -79,8 +79,17 @@ console.log(1);
 		<dl class="company_center_aside">
 			<dt>我发布的职位</dt>
 			<dd><a href="<?=Url::to(['job/job','type'=>'1'])?>">有效职位</a></dd>
-			<dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">已下线职位</a></dd>
+			<dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">充值订单</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">增值服务</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">企业模板</a></dd>
 		</dl>
+        <dl class="company_center_aside">
+            <dt>会员服务</dt>
+            <dd><a href="<?=Url::to(['category/account','type'=>'1'])?>">我的账户</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">充值订单</a></dd>
+            <dd><a href="<?=Url::to(['category/advert','type'=>'2'])?>">增值服务</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">企业模板</a></dd>
+        </dl>
     	<div class="subscribe_side mt20">
 			<div class="f14">想收到更多更好的简历？</div>
 			<div class="f18 mb10">就用拉勾招聘加速助手 </div>
