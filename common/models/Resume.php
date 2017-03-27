@@ -201,7 +201,6 @@ class Resume extends \yii\db\ActiveRecord
     }
 
 
-
     //查询一个用户的所有简历
     public function select($u_id)
     {

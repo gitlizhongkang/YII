@@ -7,6 +7,7 @@ use Yii;
 use yii\web\Controller;
 use common\models\Ad;
 use common\models\JobsCategory;
+
 use common\models\Category;
 use backend\models\Company;
 use yii\data\Pagination;
@@ -14,7 +15,11 @@ use backend\models\Jobs;
 
 class IndexController extends Controller
 {
-	public $layout='header';
+
+
+	public $layout='/header';
+
+
 	//前台首页		
 	public function actionIndex()
 	{
@@ -29,10 +34,8 @@ class IndexController extends Controller
 			$data['jobCate']=$cache->get('jobCate');
 		}else{
 			$jobCate= new JobsCategory;
-			$res=$jobCate->select1();
+			$data['jobCate']=$jobCate->select1();
 			//查询职位分类
-			$data['jobCate']=$this->get_job($res);
-			//重新排序
 			$cache->set('jobCate',$data['jobCate']);
 			//存入缓存
 		}				
@@ -70,24 +73,5 @@ class IndexController extends Controller
         $data['trade_id']=$trade_id;
         return $this->render("companylist.html",$data);
     }
-	//职位分类重新排序
-	public function get_job($job)
-    {
-        foreach ($job as $k => $v) {
-            if($v['parentid']==0){
-                $arr[$v['categoryname']] = array();
-                foreach ($job as $k1 => $v1) {
-                    if ($v['id'] == $v1['parentid']) {
-                        $arr[$v['categoryname']][$v1['categoryname']] = array();
-                        foreach ($job as $k2 => $v2) {
-                            if ($v1['id'] == $v2['parentid']) {
-                                $arr[$v['categoryname']][$v1['categoryname']][] = $v2['categoryname'];
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return $arr;
-    }
+
 }

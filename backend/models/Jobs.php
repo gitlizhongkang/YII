@@ -67,8 +67,8 @@ class Jobs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['u_id', 'jobs_name', 'companyname', 'company_id', 'company_addtime', 'highlight', 'stick', 'nature_cn', 'sex_cn', 'age', 'amount', 'topclass', 'category', 'subclass', 'trade_cn', 'scale_cn', 'district_cn', 'tag_cn', 'education_cn', 'experience_cn', 'wage_cn', 'negotiable', 'contents', 'addtime', 'deadline', 'refreshtime', 'setmeal_id', 'setmeal_name', 'key', 'map_x', 'map_y'], 'required'],
-            [['u_id', 'company_id', 'company_addtime', 'company_audit', 'recommend', 'emergency', 'stick', 'amount', 'topclass', 'category', 'subclass', 'negotiable', 'addtime', 'deadline', 'refreshtime', 'setmeal_deadline', 'setmeal_id', 'audit','display', 'click', 'user_status', 'add_mode'], 'integer'],
+            // [['u_id', 'jobs_name', 'companyname', 'company_id', 'company_addtime', 'highlight', 'stick', 'nature_cn', 'sex_cn', 'age', 'amount', 'topclass', 'category', 'subclass', 'trade_cn', 'scale_cn', 'district_cn', 'tag_cn', 'education_cn', 'experience_cn', 'wage_cn', 'negotiable', 'contents', 'addtime', 'deadline', 'refreshtime', 'setmeal_id', 'setmeal_name', 'key', 'map_x', 'map_y'], 'required'],
+            [['u_id', 'company_id', 'company_addtime', 'company_audit', 'recommend', 'emergency', 'stick', 'amount', 'topclass', 'category', 'subclass', 'negotiable', 'addtime', 'deadline', 'refreshtime', 'setmeal_deadline', 'setmeal_id', 'audit','display', 'click', 'user_status', 'add_mode','education_id'], 'integer'],
             [['contents', 'key'], 'string'],
             [['map_x', 'map_y'], 'number'],
             [['jobs_name', 'nature_cn', 'trade_cn', 'scale_cn', 'education_cn', 'experience_cn', 'wage_cn'], 'string', 'max' => 30],
@@ -78,6 +78,7 @@ class Jobs extends \yii\db\ActiveRecord
             [['age'], 'string', 'max' => 10],
             [['category_cn', 'district_cn', 'tag_cn'], 'string', 'max' => 100],
             [['setmeal_name'], 'string', 'max' => 60],
+            [['require','address'], 'string', 'max' => 255],
         ];
     }
 
@@ -130,6 +131,9 @@ class Jobs extends \yii\db\ActiveRecord
             'map_x' => 'Map X',
             'map_y' => 'Map Y',
             'add_mode' => 'Add Mode',
+            'require'=>'Require',
+            'address'=>'Address',
+            'education_id'=>'Education Id'
         ];
     }
     //查询职位
@@ -166,5 +170,26 @@ class Jobs extends \yii\db\ActiveRecord
      public function select1()
     {
         return $this->find()->offset('0')->limit('5')->orderBy('addtime DESC')->all();       
+    }
+    //查询一个用户的职位数量
+    public function jobCount($id){
+        $time1=strtotime(date('Y-m-d'));
+        $time2=$time1+24*60*60;
+        return Jobs::find()->where(['u_id'=>$id])->andWhere(['between', 'addtime', $time1, $time2])->count();
+    }
+    //添加职位
+    public function add($arr){
+        $this->setAttributes($arr);
+        return $this->save();
+    }
+    //条件查询职位数量
+    public function getcount($where){
+        return  Jobs::find()->where($where)->count();
+    }
+    //修改职位
+    public function updateJob($id,$arr){
+        $res=$this->findOne($id);
+        $res->setAttributes($arr);
+        return $res->save();
     }
 }

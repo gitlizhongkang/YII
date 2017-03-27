@@ -15,7 +15,7 @@ class TouController extends Controller
 		$user=$session->get('user');
 		$id=Yii::$app->request->get('id');
 		$jobs=new Jobs;
-		$arr=$jobs->getOne(1);
+		$arr=$jobs->getOne($id);
 		$resume=new Resume;
 		$info=$resume->select($user['uid']);
 		$controller=Yii::$app->controller->id;

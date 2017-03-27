@@ -77,4 +77,16 @@ class District extends \yii\db\ActiveRecord
         $cat_info = $this->find()->asArray()->all();
         return $data = $this->tree($cat_info);
     }
+    //查询顶级分类
+     public function parent()
+    {
+        return $this->find()->where(['parentid'=>'0'])->all();
+
+    }
+    //查询子分类
+     public function child($parentid)
+    {
+        return $this->find()->where(['parentid'=>$parentid])->asArray()->all();
+
+    }
 }

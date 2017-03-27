@@ -49,9 +49,7 @@ $user=$session->get('user');
     		<ul class="reset" id="navheader">
     			<li class="current"><a href="index.html">首页</a></li>
     			<li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
-    			<li ><a href="#" target="_blank">论坛</a></li>
-    			<li ><a href="jianli.html" rel="nofollow">我的简历</a></li>
-	    		<li ><a href="create.html" rel="nofollow">发布职位</a></li>
+    			<li ><a href="<?=Url::to(['list/index'])?>" target="_blank">招聘中心</a></li>
 	    	</ul>
             <?php if(!empty($user)){ ?>
              <dl class="collapsible_menu">
@@ -76,6 +74,7 @@ $user=$session->get('user');
             <?php }?>
         </div>
     </div>
+
     <link href="service/css/lrtk.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="service/js/lrtk.js"></script>
 <div id='cs_box'>
@@ -93,4 +92,4 @@ $user=$session->get('user');
         });
     });
 </script>
-<?php echo $content; ?>
+    <?php echo $content; ?>
