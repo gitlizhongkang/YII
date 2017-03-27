@@ -31,7 +31,7 @@ use yii\helpers\Url;
 </div>
 <div class="content">	
 <div id="search_box">
-	<form id="searchForm" name="searchForm" action="list.html" method="get">
+	<form id="searchForm" onsubmit="return false" name="searchForm" action="list.html" method="get">
         <ul id="searchType">
         <li data-searchtype="1" class="type_selected">职位</li>
         	<li data-searchtype="4">公司</li>
@@ -53,6 +53,28 @@ use yii\helpers\Url;
 				
     </form>
 </div>
+<script>
+	$(document).on('click','#search_button',function(){
+	if($("#searchType").children("li").eq(1).html()=="职位"){
+		var keyword=$('#search_input').val();
+		var keyword = $.trim($('#search_input').val());
+		var reg =  /[`~!@\$%\^\&\*\(\)_<>\?:"\{\},\\\/;'\[\]]/ig;
+		var re = /#/g;
+		var r = /\./g;
+		var kw = keyword.replace(reg," ");
+		location.href="index.php?r=list/index&fs=公司&kw="+kw+"&dq=";
+	}else{
+		var keyword=$('#search_input').val();
+		var keyword = $.trim($('#search_input').val());
+		var reg =  /[`~!@\$%\^\&\*\(\)_<>\?:"\{\},\\\/;'\[\]]/ig;
+		var re = /#/g; 
+		var r = /\./g;
+		var kw = keyword.replace(reg," ");
+		location.href="index.php?r=list/index&fs=职位&kw="+kw+"&dq=";
+	}
+	
+})
+</script>
 <style>
 .ui-autocomplete{width:488px;background:#fafafa !important;position: relative;z-index:10;border: 2px solid #91cebe;}
 .ui-autocomplete-category{font-size:16px;color:#999;width:50px;position: absolute;z-index:11; right: 0px;/*top: 6px; */text-align:center;border-top: 1px dashed #e5e5e5;padding:5px 0;}
@@ -307,15 +329,6 @@ if(count($middle)>=($i+1)){
 	    	<a id="backtop" title="回到顶部" rel="nofollow"></a>
 	    </div><!-- end #container -->
 	</div><!-- end #body -->
-	<div id="footer">
-		<div class="wrapper">
-			<a href="h/about.html" target="_blank" rel="nofollow">联系我们</a>
-		    <a href="h/af/zhaopin.html" target="_blank">互联网公司导航</a>
-		    <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
-		    <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>
-			<div class="copyright">&copy;2013-2014 Lagou <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备14023790号-2</a></div>
-		</div>
-	</div>
 
 <script type="text/javascript" src="style/js/core.min.js"></script>
 <script type="text/javascript" src="style/js/popup.min.js"></script>

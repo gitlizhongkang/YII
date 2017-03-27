@@ -14,8 +14,6 @@ class ListController extends Controller
 	public function actionIndex(){	
 		$JoBModel=new jobs;
 		if($arr=Yii::$app->request->get()){
-			// Array ( [r] => list/index [kw] => 前端开发 [dq] => 上海 ) 
-			// http://www.frontend.com/web/index.php?r=list&yx=1000~1500%E5%85%83/%E6%9C%88&gj=%E6%97%A0%E7%BB%8F%E9%AA%8C&xl=%E5%88%9D%E4%B8%AD&gx=%E5%85%A8%E8%81%8C
 			$kw=isset($arr['kw'])?$arr['kw']:"";
 			$fs=isset($arr['fs'])?$arr['fs']:"";
 			$yx=isset($arr['yx'])?$arr['yx']:"";
@@ -24,6 +22,7 @@ class ListController extends Controller
 			$gx=isset($arr['gx'])?$arr['gx']:"";
 			$sj=isset($arr['sj'])?$arr['sj']:"";
 			$dq=isset($arr['dq'])?$arr['dq']:"全国";
+			if($dq==""){$dq="全国";}
 			$dateStr = date('Y-m-d', time());
 			$time = strtotime($dateStr);  
 			$where="1=1 and deadline > $time";
@@ -81,11 +80,9 @@ class ListController extends Controller
 			}
 			$where.=" order by addtime desc";
 			$jobs=$JoBModel->getAll($where);
-			// print_r($where);die;
 			$HotsModel=new Hots;
 			$HotsWhere="way = '$fs' and words = '$kw'";
 			$HotsOne=$HotsModel->GetOne($HotsWhere);
-			// print_r($HotsOne);die;
 			if($HotsOne){
 				$SetHots=$HotsModel->setAudit($HotsOne['id'],'num',$HotsOne['num']+1);
 			}else{
@@ -96,15 +93,12 @@ class ListController extends Controller
 			}
 			//热搜
 			$Hots=$HotsModel->GetRankList();
-			// print_r($jobs);die;
 			$CateModel=new Category;
 			$cate=$CateModel->getList();
-			// print_r($cate);die;
 			$date['QS_wage']=$CateModel->getArray($cate[13]['c_alias']);
 			$date['QS_jobs_nature']=$CateModel->getArray($cate[4]['c_alias']);
 			$date['QS_education']=$CateModel->getArray($cate[2]['c_alias']);
 			$date['QS_experience']=$CateModel->getArray($cate[3]['c_alias']);
-			// print_r($date);die;
 			return $this->render('list.html',['data'=>$jobs,'dq'=>$dq,'hots'=>$Hots,'jobsList'=>$jobs['list'],'pages'=>$jobs['pages'],'date'=>$date]);
 		}
 	}

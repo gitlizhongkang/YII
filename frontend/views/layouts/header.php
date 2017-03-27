@@ -3,6 +3,7 @@ use yii\helpers\Url;
 $session=\Yii::$app->session;
 $user=$session->get('user');
 ?>
+
     <!DOCTYPE HTML>
     <html>
     <head>
@@ -51,6 +52,18 @@ $user=$session->get('user');
     			<li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
     			<li ><a href="<?=Url::to(['list/index'])?>" target="_blank">招聘中心</a></li>
 	    	</ul>
+            <script>
+                $(document).ready(function(){
+                    var kzq="<?php $kzq=isset($_GET['r'])?$_GET['r']:'index/index'; if($kzq=='index'){$kzq='index/index';} echo $kzq;?>";
+                    if(kzq=='index/index'){
+                        $('#navheader li').eq(0).attr('class','current').siblings().removeAttr('class');
+                    }else if(kzq=='index/company-list'){
+                         $('#navheader li').eq(1).attr('class','current').siblings().removeAttr('class');
+                    }else if(kzq=='list'||kzq=="list/index"||kzq=="list/"){
+                         $('#navheader li').eq(2).attr('class','current').siblings().removeAttr('class');
+                    }
+                })
+            </script>
             <?php if(!empty($user)){ ?>
              <dl class="collapsible_menu">
                 <dt>
@@ -59,7 +72,7 @@ $user=$session->get('user');
                     <i></i>
                 </dt>
                 <?php if($user['type']==0){ ?>
-                    <dd><a rel="nofollow" href="person">个人中心</a></dd>
+                    <dd><a rel="nofollow" href="<?=Url::to(['resume/index'])?>">个人中心</a></dd>
                <?php }else{ ?>
                     <dd><a rel="nofollow" href="<?=Url::to(['company/index'])?>">企业中心</a></dd>
                 <?php } ?>
@@ -93,3 +106,12 @@ $user=$session->get('user');
     });
 </script>
     <?php echo $content; ?>
+        <div id="footer">
+        <div class="wrapper">
+            <a href="<?=Url::to(['index/about'])?>" target="_blank" rel="nofollow">联系我们</a>
+            <a href="h/af/zhaopin.html" target="_blank">互联网公司导航</a>
+            <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
+            <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>
+            <div class="copyright">&copy;2013-2014 Lagou <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备14023790号-2</a></div>
+        </div>
+    </div>

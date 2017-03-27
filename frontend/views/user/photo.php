@@ -34,7 +34,7 @@ use yii\widgets\ActiveForm;
         </dl>
     </div>
     <!-- end .sidebar -->
-    <div class="content_l">
+    <div class="content_l" style="margin: 0 0 0 40px">
         <dl class="c_delivery">
             <dt>
             <h1><em></em>上传头像状态</h1>

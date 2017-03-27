@@ -518,7 +518,6 @@ $(function(){
 	
 });
 $(document).on('click','#search_button',function(){
-	alert($("#searchType").children("li").eq(1).html())
 	if($("#searchType").children("li").eq(1).html()=="职位"){
 		var keyword=$('#search_input').val();
 		var keyword = $.trim($('#search_input').val());
@@ -594,7 +593,6 @@ function editForm(inputId,inputValue){
 	var kw = keyword.replace(reg," ");
 	var url = location.search;
 	var http ="index.php";
-	// alert(url)=http://www.frontend.com/web/index.php?r=list%2Findex
 	if(kw == ''){
 		location.href=http+url;
 		$('#searchForm').attr('action',"<?=Url::to(['list/index'])?>").submit();	
