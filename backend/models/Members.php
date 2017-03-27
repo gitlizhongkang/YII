@@ -76,11 +76,7 @@ class Members extends \yii\db\ActiveRecord
     public function del($id)
     {
         return Members::deleteAll("uid in ($id)");
-<<<<<<< HEAD
     }
-=======
-    }    
->>>>>>> 4844c452743b65947ada04deab2dd1694f08acc3
      //添加
     public function add($arr){
         $this->setAttributes($arr);
