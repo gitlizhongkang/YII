@@ -77,7 +77,7 @@ class Members extends \yii\db\ActiveRecord
     {
         return Members::deleteAll("uid in ($id)");
 
-    }   
+    }
      //添加
     public function add($arr){
         $this->setAttributes($arr);
