@@ -72,21 +72,17 @@ class UserPhoto extends \yii\db\ActiveRecord
     {
         $query = UserPhoto::find();
 
-        // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
 
-        $this->load($params);
 
+        $this->load($params);
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
             return $dataProvider;
         }
 
-        // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'user_id' => $this->user_id,
@@ -94,5 +90,35 @@ class UserPhoto extends \yii\db\ActiveRecord
         ]);
 
         return $dataProvider;
+    }
+
+
+    /**
+     * @return array
+     */
+    public function upload()
+    {
+        $fileArr = [];
+        foreach ($this->photo as $fileObj)
+        {
+            //文件名
+            $filePath = $this->fileName($fileObj);
+            //保存文件
+            $fileObj->saveAs($filePath);
+
+            //文件名数组
+            $fileArr[] = $filePath;
+        }
+        return $fileArr;
+    }
+
+
+    /**
+     * @param $fileObj
+     * @return string
+     */
+    protected function fileName($fileObj)
+    {
+        return 'uploads/' . time() . rand(11,99) . '.' . $fileObj->extension;
     }
 }

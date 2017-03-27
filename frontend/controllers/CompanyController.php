@@ -5,6 +5,7 @@ use Yii;
 use yii\web\Controller;
 use common\models\Ad;
 use common\models\JobsCategory;
+use backend\models\Jobs;
 use common\models\CompanyProduct;
 use common\models\CompanyLeader;
 use common\models\Category;
@@ -39,7 +40,12 @@ class CompanyController extends Controller
         if($companyinfo['logo']==''){
             return $this->redirect(["company/improve1","companyid"=>$companyinfo['id']]);
         }
-
+        $companyinfo['labels']=explode(",",$companyinfo['labels']);
+        $data['companyinfo']=$companyinfo;
+        $data['jobsinfo']=Jobs::find()->where(["company_id"=>$companyinfo['id']])->asArray()->all();
+        $data['productinfo']=CompanyProduct::find()->where(["companyId"=>$companyinfo['id']])->asArray()->all();
+        $data['leaderinfo']=CompanyLeader::find()->where(["companyId"=>$companyinfo['id']])->asArray()->all();
+       return $this->render("list.html",$data);
     }
     public function actionBlind1()
     {

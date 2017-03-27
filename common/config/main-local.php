@@ -11,6 +11,7 @@ return [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
+            'viewPath' => '@common/mail',
             'useFileTransport' => false,
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
@@ -24,7 +25,6 @@ return [
                 'charset'=>'UTF-8',
                 'from'=>array("15803586720@163.com"=>"follow me"),
             ],
-
         ],
     ],
 ];

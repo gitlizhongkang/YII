@@ -32,7 +32,7 @@ var youdao_conv_id = 271546;
 	        	<input type="hidden" value="Publish" name="type">
 			    <ul class="reset my_jobs">
 			    <?php foreach($arr['list'] as $k=>$v){ ?>
-				    <li data-id="149594">
+				    <li data-id="<?=$v['id']?>">
 				    	<h3>
 				    		<a target="_blank" title="随便写" href="http://www.lagou.com/jobs/149594.html"><?=$v['jobs_name']?></a> 
 		                	<span>[<?=$v['district_cn']?>]</span>
@@ -42,9 +42,11 @@ var youdao_conv_id = 271546;
 		                <div class="c9">发布时间： <?=date('Y-m-d',$v['addtime'])?></div>
 			            <div class="links">
 			            	<!-- <a class="job_refresh" href="javascript:void(0)">刷新<span>每个职位7天内只能刷新一次</span></a> -->
-		                    <a target="_blank" class="job_edit" href="create.html?positionId=149594">编辑</a>
-		                    <a class="job_offline" href="javascript:void(0)">下线</a>                      
-		                    <a class="job_del" href="<?=Url::to(['job/delete','id'=>$v['id']])?>">删除</a>
+		                    <a target="_blank" class="job_edit" href="<?=Url::to(['job/update','id'=>$v['id']])?>">编辑</a>
+		                    <?php if($type==1){ ?>
+		                    <a class="job_offline" href="javascript:void(0)">下线</a> 
+		                    <?php } ?>                     
+		                    <a class="job_del" href="javascript:void(0)">删除</a>
 		                </div>
 		            </li>
 		          <?php } ?>
@@ -59,55 +61,18 @@ var youdao_conv_id = 271546;
     </dl>
    
 </div><!-- end .content -->
+<script>
+var offline="<?=Url::to(['job/down'])?>";
+var result="<?=Url::to(['job/job','type'=>$type])?>";
+var del="<?=Url::to(['job/delete'])?>";
+</script>
 <script src="style/js/job_list.min.js" type="text/javascript"></script> 
 
 <script src="style/js/core.min.js" type="text/javascript"></script>
 <script src="style/js/popup.min.js" type="text/javascript"></script>
 <script src="style/js/tongji.js" type="text/javascript"></script>
 <!--  -->
-<script src="style/js/analytics01.js" type="text/javascript"></script><script type="text/javascript" src="style/js/h.js"></script>
-<script type="text/javascript">
-$(function(){
-	$('#noticeDot-1').hide();
-	$('#noticeTip a.closeNT').click(function(){
-		$(this).parent().hide();
-	});
-});
-var index = Math.floor(Math.random() * 2);
-var ipArray = new Array('42.62.79.226','42.62.79.227');
-var url = "ws://" + ipArray[index] + ":18080/wsServlet?code=314873";
-var CallCenter = {
-		init:function(url){
-			var _websocket = new WebSocket(url);
-			_websocket.onopen = function(evt) {
-				console.log("Connected to WebSocket server.");
-			};
-			_websocket.onclose = function(evt) {
-				console.log("Disconnected");
-			};
-			_websocket.onmessage = function(evt) {
-				//alert(evt.data);
-				var notice = jQuery.parseJSON(evt.data);
-				if(notice.status[0] == 0){
-					$('#noticeDot-0').hide();
-					$('#noticeTip').hide();
-					$('#noticeNo').text('').show().parent('a').attr('href',ctx+'/mycenter/delivery.html');
-					$('#noticeNoPage').text('').show().parent('a').attr('href',ctx+'/mycenter/delivery.html');
-				}else{
-					$('#noticeDot-0').show();
-					$('#noticeTip strong').text(notice.status[0]);
-					$('#noticeTip').show();
-					$('#noticeNo').text('('+notice.status[0]+')').show().parent('a').attr('href',ctx+'/mycenter/delivery.html');
-					$('#noticeNoPage').text(' ('+notice.status[0]+')').show().parent('a').attr('href',ctx+'/mycenter/delivery.html');
-				}
-				$('#noticeDot-1').hide();
-			};
-			_websocket.onerror = function(evt) {
-				console.log('Error occured: ' + evt);
-			};
-		}
-};
-CallCenter.init(url);
-</script>
+<!-- <script src="style/js/analytics01.js" type="text/javascript"></script><script type="text/javascript" src="style/js/h.js"></script> -->
+
 
 <div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

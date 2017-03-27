@@ -74,6 +74,7 @@ class IndexController extends Controller
         return $this->render("companylist.html",$data);
     }
 
+
 	//职位分类重新排序
 	public function get_job($job)
     {
@@ -101,4 +102,5 @@ class IndexController extends Controller
  
         return $arr;
     }
+
 }

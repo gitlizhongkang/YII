@@ -201,19 +201,9 @@ class Resume extends \yii\db\ActiveRecord
     }
 
 
-
-    /**
-     * @brief 查询数据
-     * @param array $condition
-     * @return array|\yii\db\ActiveRecord[]
-     */
-    public function selectAll($condition = [])
-    {
-        return self::find()->where($condition)->asArray()->all();
-    }
-
     //查询一个用户的所有简历
-    public function select($u_id){
+    public function select($u_id)
+    {
         return $this->find()->where(['uid'=>$u_id])->all();
     }
 }
