@@ -146,7 +146,7 @@ class CompanyController extends Controller
              }
          }else{
              $info['code']=3;
-             $info['msg']='这是什么';
+             $info['msg']='这是什么jb玩意';
          }
         return $this->render('success.html',$info);
     }

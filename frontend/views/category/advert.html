@@ -1,0 +1,67 @@
+<?php
+use yii\helpers\Url;
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="renderer" content="webkit"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+<title>{#$title#}</title>
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<link rel="stylesheet" href="css/user_common.css" />
+<link rel="stylesheet" href="css/user_company.css" />
+<script src="js/jquery.js"></script>
+</head>
+<body {#if $QISHI.body_bgimg#}style="background:url({#$QISHI.site_domain#}{#$QISHI.site_dir#}data/{#$QISHI.updir_images#}/{#$QISHI.body_bgimg#}) repeat-x center 38px;"{#/if#}>
+
+<div class="page_location link_bk">当前位置：<a href="{#$QISHI.site_dir#}">首页</a> > <a href="{#$userindexurl#}">会员中心</a> > 增值服务</div>
+  <div class="usermain">
+    <div class="leftmenu com link_bk">
+    </div>
+    <div class="rightmain">
+      <div class="bbox1">
+        <div class="topnav">
+          <div class="titleH1"><div class="h1-title">增值服务</div></div>
+          <div class="navs link_bk clearfix">
+            <a href="company_service.php?act=adv_list" class="se">申请广告位</a>
+          </div>
+        </div>
+        <div class="price-data">
+          <table>
+            <thead>
+              <tr>
+                <th class="align-left" width="260">广告位名称</th>
+                <th width="">广告位类型</th>
+                <th width="">价格（元/周）</th>
+                <th width="">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+<?php foreach ($data as $key => $value): ?>
+  <tr>
+    <td class="align-left"><?=$value['categoryname']?></td>
+    <td><?php
+        if ($value['num'] == 1){
+           echo "文字";
+        }else if ($value['num'] == 2){
+           echo "图片";
+        }else if ($value['num'] == 3) {
+           echo "代码";
+        }else{
+          echo "Flash";
+        }?>
+    </td>
+    <td><?=$value['expense']?>元/周</td>
+
+<td><a href="<?=Url::to(['category/advert_add'])?>&category_id=<?= $value['category_id'];?>">购买</a></td>
+  </tr>
+ <?php endforeach ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</body>
+</html>
