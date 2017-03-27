@@ -72,7 +72,7 @@
                                 <div class="links">
                                     <a data-deliverid="1686182"  href="javascript:void(0)">修改简历</a>
                                     <a data-deliverid="1686182"  href="javascript:void(0)">删除简历</a>
-                                    <a data-deliverid="1686182"  href="javascript:void(0)">投递</a>
+                                    <a data-deliverid="1686182"  href="javascript:void(0)">查看详情</a>
                                 </div>
                             </div>
                             <div class="contactInfo">

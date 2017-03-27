@@ -281,7 +281,7 @@ ul.hot_pos i{width: 12px;height: 14px;position:absolute;background:url(img/hot.p
 .choosetype_l{width:390px;border-right:1px dashed #c4d5d4;padding-top:10px;overflow:hidden;}
 
 /*company_list.html*/
-.content_l{ float:left; margin:0 0 0 40px; width:680px;}
+.content_l{ float:left; width:680px;}
 .content_l h1{font-weight:normal; line-height:42px; margin:0 0 20px 0;}
 .hc_tag{margin-bottom:20px;}
 .hc_tag > dt{padding-bottom:10px; overflow:hidden;}

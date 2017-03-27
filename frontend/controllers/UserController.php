@@ -59,7 +59,7 @@ class UserController extends Controller
     public function actionIndex()
     {
         //渲染模型
-        $model = UserInfo::findOne(12);//$this->userInfo['uid']
+        $model = UserInfo::findOne($this->userInfo['uid']);//$this->userInfo['uid']
 
 
         //接值入库
@@ -124,7 +124,7 @@ class UserController extends Controller
                 //入库
                 foreach ($fileArr as $key => $val)
                 {
-                    $sql = "INSERT INTO lg_user_photo(id,user_id,photo) VALUES (null,'12','{$val}')";  ////上线更改$this->userInfo['uid']
+                    $sql = "INSERT INTO lg_user_photo(id,user_id,photo) VALUES (null,'{$this->userInfo['uid']}','{$val}')";  ////上线更改$this->userInfo['uid']
                     Yii::$app->db->createCommand($sql)->execute();
                 }
                 $this->refresh();
@@ -140,7 +140,7 @@ class UserController extends Controller
 
         //渲染模型
         $model = UserPhoto::find()
-            ->where(['user_id' => 12, 'status' => $status])  //$this->userInfo['uid']
+            ->where(['user_id' => $this->userInfo['uid'], 'status' => $status])  //$this->userInfo['uid']
             ->asArray()
             ->all();
         //print_r($model);die;
@@ -159,7 +159,7 @@ class UserController extends Controller
      */
     public function actionSafe()
     {
-        $model = User::findOne(12);     //$this->userInfo['uid']
+        $model = User::findOne($this->userInfo['uid']);     //$this->userInfo['uid']
 
         if(Yii::$app->request->isPost)
         {
@@ -232,7 +232,7 @@ class UserController extends Controller
 
         //生成密钥
         $code = Yii::$app->getSecurity()->generateRandomString();
-        $user = User::findOne(12);  //$this->userInfo['uid]
+        $user = User::findOne($this->userInfo['uid']);  //$this->userInfo['uid]
         $user->setAttribute('code',$code);
         if(!$user->save())
         {
@@ -241,7 +241,7 @@ class UserController extends Controller
 
 
         //邮件内容
-        $href = Yii::$app->urlManager->createAbsoluteUrl(['user/check', 'id' => 12,'token' => $code]); //$this->userInfo['uid]
+        $href = Yii::$app->urlManager->createAbsoluteUrl(['user/check', 'id' => $this->userInfo['uid'],'token' => $code]); //$this->userInfo['uid]
         $body = "<a href='$href'>$href</a>";
 
         //发送邮件
