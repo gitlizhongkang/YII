@@ -35,7 +35,7 @@ class JobController extends Controller
 		$user=$session->get('user');
 		$id=$user['uid'];
 		$job=new Jobs;
-		$count=$job->jobCount($id);	
+		$count=$job->jobCount($id);
 		if(Yii::$app->request->isPost){
 			$members= new Members;
 			$point=$members->getPoint($id);
