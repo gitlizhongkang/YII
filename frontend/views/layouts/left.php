@@ -28,7 +28,7 @@ console.log(1);
 <script type="text/javascript" src="style/js/jquery.1.10.1.min.js"></script>
 <script src="style/js/jquery.lib.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="style/js/ajaxfileupload.js"></script>
-<script src="style/js/additional-methods.js" type="text/javascript"></script>
+    <script src="style/js/additional-methods.js" type="text/javascript"></script></head>
 <div id="body">
 	<div id="header">
     	<div class="wrapper">
@@ -68,11 +68,10 @@ console.log(1);
         <a class="btn_create" href="<?=Url::to(['job/index'])?>">发布新职位</a>
         <dl class="company_center_aside">
 			<dt>我收到的简历</dt>
-			<dd><a href="">待处理简历</a> </dd>
-			<dd><a href="canInterviewResumes.html">待定简历</a></dd>
-			<dd><a href="haveNoticeResumes.html">已通知面试简历</a></dd>
-			<dd><a href="haveRefuseResumes.html">不合适简历</a></dd>
-			<dd class="btm"><a href="autoFilterResumes.html">自动过滤简历</a> </dd>
+			<dd><a href="<?= Url::to(['resu/index1']) ?>">待处理简历</a> </dd>
+			<dd><a href="<?= Url::to(['resu/index2']) ?>">待定简历</a></dd>
+			<dd><a href="<?= Url::to(['resu/index3']) ?>">已通知面试简历</a></dd>
+			<dd><a href="<?= Url::to(['resu/index4']) ?>">不合适简历</a></dd>
 		</dl>
 		<dl class="company_center_aside">
 			<dt>我发布的职位</dt>
@@ -83,10 +82,9 @@ console.log(1);
 		</dl>
         <dl class="company_center_aside">
             <dt>会员服务</dt>
-            <dd><a href="<?=Url::to(['category/account','type'=>'1'])?>">我的账户</a></dd>
-            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">充值订单</a></dd>
-            <dd><a href="<?=Url::to(['category/advert','type'=>'2'])?>">增值服务</a></dd>
-            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">企业模板</a></dd>
+            <dd><a href="<?=Url::to(['category/account'])?>">我的账户</a></dd>
+            <dd><a href="<?=Url::to(['category/indent'])?>">充值订单</a></dd>
+            <dd><a href="<?=Url::to(['category/advert'])?>">增值服务</a></dd>
         </dl>
     	<div class="subscribe_side mt20">
 			<div class="f14">想收到更多更好的简历？</div>

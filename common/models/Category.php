@@ -1,9 +1,6 @@
 <?php
-
 namespace common\models;
-
 use Yii;
-
 /**
  * This is the model class for table "lg_category".
  * This is the model class for table "{{%category}}".
@@ -42,10 +39,6 @@ class Category extends \yii\db\ActiveRecord
             [['stat_jobs', 'stat_resume'], 'string', 'max' => 15],
         ];
     }
-
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
@@ -61,9 +54,15 @@ class Category extends \yii\db\ActiveRecord
         ];
     }
     //获取分类
+<<<<<<< HEAD
+    public function cate($cate)
+    {
+        return $this->find()->where(['c_alias' => $cate])->all();
+=======
     public function cate($cate){
 
         return $this->find()->where(['c_alias'=>$cate])->all();
+>>>>>>> 867cea59da488c59e3a382f9838aa70a9b68c047
     }
     public function getList(){
         return $cate=Category::find()->groupBy(['c_alias'])->select('c_alias')->asArray()->all();

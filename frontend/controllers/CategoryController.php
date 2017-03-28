@@ -4,7 +4,8 @@ namespace frontend\controllers;
 use Yii;
 use yii\web\Controller;
 use frontend\models\AdCategory;
-                    
+use frontend\models\Pay; 
+use frontend\models\Points;
 
 class CategoryController extends Controller
 {
@@ -25,6 +26,13 @@ class CategoryController extends Controller
     public function actionAccount()
     {
         return $this->render('account.html');
+    }
+//充值订单
+    public function actionIndent()
+    {
+        $data = Pay::select();
+        $arr = Points::select();
+        return $this->render('indent',['data'=>$data,'arr'=>$arr]);
     }
 
 }

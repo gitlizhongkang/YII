@@ -3,6 +3,7 @@ use yii\helpers\Url;
 $session=\Yii::$app->session;
 $user=$session->get('user');
 ?>
+
     <!DOCTYPE HTML>
     <html>
     <head>
@@ -49,8 +50,20 @@ $user=$session->get('user');
     		<ul class="reset" id="navheader">
     			<li class="current"><a href="<?=Url::to(['index/index'])?>">首页</a></li>
     			<li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
-    			<li ><a href="<?=Url::to(['list/index'])?>" target="_blank">招聘中心</a></li>
+    			<li ><a href="<?=Url::to(['list/index'])?>">招聘中心</a></li>
 	    	</ul>
+            <script>
+                $(document).ready(function(){
+                    var kzq="<?php $kzq=isset($_GET['r'])?$_GET['r']:'index/index'; if($kzq=='index'){$kzq='index/index';} echo $kzq;?>";
+                    if(kzq=='index/index'){
+                        $('#navheader li').eq(0).attr('class','current').siblings().removeAttr('class');
+                    }else if(kzq=='index/company-list'){
+                         $('#navheader li').eq(1).attr('class','current').siblings().removeAttr('class');
+                    }else if(kzq=='list'||kzq=="list/index"||kzq=="list/"){
+                         $('#navheader li').eq(2).attr('class','current').siblings().removeAttr('class');
+                    }
+                })
+            </script>
             <?php if(!empty($user)){ ?>
              <dl class="collapsible_menu">
                 <dt>

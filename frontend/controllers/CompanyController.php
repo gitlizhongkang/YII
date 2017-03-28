@@ -9,6 +9,7 @@ use backend\models\Jobs;
 use common\models\CompanyProduct;
 use common\models\CompanyLeader;
 use common\models\Category;
+use common\models\User;
 use backend\models\Company;
 use yii\data\Pagination;
 use yii\web\UploadedFile;
@@ -150,6 +151,7 @@ class CompanyController extends Controller
          }
         return $this->render('success.html',$info);
     }
+
     //完善公司资料
     public function actionImprove1()
     {
@@ -300,9 +302,34 @@ class CompanyController extends Controller
         }
         echo json_encode($data);
     }
+    //公司詳細信息
     public function actionGongsi(){
-            
-            return $this->render('gongsi.html');
+            $CompanyModel=new Company;
+            $id=yii::$app->request->get("id");
+            $date['Detail']=$CompanyModel->getOne1($id);
+            $LeaderModel=new CompanyLeader();
+            $date['leader']=$LeaderModel->find()->where("companyId = $id")->asArray()->all();
+            $ProductModel=new CompanyProduct();
+            $date['product']=$ProductModel->find()->where("companyId = $id")->asArray()->all();
+            $JobsModel=new Jobs;
+            $date['jobs']=$JobsModel->find()->select('count(company_id) As jobs')->groupBy('company_id')->where(['company_id'=>$id])->asArray()->one();
+            $UserModel=new User;
+            $date['last_login']=$UserModel->find()->select('last_login_time')->where(['id'=>$date['Detail']['u_id']])->asArray()->one();
+            // print_r($date);die;
+            return $this->render('gongsi.html',$date);
         }
-
+    public function actionGongsi1(){
+            $CompanyModel=new Company;
+            $id=yii::$app->request->get("id");
+            $date['Detail']=$CompanyModel->getOne1($id);
+            $LeaderModel=new CompanyLeader();
+            $date['leader']=$LeaderModel->find()->where("companyId = $id")->asArray()->all();
+            $JobsModel=new Jobs;
+            $date['jobs']=$JobsModel->find()->select('count(company_id) As jobs')->groupBy('company_id')->where(['company_id'=>$id])->asArray()->one();
+            $date['job']=$JobsModel->find()->where(['company_id'=>$id])->asArray()->all();
+            $UserModel=new User;
+            $date['last_login']=$UserModel->find()->select('last_login_time')->where(['id'=>$date['Detail']['u_id']])->asArray()->one();
+            // print_r($date);die;
+            return $this->render('gongsi1.html',$date);
+        }
 }
