@@ -16,10 +16,10 @@ use yii\captcha\Captcha;
                 <a href="<?= \yii\helpers\Url::to(['resume/use'])?>">已投简历</a>
             </dd>
             <dd>
-                <a href="<?= \yii\helpers\Url::to(['resume/index'])?>">收藏的职位</a>
+                <a href="<?= \yii\helpers\Url::to(['user/collect'])?>">收藏的职位</a>
             </dd>
             <dd>
-                <a href="<?= \yii\helpers\Url::to(['resume/index'])?>">订阅职位</a>
+                <a href="<?= \yii\helpers\Url::to(['user/order'])?>">订阅职位</a>
             </dd>
         </dl>
         <dl class="company_center_aside">
@@ -96,14 +96,14 @@ use yii\captcha\Captcha;
                             <td>登录邮箱</td>
                             <td class="c7">
                                 <?= $model->email?>
-                                <?= $model->email_audit == 1 ? "<span style='color: blue'>已绑定</span>" : "<a id=email style='color: red'>未绑定</a>" ?>
+                                <?= $model->email_audit == 1 ? "<span style='color: blue'>已绑定</span>" : "<a id=email style='color: red'>未绑定(点击绑定)</a>" ?>
                             </td>
                         </tr>
                         <tr>
                             <td>登录手机</td>
                             <td class="c7">
                                 <?= $model->tel?>
-                                <?= $model->tel_audit == 1 ? "<span style='color: blue'>已绑定</span>" : "<a id=tel style='color: red'>未绑定</a>" ?>
+                                <?= $model->tel_audit == 1 ? "<span style='color: blue'>已绑定</span>" : "<a id=tel style='color: red'>未绑定(点击绑定)</a>" ?>
                             </td>
                         </tr>
                     </table>

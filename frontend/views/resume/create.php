@@ -1,4 +1,3 @@
-
 <div id="container">
     <div class="clearfix">
         <div class="content_l">

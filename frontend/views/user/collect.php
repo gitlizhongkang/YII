@@ -1,7 +1,3 @@
-<?php
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
-?>
 <div id="container">
     <div class="sidebar">
         <a class="btn_create" href="<?= \yii\helpers\Url::to(['resume/create'])?>">创建新简历</a>
@@ -13,7 +9,7 @@ use yii\widgets\ActiveForm;
             <dd>
                 <a href="<?= \yii\helpers\Url::to(['resume/use'])?>">已投简历</a>
             </dd>
-            <dd>
+            <dd class="current">
                 <a href="<?= \yii\helpers\Url::to(['user/collect'])?>">收藏的职位</a>
             </dd>
             <dd>
@@ -22,7 +18,7 @@ use yii\widgets\ActiveForm;
         </dl>
         <dl class="company_center_aside">
             <dt>账号管理</dt>
-            <dd class="current">
+            <dd>
                 <a href="<?= \yii\helpers\Url::to(['user/index'])?>">基本资料</a>
             </dd>
             <dd>
@@ -34,93 +30,56 @@ use yii\widgets\ActiveForm;
         </dl>
     </div>
     <!-- end .sidebar -->
+
     <div class="content">
         <dl class="company_center_content">
             <dt>
-            <h1>
-                <em></em>
-                我的资料
-            </h1>
+            <h1><em></em>收藏的职位</h1>
             </dt>
             <dd>
-                <?php
-                $form = ActiveForm::begin([
-                    'id' => 'jobForm',
-                    'options' => [
-                        'enctype' => 'multipart/form-data',
-                        'class' => 'a'
-                    ],
-                ]) ?>
-                <table class="btm">
-                    <tbody>
-                    <tr>
-                        <td width="25"><span class="redstar">*</span></td>
-                        <td width="85">姓名</td>
-                        <td>
-                            <?= $form->field($model, 'name')->textInput()->label(false) ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="redstar">*</span></td>
-                        <td>性别</td>
-                        <td>
-                            <?= $form->field($model, 'sex')->radioList(['0' => '女', '1' => '男'])->label(false) ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="redstar">*</span></td>
-                        <td>身高</td>
-                        <td>
-                            <?= $form->field($model, 'height')->textInput()->label(false) ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="redstar">*</span></td>
-                        <td>出生年分</td>
-                        <td>
-                            <?= $form->field($model, 'birthday')->dropDownList($year,['prompt'=>'请选择','style'=>'width: 100px;height: 40px;border: solid 2px #f2f2f2'])->label(false) ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="redstar">*</span></td>
-                        <td>婚姻</td>
-                        <td>
-                            <?= $form->field($model, 'marriage')->radioList(['2' => '未婚', '3' => '已婚'])->label(false) ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="redstar">*</span></td>
-                        <td>籍贯</td>
-                        <td>
-                            <?= $form->field($model, 'province_id')->dropDownList($province,['prompt'=>'请选择','style'=>'width: 100px;height: 40px;border: solid 2px #f2f2f2'])->label(false) ?>
-                            <?= $form->field($model, 'city_id')->dropDownList($city,['prompt'=>'请选择','style'=>'width: 100px;height: 40px;border: solid 2px #f2f2f2'])->label(false) ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="redstar">*</span></td>
-                        <td>现居地</td>
-                        <td>
-                            <?= $form->field($model,'residence')->textInput()->label(false)?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="redstar">*</span></td>
-                        <td>学历</td>
-                        <td>
-                            <?= $form->field($model,'education')->dropDownList(['大专'=>'大专','本科'=>'本科','硕士'=>'硕士','博士'=>'博士','博士以上'=>'博士以上'], ['prompt'=>'请选择','style'=>'width: 100px;height: 40px;border: solid 2px #f2f2f2'])->label(false)?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="redstar">*</span></td>
-                        <td>经验</td>
-                        <td>
-                            <?= $form->field($model,'experience')->dropDownList(['实习'=>'实习','1-2年'=>'1-2年','3-5年'=>'3-5年','5-10年'=>'5-10年','10年以上'=>'10年以上'], ['prompt'=>'请选择','style'=>'width: 100px;height: 40px;border: solid 2px #f2f2f2'])->label(false)?>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <?= Html::submitButton('保存', ['class' => 'btn btn-primary']) ?>
-                <?php ActiveForm::end() ?>
+                <div class="filter_actions">
+                    <a id="resumeRefuseAll" href="javascript:;"></a>
+                </div>
+                <ul class="reset resumeLists">
+                    <?php foreach ($jobs as $key => $val){ ?>
+                        <li class="onlineResume" style="border: dotted 1px #cfc7bb">
+                            <div class="resumeShow">
+                                <a target="_blank" href="<?= \yii\helpers\Url::to(['tou/index','id'=>$val['id']]) ?>">
+                                    <img src="">
+                                </a>
+                                <div class="resumeIntro">
+                                    <h3 class="unread">
+                                        <a target="_blank" href="<?= \yii\helpers\Url::to(['tou/index','id'=>$val['id']]) ?>">
+                                            <?= $val['jobs_name'] ?>
+                                        </a>
+                                    </h3>
+                                    <span class="fr">刷新时间：<?= date('y-m-d H时',$val['refreshtime']) ?></span>
+                                    <br>
+                                    <span class="fr">点击量：<?= $val['click'] ?></span>
+                                    <div>
+                                    <span>
+                                        <?= $val['companyname'] ?>/
+                                        <?= $val['jobs_name'] ?>/
+                                        <?= $val['nature_cn'] ?>
+                                    </span><br>
+                                        <span>
+                                            <?= '招聘人数：' . $val['amount'] ?>/<?= $val['deadline'] <= time() ? '(<span style="color: green">正在招聘</span>))' : '(<span style="color: red">职位已过期</span>)'; ?>
+                                            <br>
+                                            <?= '要求：' . $val['require'] ?>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="links">
+                                    <a data-deliverid="1686182"  href="<?= \yii\helpers\Url::to(['tou/index','id'=>$val['id']]) ?>">查看详情</a>
+                                </div>
+                            </div>
+                            <div class="contactInfo">
+                                <span class="c9">电话：</span>&nbsp;&nbsp;&nbsp;
+                                <span class="c9">邮箱：</span><a href="mailto:"></a>
+                            </div>
+                        </li>
+                    <?php } ?>
+                </ul>
             </dd>
         </dl>
     </div>
