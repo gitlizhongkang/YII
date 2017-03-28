@@ -44,6 +44,9 @@ class JobController extends Controller
 			}else{
 				if($count<5){
 				$arr=Yii::$app->request->post();
+				$category_cn=$arr['category_cn'];
+				$cateId=JobsCategory::find()->select('id')->where(['categoryname'=>$category_cn])->asArray()->one();
+				$arr['category']=$cateId['id'];
 				$arr['tag_cn']=implode(',',$arr['tag_cn']);
 				$arr['require']=implode(',',$arr['require']);
 				$arr['district_cn']=$arr['province'].'/'.$arr['city'].'/'.$arr['place'];
