@@ -50,7 +50,7 @@ $user=$session->get('user');
     		<ul class="reset" id="navheader">
     			<li class="current"><a href="<?=Url::to(['index/index'])?>">首页</a></li>
     			<li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
-    			<li ><a href="<?=Url::to(['list/index'])?>" target="_blank">招聘中心</a></li>
+    			<li ><a href="<?=Url::to(['list/index'])?>">招聘中心</a></li>
 	    	</ul>
             <script>
                 $(document).ready(function(){
