@@ -34,7 +34,7 @@ class JobController extends Controller
 		$user=$session->get('user');
 		$id=$user['uid'];
 		$job=new Jobs;
-		$count=$job->jobCount($id);	
+		$count=$job->jobCount($id);
 		if(Yii::$app->request->isPost){
 			$members= new Members;
 			$point=$members->getPoint($id);
@@ -44,6 +44,9 @@ class JobController extends Controller
 			}else{
 				if($count<5){
 				$arr=Yii::$app->request->post();
+				$category_cn=$arr['category_cn'];
+				$cateId=JobsCategory::find()->select('id')->where(['categoryname'=>$category_cn])->asArray()->one();
+				$arr['category']=$cateId['id'];
 				$arr['tag_cn']=implode(',',$arr['tag_cn']);
 				$arr['require']=implode(',',$arr['require']);
 				$arr['district_cn']=$arr['province'].'/'.$arr['city'].'/'.$arr['place'];

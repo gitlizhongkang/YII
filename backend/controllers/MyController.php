@@ -36,6 +36,7 @@ class MyController extends Controller
         $admin_id=Yii::$app->session->get('admin_id');
         $model= new AuthAssignment;
         $power=$model->getPower($admin_id);
+        $powers=array();
         foreach ($power as $key => $value) {
             $powers[]=$power[$key]['child'];
         }

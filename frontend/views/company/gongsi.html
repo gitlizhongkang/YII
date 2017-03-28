@@ -1,23 +1,27 @@
+<?php
+use yii\helpers\Url;
+?>
 <!DOCTYPE html>
-<html style=""><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="gongsi/style1.css"><style type="text/css">.amap-adinfo-content-wrap,.amap-info-combo{text-align:center}.amap-adinfo-content-wrap .adinfo-select-btn{margin:3px auto}.adinfo-select-btn{margin-left:25px;margin-top:4px;margin-bottom:3px;border:0;color:#fff;cursor:pointer;padding:3px 6px;border-radius:2px;background-color:#0091ff}.amap-info-combo{font-size:12px;line-height:18px;white-space:nowrap}.amap-input-tips{position:fixed;border:1px solid #dadada;width:100px;height:100px}.amap-info-combo table{width:100%;border-spacing:0;margin:4px 0 6px}.amap-info-combo table td{min-width:8px}.amap-info-tabs{overflow:hidden;height:30px;line-height:30px;color:#333;cursor:pointer;background-color:#f2f2f2}.amap-info-combo .tab{border:1px solid #d9d9d9;height:22px;border-right-width:0;padding:0 10px}.amap-info-combo .tab:first-child{border-left-width:0}.amap-info-tabs .tab-icon{width:18px;height:18px;display:inline-block;vertical-align:middle;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) no-repeat}.amap-info-tabs .icon-start{background-position:0 -100px}.amap-info-tabs .icon-end{background-position:0 -50px}.amap-info-tabs .icon-around{background-position:0 1px;border-left:0}.amap-info-combo .selected{background-color:#fefefe;border-bottom:0}.amap-info-combo input:focus{outline:0}.amap-info-combo .input-label{padding:0 5px 0 8px}.amap-info-combo.status-poiSearch .input-label{padding:0 2px}.amap-info-combo.status-poiSearch .keyword-input{border-right:0}.amap-info-combo .keyword{width:90%;height:20px;border:0;padding:0 4px;background-color:#fff}.amap-info-combo .keyword-input{border:1px solid #c9c9c9;line-height:21px;height:22px;width:100%;text-align:left;margin-right:40px;border-radius:2px}.amap-info-combo .search-button{background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) 10px -197px no-repeat #0091ff;border:none;border-top-right-radius:2px;border-bottom-right-radius:2px;color:#FFF;width:30px;height:24px;line-height:24px;padding:0 4px;margin-right:5px;text-indent:-9999em;cursor:pointer}.amap-info-combo .nav-button{padding:2px 2px 2px 8px}.amap-info-combo .nav-icon{padding:4px 3px 4px 20px;border:1px solid #c9c9c9;margin-right:4px;border-radius:2px;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) no-repeat;cursor:pointer}.amap-info-combo .hovered{background-color:#0091ff;border-color:#0091ff;color:#fff}.amap-info-combo .nav-drive{background-position:2px -246px}.amap-info-combo .nav-drive-hover{background-position:2px -396px}.amap-info-combo .nav-bus{background-position:2px -299px}.amap-info-combo .nav-bus-hover{background-position:2px -447px}.amap-info-combo .nav-walk{background-position:6px -347px}.amap-info-combo .nav-walk-hover{background-position:6px -497px}.amap-adcombo-close{position:absolute;top:4px;right:4px;background:url(https://webapi.amap.com/images/close.png) center center no-repeat;width:18px;height:18px;text-indent:-9999em}.amap-adcontent-body{box-shadow:0 0 .5px rgba(0,0,100,.6);background:#fff;border-radius:2px;text-align:left;border:1px solid silver}.amap-combo-sharp{margin:0 auto;bottom:1px;position:relative;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) -5px -564px no-repeat;width:18px;height:9px}.hide{display:none}</style><style type="text/css">.amap-indoor-map .label-canvas{position:absolute;top:0;left:0}.amap-indoor-map .highlight-image-con *{pointer-events:none}.amap-indoormap-floorbar-control{position:absolute;margin:auto 0;bottom:165px;right:12px;width:35px;text-align:center;line-height:1.3em;overflow:hidden;padding:0 2px}.amap-indoormap-floorbar-control .panel-box{background-color:rgba(255,255,255,.9);border-radius:3px;border:1px solid #ccc}.amap-indoormap-floorbar-control .select-dock{position:absolute;top:0;left:0;width:100%;box-sizing:border-box;height:30px;border:solid #4196ff;border-width:0 2px;border-radius:2px;pointer-events:none;background:linear-gradient(to bottom,#f6f8f9 0,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%)}.amap-indoor-map .transition{transition:opacity .2s},.amap-indoormap-floorbar-control .transition{transition:top .2s,margin-top .2s}.amap-indoormap-floorbar-control .select-dock:after,.amap-indoormap-floorbar-control .select-dock:before{content:"";position:absolute;width:0;height:0;left:0;top:10px;border:solid transparent;border-width:4px;border-left-color:#4196ff}.amap-indoormap-floorbar-control .select-dock:after{right:0;left:auto;border-left-color:transparent;border-right-color:#4196ff}.amap-indoormap-floorbar-control.is-mobile{width:37px}.amap-indoormap-floorbar-control.is-mobile .floor-btn{height:35px;line-height:35px}.amap-indoormap-floorbar-control.is-mobile .select-dock{height:35px;top:36px}.amap-indoormap-floorbar-control.is-mobile .select-dock:after,.amap-indoormap-floorbar-control.is-mobile .select-dock:before{top:13px}.amap-indoormap-floorbar-control.is-mobile .floor-list-box{height:105px}.amap-indoormap-floorbar-control .floor-list-item .floor-btn{color:#555;font-family:"Times New Roman",sans-serif,"Microsoft Yahei";font-size:16px}.amap-indoormap-floorbar-control .floor-list-item.selected .floor-btn{color:#000}.amap-indoormap-floorbar-control .floor-btn{height:28px;line-height:28px;overflow:hidden;cursor:pointer;position:relative;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.amap-indoormap-floorbar-control .floor-btn:hover{background-color:rgba(221,221,221,.4)}.amap-indoormap-floorbar-control .floor-minus,.amap-indoormap-floorbar-control .floor-plus{position:relative;text-indent:-1000em}.amap-indoormap-floorbar-control .floor-minus:after,.amap-indoormap-floorbar-control .floor-plus:after{content:"";position:absolute;margin:auto;top:9px;left:0;right:0;width:0;height:0;border:solid transparent;border-width:10px 8px;border-top-color:#777}.amap-indoormap-floorbar-control .floor-minus.disabled,.amap-indoormap-floorbar-control .floor-plus.disabled{opacity:.3}.amap-indoormap-floorbar-control .floor-plus:after{border-bottom-color:#777;border-top-color:transparent;top:-3px}.amap-indoormap-floorbar-control .floor-list-box{max-height:153px;position:relative;overflow-y:hidden}.amap-indoormap-floorbar-control .floor-list{margin:0;padding:0;list-style:none}.amap-indoormap-floorbar-control .floor-list-item{position:relative}.amap-indoormap-floorbar-control .floor-btn.disabled,.amap-indoormap-floorbar-control .floor-btn.disabled *,.amap-indoormap-floorbar-control.with-indrm-loader *{-webkit-pointer-events:none!important;pointer-events:none!important}.amap-indoormap-floorbar-control .with-indrm-loader .floor-nonas{opacity:.5}.amap-indoor-map-moverf-marker{background-color:#FFFEEF;border:1px solid #7E7E7E;padding:3px 6px;font-size:12px;white-space:nowrap;display:inline-block;position:absolute;top:1em;left:1.2em}.amap-indoormap-floorbar-control .amap-indrm-loader{-moz-animation:amap-indrm-loader 1.25s infinite linear;-webkit-animation:amap-indrm-loader 1.25s infinite linear;animation:amap-indrm-loader 1.25s infinite linear;border:2px solid #91A3D8;border-right-color:transparent;box-sizing:border-box;display:inline-block;overflow:hidden;text-indent:-9999px;width:13px;height:13px;border-radius:7px;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0}@-moz-keyframes amap-indrm-loader{0%{-moz-transform:rotate(0);transform:rotate(0)}100%{-moz-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes amap-indrm-loader{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes amap-indrm-loader{0%{-moz-transform:rotate(0);-ms-transform:rotate(0);-webkit-transform:rotate(0);transform:rotate(0)}100%{-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style><script charset="utf-8" src="gongsi/v.htm"></script><script async="" src="gongsi/analytics.js"></script><script src="gongsi/hm.js"></script><script async="" src="gongsi/a.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="renderer" content="webkit">
-<meta property="qc:admins" content="23635710066417756375">
-<meta name="baidu-site-verification" content="QIQ6KC1oZ6">
-<meta charset="UTF-8">
-
-<meta content="伙伴网,伙伴网招聘,伙伴网最新招聘信息,伙伴聚力（北京）科技有限公司,伙伴聚力（北京）科技有限公司职位招聘" name="keywords">
-
-<meta content="伙伴网在拉勾网招聘等你,公司已获得红杉资本、晨兴资本两家全球顶级风险投资商的A轮数百万美金的联合投资,实力见证,品质保证!媒体报道:【一见|伙伴云表格】在中小企业的痛点上浇辣椒..." name="description">
-
-<title>【伙伴网_伙伴网招聘】伙伴聚力（北京）科技有限公司招聘信息-拉勾网</title>
-
-<link rel="Shortcut Icon" href="https://www.lgstatic.com/www/static/common/static/favicon_faed927.ico">
-
-
-    
-<script type="text/javascript">
+<html style="">
+ <head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="gongsi/style1.css" />
+  <style type="text/css">.amap-adinfo-content-wrap,.amap-info-combo{text-align:center}.amap-adinfo-content-wrap .adinfo-select-btn{margin:3px auto}.adinfo-select-btn{margin-left:25px;margin-top:4px;margin-bottom:3px;border:0;color:#fff;cursor:pointer;padding:3px 6px;border-radius:2px;background-color:#0091ff}.amap-info-combo{font-size:12px;line-height:18px;white-space:nowrap}.amap-input-tips{position:fixed;border:1px solid #dadada;width:100px;height:100px}.amap-info-combo table{width:100%;border-spacing:0;margin:4px 0 6px}.amap-info-combo table td{min-width:8px}.amap-info-tabs{overflow:hidden;height:30px;line-height:30px;color:#333;cursor:pointer;background-color:#f2f2f2}.amap-info-combo .tab{border:1px solid #d9d9d9;height:22px;border-right-width:0;padding:0 10px}.amap-info-combo .tab:first-child{border-left-width:0}.amap-info-tabs .tab-icon{width:18px;height:18px;display:inline-block;vertical-align:middle;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) no-repeat}.amap-info-tabs .icon-start{background-position:0 -100px}.amap-info-tabs .icon-end{background-position:0 -50px}.amap-info-tabs .icon-around{background-position:0 1px;border-left:0}.amap-info-combo .selected{background-color:#fefefe;border-bottom:0}.amap-info-combo input:focus{outline:0}.amap-info-combo .input-label{padding:0 5px 0 8px}.amap-info-combo.status-poiSearch .input-label{padding:0 2px}.amap-info-combo.status-poiSearch .keyword-input{border-right:0}.amap-info-combo .keyword{width:90%;height:20px;border:0;padding:0 4px;background-color:#fff}.amap-info-combo .keyword-input{border:1px solid #c9c9c9;line-height:21px;height:22px;width:100%;text-align:left;margin-right:40px;border-radius:2px}.amap-info-combo .search-button{background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) 10px -197px no-repeat #0091ff;border:none;border-top-right-radius:2px;border-bottom-right-radius:2px;color:#FFF;width:30px;height:24px;line-height:24px;padding:0 4px;margin-right:5px;text-indent:-9999em;cursor:pointer}.amap-info-combo .nav-button{padding:2px 2px 2px 8px}.amap-info-combo .nav-icon{padding:4px 3px 4px 20px;border:1px solid #c9c9c9;margin-right:4px;border-radius:2px;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) no-repeat;cursor:pointer}.amap-info-combo .hovered{background-color:#0091ff;border-color:#0091ff;color:#fff}.amap-info-combo .nav-drive{background-position:2px -246px}.amap-info-combo .nav-drive-hover{background-position:2px -396px}.amap-info-combo .nav-bus{background-position:2px -299px}.amap-info-combo .nav-bus-hover{background-position:2px -447px}.amap-info-combo .nav-walk{background-position:6px -347px}.amap-info-combo .nav-walk-hover{background-position:6px -497px}.amap-adcombo-close{position:absolute;top:4px;right:4px;background:url(https://webapi.amap.com/images/close.png) center center no-repeat;width:18px;height:18px;text-indent:-9999em}.amap-adcontent-body{box-shadow:0 0 .5px rgba(0,0,100,.6);background:#fff;border-radius:2px;text-align:left;border:1px solid silver}.amap-combo-sharp{margin:0 auto;bottom:1px;position:relative;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) -5px -564px no-repeat;width:18px;height:9px}.hide{display:none}</style>
+  <style type="text/css">.amap-indoor-map .label-canvas{position:absolute;top:0;left:0}.amap-indoor-map .highlight-image-con *{pointer-events:none}.amap-indoormap-floorbar-control{position:absolute;margin:auto 0;bottom:165px;right:12px;width:35px;text-align:center;line-height:1.3em;overflow:hidden;padding:0 2px}.amap-indoormap-floorbar-control .panel-box{background-color:rgba(255,255,255,.9);border-radius:3px;border:1px solid #ccc}.amap-indoormap-floorbar-control .select-dock{position:absolute;top:0;left:0;width:100%;box-sizing:border-box;height:30px;border:solid #4196ff;border-width:0 2px;border-radius:2px;pointer-events:none;background:linear-gradient(to bottom,#f6f8f9 0,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%)}.amap-indoor-map .transition{transition:opacity .2s},.amap-indoormap-floorbar-control .transition{transition:top .2s,margin-top .2s}.amap-indoormap-floorbar-control .select-dock:after,.amap-indoormap-floorbar-control .select-dock:before{content:"";position:absolute;width:0;height:0;left:0;top:10px;border:solid transparent;border-width:4px;border-left-color:#4196ff}.amap-indoormap-floorbar-control .select-dock:after{right:0;left:auto;border-left-color:transparent;border-right-color:#4196ff}.amap-indoormap-floorbar-control.is-mobile{width:37px}.amap-indoormap-floorbar-control.is-mobile .floor-btn{height:35px;line-height:35px}.amap-indoormap-floorbar-control.is-mobile .select-dock{height:35px;top:36px}.amap-indoormap-floorbar-control.is-mobile .select-dock:after,.amap-indoormap-floorbar-control.is-mobile .select-dock:before{top:13px}.amap-indoormap-floorbar-control.is-mobile .floor-list-box{height:105px}.amap-indoormap-floorbar-control .floor-list-item .floor-btn{color:#555;font-family:"Times New Roman",sans-serif,"Microsoft Yahei";font-size:16px}.amap-indoormap-floorbar-control .floor-list-item.selected .floor-btn{color:#000}.amap-indoormap-floorbar-control .floor-btn{height:28px;line-height:28px;overflow:hidden;cursor:pointer;position:relative;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.amap-indoormap-floorbar-control .floor-btn:hover{background-color:rgba(221,221,221,.4)}.amap-indoormap-floorbar-control .floor-minus,.amap-indoormap-floorbar-control .floor-plus{position:relative;text-indent:-1000em}.amap-indoormap-floorbar-control .floor-minus:after,.amap-indoormap-floorbar-control .floor-plus:after{content:"";position:absolute;margin:auto;top:9px;left:0;right:0;width:0;height:0;border:solid transparent;border-width:10px 8px;border-top-color:#777}.amap-indoormap-floorbar-control .floor-minus.disabled,.amap-indoormap-floorbar-control .floor-plus.disabled{opacity:.3}.amap-indoormap-floorbar-control .floor-plus:after{border-bottom-color:#777;border-top-color:transparent;top:-3px}.amap-indoormap-floorbar-control .floor-list-box{max-height:153px;position:relative;overflow-y:hidden}.amap-indoormap-floorbar-control .floor-list{margin:0;padding:0;list-style:none}.amap-indoormap-floorbar-control .floor-list-item{position:relative}.amap-indoormap-floorbar-control .floor-btn.disabled,.amap-indoormap-floorbar-control .floor-btn.disabled *,.amap-indoormap-floorbar-control.with-indrm-loader *{-webkit-pointer-events:none!important;pointer-events:none!important}.amap-indoormap-floorbar-control .with-indrm-loader .floor-nonas{opacity:.5}.amap-indoor-map-moverf-marker{background-color:#FFFEEF;border:1px solid #7E7E7E;padding:3px 6px;font-size:12px;white-space:nowrap;display:inline-block;position:absolute;top:1em;left:1.2em}.amap-indoormap-floorbar-control .amap-indrm-loader{-moz-animation:amap-indrm-loader 1.25s infinite linear;-webkit-animation:amap-indrm-loader 1.25s infinite linear;animation:amap-indrm-loader 1.25s infinite linear;border:2px solid #91A3D8;border-right-color:transparent;box-sizing:border-box;display:inline-block;overflow:hidden;text-indent:-9999px;width:13px;height:13px;border-radius:7px;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0}@-moz-keyframes amap-indrm-loader{0%{-moz-transform:rotate(0);transform:rotate(0)}100%{-moz-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes amap-indrm-loader{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes amap-indrm-loader{0%{-moz-transform:rotate(0);-ms-transform:rotate(0);-webkit-transform:rotate(0);transform:rotate(0)}100%{-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style>
+  <script charset="utf-8" src="gongsi/v.htm"></script>
+ <!--  <script async="" src="gongsi/analytics.js"></script> -->
+<!--   <script src="gongsi/hm.js"></script>
+ -->  <!-- <script async="" src="gongsi/a.js"></script>  -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="renderer" content="webkit" /> 
+  <meta property="qc:admins" content="23635710066417756375" /> 
+  <meta name="baidu-site-verification" content="QIQ6KC1oZ6" /> 
+  <meta charset="UTF-8" /> 
+  <meta content="伙伴网,伙伴网招聘,伙伴网最新招聘信息,伙伴聚力（北京）科技有限公司,伙伴聚力（北京）科技有限公司职位招聘" name="keywords" /> 
+  <meta content="伙伴网在拉勾网招聘等你,公司已获得红杉资本、晨兴资本两家全球顶级风险投资商的A轮数百万美金的联合投资,实力见证,品质保证!媒体报道:【一见|伙伴云表格】在中小企业的痛点上浇辣椒..." name="description" /> 
+  <title><?=$Detail['companyname']?>招聘信息-拉勾网</title> 
+  <link rel="Shortcut Icon" href="https://www.lgstatic.com/www/static/common/static/favicon_faed927.ico" /> 
+  <script type="text/javascript">
 
 (function() {
     var protocol = window.location.protocol;
@@ -43,19 +47,22 @@
 
     window.GLOBAL_CDN_DOMAIN = 'www.lgstatic.com';
 })();
-</script>    <!-- 动态token，防御伪造请求，重复提交 -->
-    <script type="text/javascript">
+</script> 
+  <!-- 动态token，防御伪造请求，重复提交 --> 
+  <script type="text/javascript">
     window.X_Anti_Forge_Token = '6c40270b-3801-42f2-af8a-6191a0c7c223';
     window.X_Anti_Forge_Code = '95919818';
-</script>
-
-    <link rel="canonical" href="https://www.lagou.com/gongsi/587.html">
-
-    <link rel="stylesheet" type="text/css" href="gongsi/mCustomScrollbar_ac2fb8b.css">
-    <link rel="stylesheet" type="text/css" href="gongsi/layout_19d0413.css">
-    <link rel="stylesheet" type="text/css" href="gongsi/widgets_ea16201.css">
-    <link rel="stylesheet" type="text/css" href="gongsi/main.css">
-<script src="gongsi/jquery.js" class="lazyload" charset="utf-8"></script><style class="lazyload" charset="utf-8">@import "//www.lgstatic.com/www/static/common/widgets/passport/css/loginpop_f86913d.css";</style><script src="gongsi/lagou_5427c0e.js" class="lazyload" charset="utf-8"></script><style type="text/css">.amap-container{cursor:url(https://webapi.amap.com/theme/v1.3/openhand.cur),default;}.amap-drag{cursor:url(https://webapi.amap.com/theme/v1.3/closedhand.cur),default;}</style><style charset="utf-8" type="text/css" class="firebugResetStyles">/* See license.txt for terms of usage */
+</script> 
+  <link rel="canonical" href="https://www.lagou.com/gongsi/587.html" /> 
+  <link rel="stylesheet" type="text/css" href="gongsi/mCustomScrollbar_ac2fb8b.css" /> 
+ <!--  <link rel="stylesheet" type="text/css" href="gongsi/layout_19d0413.css" />  -->
+  <link rel="stylesheet" type="text/css" href="gongsi/widgets_ea16201.css" /> 
+  <link rel="stylesheet" type="text/css" href="gongsi/main.css" /> 
+  <script src="gongsi/jquery.js" class="lazyload" charset="utf-8"></script>
+  <style class="lazyload" charset="utf-8">@import "//www.lgstatic.com/www/static/common/widgets/passport/css/loginpop_f86913d.css";</style>
+  <script src="gongsi/lagou_5427c0e.js" class="lazyload" charset="utf-8"></script>
+  <style type="text/css">.amap-container{cursor:url(https://webapi.amap.com/theme/v1.3/openhand.cur),default;}.amap-drag{cursor:url(https://webapi.amap.com/theme/v1.3/closedhand.cur),default;}</style>
+  <style charset="utf-8" type="text/css" class="firebugResetStyles">/* See license.txt for terms of usage */
 
 /** reset styling **/
 
@@ -116,7 +123,6 @@ style.firebugResetStyles {
     background-color: transparent !important;
 
 }
-
 
 
 .firebugResetStyles:before, .firebugResetStyles:after {
@@ -321,1319 +327,1154 @@ style.firebugResetStyles {
 
 }
 
-</style></head>
-<body>
-    <script id="interviewExperiencesData" type="text/html">{"pageSize":5,"start":"0","result":[{"positionStatus":1,"tagArray":["环境高大上","面试官是大牛"],"id":601634,"portrait":"images/jd_portrait.png","username":"匿名","userId":2409451,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":5,"describeScore":4,"interviewerScore":4,"companyScore":5,"comprehensiveScore":4.3,"content":"公司的面试很特别，首面是人事+老板+不知名小哥 一起面试的，而且是在老板办公司面试的。做的产品是云表格，通俗说就是 可以在线上实现团队内部协作的excel，由于之前对公司产品没有做深入的体验，前前后后面试了2小时+，最后给留了作业，让写一份对公司的体验报告。第二天通过人事，上交作业，随后老板打电话过来，说写的不深刻，让重新写，希望能体现出对公司产品市场定位、未来发展的额思路等等、、、一直有种被套路了的感觉。\n<br />可以感觉出公司对自己的产品很有信息，认为自己5个表格，就可以完全代替你们之前开发了几个月的系统。团队也很靠谱，毕竟是discuz！的原版人马。","evaluation":"","positionId":2829205,"positionName":"产品经理","companyName":"伙伴网","positionType":"","hrId":1930104,"orderId":4020210,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"环境高大上\",\"面试官是大牛\"]","type":1,"status":1,"source":1,"createTime":"2017-03-19 13:48:12"},{"positionStatus":1,"tagArray":["呵呵"],"id":601331,"portrait":"images/jd_portrait.png","username":"匿名","userId":3818108,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":3,"describeScore":2,"interviewerScore":3,"companyScore":5,"comprehensiveScore":3.3,"content":"格局不会太大，另外前台小姐姐人很好～～","evaluation":"","positionId":2829205,"positionName":"产品经理","companyName":"伙伴网","positionType":"","hrId":1930104,"orderId":3973582,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"呵呵\"]","type":1,"status":1,"source":3,"createTime":"2017-03-18 15:16:43"},{"positionStatus":1,"tagArray":["面试效率高"],"id":601250,"portrait":"images/jd_portrait.png","username":"匿名","userId":3344027,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":3,"describeScore":4,"interviewerScore":4,"companyScore":4,"comprehensiveScore":4.0,"content":"应该已经招到合适的人了，老板直接面的","evaluation":"","positionId":2829205,"positionName":"产品经理","companyName":"伙伴网","positionType":"","hrId":1930104,"orderId":4008462,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"面试效率高\"]","type":1,"status":1,"source":1,"createTime":"2017-03-18 11:57:18"},{"positionStatus":1,"tagArray":["面试官很nice","面试效率高","面试官是大牛"],"id":599247,"portrait":"images/jd_portrait.png","username":"匿名","userId":1529892,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":3,"describeScore":5,"interviewerScore":5,"companyScore":5,"comprehensiveScore":5.0,"content":"有点紧张了，面试官很随和而且思维清晰，不断给我鼓励，平和的帮助我分析我的不足，很有收获，给面试者证明自己的机会并且负责的检验和指导，先看人的品性，再看综合素养，然后是职业技能，是一家人情味十足的公司，喜欢！（hr姐姐的心理学的杠杠的~膜拜~）","evaluation":"很安静适合独立思考，技术氛围比较浓厚，大家都说少穿点是对的，保持思维活跃~","positionId":2829205,"positionName":"产品经理","companyName":"伙伴网","positionType":"","hrId":1930104,"orderId":4006308,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"面试官很nice\",\"面试效率高\",\"面试官是大牛\"]","type":1,"status":1,"source":1,"createTime":"2017-03-16 19:35:24"},{"positionStatus":1,"tagArray":["面试官很nice"],"id":597779,"portrait":"i/image/M00/B3/9B/CgqKkVi82PuAcXJrAAAniFk4QyA988.JPG","username":"林*欣","userId":7306052,"isAnonymous":false,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":4,"describeScore":4,"interviewerScore":5,"companyScore":4,"comprehensiveScore":4.3,"content":"感觉面试官都很负责，氛围不错，对人才的筛选很认真","evaluation":"公司环境还可以","positionId":2886921,"positionName":"JAVA初级工程师（C/C++均可）","companyName":"伙伴网","positionType":"技术","hrId":1930104,"orderId":4008229,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"面试官很nice\"]","type":1,"status":1,"source":1,"createTime":"2017-03-16 08:08:08"}],"totalCount":"137","pageNo":1}</script>
-    <script id="companyInfoData" type="text/html">{"addressList":[{"id":14418,"companyId":587,"userId":2544,"province":"北京","city":"北京","district":"海淀区","detailAddress":"上地三街9号嘉华大厦B座1107室","lat":"40.03623451","lng":"116.3081707","businessArea":"上地,马连洼,西二旗","createTime":"2013-08-20 17:10:10","updateTime":"2016-01-21 10:27:02","useTime":"2016-01-21 10:27:02","provinceCode":"010000000","cityCode":"010100000","districtCode":"010114000","businessAreaCode":"010114041,010114045,010114013","isDefault":false,"isEnable":true,"isDel":false,"isValid":true}],"labels":["Geek","超爽协作","有愿景有落地","六险一金","领导接地气"],"baseInfo":{"companyId":587,"industryField":"企业服务","companySize":"50-150人","city":"北京","financeStage":"A轮"},"leaders":[{"id":368,"companyid":587,"photo":"i/image/M00/50/84/Cgp3O1e0HRCAeZQ4AAAqEIEVG84699.jpg","name":"袁兆江","position":"Co-founder","weibo":"","remark":"<p>毕业于武汉大学。原Discuz!团队产品运营副总裁7年。2013年创办伙伴网</p>","createtime":"2013-08-20 17:14:27","isenable":0,"isleader":1,"weibonickname":"","cyclopediaUrl":""},{"id":38227,"companyid":587,"photo":"i/image/M00/50/84/Cgp3O1e0HTKAc_4bAABYfmZMOc0755.jpg","name":"戴志康","position":"Co-founder/CEO","weibo":"","remark":"<p>原Discuz!创始人</p>","createtime":"2015-06-18 17:33:13","isenable":0,"weibonickname":"","cyclopediaUrl":""}],"userType":false,"history":[{"id":151371,"companyid":587,"year":"2016","month":"Dec","day":"31","eventtype":"数据","type":"1","eventdate":"2016-12-31","eventname":"客户付费提升10倍","eventurl":"","eventprofile":"<p>产品与客户服务分级，用户、效益双丰收！</p>\n<br />","financeStage":""},{"id":151370,"companyid":587,"year":"2016","month":"Nov","day":"10","eventtype":"产品","type":"4","eventdate":"2016-11-10","eventname":"企业全流程产品伙伴云发布","eventurl":"","eventprofile":"<p>服务企业深度场景，将数据处理全流程化，workflow、dashboard等重量级功能上线</p>\n<br />","financeStage":""},{"id":151364,"companyid":587,"year":"2016","month":"June","day":"30","eventtype":"数据","type":"1","eventdate":"2016-06-30","eventname":"企业用户突破30w","eventurl":"","eventprofile":"<p>精耕细作，专注产品，70%的客户来自口碑相传</p>\n<br />","financeStage":""},{"id":151362,"companyid":587,"year":"2015","month":"Oct","day":"10","eventtype":"产品","type":"4","eventdate":"2015-10-10","eventname":"伙伴云表格产品正式发布","eventurl":"","eventprofile":"<p>稳定、安全、可靠</p>","financeStage":""},{"id":132371,"companyid":587,"year":"2015","month":"July","day":"10","eventtype":"产品","type":"4","eventdate":"2015-07-10","eventname":"伙伴云表格产品Beta发布","eventurl":"","eventprofile":"<p>内部代号HuobanV4，web端，APP端同步发布</p>","financeStage":""},{"id":24591,"companyid":587,"year":"2014","month":"Aug","day":"01","eventtype":"资本","type":"2","eventdate":"2014-08-01","eventname":"","eventurl":"","eventprofile":"红杉资本、晨兴资本联合投资","investMoney":"","icon":"","financeStage":"A轮"}],"pageType":1,"coreInfo":{"companyId":587,"logo":"image1/M00/30/5F/CgYXBlWIQJGAFhr9AAHsORnjH_E334.png","companyName":"伙伴聚力（北京）科技有限公司","companyShortName":"伙伴网","approve":2,"companyUrl":"http://www.huoban.com","companyIntroduce":"红杉资本、晨兴创投A轮，专注企业数据管理，Discuz!团队原班人马再次创业！","isFirst":false},"dataInfo":{"positionCount":3,"resumeProcessRate":99,"resumeProcessTime":1,"experienceCount":136,"lastLoginTime":"今天"},"companyId":587,"products":[{"id":385,"companyid":587,"producturl":"http://www.huoban.com","productprofile":"<p>伙伴云表格，针对企业数据管理系统，高度自由化的产品设计，贴合百行百业的企业数据管理及协作需求。www.huoban.com，一个面向未来充满魔力的产品，一个身经百战多次辉煌的团队，期待您的加入！</p>","product":"伙伴云表格","productpicurl":"i/image/M00/9E/29/CgqKkVikPHCARBmQAAApqgqPgKg80.jpeg","producttype":["网站","移动app"]},{"id":67017,"companyid":587,"producturl":"http://im.tongren.com/","productprofile":"<p>伙伴集团直属团队。</p>\n<p>这是一个卓越的团队，精英们极致coding、深刻理解用户、共同参与产品，以不断自我超越的态度，探索并攻坚具有革命意义的平台级IM。</p>\n<p>气场初具，邀请具有同样气味的你！</p>","product":"同仁","productpicurl":"i/image/M00/50/88/Cgp3O1e0JO2AWos4AAATsyikhyc627.jpg","producttype":["网站","移动app"]}],"introduction":{"companyId":587,"companyProfile":"<p>公司已获得红杉资本、晨兴资本两家全球顶级风险投资商的A轮数百万美金的联合投资，实力见证，品质保证！</p>\n<p><br /></p>\n<p>媒体报道：</p>\n<p>【一见|伙伴云表格】在中小企业的痛点上浇辣椒</p>\n<p>http://my.tv.sohu.com/pl/9034610/80705074.shtml</p>\n<p><br /></p>\n<p>36kr－论坛引擎 Discuz！团队再次出手，为企业 Excel 重度用户打造协作工具“伙伴云表格”</p>\n<p>http://36kr.com/p/5035364.html</p>\n<p><br /></p>\n<p>创业邦：伙伴云表格袁兆江：三年磨一剑 创业路上的贪与成</p>\n<p>http://www.cyzone.cn/a/20150722/277759.html</p>","pictures":[{"id":91751,"companyId":587,"companyPicUrl":"i/image/M00/02/EF/Cgp3O1ahl0yAdf8zAAGdaw726e8289.png","position":1,"createTime":"2016-01-22 10:43:27","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201978,"companyId":587,"companyPicUrl":"i/image/M00/6B/05/CgqKkVgZuPOAWas6AANybcrnHvs235.jpg","position":0,"createTime":"2016-11-02 18:00:46","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201979,"companyId":587,"companyPicUrl":"i/image/M00/6B/05/Cgp3O1gZuPqAbjjSAAJSlWWJX8A869.jpg","position":0,"createTime":"2016-11-02 18:00:46","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201980,"companyId":587,"companyPicUrl":"i/image/M00/6B/05/Cgp3O1gZuQOAX4pEAAHGmIMozRU747.jpg","position":0,"createTime":"2016-11-02 18:00:46","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201984,"companyId":587,"companyPicUrl":"i/image/M00/6B/06/Cgp3O1gZuimAVCLVAACMLR-1k3M497.jpg","position":0,"createTime":"2016-11-02 18:04:57","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201985,"companyId":587,"companyPicUrl":"i/image/M00/6B/06/CgqKkVgZuj-AAUOXAAO9NSnCebo063.jpg","position":0,"createTime":"2016-11-02 18:04:57","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201986,"companyId":587,"companyPicUrl":"i/image/M00/6B/06/Cgp3O1gZukeAHxl4AAbK4-YAUrI928.jpg","position":0,"createTime":"2016-11-02 18:04:57","updateTime":"2017-02-14 19:05:13","isdel":false}]},"isCompanyHr":false}</script>
-
-    
-    	<!--C端头部通栏广告位-->
-	
-
-	<!--验证注册邮箱-->
-	<!--
+</style>
+ </head> 
+ <body> 
+  <script id="interviewExperiencesData" type="text/html">{"pageSize":5,"start":"0","result":[{"positionStatus":1,"tagArray":["环境高大上","面试官是大牛"],"id":601634,"portrait":"images/jd_portrait.png","username":"匿名","userId":2409451,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":5,"describeScore":4,"interviewerScore":4,"companyScore":5,"comprehensiveScore":4.3,"content":"公司的面试很特别，首面是人事+老板+不知名小哥 一起面试的，而且是在老板办公司面试的。做的产品是云表格，通俗说就是 可以在线上实现团队内部协作的excel，由于之前对公司产品没有做深入的体验，前前后后面试了2小时+，最后给留了作业，让写一份对公司的体验报告。第二天通过人事，上交作业，随后老板打电话过来，说写的不深刻，让重新写，希望能体现出对公司产品市场定位、未来发展的额思路等等、、、一直有种被套路了的感觉。\n<br />可以感觉出公司对自己的产品很有信息，认为自己5个表格，就可以完全代替你们之前开发了几个月的系统。团队也很靠谱，毕竟是discuz！的原版人马。","evaluation":"","positionId":2829205,"positionName":"产品经理","companyName":"伙伴网","positionType":"","hrId":1930104,"orderId":4020210,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"环境高大上\",\"面试官是大牛\"]","type":1,"status":1,"source":1,"createTime":"2017-03-19 13:48:12"},{"positionStatus":1,"tagArray":["呵呵"],"id":601331,"portrait":"images/jd_portrait.png","username":"匿名","userId":3818108,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":3,"describeScore":2,"interviewerScore":3,"companyScore":5,"comprehensiveScore":3.3,"content":"格局不会太大，另外前台小姐姐人很好～～","evaluation":"","positionId":2829205,"positionName":"产品经理","companyName":"伙伴网","positionType":"","hrId":1930104,"orderId":3973582,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"呵呵\"]","type":1,"status":1,"source":3,"createTime":"2017-03-18 15:16:43"},{"positionStatus":1,"tagArray":["面试效率高"],"id":601250,"portrait":"images/jd_portrait.png","username":"匿名","userId":3344027,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":3,"describeScore":4,"interviewerScore":4,"companyScore":4,"comprehensiveScore":4.0,"content":"应该已经招到合适的人了，老板直接面的","evaluation":"","positionId":2829205,"positionName":"产品经理","companyName":"伙伴网","positionType":"","hrId":1930104,"orderId":4008462,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"面试效率高\"]","type":1,"status":1,"source":1,"createTime":"2017-03-18 11:57:18"},{"positionStatus":1,"tagArray":["面试官很nice","面试效率高","面试官是大牛"],"id":599247,"portrait":"images/jd_portrait.png","username":"匿名","userId":1529892,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":3,"describeScore":5,"interviewerScore":5,"companyScore":5,"comprehensiveScore":5.0,"content":"有点紧张了，面试官很随和而且思维清晰，不断给我鼓励，平和的帮助我分析我的不足，很有收获，给面试者证明自己的机会并且负责的检验和指导，先看人的品性，再看综合素养，然后是职业技能，是一家人情味十足的公司，喜欢！（hr姐姐的心理学的杠杠的~膜拜~）","evaluation":"很安静适合独立思考，技术氛围比较浓厚，大家都说少穿点是对的，保持思维活跃~","positionId":2829205,"positionName":"产品经理","companyName":"伙伴网","positionType":"","hrId":1930104,"orderId":4006308,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"面试官很nice\",\"面试效率高\",\"面试官是大牛\"]","type":1,"status":1,"source":1,"createTime":"2017-03-16 19:35:24"},{"positionStatus":1,"tagArray":["面试官很nice"],"id":597779,"portrait":"i/image/M00/B3/9B/CgqKkVi82PuAcXJrAAAniFk4QyA988.JPG","username":"林*欣","userId":7306052,"isAnonymous":false,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":4,"describeScore":4,"interviewerScore":5,"companyScore":4,"comprehensiveScore":4.3,"content":"感觉面试官都很负责，氛围不错，对人才的筛选很认真","evaluation":"公司环境还可以","positionId":2886921,"positionName":"JAVA初级工程师（C/C++均可）","companyName":"伙伴网","positionType":"技术","hrId":1930104,"orderId":4008229,"companyId":587,"replyCount":0,"isAllowReply":true,"tags":"[\"面试官很nice\"]","type":1,"status":1,"source":1,"createTime":"2017-03-16 08:08:08"}],"totalCount":"137","pageNo":1}</script> 
+  <script id="companyInfoData" type="text/html">{"addressList":[{"id":14418,"companyId":587,"userId":2544,"province":"北京","city":"北京","district":"海淀区","detailAddress":"上地三街9号嘉华大厦B座1107室","lat":"40.03623451","lng":"116.3081707","businessArea":"上地,马连洼,西二旗","createTime":"2013-08-20 17:10:10","updateTime":"2016-01-21 10:27:02","useTime":"2016-01-21 10:27:02","provinceCode":"010000000","cityCode":"010100000","districtCode":"010114000","businessAreaCode":"010114041,010114045,010114013","isDefault":false,"isEnable":true,"isDel":false,"isValid":true}],"labels":["Geek","超爽协作","有愿景有落地","六险一金","领导接地气"],"baseInfo":{"companyId":587,"industryField":"企业服务","companySize":"50-150人","city":"北京","financeStage":"A轮"},"leaders":[{"id":368,"companyid":587,"photo":"i/image/M00/50/84/Cgp3O1e0HRCAeZQ4AAAqEIEVG84699.jpg","name":"袁兆江","position":"Co-founder","weibo":"","remark":"<p>毕业于武汉大学。原Discuz!团队产品运营副总裁7年。2013年创办伙伴网</p>","createtime":"2013-08-20 17:14:27","isenable":0,"isleader":1,"weibonickname":"","cyclopediaUrl":""},{"id":38227,"companyid":587,"photo":"i/image/M00/50/84/Cgp3O1e0HTKAc_4bAABYfmZMOc0755.jpg","name":"戴志康","position":"Co-founder/CEO","weibo":"","remark":"<p>原Discuz!创始人</p>","createtime":"2015-06-18 17:33:13","isenable":0,"weibonickname":"","cyclopediaUrl":""}],"userType":false,"history":[{"id":151371,"companyid":587,"year":"2016","month":"Dec","day":"31","eventtype":"数据","type":"1","eventdate":"2016-12-31","eventname":"客户付费提升10倍","eventurl":"","eventprofile":"<p>产品与客户服务分级，用户、效益双丰收！</p>\n<br />","financeStage":""},{"id":151370,"companyid":587,"year":"2016","month":"Nov","day":"10","eventtype":"产品","type":"4","eventdate":"2016-11-10","eventname":"企业全流程产品伙伴云发布","eventurl":"","eventprofile":"<p>服务企业深度场景，将数据处理全流程化，workflow、dashboard等重量级功能上线</p>\n<br />","financeStage":""},{"id":151364,"companyid":587,"year":"2016","month":"June","day":"30","eventtype":"数据","type":"1","eventdate":"2016-06-30","eventname":"企业用户突破30w","eventurl":"","eventprofile":"<p>精耕细作，专注产品，70%的客户来自口碑相传</p>\n<br />","financeStage":""},{"id":151362,"companyid":587,"year":"2015","month":"Oct","day":"10","eventtype":"产品","type":"4","eventdate":"2015-10-10","eventname":"伙伴云表格产品正式发布","eventurl":"","eventprofile":"<p>稳定、安全、可靠</p>","financeStage":""},{"id":132371,"companyid":587,"year":"2015","month":"July","day":"10","eventtype":"产品","type":"4","eventdate":"2015-07-10","eventname":"伙伴云表格产品Beta发布","eventurl":"","eventprofile":"<p>内部代号HuobanV4，web端，APP端同步发布</p>","financeStage":""},{"id":24591,"companyid":587,"year":"2014","month":"Aug","day":"01","eventtype":"资本","type":"2","eventdate":"2014-08-01","eventname":"","eventurl":"","eventprofile":"红杉资本、晨兴资本联合投资","investMoney":"","icon":"","financeStage":"A轮"}],"pageType":1,"coreInfo":{"companyId":587,"logo":"image1/M00/30/5F/CgYXBlWIQJGAFhr9AAHsORnjH_E334.png","companyName":"伙伴聚力（北京）科技有限公司","companyShortName":"伙伴网","approve":2,"companyUrl":"http://www.huoban.com","companyIntroduce":"红杉资本、晨兴创投A轮，专注企业数据管理，Discuz!团队原班人马再次创业！","isFirst":false},"dataInfo":{"positionCount":3,"resumeProcessRate":99,"resumeProcessTime":1,"experienceCount":136,"lastLoginTime":"今天"},"companyId":587,"products":[{"id":385,"companyid":587,"producturl":"http://www.huoban.com","productprofile":"<p>伙伴云表格，针对企业数据管理系统，高度自由化的产品设计，贴合百行百业的企业数据管理及协作需求。www.huoban.com，一个面向未来充满魔力的产品，一个身经百战多次辉煌的团队，期待您的加入！</p>","product":"伙伴云表格","productpicurl":"i/image/M00/9E/29/CgqKkVikPHCARBmQAAApqgqPgKg80.jpeg","producttype":["网站","移动app"]},{"id":67017,"companyid":587,"producturl":"http://im.tongren.com/","productprofile":"<p>伙伴集团直属团队。</p>\n<p>这是一个卓越的团队，精英们极致coding、深刻理解用户、共同参与产品，以不断自我超越的态度，探索并攻坚具有革命意义的平台级IM。</p>\n<p>气场初具，邀请具有同样气味的你！</p>","product":"同仁","productpicurl":"i/image/M00/50/88/Cgp3O1e0JO2AWos4AAATsyikhyc627.jpg","producttype":["网站","移动app"]}],"introduction":{"companyId":587,"companyProfile":"<p>公司已获得红杉资本、晨兴资本两家全球顶级风险投资商的A轮数百万美金的联合投资，实力见证，品质保证！</p>\n<p><br /></p>\n<p>媒体报道：</p>\n<p>【一见|伙伴云表格】在中小企业的痛点上浇辣椒</p>\n<p>http://my.tv.sohu.com/pl/9034610/80705074.shtml</p>\n<p><br /></p>\n<p>36kr－论坛引擎 Discuz！团队再次出手，为企业 Excel 重度用户打造协作工具“伙伴云表格”</p>\n<p>http://36kr.com/p/5035364.html</p>\n<p><br /></p>\n<p>创业邦：伙伴云表格袁兆江：三年磨一剑 创业路上的贪与成</p>\n<p>http://www.cyzone.cn/a/20150722/277759.html</p>","pictures":[{"id":91751,"companyId":587,"companyPicUrl":"i/image/M00/02/EF/Cgp3O1ahl0yAdf8zAAGdaw726e8289.png","position":1,"createTime":"2016-01-22 10:43:27","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201978,"companyId":587,"companyPicUrl":"i/image/M00/6B/05/CgqKkVgZuPOAWas6AANybcrnHvs235.jpg","position":0,"createTime":"2016-11-02 18:00:46","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201979,"companyId":587,"companyPicUrl":"i/image/M00/6B/05/Cgp3O1gZuPqAbjjSAAJSlWWJX8A869.jpg","position":0,"createTime":"2016-11-02 18:00:46","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201980,"companyId":587,"companyPicUrl":"i/image/M00/6B/05/Cgp3O1gZuQOAX4pEAAHGmIMozRU747.jpg","position":0,"createTime":"2016-11-02 18:00:46","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201984,"companyId":587,"companyPicUrl":"i/image/M00/6B/06/Cgp3O1gZuimAVCLVAACMLR-1k3M497.jpg","position":0,"createTime":"2016-11-02 18:04:57","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201985,"companyId":587,"companyPicUrl":"i/image/M00/6B/06/CgqKkVgZuj-AAUOXAAO9NSnCebo063.jpg","position":0,"createTime":"2016-11-02 18:04:57","updateTime":"2017-02-14 19:05:13","isdel":false},{"id":201986,"companyId":587,"companyPicUrl":"i/image/M00/6B/06/Cgp3O1gZukeAHxl4AAbK4-YAUrI928.jpg","position":0,"createTime":"2016-11-02 18:04:57","updateTime":"2017-02-14 19:05:13","isdel":false}]},"isCompanyHr":false}</script> 
+  <!--C端头部通栏广告位--> 
+  <!--验证注册邮箱--> 
+  <!--
     @require "common/widgets/header_c/modules/emailvalid/main.less"
--->
-
-
-
-
-	<input id="serverTime" value="1490168016761" type="hidden">
-
-    <!--
+--> 
+  <input id="serverTime" value="1490168016761" type="hidden" /> 
+  <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/top-info/main.less"
--->
-<!--
+--> 
+  <!--
     @require "company-c/modules/event/activity1230/main.less"
--->
-<input value="587" id="companyId" type="hidden">
-<div class="top_info">
-    <div class="top_info_wrap">
-        <img src="gongsi/CgYXBlWIQJGAFhr9AAHsORnjH_E334.png" alt="伙伴网Logo" heihgt="164" width="164">
-        <div class="company_info">
-            <div class="company_main">
-                <h1>
-                    <a href="http://www.huoban.com/" class="hovertips" target="_blank" rel="nofollow" title="伙伴聚力（北京）科技有限公司">
-                        伙伴网
-                    </a>
-                </h1>
-                                    <a href="http://www.huoban.com/" class="icon-wrap" target="_blank" rel="nofollow" title="http://www.huoban.com">
-                        <i></i>
-                    </a>
-                                                    <a class="identification" title="拉勾认证企业">
-                        <i></i>
-                        <span>拉勾认证</span>
-                    </a>
-                                <div class="company_word">
-                    红杉资本、晨兴创投A轮，专注企业数据管理，Discuz!团队原班人马再次创业！                </div>
-            </div>
-            <div class="company_data">
-                <ul>
-                    <li>
-                        <strong>
-                                                            3个
-                                                    </strong>
-                        <br>
-                        <span class="tipsys" original-title="该公司的在招职位数量">
-                            <span>招聘职位</span><span class="tip"></span>
-                        </span>
-                    </li>
-                    <li>
-                        <strong>
-                                                            99%
-                                                    </strong>
-                        <span class="tipsys" original-title="该公司所有职位收到的简历中，在投递后7天内处理完成的简历所占比例">
-                            <span>简历及时处理率</span><span class="tip"></span>
-                        </span>
-                    </li>
-                    <li>
-                        <strong>
-                                                            1天
-                                                    </strong>
-                        <br>
-                        <span class="tipsys" original-title="该公司的所有职位管理者完成简历处理的平均用时">
-                            <span>简历处理用时</span><span class="tip"></span>
-                        </span>
-                    </li>
-                    <li id="mspj" style="cursor:pointer;">
-                        <strong>
-                                                            136个
-                                                    </strong>
-                        <br>
-                        <span class="tipsys" original-title="该公司收到的面试评价数量">
-                            <span>面试评价</span><span class="tip"></span>
-                        </span>
-                    </li>
-                    <li>
-                        <strong>今天</strong><br>
-                        <span class="tipsys" original-title="该公司职位管理者最近一次登录时间">
-                            <span>企业最近登录</span><span class="tip"></span>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <!--
+--> 
+  <input value="587" id="companyId" type="hidden" /> 
+  <div class="top_info"> 
+   <div class="top_info_wrap"> 
+    <img src="<?=$Detail['logo']?>" alt="<?=$Detail['companyname']?>Logo" heihgt="164" width="164" /> 
+    <div class="company_info"> 
+     <div class="company_main"> 
+      <h1> <a href="http://www.huoban.com/" class="hovertips" target="_blank" rel="nofollow" title="<?=$Detail['companyname']?>"><?=$Detail['shortname']?> </a> </h1> 
+      <a href="<?=$Detail['website']?>" class="icon-wrap" target="_blank" rel="nofollow" title="<?=$Detail['website']?>"> <i></i> </a> 
+      <a class="identification" title="拉勾认证企业"> <i></i> <span>拉勾认证</span> </a> 
+      <div class="company_word">
+       <?=$Detail['message']?>
+      </div> 
+     </div> 
+     <div class="company_data"> 
+      <ul> 
+       <li> <strong> <?=$jobs['jobs']?> </strong> <br /> <span class="tipsys" original-title="该公司的在招职位数量"> <span>招聘职位</span><span class="tip"></span> </span> </li> 
+       <li> <strong> 99% </strong> <span class="tipsys" original-title="该公司所有职位收到的简历中，在投递后7天内处理完成的简历所占比例"> <span>简历及时处理率</span><span class="tip"></span> </span> </li> 
+       <li> <strong> 1天 </strong> <br /> <span class="tipsys" original-title="该公司的所有职位管理者完成简历处理的平均用时"> <span>简历处理用时</span><span class="tip"></span> </span> </li> 
+       <li id="mspj" style="cursor:pointer;"> <strong> 136个 </strong> <br /> <span class="tipsys" original-title="该公司收到的面试评价数量"> <span>面试评价</span><span class="tip"></span> </span> </li> 
+       <li> <strong><?php
+                        $ltime=$last_login['last_login_time'];$ctime=time()-$ltime;
+                        if($ctime < 3600*24){echo "今天";}
+                        else if($ctime < 3600*24*3){echo "1天前";}else if($ctime < 3600*24*7){echo "3天前";}else if($ctime < 3600*24*14){echo "一周前";}else if($ctime < 3600*24*21){echo "两周前";}else if($ctime > 3600*24*30){echo "一月前";}
+       ?></strong><br /> <span class="tipsys" original-title="该公司职位管理者最近一次登录时间"> <span>企业最近登录</span><span class="tip"></span> </span> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/tabs/main.less"
--->
-
-<div id="company_navs" class="company_navs">
-    <div class="company_navs_wrap">
-        <ul data-pjax="">
-            <li class="current">
-                <a href="https://www.lagou.com/gongsi/587.html" data-lg-tj-id="9100" data-lg-tj-no="0001" data-lg-tj-cid="idnull">公司主页</a>
-            </li>
-            <li>
-                <a href="https://www.lagou.com/gongsi/j587.html" data-lg-tj-id="9100" data-lg-tj-no="0002" data-lg-tj-cid="idnull">招聘职位（3）</a>
-            </li>
-            <li>
-                <a href="https://www.lagou.com/gongsi/q587.html" data-lg-tj-id="9100" data-lg-tj-no="0003" data-lg-tj-cid="idnull">公司问答</a>
-                <i class="icon_new"></i>
-            </li>
-        </ul>
-        <div class="company_share">
-            <span>分享</span>
-            <a href="javascript:;" class="share_weibo" rel="nofollow" title="分享到微博"></a>
-            <a href="javascript:;" class="share_weixin" rel="nofollow" title="分享到微信"></a>
-            <div class="share_weixin_success">
-                <img alt="移动端公司主页二维码">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="company_navs_shadow" style="display: none;"></div>
-
-    <div id="main_container">
-                <div id="container_left">
-            <div id="containerCompanyDetails">
-                <!--
+--> 
+  <div id="company_navs" class="company_navs"> 
+   <div class="company_navs_wrap"> 
+    <ul data-pjax=""> 
+     <li class="current"> <a href="<?=URL::to(['company/gongsi'])?>&id=<?=$Detail['id']?>" data-lg-tj-id="9100" data-lg-tj-no="0001" data-lg-tj-cid="idnull">公司主页</a> </li> 
+     <li> <a href="<?=Url::to(['company/gongsi1'])?>&id=<?=$Detail['id']?>" data-lg-tj-id="9100" data-lg-tj-no="0002" data-lg-tj-cid="idnull">招聘职位（<?=$jobs['jobs']?>）</a> </li> 
+     <li> <a href="https://www.lagou.com/gongsi/q587.html" data-lg-tj-id="9100" data-lg-tj-no="0003" data-lg-tj-cid="idnull">公司问答</a> <i class="icon_new"></i> </li> 
+    </ul> 
+    <div class="company_share"> 
+     <span>分享</span> 
+     <a href="javascript:;" class="share_weibo" rel="nofollow" title="分享到微博"></a> 
+     <a href="javascript:;" class="share_weixin" rel="nofollow" title="分享到微信"></a> 
+     <div class="share_weixin_success"> 
+      <img alt="移动端公司主页二维码" /> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="company_navs_shadow" style="display: none;"></div> 
+  <div id="main_container"> 
+   <div id="container_left"> 
+    <div id="containerCompanyDetails"> 
+     <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/products/main.less"
--->
-
-<div class="item_container" id="company_products">
-    <div class="item_ltitle">公司产品</div>
-    <div class="item_content">
-            <div class="product_content product_item clearfix" data-id="385" data-index="0">
-            <img src="gongsi/CgqKkVikPHCARBmQAAApqgqPgKg80.jpg" alt="产品图片" height="180" width="300">
-            <div class="product_details">
-                <h4 class="product_url_all">
-                    <div class="product_url">
-                        <a href="http://www.huoban.com/" class="url_valid" target="_blank" rel="nofollow" title="http://www.huoban.com">
-                            伙伴云表格
-                        </a>
-                                                <a href="http://www.huoban.com/" target="_blank" rel="nofollow" title="http://www.huoban.com">
-                            <i></i>
-                        </a>
-                                            </div>
-                </h4>
-                <ul class="clearfix">
-                                    <li>网站</li>
-                                    <li>移动app</li>
-                                </ul>
-                <div class="product_profile mCustomScrollbar _mCS_1"><div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
-                    <p>伙伴云表格，针对企业数据管理系统，高度自由化的产品设计，贴合百行百业的企业数据管理及协作需求。www.huoban.com，一个面向未来充满魔力的产品，一个身经百战多次辉煌的团队，期待您的加入！</p>
-                </div><div class="mCSB_scrollTools" style="position: absolute; display: none;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position:relative;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+--> 
+     <div class="item_container" id="company_products"> 
+      <div class="item_ltitle">
+       公司产品
+      </div> 
+      <div class="item_content">
+      <?php foreach($product as $val){?> 
+       <div class="product_content product_item clearfix" data-id="385" data-index="0"> 
+        <img src="<?=$val['photo']?>" alt="产品图片" height="180" width="300" /> 
+        <div class="product_details"> 
+         <h4 class="product_url_all"> 
+          <div class="product_url"> 
+           <a href="<?=$val['productUrl']?>" class="url_valid" target="_blank" rel="nofollow" title="<?=$val['productUrl']?>"><?=$val['product']?></a> 
+           <a href="<?=$val['productUrl']?>" target="_blank" rel="nofollow" title="<?=$val['productUrl']?>"> <i></i> </a> 
+          </div> </h4> 
+         <ul class="clearfix"> 
+          <li>网站</li> 
+          <li>移动app</li> 
+         </ul> 
+         <div class="product_profile mCustomScrollbar _mCS_1">
+          <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+           <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;"> 
+            <p><?=$val['productProfile']?></p> 
+           </div>
+           <div class="mCSB_scrollTools" style="position: absolute; display: none;">
+            <div class="mCSB_draggerContainer">
+             <div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;">
+              <div class="mCSB_dragger_bar" style="position:relative;"></div>
+             </div>
+             <div class="mCSB_draggerRail"></div>
             </div>
-        </div>
-            <div class="product_content product_item clearfix" data-id="67017" data-index="1">
-            <img src="gongsi/Cgp3O1e0JO2AWos4AAATsyikhyc627.jpg" alt="产品图片" height="180" width="300">
-            <div class="product_details">
-                <h4 class="product_url_all">
-                    <div class="product_url">
-                        <a href="http://im.tongren.com/" class="url_valid" target="_blank" rel="nofollow" title="http://im.tongren.com/">
-                            同仁
-                        </a>
-                                                <a href="http://im.tongren.com/" target="_blank" rel="nofollow" title="http://im.tongren.com/">
-                            <i></i>
-                        </a>
-                                            </div>
-                </h4>
-                <ul class="clearfix">
-                                    <li>网站</li>
-                                    <li>移动app</li>
-                                </ul>
-                <div class="product_profile mCustomScrollbar _mCS_2"><div class="mCustomScrollBox mCS-dark-2" id="mCSB_2" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
-                    <p>伙伴集团直属团队。</p>
-<p>这是一个卓越的团队，精英们极致coding、深刻理解用户、共同参与产品，以不断自我超越的态度，探索并攻坚具有革命意义的平台级IM。</p>
-<p>气场初具，邀请具有同样气味的你！</p>
-                </div><div class="mCSB_scrollTools" style="position: absolute; display: none;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position:relative;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
-            </div>
-        </div>
-        </div>
-</div>
-
-                <!--
+           </div>
+          </div>
+         </div> 
+        </div> 
+       </div>
+       <?php }?>
+       </div>
+       </div> 
+     <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/intro/main.less"
--->
-
-<div class="item_container" id="company_intro">
-    <div class="item_ltitle">公司介绍</div>
-    <div class="item_content">
-        <div class="company_intro_text" style="display: block;">
-            <span class="company_content"><p>公司已获得红杉资本、晨兴资本两家全球顶级风险投资商的A轮数百万美金的联合投资，实力见证，品质保证！</p>
-
-<p>媒体报道：</p>
-<p>【一见|伙伴云表格】在中小企业的痛点上浇辣椒</p>
-<p>http://my.tv.sohu.com/pl/9034610/80705074.shtml</p>
-
-<p>36kr－论坛引擎 Discuz！团队再次出手，为企业 Excel 重度用户打造协作工具“伙伴云表格”</p>
-<p>http://36kr.com/p/5035364.html</p>
-
-<p>创业邦：伙伴云表格袁兆江：三年磨一剑 创业路上的贪与成</p>
-<p>http://ww...</p></span>
-            <span class="text_over" style="background-position: right top;">展开</span>
-        </div>
-
-        <div class="company_image_gallery">
-                        <div id="imageGallery">
-                                <a rel="nofollow" href="javascript:;" class="prev avalible" id="prev"></a>
-                <a rel="nofollow" href="javascript:;" class="next avalible" id="next"></a>
-                                <div class="rotateImages_wrap">
-                    <ul class="company_img" id="rotateImages" style="width: 3360px; left: 0px;">
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                            <li class="rotate_item" data-item="i/image/M00/6B/05/CgqKkVgZuPOAWas6AANybcrnHvs235.jpg" style="float: left;"><img src="gongsi/CgqKkVgZuPOAWas6AANybcrnHvs235.jpg" style="width: 453.333px; height: 340px;"></li><li class="rotate_item" data-item="i/image/M00/6B/05/Cgp3O1gZuPqAbjjSAAJSlWWJX8A869.jpg" style="float: left;"><img src="gongsi/Cgp3O1gZuPqAbjjSAAJSlWWJX8A869.jpg" style="width: 453.333px; height: 340px;"></li><li class="rotate_item" data-item="i/image/M00/6B/05/Cgp3O1gZuQOAX4pEAAHGmIMozRU747.jpg" style="float: left;"><img src="gongsi/Cgp3O1gZuQOAX4pEAAHGmIMozRU747.jpg" style="width: 453.333px; height: 340px;"></li><li class="rotate_item" data-item="i/image/M00/6B/06/Cgp3O1gZuimAVCLVAACMLR-1k3M497.jpg" style="float: left;"><img src="gongsi/Cgp3O1gZuimAVCLVAACMLR-1k3M497.jpg" style="width: 480px; height: 190.8px;"></li><li class="rotate_item" data-item="i/image/M00/6B/06/CgqKkVgZuj-AAUOXAAO9NSnCebo063.jpg" style="float: left;"><img src="gongsi/CgqKkVgZuj-AAUOXAAO9NSnCebo063.jpg" style="width: 480px; height: 319.92px;"></li><li class="rotate_item" data-item="i/image/M00/6B/06/Cgp3O1gZukeAHxl4AAbK4-YAUrI928.jpg" style="float: left;"><img src="gongsi/Cgp3O1gZukeAHxl4AAbK4-YAUrI928.jpg" style="width: 480px; height: 319.92px;"></li><li class="rotate_item rotate_active" data-item="i/image/M00/02/EF/Cgp3O1ahl0yAdf8zAAGdaw726e8289.png" style="float: left;"><img src="gongsi/Cgp3O1ahl0yAdf8zAAGdaw726e8289.jpg" style="width: 480px; height: 270px;"></li></ul>
-                </div>
-                                <ul class="rotate_nav selectIndex">
-                                        <li>
-                        <a rel="nofollow" href="javascript:;" class="index sel"></a>
-                    </li>
-                                        <li>
-                        <a rel="nofollow" href="javascript:;" class="index"></a>
-                    </li>
-                                        <li>
-                        <a rel="nofollow" href="javascript:;" class="index"></a>
-                    </li>
-                                        <li>
-                        <a rel="nofollow" href="javascript:;" class="index"></a>
-                    </li>
-                                        <li>
-                        <a rel="nofollow" href="javascript:;" class="index"></a>
-                    </li>
-                                        <li>
-                        <a rel="nofollow" href="javascript:;" class="index"></a>
-                    </li>
-                                        <li>
-                        <a rel="nofollow" href="javascript:;" class="index"></a>
-                    </li>
-                                    </ul>
-                            </div>
-                    </div>
-    </div>
-</div>
-
-                <!--
+-->  
+     <div class="item_container" id="company_intro"> 
+      <div class="item_ltitle">
+       公司介绍
+      </div> 
+      <div class="item_content"> 
+       <div class="company_intro_text" style="display: block;"> 
+        <span class="company_content"><p>公司已获得红杉资本、晨兴资本两家全球顶级风险投资商的A轮数百万美金的联合投资，实力见证，品质保证！</p> <p>媒体报道：</p> <p>【一见|伙伴云表格】在中小企业的痛点上浇辣椒</p> <p>http://my.tv.sohu.com/pl/9034610/80705074.shtml</p> <p>36kr－论坛引擎 Discuz！团队再次出手，为企业 Excel 重度用户打造协作工具“伙伴云表格”</p> <p>http://36kr.com/p/5035364.html</p> <p>创业邦：伙伴云表格袁兆江：三年磨一剑 创业路上的贪与成</p> <p>http://ww...</p></span> 
+        <span class="text_over" style="background-position: right top;">展开</span> 
+       </div> 
+       <div class="company_image_gallery"> 
+        <div id="imageGallery"> 
+         <a rel="nofollow" href="javascript:;" class="prev avalible" id="prev"></a> 
+         <a rel="nofollow" href="javascript:;" class="next avalible" id="next"></a> 
+         <div class="rotateImages_wrap"> 
+          <ul class="company_img" id="rotateImages" style="width: 3360px; left: 0px;"> 
+           <li class="rotate_item" data-item="i/image/M00/6B/05/CgqKkVgZuPOAWas6AANybcrnHvs235.jpg" style="float: left;"><img src="gongsi/CgqKkVgZuPOAWas6AANybcrnHvs235.jpg" style="width: 453.333px; height: 340px;" /></li>
+           <li class="rotate_item" data-item="i/image/M00/6B/05/Cgp3O1gZuPqAbjjSAAJSlWWJX8A869.jpg" style="float: left;"><img src="gongsi/Cgp3O1gZuPqAbjjSAAJSlWWJX8A869.jpg" style="width: 453.333px; height: 340px;" /></li>
+           <li class="rotate_item" data-item="i/image/M00/6B/05/Cgp3O1gZuQOAX4pEAAHGmIMozRU747.jpg" style="float: left;"><img src="gongsi/Cgp3O1gZuQOAX4pEAAHGmIMozRU747.jpg" style="width: 453.333px; height: 340px;" /></li>
+           <li class="rotate_item" data-item="i/image/M00/6B/06/Cgp3O1gZuimAVCLVAACMLR-1k3M497.jpg" style="float: left;"><img src="gongsi/Cgp3O1gZuimAVCLVAACMLR-1k3M497.jpg" style="width: 480px; height: 190.8px;" /></li>
+           <li class="rotate_item" data-item="i/image/M00/6B/06/CgqKkVgZuj-AAUOXAAO9NSnCebo063.jpg" style="float: left;"><img src="gongsi/CgqKkVgZuj-AAUOXAAO9NSnCebo063.jpg" style="width: 480px; height: 319.92px;" /></li>
+           <li class="rotate_item" data-item="i/image/M00/6B/06/Cgp3O1gZukeAHxl4AAbK4-YAUrI928.jpg" style="float: left;"><img src="gongsi/Cgp3O1gZukeAHxl4AAbK4-YAUrI928.jpg" style="width: 480px; height: 319.92px;" /></li>
+           <li class="rotate_item rotate_active" data-item="i/image/M00/02/EF/Cgp3O1ahl0yAdf8zAAGdaw726e8289.png" style="float: left;"><img src="gongsi/Cgp3O1ahl0yAdf8zAAGdaw726e8289.jpg" style="width: 480px; height: 270px;" /></li>
+          </ul> 
+         </div> 
+         <ul class="rotate_nav selectIndex"> 
+          <li> <a rel="nofollow" href="javascript:;" class="index sel"></a> </li> 
+          <li> <a rel="nofollow" href="javascript:;" class="index"></a> </li> 
+          <li> <a rel="nofollow" href="javascript:;" class="index"></a> </li> 
+          <li> <a rel="nofollow" href="javascript:;" class="index"></a> </li> 
+          <li> <a rel="nofollow" href="javascript:;" class="index"></a> </li> 
+          <li> <a rel="nofollow" href="javascript:;" class="index"></a> </li> 
+          <li> <a rel="nofollow" href="javascript:;" class="index"></a> </li> 
+         </ul> 
+        </div> 
+       </div> 
+      </div> 
+    </div>  
+     <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/history/main.less"
--->
-
-<div class="item_container" id="history_container">
-    <div class="item_ltitle">发展历程</div>
-    <div class="item_content">
-        <ul class="history_ul">
-                    <li class="history_li clearfix " data-id="151371">
-                <div class="li_date">
-                    <p class="date_day">31</p>
-                    <p class="date_year">2016 Dec</p>
-                </div>
-                <div class="li_type_icon li_type_icon1" title="数据"></div>
-                <div class="li_desc">
-                    <p class="desc_title desc_hover clearfix" data-href="">
-                        <span class="desc_real_title ">
-                            <a>
-                                                                    客户付费提升10倍
-                                                            </a>
-                                                                                </span>
-                    </p>
-                    <div class="desc_intro">
-                                                    <p>产品与客户服务分级，用户、效益双丰收！</p>
-<br>
-                                            </div>
-                </div>
-                                    <span class="history_ul_vspilt"></span>
-                            </li>
-                        <li class="history_li clearfix " data-id="151370">
-                <div class="li_date">
-                    <p class="date_day">10</p>
-                    <p class="date_year">2016 Nov</p>
-                </div>
-                <div class="li_type_icon li_type_icon4" title="产品"></div>
-                <div class="li_desc">
-                    <p class="desc_title desc_hover clearfix" data-href="">
-                        <span class="desc_real_title ">
-                            <a>
-                                                                    企业全流程产品伙伴云发布
-                                                            </a>
-                                                                                </span>
-                    </p>
-                    <div class="desc_intro">
-                                                    <p>服务企业深度场景，将数据处理全流程化，workflow、dashboard等重量级功能上线</p>
-<br>
-                                            </div>
-                </div>
-                                    <span class="history_ul_vspilt"></span>
-                            </li>
-                        <li class="history_li clearfix " data-id="151364">
-                <div class="li_date">
-                    <p class="date_day">30</p>
-                    <p class="date_year">2016 June</p>
-                </div>
-                <div class="li_type_icon li_type_icon1" title="数据"></div>
-                <div class="li_desc">
-                    <p class="desc_title desc_hover clearfix" data-href="">
-                        <span class="desc_real_title ">
-                            <a>
-                                                                    企业用户突破30w
-                                                            </a>
-                                                                                </span>
-                    </p>
-                    <div class="desc_intro">
-                                                    <p>精耕细作，专注产品，70%的客户来自口碑相传</p>
-<br>
-                                            </div>
-                </div>
-                                    <span class="history_ul_vspilt"></span>
-                            </li>
-                        <li class="history_li clearfix " data-id="151362">
-                <div class="li_date">
-                    <p class="date_day">10</p>
-                    <p class="date_year">2015 Oct</p>
-                </div>
-                <div class="li_type_icon li_type_icon4" title="产品"></div>
-                <div class="li_desc">
-                    <p class="desc_title desc_hover clearfix" data-href="">
-                        <span class="desc_real_title ">
-                            <a>
-                                                                    伙伴云表格产品正式发布
-                                                            </a>
-                                                                                </span>
-                    </p>
-                    <div class="desc_intro">
-                                                    <p>稳定、安全、可靠</p>
-                                            </div>
-                </div>
-                                    <span class="history_ul_vspilt"></span>
-                            </li>
-                        <li class="history_li clearfix " data-id="132371">
-                <div class="li_date">
-                    <p class="date_day">10</p>
-                    <p class="date_year">2015 July</p>
-                </div>
-                <div class="li_type_icon li_type_icon4" title="产品"></div>
-                <div class="li_desc">
-                    <p class="desc_title desc_hover clearfix" data-href="">
-                        <span class="desc_real_title ">
-                            <a>
-                                                                    伙伴云表格产品Beta发布
-                                                            </a>
-                                                                                </span>
-                    </p>
-                    <div class="desc_intro">
-                                                    <p>内部代号HuobanV4，web端，APP端同步发布</p>
-                                            </div>
-                </div>
-                                    <span class="history_ul_vspilt"></span>
-                            </li>
-                        <li class="history_li clearfix history_li_last" data-id="24591">
-                <div class="li_date">
-                    <p class="date_day">01</p>
-                    <p class="date_year">2014 Aug</p>
-                </div>
-                <div class="li_type_icon li_type_icon2" title="资本"></div>
-                <div class="li_desc">
-                    <p class="desc_title desc_hover clearfix" data-href="">
-                        <span class="desc_real_title ">
-                            <a>
-                                                                    获得A轮融资
-                                                            </a>
-                                                                                </span>
-                    </p>
-                    <div class="desc_intro">
-                                                                                    融资机构：红杉资本、晨兴资本联合投资
-                                                                                                    </div>
-                </div>
-                            </li>
-                    </ul>
-    </div>
-</div>
-
-
-                <!--
+-->    
+     <div class="item_container" id="history_container"> 
+      <div class="item_ltitle">
+       发展历程
+      </div> 
+      <div class="item_content"> 
+       <ul class="history_ul"> 
+        <li class="history_li clearfix " data-id="151371"> 
+         <div class="li_date"> 
+          <p class="date_day">31</p> 
+          <p class="date_year">2016 Dec</p> 
+         </div> 
+         <div class="li_type_icon li_type_icon1" title="数据"></div> 
+         <div class="li_desc"> 
+          <p class="desc_title desc_hover clearfix" data-href=""> <span class="desc_real_title "> <a> 客户付费提升10倍 </a> </span> </p> 
+          <div class="desc_intro"> 
+           <p>产品与客户服务分级，用户、效益双丰收！</p>
+           <br /> 
+          </div> 
+         </div> <span class="history_ul_vspilt"></span> </li> 
+        <li class="history_li clearfix " data-id="151370"> 
+         <div class="li_date"> 
+          <p class="date_day">10</p> 
+          <p class="date_year">2016 Nov</p> 
+         </div> 
+         <div class="li_type_icon li_type_icon4" title="产品"></div> 
+         <div class="li_desc"> 
+          <p class="desc_title desc_hover clearfix" data-href=""> <span class="desc_real_title "> <a> 企业全流程产品伙伴云发布 </a> </span> </p> 
+          <div class="desc_intro"> 
+           <p>服务企业深度场景，将数据处理全流程化，workflow、dashboard等重量级功能上线</p>
+           <br /> 
+          </div> 
+         </div> <span class="history_ul_vspilt"></span> </li> 
+        <li class="history_li clearfix " data-id="151364"> 
+         <div class="li_date"> 
+          <p class="date_day">30</p> 
+          <p class="date_year">2016 June</p> 
+         </div> 
+         <div class="li_type_icon li_type_icon1" title="数据"></div> 
+         <div class="li_desc"> 
+          <p class="desc_title desc_hover clearfix" data-href=""> <span class="desc_real_title "> <a> 企业用户突破30w</a> </span> </p> 
+          <div class="desc_intro"> 
+           <p>精耕细作，专注产品，70%的客户来自口碑相传</p>
+           <br /> 
+          </div> 
+         </div> <span class="history_ul_vspilt"></span> </li> 
+        <li class="history_li clearfix " data-id="151362"> 
+         <div class="li_date"> 
+          <p class="date_day">10</p> 
+          <p class="date_year">2015 Oct</p> 
+         </div> 
+         <div class="li_type_icon li_type_icon4" title="产品"></div> 
+         <div class="li_desc"> 
+          <p class="desc_title desc_hover clearfix" data-href=""> <span class="desc_real_title "> <a>伙伴云表格产品正式发布</a> </span> </p> 
+          <div class="desc_intro"> 
+           <p>稳定、安全、可靠</p> 
+          </div> 
+         </div> <span class="history_ul_vspilt"></span></li> 
+        <li class="history_li clearfix " data-id="132371"> 
+         <div class="li_date"> 
+          <p class="date_day">10</p> 
+          <p class="date_year">2015 July</p> 
+         </div> 
+         <div class="li_type_icon li_type_icon4" title="产品"></div> 
+         <div class="li_desc"> 
+          <p class="desc_title desc_hover clearfix" data-href=""> <span class="desc_real_title "> <a>伙伴云表格产品Beta发布</a> </span> </p> 
+          <div class="desc_intro"> 
+           <p>内部代号HuobanV4，web端，APP端同步发布</p> 
+          </div> 
+         </div> <span class="history_ul_vspilt"></span> </li> 
+        <li class="history_li clearfix history_li_last" data-id="24591"> 
+         <div class="li_date"> 
+          <p class="date_day">01</p> 
+          <p class="date_year">2014 Aug</p> 
+         </div> 
+         <div class="li_type_icon li_type_icon2" title="资本"></div> 
+         <div class="li_desc"> 
+          <p class="desc_title desc_hover clearfix" data-href=""> <span class="desc_real_title "> <a> 获得A轮融资</a> </span> </p> 
+          <div class="desc_intro">
+            融资机构：红杉资本、晨兴资本联合投资 
+          </div> 
+         </div> </li> 
+       </ul> 
+      </div> 
+     </div> 
+ 
+     <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/reviews/main.less"
     @require "company-c/modules/reviews-latest/main.less"
--->
+-->   
+     <div class="interview_container item_container" id="interview_container"> 
+      <div id="interview_anchor"></div> 
+      <div class="item_ltitle">
+       面试评价
+      </div> 
+      <div class="reviews-area"> 
+       <div class="reviews-top"> 
+        <div class="comprehensive-review clearfix"> 
+         <span class="text">综合评分：</span> 
+         <div class="stars"> 
+          <div class="stars-static"> 
+           <span class="star_rank" style="width: 107.35px; background-position: -1px -48px;"></span> 
+          </div> 
+         </div> 
+         <span class="score">4.3</span> 
+         <span class="count">（&nbsp;来自&nbsp;137&nbsp;份评价&nbsp;）</span> 
+        </div> 
+        <ul class="classification-review clearfix"> 
+         <li class="clearfix"> <span class="text">描述相符</span> 
+          <div class="stars"> 
+           <div class="stars-static_s"> 
+            <span class="star_rank_ms" style="width: 92.4px; background-position: -1px -40px;"></span> 
+           </div> 
+           <div class="score-detail"> 
+            <div class="triangleOut"></div> 
+            <div class="triangleIn"></div> 
+            <ul> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+              </div> 
+              <div class="persent-bar" style="width:54px;"></div> 54% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:29px;"></div> 29% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-3"></i> 
+               <i class="star star-3"></i> 
+               <i class="star star-3"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:9px;"></div> 9% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-2"></i> 
+               <i class="star star-2"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:4px;"></div> 4% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-1"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:4px;"></div> 4% </li> 
+            </ul> 
+           </div> 
+          </div> <span class="score">4.2</span> 
+          <div class="separate"></div> </li> 
+         <li> <span class="text">面试官</span> 
+          <div class="stars"> 
+           <div class="stars-static_s"> 
+            <span class="star_rank_msg" style="width: 94.6px; background-position: -1px -40px;"></span> 
+           </div> 
+           <div class="score-detail"> 
+            <div class="triangleOut"></div> 
+            <div class="triangleIn"></div> 
+            <ul> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+              </div> 
+              <div class="persent-bar" style="width:62px;"></div> 62% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:21px;"></div> 21% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-3"></i> 
+               <i class="star star-3"></i> 
+               <i class="star star-3"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:6px;"></div> 6% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-2"></i> 
+               <i class="star star-2"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:5px;"></div> 5% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-1"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:6px;"></div> 6% </li> 
+            </ul> 
+           </div> 
+          </div> <span class="score">4.3</span> 
+          <div class="separate"></div> </li> 
+         <li> <span class="text">公司环境</span> 
+          <div class="stars"> 
+           <div class="stars-static_s"> 
+            <span class="star_rank_hj" style="width: 94.6px; background-position: -1px -40px;"></span> 
+           </div> 
+           <div class="score-detail"> 
+            <div class="triangleOut"></div> 
+            <div class="triangleIn"></div> 
+            <ul> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+               <i class="star star-5"></i> 
+              </div> 
+              <div class="persent-bar" style="width:54px;"></div> 54% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star star-4"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:29px;"></div> 29% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-3"></i> 
+               <i class="star star-3"></i> 
+               <i class="star star-3"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:11px;"></div> 11% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-2"></i> 
+               <i class="star star-2"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:2px;"></div> 2% </li> 
+             <li class="clearfix"> 
+              <div class="tip-stars"> 
+               <i class="star star-1"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+               <i class="star"></i> 
+              </div> 
+              <div class="persent-bar" style="width:4px;"></div> 4% </li> 
+            </ul> 
+           </div> 
+          </div> <span class="score">4.3</span> </li> 
+        </ul> 
+       </div> 
+       <div class="list-container"> 
+        <ul class="list-content"> 
+         <li class="review-area clearfix"> 
+          <div class="review-avater"> 
+           <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/images/jd_portrait.png" alt="评价人头像" rel="nofollow" src="gongsi/jd_portrait.png" style="display: inline-block;" height="50" width="50" /> 
+          </div> 
+          <div class="review-right"> 
+           <div class="review-stars clearfix"> 
+            <span class="review-name">匿名</span> 
+            <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <div class="stars"> 
+             <div class="stars-static_s"> 
+              <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 94.6px;"></span> 
+             </div> 
+             <div class="score-detail"> 
+              <div class="triangleOut"></div> 
+              <div class="triangleIn"></div> 
+              <ul> 
+               <li class="clearfix"> <span class="title">描述相符</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">4.0</span> </li> 
+               <li class="clearfix"> <span class="title">面试官</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">4.0</span> </li> 
+               <li class="clearfix"> <span class="title">公司环境</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                </div> <span class="score">5.0</span> </li> 
+              </ul> 
+             </div> 
+            </div> 
+            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2829205.html" title="产品经理" data-index="0">产品经理</a> 
+            <span class="job-status">（&nbsp;已下线&nbsp;）</span> 
+            <span class="review-date">2017-03-19</span> 
+           </div> 
+           <div class="review-tags clearfix"> 
+            <div class="tag">
+             环境高大上
+            </div> 
+            <div class="tag">
+             面试官是大牛
+            </div> 
+           </div> 
+           <div class="review-content"> 
+            <div> 
+             <span class="review-type">[面试过程]</span> 
+             <div class="interview-process">
+              公 司的面试很特别，首面是人事+老板+不知名小哥 一起面试的，而且是在老板办公司面试的。做的产品是云表格，通俗说就是 可以在线上实现团队内部协作的excel，由于之前对公司产品没有做深入的体验，前前后后面试了2小时+，最后给留了作业，让写一份对公司的体验报告。第 二天通过人事，上交作业，随后老板打电话过来，说写的不深刻，让重新写，希望能体现出对公司产品市场定位、未来发展的额思路等等、、、一...
+             </div> 
+             <a rel="nofollow" href="javascript:;" class="down"><span>展开</span><i></i></a> 
+            </div> 
+           </div> 
+           <div class="review-action"> 
+            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="601634">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a> 
+           </div> 
+           <div class="review-reply" data-index="0"> 
+           </div> 
+          </div> </li> 
+         <li class="review-area clearfix"> 
+          <div class="review-avater"> 
+           <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/images/jd_portrait.png" alt="评价人头像" rel="nofollow" src="gongsi/jd_portrait.png" style="display: inline-block;" height="50" width="50" /> 
+          </div> 
+          <div class="review-right"> 
+           <div class="review-stars clearfix"> 
+            <span class="review-name">匿名</span> 
+            <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <div class="stars"> 
+             <div class="stars-static_s"> 
+              <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 72.6px;"></span> 
+             </div> 
+             <div class="score-detail"> 
+              <div class="triangleOut"></div> 
+              <div class="triangleIn"></div> 
+              <ul> 
+               <li class="clearfix"> <span class="title">描述相符</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-2"></i> 
+                 <i class="star star-2"></i> 
+                 <i class="star "></i> 
+                 <i class="star "></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">2.0</span> </li> 
+               <li class="clearfix"> <span class="title">面试官</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-3"></i> 
+                 <i class="star star-3"></i> 
+                 <i class="star star-3"></i> 
+                 <i class="star "></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">3.0</span> </li> 
+               <li class="clearfix"> <span class="title">公司环境</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                </div> <span class="score">5.0</span> </li> 
+              </ul> 
+             </div> 
+            </div> 
+            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2829205.html" title="产品经理" data-index="1">产品经理</a> 
+            <span class="job-status">（&nbsp;已下线&nbsp;）</span> 
+            <span class="review-date">2017-03-18</span> 
+           </div> 
+           <div class="review-tags clearfix"> 
+            <div class="tag">
+             呵呵
+            </div> 
+           </div> 
+           <div class="review-content"> 
+            <div> 
+             <span class="review-type">[面试过程]</span> 
+             <div class="interview-process">
+              格局不会太大，另外前台小姐姐人很好～～
+             </div> 
+            </div> 
+           </div> 
+           <div class="review-action"> 
+            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="601331">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a> 
+           </div> 
+           <div class="review-reply" data-index="1"> 
+           </div> 
+          </div> </li> 
+         <li class="review-area clearfix"> 
+          <div class="review-avater"> 
+           <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/images/jd_portrait.png" alt="评价人头像" rel="nofollow" src="gongsi/jd_portrait.png" style="display: inline-block;" height="50" width="50" /> 
+          </div> 
+          <div class="review-right"> 
+           <div class="review-stars clearfix"> 
+            <span class="review-name">匿名</span> 
+            <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <div class="stars"> 
+             <div class="stars-static_s"> 
+              <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 88px;"></span> 
+             </div> 
+             <div class="score-detail"> 
+              <div class="triangleOut"></div> 
+              <div class="triangleIn"></div> 
+              <ul> 
+               <li class="clearfix"> <span class="title">描述相符</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">4.0</span> </li> 
+               <li class="clearfix"> <span class="title">面试官</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">4.0</span> </li> 
+               <li class="clearfix"> <span class="title">公司环境</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">4.0</span> </li> 
+              </ul> 
+             </div> 
+            </div> 
+            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2829205.html" title="产品经理" data-index="2">产品经理</a> 
+            <span class="job-status">（&nbsp;已下线&nbsp;）</span> 
+            <span class="review-date">2017-03-18</span> 
+           </div> 
+           <div class="review-tags clearfix"> 
+            <div class="tag">
+             面试效率高
+            </div> 
+           </div> 
+           <div class="review-content"> 
+            <div> 
+             <span class="review-type">[面试过程]</span> 
+             <div class="interview-process">
+              应该已经招到合适的人了，老板直接面的
+             </div> 
+            </div> 
+           </div> 
+           <div class="review-action"> 
+            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="601250">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a> 
+           </div> 
+           <div class="review-reply" data-index="2"> 
+           </div> 
+          </div> </li> 
+         <li class="review-area clearfix"> 
+          <div class="review-avater"> 
+           <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/images/jd_portrait.png" alt="评价人头像" rel="nofollow" src="gongsi/jd_portrait.png" style="display: inline-block;" height="50" width="50" /> 
+          </div> 
+          <div class="review-right"> 
+           <div class="review-stars clearfix"> 
+            <span class="review-name">匿名</span> 
+            <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <div class="stars"> 
+             <div class="stars-static_s"> 
+              <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 110px;"></span> 
+             </div> 
+             <div class="score-detail"> 
+              <div class="triangleOut"></div> 
+              <div class="triangleIn"></div> 
+              <ul> 
+               <li class="clearfix"> <span class="title">描述相符</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                </div> <span class="score">5.0</span> </li> 
+               <li class="clearfix"> <span class="title">面试官</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                </div> <span class="score">5.0</span> </li> 
+               <li class="clearfix"> <span class="title">公司环境</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                </div> <span class="score">5.0</span> </li> 
+              </ul> 
+             </div> 
+            </div> 
+            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2829205.html" title="产品经理" data-index="3">产品经理</a> 
+            <span class="job-status">（&nbsp;已下线&nbsp;）</span> 
+            <span class="review-date">2017-03-16</span> 
+           </div> 
+           <div class="review-tags clearfix"> 
+            <div class="tag">
+             面试官很nice
+            </div> 
+            <div class="tag">
+             面试效率高
+            </div> 
+            <div class="tag">
+             面试官是大牛
+            </div> 
+           </div> 
+           <div class="review-content"> 
+            <div> 
+             <span class="review-type">[面试过程]</span> 
+             <div class="interview-process">
+              有点紧张了，面试官很随和而且思维清晰，不断给我鼓励，平和的帮助我分析我的不足，很有收获，给面试者证明自己的机会并且负责的检验和指导，先看人的品性，再看综合素养，然后是职业技能，是一家人情味十足的公司，喜欢！（hr姐姐的心理学的杠杠的~膜拜~）
+             </div>
+             <br /> 
+            </div> 
+            <div> 
+             <span class="review-type">[其他评价]</span> 
+             <div class="other-review">
+              很安静适合独立思考，技术氛围比较浓厚，大家都说少穿点是对的，保持思维活跃~
+             </div> 
+            </div> 
+           </div> 
+           <div class="review-action"> 
+            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="599247">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a> 
+           </div> 
+           <div class="review-reply" data-index="3"> 
+           </div> 
+          </div> </li> 
+         <li class="review-area clearfix"> 
+          <div class="review-avater"> 
+           <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/i/image/M00/B3/9B/CgqKkVi82PuAcXJrAAAniFk4QyA988.JPG" alt="评价人头像" rel="nofollow" src="gongsi/CgqKkVi82PuAcXJrAAAniFk4QyA988.JPG" style="display: inline-block;" height="50" width="50" /> 
+          </div> 
+          <div class="review-right"> 
+           <div class="review-stars clearfix"> 
+            <a class="review-name" title="林*欣">林*欣</a> 
+            <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <div class="stars"> 
+             <div class="stars-static_s"> 
+              <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 94.6px;"></span> 
+             </div> 
+             <div class="score-detail"> 
+              <div class="triangleOut"></div> 
+              <div class="triangleIn"></div> 
+              <ul> 
+               <li class="clearfix"> <span class="title">描述相符</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">4.0</span> </li> 
+               <li class="clearfix"> <span class="title">面试官</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                 <i class="star star-5"></i> 
+                </div> <span class="score">5.0</span> </li> 
+               <li class="clearfix"> <span class="title">公司环境</span> <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                <div class="tip-stars"> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star star-4"></i> 
+                 <i class="star "></i> 
+                </div> <span class="score">4.0</span> </li> 
+              </ul> 
+             </div> 
+            </div> 
+            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+            <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2886921.html" title="JAVA初级工程师（C/C++均可）" data-index="4">JAVA初级工程师（C/C++均可）</a> 
+            <span class="job-status">（&nbsp;已下线&nbsp;）</span> 
+            <span class="review-date">2017-03-16</span> 
+           </div> 
+           <div class="review-tags clearfix"> 
+            <div class="tag">
+             面试官很nice
+            </div> 
+           </div> 
+           <div class="review-content"> 
+            <div> 
+             <span class="review-type">[面试过程]</span> 
+             <div class="interview-process">
+              感觉面试官都很负责，氛围不错，对人才的筛选很认真
+             </div>
+             <br /> 
+            </div> 
+            <div> 
+             <span class="review-type">[其他评价]</span> 
+             <div class="other-review">
+              公司环境还可以
+             </div> 
+            </div> 
+           </div> 
+           <div class="review-action"> 
+            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="597779">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a> 
+           </div> 
+           <div class="review-reply" data-index="4"> 
+           </div> 
+          </div> </li> 
+        </ul> 
+       </div> 
+      </div> 
+      <a class="view-more" href="https://www.lagou.com/gongsi/interviewExperiences.html?companyId=587" target="_blank" data-lg-tj-id="9200" data-lg-tj-no="0001" data-lg-tj-cid="idnull" data-lg-tj-track-code="hpage_comment" title="伙伴网怎么样">查看更多</a> 
+     </div> 
 
-<div class="interview_container item_container" id="interview_container">
-    <div id="interview_anchor"></div>
-    <div class="item_ltitle">面试评价</div>
-        <div class="reviews-area">
-                <div class="reviews-top">
-            <div class="comprehensive-review clearfix">
-                <span class="text">综合评分：</span>
-                <div class="stars">
-                    <div class="stars-static">
-                        <span class="star_rank" style="width: 107.35px; background-position: -1px -48px;"></span>
-                    </div>
-                                    </div>
-                <span class="score">4.3</span>
-                <span class="count">（&nbsp;来自&nbsp;137&nbsp;份评价&nbsp;）</span>
-            </div>
-                        <ul class="classification-review clearfix">
-                <li class="clearfix">
-                    <span class="text">描述相符</span>
-                    <div class="stars">
-                        <div class="stars-static_s">
-                            <span class="star_rank_ms" style="width: 92.4px; background-position: -1px -40px;"></span>
-                        </div>
-                        <div class="score-detail">
-                            <div class="triangleOut"></div>
-                            <div class="triangleIn"></div>
-                            <ul>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:54px;"></div>
-                                    54%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:29px;"></div>
-                                    29%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:9px;"></div>
-                                    9%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-2"></i>
-                                                                            <i class="star star-2"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:4px;"></div>
-                                    4%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-1"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:4px;"></div>
-                                    4%
-                                </li>
-                                                            </ul>
-                        </div>
-                    </div>
-                    <span class="score">4.2</span>
-                    <div class="separate"></div>
-                </li>
-                <li>
-                    <span class="text">面试官</span>
-                    <div class="stars">
-                        <div class="stars-static_s">
-                            <span class="star_rank_msg" style="width: 94.6px; background-position: -1px -40px;"></span>
-                        </div>
-                        <div class="score-detail">
-                            <div class="triangleOut"></div>
-                            <div class="triangleIn"></div>
-                            <ul>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:62px;"></div>
-                                    62%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:21px;"></div>
-                                    21%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:6px;"></div>
-                                    6%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-2"></i>
-                                                                            <i class="star star-2"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:5px;"></div>
-                                    5%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-1"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:6px;"></div>
-                                    6%
-                                </li>
-                                                            </ul>
-                        </div>
-                    </div>
-                    <span class="score">4.3</span>
-                    <div class="separate"></div>
-                </li>
-                <li>
-                    <span class="text">公司环境</span>
-                    <div class="stars">
-                        <div class="stars-static_s">
-                            <span class="star_rank_hj" style="width: 94.6px; background-position: -1px -40px;"></span>
-                        </div>
-                        <div class="score-detail">
-                            <div class="triangleOut"></div>
-                            <div class="triangleIn"></div>
-                            <ul>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                            <i class="star star-5"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:54px;"></div>
-                                    54%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star star-4"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:29px;"></div>
-                                    29%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star star-3"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:11px;"></div>
-                                    11%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-2"></i>
-                                                                            <i class="star star-2"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:2px;"></div>
-                                    2%
-                                </li>
-                                                                <li class="clearfix">
-                                                                        <div class="tip-stars">
-                                                                            <i class="star star-1"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                            <i class="star"></i>
-                                                                        </div>
-                                    <div class="persent-bar" style="width:4px;"></div>
-                                    4%
-                                </li>
-                                                            </ul>
-                        </div>
-                    </div>
-                    <span class="score">4.3</span>
-                </li>
-            </ul>
-                    </div>
-                <div class="list-container">
-            <ul class="list-content">
-                                                <li class="review-area clearfix">
-                    <div class="review-avater">
-                        <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/images/jd_portrait.png" alt="评价人头像" rel="nofollow" src="gongsi/jd_portrait.png" style="display: inline-block;" height="50" width="50">
-                    </div>
-                    <div class="review-right">
-                        <div class="review-stars clearfix">
-                                                            <span class="review-name">匿名</span>
-                                                        <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                            <div class="stars">
-                                <div class="stars-static_s">
-                                    <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 94.6px;"></span>
-                                </div>
-                                                                <div class="score-detail">
-                                    <div class="triangleOut"></div>
-                                    <div class="triangleIn"></div>
-                                    <ul>
-                                        <li class="clearfix">
-                                            <span class="title">描述相符</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">4.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">面试官</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">4.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">公司环境</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                            </div>
-                                            <span class="score">5.0</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                                            </div>
-                            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                                                                                <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2829205.html" title="产品经理" data-index="0">产品经理</a>
-                                    <span class="job-status">（&nbsp;已下线&nbsp;）</span>
-                                                                                        <span class="review-date">2017-03-19</span>
-                        </div>
-                        <div class="review-tags clearfix">
-                                                            <div class="tag">环境高大上</div>
-                                                            <div class="tag">面试官是大牛</div>
-                                                    </div>
-                        <div class="review-content">
-                                                                                    <div>
-                                <span class="review-type">[面试过程]</span>
-                                                                <div class="interview-process">公
-司的面试很特别，首面是人事+老板+不知名小哥 一起面试的，而且是在老板办公司面试的。做的产品是云表格，通俗说就是 
-可以在线上实现团队内部协作的excel，由于之前对公司产品没有做深入的体验，前前后后面试了2小时+，最后给留了作业，让写一份对公司的体验报告。第
-二天通过人事，上交作业，随后老板打电话过来，说写的不深刻，让重新写，希望能体现出对公司产品市场定位、未来发展的额思路等等、、、一...</div>
-                                <a rel="nofollow" href="javascript:;" class="down"><span>展开</span><i></i></a>
-                                                            </div>
-                                                    </div>
-                        <div class="review-action">
-                                                            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="601634">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a>
-                                                    </div>
-                        <div class="review-reply" data-index="0">
-                                                </div>
-                    </div>
-                </li>
-                                <li class="review-area clearfix">
-                    <div class="review-avater">
-                        <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/images/jd_portrait.png" alt="评价人头像" rel="nofollow" src="gongsi/jd_portrait.png" style="display: inline-block;" height="50" width="50">
-                    </div>
-                    <div class="review-right">
-                        <div class="review-stars clearfix">
-                                                            <span class="review-name">匿名</span>
-                                                        <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                            <div class="stars">
-                                <div class="stars-static_s">
-                                    <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 72.6px;"></span>
-                                </div>
-                                                                <div class="score-detail">
-                                    <div class="triangleOut"></div>
-                                    <div class="triangleIn"></div>
-                                    <ul>
-                                        <li class="clearfix">
-                                            <span class="title">描述相符</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-2"></i>
-                                                                                                    <i class="star star-2"></i>
-                                                                                                    <i class="star "></i>
-                                                                                                    <i class="star "></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">2.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">面试官</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-3"></i>
-                                                                                                    <i class="star star-3"></i>
-                                                                                                    <i class="star star-3"></i>
-                                                                                                    <i class="star "></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">3.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">公司环境</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                            </div>
-                                            <span class="score">5.0</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                                            </div>
-                            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                                                                                <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2829205.html" title="产品经理" data-index="1">产品经理</a>
-                                    <span class="job-status">（&nbsp;已下线&nbsp;）</span>
-                                                                                        <span class="review-date">2017-03-18</span>
-                        </div>
-                        <div class="review-tags clearfix">
-                                                            <div class="tag">呵呵</div>
-                                                    </div>
-                        <div class="review-content">
-                                                                                    <div>
-                                <span class="review-type">[面试过程]</span>
-                                                                <div class="interview-process">格局不会太大，另外前台小姐姐人很好～～</div>
-                                                            </div>
-                                                    </div>
-                        <div class="review-action">
-                                                            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="601331">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a>
-                                                    </div>
-                        <div class="review-reply" data-index="1">
-                                                </div>
-                    </div>
-                </li>
-                                <li class="review-area clearfix">
-                    <div class="review-avater">
-                        <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/images/jd_portrait.png" alt="评价人头像" rel="nofollow" src="gongsi/jd_portrait.png" style="display: inline-block;" height="50" width="50">
-                    </div>
-                    <div class="review-right">
-                        <div class="review-stars clearfix">
-                                                            <span class="review-name">匿名</span>
-                                                        <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                            <div class="stars">
-                                <div class="stars-static_s">
-                                    <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 88px;"></span>
-                                </div>
-                                                                <div class="score-detail">
-                                    <div class="triangleOut"></div>
-                                    <div class="triangleIn"></div>
-                                    <ul>
-                                        <li class="clearfix">
-                                            <span class="title">描述相符</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">4.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">面试官</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">4.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">公司环境</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">4.0</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                                            </div>
-                            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                                                                                <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2829205.html" title="产品经理" data-index="2">产品经理</a>
-                                    <span class="job-status">（&nbsp;已下线&nbsp;）</span>
-                                                                                        <span class="review-date">2017-03-18</span>
-                        </div>
-                        <div class="review-tags clearfix">
-                                                            <div class="tag">面试效率高</div>
-                                                    </div>
-                        <div class="review-content">
-                                                                                    <div>
-                                <span class="review-type">[面试过程]</span>
-                                                                <div class="interview-process">应该已经招到合适的人了，老板直接面的</div>
-                                                            </div>
-                                                    </div>
-                        <div class="review-action">
-                                                            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="601250">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a>
-                                                    </div>
-                        <div class="review-reply" data-index="2">
-                                                </div>
-                    </div>
-                </li>
-                                <li class="review-area clearfix">
-                    <div class="review-avater">
-                        <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/images/jd_portrait.png" alt="评价人头像" rel="nofollow" src="gongsi/jd_portrait.png" style="display: inline-block;" height="50" width="50">
-                    </div>
-                    <div class="review-right">
-                        <div class="review-stars clearfix">
-                                                            <span class="review-name">匿名</span>
-                                                        <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                            <div class="stars">
-                                <div class="stars-static_s">
-                                    <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 110px;"></span>
-                                </div>
-                                                                <div class="score-detail">
-                                    <div class="triangleOut"></div>
-                                    <div class="triangleIn"></div>
-                                    <ul>
-                                        <li class="clearfix">
-                                            <span class="title">描述相符</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                            </div>
-                                            <span class="score">5.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">面试官</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                            </div>
-                                            <span class="score">5.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">公司环境</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                            </div>
-                                            <span class="score">5.0</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                                            </div>
-                            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                                                                                <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2829205.html" title="产品经理" data-index="3">产品经理</a>
-                                    <span class="job-status">（&nbsp;已下线&nbsp;）</span>
-                                                                                        <span class="review-date">2017-03-16</span>
-                        </div>
-                        <div class="review-tags clearfix">
-                                                            <div class="tag">面试官很nice</div>
-                                                            <div class="tag">面试效率高</div>
-                                                            <div class="tag">面试官是大牛</div>
-                                                    </div>
-                        <div class="review-content">
-                                                                                    <div>
-                                <span class="review-type">[面试过程]</span>
-                                <div class="interview-process">有点紧张了，面试官很随和而且思维清晰，不断给我鼓励，平和的帮助我分析我的不足，很有收获，给面试者证明自己的机会并且负责的检验和指导，先看人的品性，再看综合素养，然后是职业技能，是一家人情味十足的公司，喜欢！（hr姐姐的心理学的杠杠的~膜拜~）</div><br>
-                            </div>
-                            <div>
-                                <span class="review-type">[其他评价]</span>
-                                <div class="other-review">很安静适合独立思考，技术氛围比较浓厚，大家都说少穿点是对的，保持思维活跃~</div>
-                            </div>
-                                                    </div>
-                        <div class="review-action">
-                                                            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="599247">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a>
-                                                    </div>
-                        <div class="review-reply" data-index="3">
-                                                </div>
-                    </div>
-                </li>
-                                <li class="review-area clearfix">
-                    <div class="review-avater">
-                        <img class="lazy_img" data-original="//www.lgstatic.com/thumbnail_100x100/i/image/M00/B3/9B/CgqKkVi82PuAcXJrAAAniFk4QyA988.JPG" alt="评价人头像" rel="nofollow" src="gongsi/CgqKkVi82PuAcXJrAAAniFk4QyA988.JPG" style="display: inline-block;" height="50" width="50">
-                    </div>
-                    <div class="review-right">
-                        <div class="review-stars clearfix">
-                                                            <a class="review-name" title="林*欣">林*欣</a>
-                                                        <span class="title">综合评分&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                            <div class="stars">
-                                <div class="stars-static_s">
-                                    <span class="star_rank_zhpf" style="background-position: -1px -40px; width: 94.6px;"></span>
-                                </div>
-                                                                <div class="score-detail">
-                                    <div class="triangleOut"></div>
-                                    <div class="triangleIn"></div>
-                                    <ul>
-                                        <li class="clearfix">
-                                            <span class="title">描述相符</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">4.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">面试官</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                                    <i class="star star-5"></i>
-                                                                                            </div>
-                                            <span class="score">5.0</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="title">公司环境</span>
-                                            <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                            <div class="tip-stars">
-                                                                        
-                                                                        
-    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star star-4"></i>
-                                                                                                    <i class="star "></i>
-                                                                                            </div>
-                                            <span class="score">4.0</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                                            </div>
-                            <span class="title">面试职位&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                                                                                                <a target="_blank" class="job-name" href="https://www.lagou.com/jobs/2886921.html" title="JAVA初级工程师（C/C++均可）" data-index="4">JAVA初级工程师（C/C++均可）</a>
-                                    <span class="job-status">（&nbsp;已下线&nbsp;）</span>
-                                                                                        <span class="review-date">2017-03-16</span>
-                        </div>
-                        <div class="review-tags clearfix">
-                                                            <div class="tag">面试官很nice</div>
-                                                    </div>
-                        <div class="review-content">
-                                                                                    <div>
-                                <span class="review-type">[面试过程]</span>
-                                <div class="interview-process">感觉面试官都很负责，氛围不错，对人才的筛选很认真</div><br>
-                            </div>
-                            <div>
-                                <span class="review-type">[其他评价]</span>
-                                <div class="other-review">公司环境还可以</div>
-                            </div>
-                                                    </div>
-                        <div class="review-action">
-                                                            <a rel="nofollow" href="javascript:;" class="useful no_select" data-id="597779">有用&nbsp;(&nbsp;<span>0</span>&nbsp;)<i></i></a>
-                                                    </div>
-                        <div class="review-reply" data-index="4">
-                                                </div>
-                    </div>
-                </li>
-                            </ul>
-        </div>
-    </div>
-                <a class="view-more" href="https://www.lagou.com/gongsi/interviewExperiences.html?companyId=587" target="_blank" data-lg-tj-id="9200" data-lg-tj-no="0001" data-lg-tj-cid="idnull" data-lg-tj-track-code="hpage_comment" title="伙伴网怎么样">查看更多</a>
-    </div>
-
-                <!--
+     <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/address/main.less"
--->
-
-<div class="address_container item_container" id="location_container">
-    <div class="item_ltitle">公司位置</div>
-    <div class="item_content">
-        <div class="item_con_map amap-container" id="addr_map" style="position: relative; background: rgb(252, 249, 242) none repeat scroll 0% 0%; cursor: url(&quot;https://webapi.amap.com/theme/v1.3/openhand.cur&quot;), default;"><object style="display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;" type="text/html" data="gongsi/a"></object><div class="amap-maps"><div class="amap-drags" style=""><div class="amap-layers" style="transform: translateZ(0px);"><div class="amap-layer" style="position: absolute; z-index: 0; top: 3831px; left: 2447px;"><img src="gongsi/appmaptile.png" style="position: absolute; top: -3681px; left: -2138px; width: 256px; height: 256px; z-index: 15;"><img src="gongsi/appmaptile_002.png" style="position: absolute; top: -3937px; left: -2138px; width: 256px; height: 256px; z-index: 15;"><img src="gongsi/appmaptile_004.png" style="position: absolute; top: -3681px; left: -2394px; width: 256px; height: 256px; z-index: 15;"><img src="gongsi/appmaptile_003.png" style="position: absolute; top: -3937px; left: -2394px; width: 256px; height: 256px; z-index: 15;"><img src="gongsi/appmaptile_005.png" style="position: absolute; top: -3681px; left: -2650px; width: 256px; height: 256px; z-index: 15;"><img src="gongsi/appmaptile_006.png" style="position: absolute; top: -3937px; left: -2650px; width: 256px; height: 256px; z-index: 15;"></div><canvas class="amap-labels" draggable="false" style="position: absolute; z-index: 99; height: 290px; width: 430px; top: 0px; left: 0px;" width="430" height="290"></canvas><div class="amap-markers" style="position: absolute; z-index: 120; top: 145px; left: 215px;"><div class="amap-marker" style="top: -31px; left: -9px; z-index: 100; transform: rotate(0deg); transform-origin: 9px 31px 0px; display: block;"><div class="amap-icon" style="position: absolute; width: 19px; height: 33px; opacity: 1;"><img src="gongsi/mark_bs.png" style="width: 19px; height: 33px; top: 0px; left: 0px;"></div></div></div></div><div class="amap-overlays" style=""></div></div></div><div style="display: none;"><div class="amap-info" style="position: absolute; left: 12px; top: 155px;"><div style="position: absolute; bottom: 0px; left: 0px;"><div><div class="amap-adcontent-body"><div class="info-title">交通银行ATM(上地三街)</div><div class="info-content">地址：上地三街9号金隅嘉华大厦<br>类型：金融保险服务;自动提款机;交通银行ATM<br><div></div></div><div class="amap-info-combo status-origin"><table><tr class="amap-info-tabs"><td class="tab"><i class="tab-icon icon-around"></i>在附近找</td><td class="tab selected"><i class="tab-icon icon-start"></i>这里出发</td><td class="tab"><i class="tab-icon icon-end"></i>到这里去</td></tr></table><table cellpadding="0"><tr><td class="input-label">终点</td><td><div class="keyword-input"><input class="keyword" type="text"></div></td><td><div class="search-button hide">搜索</div><div class="nav-button"><span class="nav-icon nav-drive">驾车</span><span class="nav-icon nav-bus">公交</span><span class="nav-icon nav-walk">步行</span></div></td></tr></table></div></div><div class="amap-combo-sharp"></div><a class="amap-adcombo-close" href="javascript:%20void(0)"></a></div></div></div></div><div class="amap-controls"><div class="amap-indoormap-floorbar-control" style="display: none;"></div></div><a class="amap-logo" href="http://gaode.com/" target="_blank"><img src="gongsi/autonavi.png"></a><div class="amap-copyright" style="display: none;"><!--v1.3.24--> © 2017 AutoNavi <span class="amap-mcode">- GS(2016)710号</span></div></div>
-        <div class="item_con_mlist mCustomScrollbar _mCS_5"><div class="mCustomScrollBox mCS-dark-2" id="mCSB_5" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
-            <ul class="con_mlist_ul">
-                                <li class="mlist_ul_li mlist_li_open" data-locationi="" d="14418">
-                    <p class="mlist_li_title">
-                        <em class="li_title_iconinx">1</em>
-                        <span title="北京海淀区" class="li_title_text ellipsis">北京市,海淀区</span>
-                        <em class="li_title_corner"></em>
-                    </p>
-                                        <p class="businessarea">上地</p>
-                                        <p class="mlist_li_desc">
-                        北京海淀区上地三街9号嘉华大厦B座1107室
-
-                    </p>
-                </li>
-                            </ul>
-                        <div class="mlist_total_desc">
-                该公司共有 <span class="mlist_total">1</span> 个地址
+--> 
+     <div class="address_container item_container" id="location_container"> 
+      <div class="item_ltitle">
+       公司位置
+      </div> 
+      <div class="item_content"> 
+       <div class="item_con_map amap-container" id="addr_map" style="position: relative; background: rgb(252, 249, 242) none repeat scroll 0% 0%; cursor: url(&quot;https://webapi.amap.com/theme/v1.3/openhand.cur&quot;), default;">
+        <object style="display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;" type="text/html" data="gongsi/a"></object>
+        <div class="amap-maps">
+         <div class="amap-drags" style="">
+          <div class="amap-layers" style="transform: translateZ(0px);">
+           <div class="amap-layer" style="position: absolute; z-index: 0; top: 3831px; left: 2447px;">
+            <img src="gongsi/appmaptile.png" style="position: absolute; top: -3681px; left: -2138px; width: 256px; height: 256px; z-index: 15;" />
+            <img src="gongsi/appmaptile_002.png" style="position: absolute; top: -3937px; left: -2138px; width: 256px; height: 256px; z-index: 15;" />
+            <img src="gongsi/appmaptile_004.png" style="position: absolute; top: -3681px; left: -2394px; width: 256px; height: 256px; z-index: 15;" />
+            <img src="gongsi/appmaptile_003.png" style="position: absolute; top: -3937px; left: -2394px; width: 256px; height: 256px; z-index: 15;" />
+            <img src="gongsi/appmaptile_005.png" style="position: absolute; top: -3681px; left: -2650px; width: 256px; height: 256px; z-index: 15;" />
+            <img src="gongsi/appmaptile_006.png" style="position: absolute; top: -3937px; left: -2650px; width: 256px; height: 256px; z-index: 15;" />
+           </div>
+           <canvas class="amap-labels" draggable="false" style="position: absolute; z-index: 99; height: 290px; width: 430px; top: 0px; left: 0px;" width="430" height="290"></canvas>
+           <div class="amap-markers" style="position: absolute; z-index: 120; top: 145px; left: 215px;">
+            <div class="amap-marker" style="top: -31px; left: -9px; z-index: 100; transform: rotate(0deg); transform-origin: 9px 31px 0px; display: block;">
+             <div class="amap-icon" style="position: absolute; width: 19px; height: 33px; opacity: 1;">
+              <img src="gongsi/mark_bs.png" style="width: 19px; height: 33px; top: 0px; left: 0px;" />
+             </div>
             </div>
-                    </div><div class="mCSB_scrollTools" style="position: absolute; display: none;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position:relative;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
-    </div>
-</div>
-
-                <!-- 推荐 -->
-                <!--
-    @require "common/widgets/recommend/main.less"
--->
-<!-- 公司详情页、职位详情页 推荐-->
-<div class="popular_recom hide-recom">
-    <a rel="nofollow" href="javascript:;" class="expansion">展开<i></i></a>
-    <dl class="popular_company clearfix">
-                    <dt>推荐职位：</dt>
-            <dd>
-                            <a href="https://www.lagou.com/zhaopin/Java/">java招聘</a>
-                            <a href="https://www.lagou.com/zhaopin/shujufenxi/">数据分析招聘</a>
-                            <a href="https://www.lagou.com/zhaopin/PHP/">php招聘</a>
-                            <a href="https://www.lagou.com/zhaopin/chanpinjingli/">产品经理招聘</a>
-                            <a href="https://www.lagou.com/zhaopin/Android/">Android招聘</a>
-                            <a href="https://www.lagou.com/zhaopin/HTML5/">HTML5招聘</a>
-                            <a href="https://www.lagou.com/zhaopin/iOS/">iOS招聘</a>
-                            <a href="https://www.lagou.com/zhaopin/UI/">UI招聘</a>
-                        </dd>
-            </dl>
-    <dl class="popular_city clearfix">
-        <dt class="title">推荐城市：</dt>
-        <dd>
-                    <a href="https://www.lagou.com/beijing/">北京找工作</a>
-                    <a href="https://www.lagou.com/beijing/">北京招聘</a>
-                    <a href="https://www.lagou.com/shanghai/">上海找工作</a>
-                    <a href="https://www.lagou.com/shanghai/">上海招聘</a>
-                    <a href="https://www.lagou.com/hangzhou/">杭州找工作</a>
-                    <a href="https://www.lagou.com/hangzhou/">杭州招聘</a>
-                    <a href="https://www.lagou.com/guangzhou/">广州找工作</a>
-                    <a href="https://www.lagou.com/guangzhou/">广州招聘</a>
-                    <a href="https://www.lagou.com/shenzhen/">深圳找工作</a>
-                    <a href="https://www.lagou.com/shenzhen/">深圳招聘</a>
-                    <a href="https://www.lagou.com/chengdu/">成都找工作</a>
-                    <a href="https://www.lagou.com/chengdu/">成都招聘</a>
-                </dd>
-    </dl>
-</div>
-<!-- 公司详情页、职位详情页 推荐-->
-            </div>
+           </div>
+          </div>
+          <div class="amap-overlays" style=""></div>
+         </div>
         </div>
-
-        <div id="container_right">
-                        <!--
+        <div style="display: none;">
+         <div class="amap-info" style="position: absolute; left: 12px; top: 155px;">
+          <div style="position: absolute; bottom: 0px; left: 0px;">
+           <div>
+            <div class="amap-adcontent-body">
+             <div class="info-title">
+              交通银行ATM(上地三街)
+             </div>
+             <div class="info-content">
+              地址：上地三街9号金隅嘉华大厦
+              <br />类型：金融保险服务;自动提款机;交通银行ATM
+              <br />
+              <div></div>
+             </div>
+             <div class="amap-info-combo status-origin">
+              <table>
+               <tbody>
+                <tr class="amap-info-tabs">
+                 <td class="tab"><i class="tab-icon icon-around"></i>在附近找</td>
+                 <td class="tab selected"><i class="tab-icon icon-start"></i>这里出发</td>
+                 <td class="tab"><i class="tab-icon icon-end"></i>到这里去</td>
+                </tr>
+               </tbody>
+              </table>
+              <table cellpadding="0">
+               <tbody>
+                <tr>
+                 <td class="input-label">终点</td>
+                 <td>
+                  <div class="keyword-input">
+                   <input class="keyword" type="text" />
+                  </div></td>
+                 <td>
+                  <div class="search-button hide">
+                   搜索
+                  </div>
+                  <div class="nav-button">
+                   <span class="nav-icon nav-drive">驾车</span>
+                   <span class="nav-icon nav-bus">公交</span>
+                   <span class="nav-icon nav-walk">步行</span>
+                  </div></td>
+                </tr>
+               </tbody>
+              </table>
+             </div>
+            </div>
+            <div class="amap-combo-sharp"></div>
+            <a class="amap-adcombo-close" href="javascript:%20void(0)"></a>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="amap-controls">
+         <div class="amap-indoormap-floorbar-control" style="display: none;"></div>
+        </div>
+        <a class="amap-logo" href="http://gaode.com/" target="_blank"><img src="gongsi/autonavi.png" /></a>
+        <div class="amap-copyright" style="display: none;">
+         <!--v1.3.24--> &copy; 2017 AutoNavi 
+         <span class="amap-mcode">- GS(2016)710号</span>
+        </div>
+       </div> 
+       <div class="item_con_mlist mCustomScrollbar _mCS_5">
+        <div class="mCustomScrollBox mCS-dark-2" id="mCSB_5" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+         <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;"> 
+          <ul class="con_mlist_ul"> 
+           <li class="mlist_ul_li mlist_li_open" data-locationi="" d="14418"> <p class="mlist_li_title"> <em class="li_title_iconinx">1</em> <span title="北京海淀区" class="li_title_text ellipsis">北京市,海淀区</span> <em class="li_title_corner"></em> </p> <p class="businessarea">上地</p> <p class="mlist_li_desc"> 北京海淀区上地三街9号嘉华大厦B座1107室 </p> </li> 
+          </ul> 
+          <div class="mlist_total_desc">
+            该公司共有 
+           <span class="mlist_total">1</span> 个地址 
+          </div> 
+         </div>
+         <div class="mCSB_scrollTools" style="position: absolute; display: none;">
+          <div class="mCSB_draggerContainer">
+           <div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;">
+            <div class="mCSB_dragger_bar" style="position:relative;"></div>
+           </div>
+           <div class="mCSB_draggerRail"></div>
+          </div>
+         </div>
+        </div>
+       </div> 
+      </div> 
+     </div> 
+     <!-- 推荐 --> 
+     <!--
+    @require "common/widgets/recommend/main.less"
+--> 
+     <!-- 公司详情页、职位详情页 推荐--> 
+     <div class="popular_recom hide-recom"> 
+      <a rel="nofollow" href="javascript:;" class="expansion">展开<i></i></a> 
+      <dl class="popular_company clearfix"> 
+       <dt>
+        推荐职位：
+       </dt> 
+       <dd> 
+        <a href="https://www.lagou.com/zhaopin/Java/">java招聘</a> 
+        <a href="https://www.lagou.com/zhaopin/shujufenxi/">数据分析招聘</a> 
+        <a href="https://www.lagou.com/zhaopin/PHP/">php招聘</a> 
+        <a href="https://www.lagou.com/zhaopin/chanpinjingli/">产品经理招聘</a> 
+        <a href="https://www.lagou.com/zhaopin/Android/">Android招聘</a> 
+        <a href="https://www.lagou.com/zhaopin/HTML5/">HTML5招聘</a> 
+        <a href="https://www.lagou.com/zhaopin/iOS/">iOS招聘</a> 
+        <a href="https://www.lagou.com/zhaopin/UI/">UI招聘</a> 
+       </dd> 
+      </dl> 
+      <dl class="popular_city clearfix"> 
+       <dt class="title">
+        推荐城市：
+       </dt> 
+       <dd> 
+        <a href="https://www.lagou.com/beijing/">北京找工作</a> 
+        <a href="https://www.lagou.com/beijing/">北京招聘</a> 
+        <a href="https://www.lagou.com/shanghai/">上海找工作</a> 
+        <a href="https://www.lagou.com/shanghai/">上海招聘</a> 
+        <a href="https://www.lagou.com/hangzhou/">杭州找工作</a> 
+        <a href="https://www.lagou.com/hangzhou/">杭州招聘</a> 
+        <a href="https://www.lagou.com/guangzhou/">广州找工作</a> 
+        <a href="https://www.lagou.com/guangzhou/">广州招聘</a> 
+        <a href="https://www.lagou.com/shenzhen/">深圳找工作</a> 
+        <a href="https://www.lagou.com/shenzhen/">深圳招聘</a> 
+        <a href="https://www.lagou.com/chengdu/">成都找工作</a> 
+        <a href="https://www.lagou.com/chengdu/">成都招聘</a> 
+       </dd> 
+      </dl> 
+     </div> 
+     <!-- 公司详情页、职位详情页 推荐--> 
+    </div> 
+   </div> 
+   <div id="container_right"> 
+    <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/basic-info/main.less"
--->
-
-<div class="item_container" id="basic_container">
-    <div class="item_ltitle">公司基本信息</div>
-    <div class="item_content">
-        <ul>
-            <li>
-                <i class="type"></i>
-                <span>企业服务</span>
-            </li>
-            <li>
-                <i class="process"></i>
-                <span>A轮</span>
-            </li>
-            <li>
-                <i class="number"></i>
-                <span>50-150人</span>
-            </li>
-                        <li>
-                <i class="address"></i>
-                <span>北京</span>
-            </li>
-                    </ul>
-    </div>
-</div>
-
-
-            <!--
+--> 
+    <div class="item_container" id="basic_container"> 
+     <div class="item_ltitle">
+      公司基本信息
+     </div> 
+     <div class="item_content"> 
+      <ul> 
+       <li> <i class="type"></i> <span><?=$Detail['trade']?></span> </li> 
+       <li> <i class="process"></i> <span>A轮</span> </li> 
+       <li> <i class="number"></i> <span><?=$Detail['scale']?></span> </li> 
+       <li> <i class="address"></i> <span><?=$Detail['city']?></span> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/managers/main.less"
--->
-
-<div class="company_managers item_container" id="company_managers">
-    <div class="item_ltitle">管理团队</div>
-    <div class="company_mangers_item">
-        <div class="managelist_wrap">
-            <ul class="manager_list" style="width: 500px; left: 0px;">
-                                        
-                            
-                        <li class="item_has rotate_item  rotate_active " style="float: left;">
-                    <img class="item_manger_photo_show" src="gongsi/Cgp3O1e0HRCAeZQ4AAAqEIEVG84699.jpg" alt="创始人头像" height="118" width="118">
-                    <p class="item_manager_name">
-                        <span>袁兆江</span>
-                                            </p>
-                    <p class="item_manager_title">Co-founder</p>
-                                            <div class="item_manager_content mCustomScrollbar _mCS_3"><div class="mCustomScrollBox mCS-dark-2" id="mCSB_3" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;"><p>毕业于武汉大学。原Discuz!团队产品运营副总裁7年。2013年创办伙伴网</p></div><div class="mCSB_scrollTools" style="position: absolute; display: none;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position:relative;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
-                                                        </li><li class="item_has rotate_item " style="float: left;">
-                    <img class="item_manger_photo_show" src="gongsi/Cgp3O1e0HTKAc_4bAABYfmZMOc0755.jpg" alt="创始人头像" height="118" width="118">
-                    <p class="item_manager_name">
-                        <span>戴志康</span>
-                                            </p>
-                    <p class="item_manager_title">Co-founder/CEO</p>
-                                            <div class="item_manager_content mCustomScrollbar _mCS_4"><div class="mCustomScrollBox mCS-dark-2" id="mCSB_4" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;"><p>原Discuz!创始人</p></div><div class="mCSB_scrollTools" style="position: absolute; display: none;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position:relative;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
-                                                        </li></ul>
-        </div>
-                    <div class="managers-switch-line">
-                <div class="managers-switch-wrapper no_select">
-                    <div class="managers-switch switch-disable managers-previous"></div>
-                    <div class="managers-switch switch-enable managers-next"></div>
-                </div>
+--> 
+    <div class="company_managers item_container" id="company_managers"> 
+     <div class="item_ltitle">
+      管理团队
+     </div> 
+     <div class="company_mangers_item"> 
+      <div class="managelist_wrap"> 
+       <ul class="manager_list" style="width: 500px; left: 0px;"> 
+      <?php foreach($leader as $val){?>
+        <li class="item_has rotate_item  rotate_active " style="float: left;"> <img class="item_manger_photo_show" src="<?=$val['photo']?>" alt="创始人头像" height="118" width="118" /> <p class="item_manager_name"> <span><?=$val['name']?></span> </p> <p class="item_manager_title"><?=$val['position']?></p> 
+         <div class="item_manager_content mCustomScrollbar _mCS_3">
+          <div class="mCustomScrollBox mCS-dark-2" id="mCSB_3" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+           <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
+            <p><?=$val['remark']?></p>
+           </div>
+           <div class="mCSB_scrollTools" style="position: absolute; display: none;">
+            <div class="mCSB_draggerContainer">
+             <div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;">
+              <div class="mCSB_dragger_bar" style="position:relative;"></div>
+             </div>
+             <div class="mCSB_draggerRail"></div>
             </div>
-            </div>
-</div>
-
-            <!--
+           </div>
+          </div>
+         </div> 
+        </li>
+        <?php }?>
+       </ul> 
+      </div> 
+      <div class="managers-switch-line"> 
+       <div class="managers-switch-wrapper no_select"> 
+        <div class="managers-switch switch-disable managers-previous"></div> 
+        <div class="managers-switch switch-enable managers-next"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/tags/main.less"
--->
-
-<div class="tags_container item_container" id="tags_container">
-    <div class="item_ltitle">公司标签</div>
-    <div class="tags_warp">
-        <div class="item_content">
-            <ul class="item_con_ul clearfix">
-                                <li class="con_ul_li">
-                    Geek
-                </li>
-                                <li class="con_ul_li">
-                    超爽协作
-                </li>
-                                <li class="con_ul_li">
-                    有愿景有落地
-                </li>
-                                <li class="con_ul_li">
-                    六险一金
-                </li>
-                                <li class="con_ul_li">
-                    领导接地气
-                </li>
-                            </ul>
-        </div>
+--> 
+    <div class="tags_container item_container" id="tags_container"> 
+     <div class="item_ltitle">
+      公司标签
+     </div> 
+     <div class="tags_warp"> 
+      <div class="item_content"> 
+       <ul class="item_con_ul clearfix"> 
+      <?php $arr=explode(",",$Detail['labels']); foreach($arr as $val){?>
+        <li class="con_ul_li"> <?=$val?> </li> 
+      <?php }?>
+       </ul> 
+      </div> 
+     </div> 
     </div>
-</div>
-
-
-            <!--
+     
+    <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/navigator/main.less"
--->
-
-<div class="navigator_container" id="navigator_container">
-        <div class="nav_item nav_selected" data-name="#company_products">
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon"></em></div>
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon_up"></em></div>
-        <span class="nav_item_text">公司产品</span>
-    </div>
-        <div class="nav_item" data-name="#company_intro">
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon"></em></div>
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon_up"></em></div>
-        <span class="nav_item_text">公司介绍</span>
-    </div>
-        <div class="nav_item" data-name="#history_container">
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon"></em></div>
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon_up"></em></div>
-        <span class="nav_item_text">发展历程</span>
-    </div>
-        <div class="nav_item" data-name="#interview_container">
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon"></em></div>
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon_up"></em></div>
-        <span class="nav_item_text">面试评价</span>
-    </div>
-    <div class="nav_item nav_item_last" data-name="#location_container">
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon"></em></div>
-        <div class="nav_item_icon_wrap"><em class="nav_item_icon_up"></em></div>
-        <span class="nav_item_text">公司位置</span>
-    </div>
-    <!-- 为了挡住顶部和底部的灰线 -->
-    <span class="nav_vline nav_vline_top"></span>
-    <span class="nav_vline nav_vline_bottom"></span>
-</div>
-        </div>
-            </div>
-
-    <a id="backtop" title="回到顶部" rel="nofollow" style="display: none; background-position-x: 0px;"></a>
-<!-- feedback -->
-<!--
+--> 
+    <div class="navigator_container" id="navigator_container"> 
+     <div class="nav_item nav_selected" data-name="#company_products"> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon"></em>
+      </div> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon_up"></em>
+      </div> 
+      <span class="nav_item_text">公司产品</span> 
+     </div> 
+     <div class="nav_item" data-name="#company_intro"> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon"></em>
+      </div> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon_up"></em>
+      </div> 
+      <span class="nav_item_text">公司介绍</span> 
+     </div> 
+     <div class="nav_item" data-name="#history_container"> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon"></em>
+      </div> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon_up"></em>
+      </div> 
+      <span class="nav_item_text">发展历程</span> 
+     </div> 
+     <div class="nav_item" data-name="#interview_container"> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon"></em>
+      </div> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon_up"></em>
+      </div> 
+      <span class="nav_item_text">面试评价</span> 
+     </div> 
+     <div class="nav_item nav_item_last" data-name="#location_container"> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon"></em>
+      </div> 
+      <div class="nav_item_icon_wrap">
+       <em class="nav_item_icon_up"></em>
+      </div> 
+      <span class="nav_item_text">公司位置</span> 
+     </div> 
+     <!-- 为了挡住顶部和底部的灰线 --> 
+     <span class="nav_vline nav_vline_top"></span> 
+     <span class="nav_vline nav_vline_bottom"></span> 
+    </div> 
+   </div> 
+  </div> 
+  <a id="backtop" title="回到顶部" rel="nofollow" style="display: none; background-position-x: 0px;"></a> 
+  <!-- feedback --> 
+  <!--
     @require "common/widgets/footer_c/modules/feedback/feedback.less"
--->
-
-<div id="product-fk">
-	<div id="feedback-icon">
-		<div class="fb-icon"></div>
-		<span>我要反馈</span>
-	</div>
-</div>
-
-<div id="footer">
-    <div class="wrapper">
-        <i class="footer_lagou_icon"></i>
-        <div class="inner_wrapper">
-            <a class="footer_app" href="https://www.lagou.com/app/download.html" rel="nofollow">拉勾APP<span>new</span><img data-delay-src="https://www.lgstatic.com/i/image/M00/8A/35/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" src="gongsi/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" style="display: none; opacity: 1;" height="256" width="256"></a>
-            <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
-            <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<img data-delay-src="http://www.lagou.com/image2/M00/18/45/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" src="gongsi/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" style="display: none;" height="242" width="242"></a>
-            <a href="https://activity.lagou.com/topic/whatisnew.html" target="_blank" rel="nofollow">版本更新</a>
-            <a href="https://www.lagou.com/qa.html?t=1" target="_blank" rel="nofollow">帮助中心</a>
-            <a href="https://www.lagou.com/about.html" target="_blank" rel="nofollow">联系我们</a>
-            <a href="https://activity.lagou.com/activity/dist/business/index.html" target="_blank" rel="nofollow">招聘解决方案</a>
-            <span class="tel">服务热线：<em>4006-2828-35 (9:00 -18:00)</em></span>
-        </div>
-        <div class="copyright ">
-            <span><em>©</em>2017 Lagou </span>
-            <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" rel="nofollow">京ICP备14023790号-2</a>
-            <span>京公网安备11010802017116号</span>
-        </div>
-    </div>
-</div>
-<script type="text/javascript" src="gongsi/vendor_e3ddeee.js"></script>
-<script type="text/javascript">/*resourcemap*/
+--> 
+  <div id="product-fk"> 
+   <div id="feedback-icon"> 
+    <div class="fb-icon"></div> 
+    <span>我要反馈</span> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div class="wrapper"> 
+    <i class="footer_lagou_icon"></i> 
+    <div class="inner_wrapper"> 
+     <a class="footer_app" href="https://www.lagou.com/app/download.html" rel="nofollow">拉勾APP<span>new</span><img data-delay-src="https://www.lgstatic.com/i/image/M00/8A/35/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" src="gongsi/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" style="display: none; opacity: 1;" height="256" width="256" /></a> 
+     <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a> 
+     <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<img data-delay-src="http://www.lagou.com/image2/M00/18/45/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" src="gongsi/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" style="display: none;" height="242" width="242" /></a> 
+     <a href="https://activity.lagou.com/topic/whatisnew.html" target="_blank" rel="nofollow">版本更新</a> 
+     <a href="https://www.lagou.com/qa.html?t=1" target="_blank" rel="nofollow">帮助中心</a> 
+     <a href="https://www.lagou.com/about.html" target="_blank" rel="nofollow">联系我们</a> 
+     <a href="https://activity.lagou.com/activity/dist/business/index.html" target="_blank" rel="nofollow">招聘解决方案</a> 
+     <span class="tel">服务热线：<em>4006-2828-35 (9:00 -18:00)</em></span> 
+    </div> 
+    <div class="copyright "> 
+     <span><em>&copy;</em>2017 Lagou </span> 
+     <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" rel="nofollow">京ICP备14023790号-2</a> 
+     <span>京公网安备11010802017116号</span> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="gongsi/vendor_e3ddeee.js"></script> 
+  <script type="text/javascript">/*resourcemap*/
 require.config({paths:{
   "common/components/artTemplate/template-helper": "//www.lgstatic.com/www/static/common/components/artTemplate/template-helper_4b2f5f0",
   "common/widgets/common/msgPopup": "//www.lgstatic.com/www/static/common/widgets/common/msgPopup_a39f2b6"
-}});</script>
-<script type="text/javascript" src="gongsi/main.js"></script>
-<script type="text/javascript" src="gongsi/widgets_b4a49f4.js"></script>
-<script type="text/javascript" src="gongsi/userinfo_7f282e9.js"></script>
-<script type="text/javascript" src="gongsi/layout_89bb557.js"></script>
-<script type="text/javascript" src="gongsi/main_002.js"></script>
-<script type="text/javascript">
+}});</script> 
+  <script type="text/javascript" src="gongsi/main.js"></script> 
+  <script type="text/javascript" src="gongsi/widgets_b4a49f4.js"></script> 
+  <script type="text/javascript" src="gongsi/userinfo_7f282e9.js"></script> 
+  <script type="text/javascript" src="gongsi/layout_89bb557.js"></script> 
+  <script type="text/javascript" src="gongsi/main_002.js"></script> 
+  <script type="text/javascript">
         window.global = window.global || {};
         global.companyInfo = JSON.parse(document.getElementById('companyInfoData').innerHTML);
         global.interviewExperiences = JSON.parse(document.getElementById('interviewExperiencesData').innerHTML);
@@ -1680,10 +1521,10 @@ require.config({paths:{
     });
 
 
-	    require(['common/widgets/header_c/layout/main']);
-	
+        require(['common/widgets/header_c/layout/main']);
+    
 
-	require(['company-c/modules/event/activity1230/main']);
+    require(['company-c/modules/event/activity1230/main']);
 
 
     require(['company-c/modules/top-info/main']);
@@ -1722,7 +1563,7 @@ require.config({paths:{
     require(['common/widgets/recommend/main']);
 
 
-	require(['common/widgets/footer_c/modules/feedback/feedback']);
+    require(['common/widgets/footer_c/modules/feedback/feedback']);
 
 
     require(['common/widgets/footer_c/layout/main']);
@@ -1773,8 +1614,41 @@ require.config({paths:{
             }
         });
     });
-</script><script src="gongsi/maps"></script>
-<script type="text/javascript" src="gongsi/lg-analytics_da6a007.js"></script>
-<script type="text/javascript" src="gongsi/oss.js"></script>
-
-<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><iframe id="webchat7moor" src="gongsi/main_22faef3.htm" style="margin: 0px; padding: 0px; width: 320px; height: 538px; border-width: 0px; border-radius: 3px; transition: height 0.5s ease-out 0s; z-index: -99999; bottom: 0px; right: 0px; position: fixed; display: none;"></iframe><script charset="utf-8" src="gongsi/main"></script><div class="amap-sug-result" style="visibility: hidden; left: -1px; top: 3909px; min-width: 1351px;"></div></body></html>
+</script>
+  <script src="gongsi/maps"></script> 
+  <script type="text/javascript" src="gongsi/lg-analytics_da6a007.js"></script> 
+  <script type="text/javascript" src="gongsi/oss.js"></script> 
+  <div id="cboxOverlay" style="display: none;"></div>
+  <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+   <div id="cboxWrapper">
+    <div>
+     <div id="cboxTopLeft" style="float: left;"></div>
+     <div id="cboxTopCenter" style="float: left;"></div>
+     <div id="cboxTopRight" style="float: left;"></div>
+    </div>
+    <div style="clear: left;">
+     <div id="cboxMiddleLeft" style="float: left;"></div>
+     <div id="cboxContent" style="float: left;">
+      <div id="cboxTitle" style="float: left;"></div>
+      <div id="cboxCurrent" style="float: left;"></div>
+      <button type="button" id="cboxPrevious"></button>
+      <button type="button" id="cboxNext"></button>
+      <button id="cboxSlideshow"></button>
+      <div id="cboxLoadingOverlay" style="float: left;"></div>
+      <div id="cboxLoadingGraphic" style="float: left;"></div>
+     </div>
+     <div id="cboxMiddleRight" style="float: left;"></div>
+    </div>
+    <div style="clear: left;">
+     <div id="cboxBottomLeft" style="float: left;"></div>
+     <div id="cboxBottomCenter" style="float: left;"></div>
+     <div id="cboxBottomRight" style="float: left;"></div>
+    </div>
+   </div>
+   <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+  </div>
+  <iframe id="webchat7moor" src="gongsi/main_22faef3.htm" style="margin: 0px; padding: 0px; width: 320px; height: 538px; border-width: 0px; border-radius: 3px; transition: height 0.5s ease-out 0s; z-index: -99999; bottom: 0px; right: 0px; position: fixed; display: none;"></iframe>
+  <script charset="utf-8" src="gongsi/main"></script>
+  <div class="amap-sug-result" style="visibility: hidden; left: -1px; top: 3909px; min-width: 1351px;"></div>
+ </body>
+</html>
