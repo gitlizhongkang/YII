@@ -86,7 +86,6 @@ console.log(1);
             <dd><a href="<?=Url::to(['category/account'])?>">我的账户</a></dd>
             <dd><a href="<?=Url::to(['category/indent'])?>">充值订单</a></dd>
             <dd><a href="<?=Url::to(['category/advert'])?>">增值服务</a></dd>
-            <dd><a href="<?=Url::to(['job/job'])?>">企业模板</a></dd>
         </dl>
     	<div class="subscribe_side mt20">
 			<div class="f14">想收到更多更好的简历？</div>
