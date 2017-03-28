@@ -3931,3 +3931,548 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1490620393.5497
     'REQUEST_TIME' => 1490620393
 ]
+2017-03-28 06:12:00 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=192....', 'root', 'kaichela', NULL)
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(792): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(871): yii\db\Command->getRawSql()
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#11 C:\Users\Administrator\Desktop\advanced\backend\models\Company.php(158): yii\db\ActiveQuery->one()
+#12 C:\Users\Administrator\Desktop\advanced\frontend\controllers\CompanyController.php(309): backend\models\Company->getOne1('<span class="st...')
+#13 [internal function]: frontend\controllers\CompanyController->actionGongsi()
+#14 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#15 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(792): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(871): yii\db\Command->getRawSql()
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 C:\Users\Administrator\Desktop\advanced\backend\models\Company.php(158): yii\db\ActiveQuery->one()
+#10 C:\Users\Administrator\Desktop\advanced\frontend\controllers\CompanyController.php(309): backend\models\Company->getOne1('<span class="st...')
+#11 [internal function]: frontend\controllers\CompanyController->actionGongsi()
+#12 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#13 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#14 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#15 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#16 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#18 {main}
+Additional Information:
+
+2017-03-28 06:11:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'company/gongsi'
+    'id' => '24'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.2026781352.1489394098'
+    '_pk_ysp_id_' => [
+        'object Object' => '6cec1630a0993518.1490670266.1.1490670266.1490670266.'
+    ]
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490408416,1490524761,1490581803,1490669999'
+    'advanced-frontend' => '547el4sku2vkccfnon6gjam754'
+    '_csrf-frontend' => '3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf\";}'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490670269'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\windowsApps;D:\\phpStudy\\MySQL\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\phpStudy\\php\\php-5.6.27-nts'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '392'
+    'SCRIPT_NAME' => '/web/index.php'
+    'REQUEST_URI' => '/web/index.php?r=company%2Fgongsi&id=24'
+    'QUERY_STRING' => 'r=company%2Fgongsi&id=24'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10002'
+    'SCRIPT_FILENAME' => 'C:/Users/Administrator/Desktop/advanced/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.frontend.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => '_ga=GA1.2.2026781352.1489394098; _pk_ysp_id.[object Object].6190=6cec1630a0993518.1490670266.1.1490670266.1490670266.; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490408416,1490524761,1490581803,1490669999; advanced-frontend=547el4sku2vkccfnon6gjam754; _csrf-frontend=3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf%22%3B%7D; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490670269'
+    'HTTP_REFERER' => 'http://www.frontend.com/web/index.php?r=list%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_HOST' => 'www.frontend.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490681499.0398
+    'REQUEST_TIME' => 1490681499
+]
+2017-03-28 06:12:03 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=192....', 'root', 'kaichela', NULL)
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(792): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(871): yii\db\Command->getRawSql()
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#11 C:\Users\Administrator\Desktop\advanced\backend\models\Company.php(158): yii\db\ActiveQuery->one()
+#12 C:\Users\Administrator\Desktop\advanced\frontend\controllers\CompanyController.php(324): backend\models\Company->getOne1('<span class="st...')
+#13 [internal function]: frontend\controllers\CompanyController->actionGongsi1()
+#14 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#15 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(792): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(871): yii\db\Command->getRawSql()
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 C:\Users\Administrator\Desktop\advanced\backend\models\Company.php(158): yii\db\ActiveQuery->one()
+#10 C:\Users\Administrator\Desktop\advanced\frontend\controllers\CompanyController.php(324): backend\models\Company->getOne1('<span class="st...')
+#11 [internal function]: frontend\controllers\CompanyController->actionGongsi1()
+#12 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#13 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#14 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#15 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#16 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#18 {main}
+Additional Information:
+
+2017-03-28 06:11:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'company/gongsi1'
+    'id' => '24'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.2026781352.1489394098'
+    '_pk_ysp_id_' => [
+        'object Object' => '6cec1630a0993518.1490670266.1.1490670266.1490670266.'
+    ]
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490408416,1490524761,1490581803,1490669999'
+    'advanced-frontend' => '547el4sku2vkccfnon6gjam754'
+    '_csrf-frontend' => '3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf\";}'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490670269'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\windowsApps;D:\\phpStudy\\MySQL\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\phpStudy\\php\\php-5.6.27-nts'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1888'
+    'SCRIPT_NAME' => '/web/index.php'
+    'REQUEST_URI' => '/web/index.php?r=company%2Fgongsi1&id=24'
+    'QUERY_STRING' => 'r=company%2Fgongsi1&id=24'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10005'
+    'SCRIPT_FILENAME' => 'C:/Users/Administrator/Desktop/advanced/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.frontend.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => '_ga=GA1.2.2026781352.1489394098; _pk_ysp_id.[object Object].6190=6cec1630a0993518.1490670266.1.1490670266.1490670266.; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490408416,1490524761,1490581803,1490669999; advanced-frontend=547el4sku2vkccfnon6gjam754; _csrf-frontend=3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf%22%3B%7D; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490670269'
+    'HTTP_REFERER' => 'http://www.frontend.com/web/index.php?r=company%2Fgongsi&id=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_HOST' => 'www.frontend.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490681502.734
+    'REQUEST_TIME' => 1490681502
+]
+2017-03-28 06:12:08 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=192....', 'root', 'kaichela', NULL)
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(792): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(871): yii\db\Command->getRawSql()
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#11 C:\Users\Administrator\Desktop\advanced\backend\models\Company.php(158): yii\db\ActiveQuery->one()
+#12 C:\Users\Administrator\Desktop\advanced\frontend\controllers\CompanyController.php(324): backend\models\Company->getOne1('<span class="st...')
+#13 [internal function]: frontend\controllers\CompanyController->actionGongsi1()
+#14 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#15 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(792): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(871): yii\db\Command->getRawSql()
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 C:\Users\Administrator\Desktop\advanced\backend\models\Company.php(158): yii\db\ActiveQuery->one()
+#10 C:\Users\Administrator\Desktop\advanced\frontend\controllers\CompanyController.php(324): backend\models\Company->getOne1('<span class="st...')
+#11 [internal function]: frontend\controllers\CompanyController->actionGongsi1()
+#12 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#13 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#14 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#15 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#16 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#18 {main}
+Additional Information:
+
+2017-03-28 06:11:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'company/gongsi1'
+    'id' => '24'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.2026781352.1489394098'
+    '_pk_ysp_id_' => [
+        'object Object' => '6cec1630a0993518.1490670266.1.1490670266.1490670266.'
+    ]
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490408416,1490524761,1490581803,1490669999'
+    'advanced-frontend' => '547el4sku2vkccfnon6gjam754'
+    '_csrf-frontend' => '3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf\";}'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490670269'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\windowsApps;D:\\phpStudy\\MySQL\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\phpStudy\\php\\php-5.6.27-nts'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1820'
+    'SCRIPT_NAME' => '/web/index.php'
+    'REQUEST_URI' => '/web/index.php?r=company%2Fgongsi1&id=24'
+    'QUERY_STRING' => 'r=company%2Fgongsi1&id=24'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '10008'
+    'SCRIPT_FILENAME' => 'C:/Users/Administrator/Desktop/advanced/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.frontend.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => '_ga=GA1.2.2026781352.1489394098; _pk_ysp_id.[object Object].6190=6cec1630a0993518.1490670266.1.1490670266.1490670266.; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490408416,1490524761,1490581803,1490669999; advanced-frontend=547el4sku2vkccfnon6gjam754; _csrf-frontend=3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf%22%3B%7D; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490670269'
+    'HTTP_REFERER' => 'http://www.frontend.com/web/index.php?r=company%2Fgongsi&id=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_HOST' => 'www.frontend.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490681507.0293
+    'REQUEST_TIME' => 1490681507
+]
+2017-03-28 07:46:42 [127.0.0.1][-][547el4sku2vkccfnon6gjam754][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=192....', 'root', 'kaichela', NULL)
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 C:\Users\Administrator\Desktop\advanced\frontend\controllers\ResumeController.php(60): yii\db\ActiveQuery->one()
+#10 [internal function]: frontend\controllers\ResumeController->actionCreate()
+#11 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#12 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#13 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#14 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#15 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#7 C:\Users\Administrator\Desktop\advanced\frontend\controllers\ResumeController.php(60): yii\db\ActiveQuery->one()
+#8 [internal function]: frontend\controllers\ResumeController->actionCreate()
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#11 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#12 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#13 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2017-03-28 07:46:21 [127.0.0.1][-][547el4sku2vkccfnon6gjam754][info][application] $_GET = [
+    'r' => 'resume/create'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.2026781352.1489394098'
+    '_pk_ysp_id_' => [
+        'object Object' => '6cec1630a0993518.1490670266.1.1490670266.1490670266.'
+    ]
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490408416,1490524761,1490581803,1490669999'
+    'advanced-frontend' => '547el4sku2vkccfnon6gjam754'
+    '_csrf-frontend' => '3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf\";}'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490670269'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user' => [
+        'uid' => 49
+        'type' => 0
+        'email' => '1179524828@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\windowsApps;D:\\phpStudy\\MySQL\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\phpStudy\\php\\php-5.6.27-nts'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1920'
+    'SCRIPT_NAME' => '/web/index.php'
+    'REQUEST_URI' => '/web/index.php?r=resume%2Fcreate'
+    'QUERY_STRING' => 'r=resume%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '13730'
+    'SCRIPT_FILENAME' => 'C:/Users/Administrator/Desktop/advanced/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.frontend.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => '_ga=GA1.2.2026781352.1489394098; _pk_ysp_id.[object Object].6190=6cec1630a0993518.1490670266.1.1490670266.1490670266.; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490408416,1490524761,1490581803,1490669999; advanced-frontend=547el4sku2vkccfnon6gjam754; _csrf-frontend=3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf%22%3B%7D; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490670269'
+    'HTTP_REFERER' => 'http://www.frontend.com/web/index.php?r=resume%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_HOST' => 'www.frontend.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490687181.4678
+    'REQUEST_TIME' => 1490687181
+]
+2017-03-28 07:47:08 [127.0.0.1][-][547el4sku2vkccfnon6gjam754][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=192....', 'root', 'kaichela', NULL)
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#9 C:\Users\Administrator\Desktop\advanced\frontend\controllers\ResumeController.php(38): yii\db\ActiveQuery->all()
+#10 [internal function]: frontend\controllers\ResumeController->actionIndex()
+#11 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#12 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#13 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#14 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#15 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#4 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#6 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#7 C:\Users\Administrator\Desktop\advanced\frontend\controllers\ResumeController.php(38): yii\db\ActiveQuery->all()
+#8 [internal function]: frontend\controllers\ResumeController->actionIndex()
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#11 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#12 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#13 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2017-03-28 07:46:47 [127.0.0.1][-][547el4sku2vkccfnon6gjam754][info][application] $_GET = [
+    'r' => 'resume/index'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.2026781352.1489394098'
+    '_pk_ysp_id_' => [
+        'object Object' => '6cec1630a0993518.1490670266.1.1490670266.1490670266.'
+    ]
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490408416,1490524761,1490581803,1490669999'
+    'advanced-frontend' => '547el4sku2vkccfnon6gjam754'
+    '_csrf-frontend' => '3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf\";}'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490670269'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user' => [
+        'uid' => 49
+        'type' => 0
+        'email' => '1179524828@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\windowsApps;D:\\phpStudy\\MySQL\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\phpStudy\\php\\php-5.6.27-nts'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1920'
+    'SCRIPT_NAME' => '/web/index.php'
+    'REQUEST_URI' => '/web/index.php?r=resume%2Findex'
+    'QUERY_STRING' => 'r=resume%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '13736'
+    'SCRIPT_FILENAME' => 'C:/Users/Administrator/Desktop/advanced/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.frontend.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => '_ga=GA1.2.2026781352.1489394098; _pk_ysp_id.[object Object].6190=6cec1630a0993518.1490670266.1.1490670266.1490670266.; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490408416,1490524761,1490581803,1490669999; advanced-frontend=547el4sku2vkccfnon6gjam754; _csrf-frontend=3c1c1cb3c9dcacfa8703a1f4429aa72365c24f2f2a1034e87be7b83cd4485866a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jz739ZCiu8e4_TQueaxuGXpNlWRnfuQf%22%3B%7D; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490670269'
+    'HTTP_REFERER' => 'http://www.frontend.com/web/index.php?r=resume%2Fuse'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_HOST' => 'www.frontend.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490687207.0583
+    'REQUEST_TIME' => 1490687207
+]

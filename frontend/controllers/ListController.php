@@ -10,6 +10,7 @@ use common\models\Category;
 
 class ListController extends Controller
 {
+	//前台jobs页面
 	public $layout='/header';
 	public function actionIndex(){	
 		$JoBModel=new jobs;
