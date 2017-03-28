@@ -64,8 +64,10 @@ class UserController extends Controller
 
 
         //接值入库
-        if($model->load(Yii::$app->request->post()) && $model->save())
+        if(Yii::$app->request->isPost)
         {
+            $model->load(Yii::$app->request->post());
+            $model->save();
             return $this->redirect(['index']);
         }
 
@@ -313,13 +315,18 @@ class UserController extends Controller
             ->where(['user_id' => $this->userInfo['uid']])
             ->one();
 
-        //查询收藏的职位信息
-        $jobs = Jobs::find()
-            ->select('lg_jobs.id,lg_jobs.jobs_name,lg_jobs.companyname,lg_jobs.refreshtime,lg_jobs.click,lg_jobs.nature_cn,lg_jobs.amount,lg_jobs.deadline,lg_jobs.require,lg_company.logo')
-            ->join('INNER JOIN','lg_company','company_id=lg_company.id')
-            ->where("lg_jobs.id in({$collect->collect})")
-            ->asArray()
-            ->all();
+        $jobs = [];
+        if(!empty($collect->collect))
+        {
+            $id = $collect->collect;
+            //查询收藏的职位信息
+            $jobs = Jobs::find()
+                ->select('lg_jobs.id,lg_jobs.jobs_name,lg_jobs.companyname,lg_jobs.refreshtime,lg_jobs.click,lg_jobs.nature_cn,lg_jobs.amount,lg_jobs.deadline,lg_jobs.require,lg_company.logo')
+                ->join('INNER JOIN','lg_company','company_id=lg_company.id')
+                ->where("lg_jobs.id in($id)")
+                ->asArray()
+                ->all();
+        }
 
         return $this->render('collect',['jobs' => $jobs]);
     }
@@ -337,18 +344,20 @@ class UserController extends Controller
             ->select('order')
             ->where(['user_id' => $this->userInfo['uid']])
             ->one();
-        $id = explode(',',$order->order);
 
+        $jobs = [];
+        if(!empty($order->order))
+        {
+            $id = explode(',',$order->order);
+            //查询收藏职位分类的职位信息
+            $jobs = Jobs::find()
+                ->select('lg_jobs.id,lg_jobs.jobs_name,lg_jobs.companyname,lg_jobs.refreshtime,lg_jobs.click,lg_jobs.nature_cn,lg_jobs.amount,lg_jobs.deadline,lg_jobs.require,lg_company.logo')
+                ->join('INNER JOIN','lg_company','company_id=lg_company.id')
+                ->where(['lg_jobs.category' => $id, 'lg_jobs.recommend' => 1])  //条件查询推广推荐 赢利点之一
+                ->asArray()
+                ->all();
+        }
 
-        //查询收藏职位分类的职位信息
-        $jobs = Jobs::find()
-            ->select('lg_jobs.id,lg_jobs.jobs_name,lg_jobs.companyname,lg_jobs.refreshtime,lg_jobs.click,lg_jobs.nature_cn,lg_jobs.amount,lg_jobs.deadline,lg_jobs.require,lg_company.logo')
-            ->join('INNER JOIN','lg_company','company_id=lg_company.id')
-            ->where(['lg_jobs.category' => $id, 'lg_jobs.recommend' => 1])  //条件查询推广推荐 赢利点之一
-            ->asArray()
-            ->all();
-
-        //print_r($jobs);die;
         return $this->render('order',['jobs' => $jobs]);
     }
 

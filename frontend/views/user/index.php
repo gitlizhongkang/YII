@@ -48,7 +48,6 @@ use yii\widgets\ActiveForm;
                     'id' => 'jobForm',
                     'options' => [
                         'enctype' => 'multipart/form-data',
-                        'class' => 'a'
                     ],
                 ]) ?>
                 <table class="btm">
