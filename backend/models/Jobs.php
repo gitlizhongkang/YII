@@ -186,4 +186,10 @@ class Jobs extends \yii\db\ActiveRecord
     public function getcount($where){
         return  Jobs::find()->where($where)->count();
     }
+    //修改职位
+    public function updateJob($id,$arr){
+        $res=$this->findOne($id);
+        $res->setAttributes($arr);
+        return $res->save();
+    }
 }
