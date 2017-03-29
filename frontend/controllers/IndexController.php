@@ -48,6 +48,17 @@ class IndexController extends Controller
         $HotsModel=new Hots;
         $data['hots']=$HotsModel->GetRankList();
          //热搜
+        if(!empty($cache->get('num'))){
+            $data['num']=$cache->get('num');
+        }else{
+            $model=new Company;
+            $date['count_companys']=$model->find()->select('count(id) as num')->asArray()->one();
+            $date['count_jobs']=$jobs->find()->select('count(id) as num')->asArray()->one();
+            // 值$value 在缓存中最多保留30秒
+            $cache->set('num', $date,3600);//存入缓存
+            $data['num']=$date; 
+            //查询职位分类
+        }
 		return $this->render('index.html',$data);
 	}
 	public function actionCompanyList()
@@ -77,14 +88,6 @@ class IndexController extends Controller
         $data['trade_id']=$trade_id;
         return $this->render("companylist.html",$data);
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 867cea59da488c59e3a382f9838aa70a9b68c047
->>>>>>> df1368ce45fe425f304a8656d86f356dc3c8a66f
 	//职位分类重新排序
 	public function get_job($job)
     {
@@ -112,11 +115,4 @@ class IndexController extends Controller
  
         return $arr;
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 867cea59da488c59e3a382f9838aa70a9b68c047
->>>>>>> df1368ce45fe425f304a8656d86f356dc3c8a66f
 }

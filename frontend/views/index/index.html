@@ -335,6 +335,26 @@ if(count($middle)>=($i+1)){
 
 <!-- <script src="style/js/wb.js" type="text/javascript" charset="utf-8"></script>
  -->
- 
+ <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+ <div id="loginToolBar" class="loginToolBar" style="bottom: 0px;">
+<div>
+<em></em>
+<img src="//www.lgstatic.com/www/static/common/widgets/login_toolbar/img/footbar_logo_cccc78d.png" height="45" width="138">
+<span class="companycount">
+<?=$num['count_companys']['num']?>
+</span>
+<span class="positioncount">
+<?=$num['count_jobs']['num']?>
+</span>
+<a class="bar_login passport_login_pop" href="<?=url::to(['register/login'])?>">
+<i></i>
+</a>
+<div class="right">
+<a id="bar_register" class="bar_register" rel="nofollow" href="<?=Url::to(['register/index'])?>" target="_blank" data-lg-tj-id="4t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+<i></i>
+</a>
+</div>
+</div>
+</div>
 </body>
 </html>	
