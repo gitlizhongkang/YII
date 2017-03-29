@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aca683e5-4551-4407-8cc1-6e595412f2cf" name="默认的" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/uploads/a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/uploads/b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/uploads/c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/HTML/4.8.0,b6889960956c877d241a7e8f87e613efc7a3611d,1.ser" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/URI/4.8.0,3478238e680361cd87bf880f5b3cc50a1e7abc6c,1.ser" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi/2017-03-27_141834.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi/Cgo8PFVdgTuAciNxAABbVCvhZtY294.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1is_JGAIjC3AAi-pMj38MY836.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi/CgqKkVir7eeAYQAxAAA6vLQYaVg768.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/file-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/image-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/file-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/image-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/service/images/lx.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/style/images/about.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/style/images/about1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/style/images/about3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/style/images/no.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/cache/lu/lun.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db502b6e317.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db505ab1fdf.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5094ad2fb.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db509513238.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db541ab8ce5.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db542e0cf4d.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5430177ba.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db54408b6f8.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db54454e778.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db54587a6f9.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db547d25be2.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db54a1c2811.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5742213d1.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db57446a44c.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db575a9a6e2.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5772d1b34.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5773ebd6b.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5787d3755.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db578907dc8.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db58327d37e.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db583a17847.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db587d9ad4e.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db589926075.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db589a6314c.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db58ad68794.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db58ad93336.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db58d42fe2d.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db58d62fea0.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5902375d6.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db59440968a.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db596a828d4.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db596c00ef0.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5982c6461.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db598300474.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db598a32ac0.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db59e7045c4.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db59e85ace2.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5a0306376.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5a0333df9.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5a84b03d9.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5a8a55412.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5aa99c7e0.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5ad59412b.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5aef49b99.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5af079d65.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5b09c69b5.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5b09ef616.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5b4982a62.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5b51b25ee.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/58db5b572f197.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/index.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170321-141043-0690-9989.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170321-141243-6548-5929.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-022614-3848-3765.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-030251-6255-8037.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-031015-9839-9122.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-031313-2470-4366.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-034425-8541-4831.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-034806-7218-3524.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-035906-4155-9731.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-043837-1371-1773.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-044014-3877-9282.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-050907-5858-9805.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170322-051114-0170-8874.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170324-141139-3813-1517.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/debug/mail/20170328-033643-2711-0576.eml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/gii-2.0.11/yii-gii-generators-model-Generator.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/logs/app.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/company/gongsi1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/index/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/job/preview.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/user/collect.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/user/order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/7moorSDKInit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/a.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/analytics.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/hm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/jquery-1.7.2_aa7baff.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/jquery.mCustomScrollbar_11266d6.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/jquery.mCustomScrollbar_4371ac5.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/jquery.mousewheel_164aa7c.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/jquery.validate.min_f66db7c.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/json2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/lagou_5427c0e.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/layout_19d0413.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/layout_89bb557.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/lg-analytics_da6a007.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/loginpop_f86913d.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/mCustomScrollbar_ac2fb8b.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main.html_aio_2_9a639b7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main.html_aio_4787e07.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main.html_aio_a8e71c2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_002.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/7moorSDKInit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/jquery-1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/jquery.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/jquery_002.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/upload.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/main_22faef3_data/upload_data/json2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/oss.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/userinfo_7f282e9.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/v.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/vendor_e3ddeee.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/widgets_b4a49f4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/gongsi1/widgets_ea16201.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/CgYXBlWIQJGAFhr9AAHsORnjH_E334.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1ahl0yAdf8zAAGdaw726e8289.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1e0HRCAeZQ4AAAqEIEVG84699.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1e0HTKAc_4bAABYfmZMOc0755.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1e0JO2AWos4AAATsyikhyc627.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1gZuPqAbjjSAAJSlWWJX8A869.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1gZuQOAX4pEAAHGmIMozRU747.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1gZuimAVCLVAACMLR-1k3M497.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/Cgp3O1gZukeAHxl4AAbK4-YAUrI928.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/CgqKkVgZuPOAWas6AANybcrnHvs235.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/CgqKkVgZuj-AAUOXAAO9NSnCebo063.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/CgqKkVi82PuAcXJrAAAniFk4QyA988.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/CgqKkVikPHCARBmQAAApqgqPgKg80.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/main" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile.png" afterPath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_002.png" afterPath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_002.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_003.png" afterPath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_003.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_004.png" afterPath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_004.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_005.png" afterPath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_005.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_006.png" afterPath="$PROJECT_DIR$/frontend/web/gongsi/appmaptile_006.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/MyController.php" afterPath="$PROJECT_DIR$/backend/controllers/MyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Company.php" afterPath="$PROJECT_DIR$/backend/models/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Jobs.php" afterPath="$PROJECT_DIR$/backend/models/Jobs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/logs/app.log" afterPath="$PROJECT_DIR$/backend/runtime/logs/app.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/main-local.php" afterPath="$PROJECT_DIR$/common/config/main-local.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/Ad.php" afterPath="$PROJECT_DIR$/common/models/Ad.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/Category.php" afterPath="$PROJECT_DIR$/common/models/Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/JobsCategory.php" afterPath="$PROJECT_DIR$/common/models/JobsCategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/Resume.php" afterPath="$PROJECT_DIR$/common/models/Resume.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/UserInfo.php" afterPath="$PROJECT_DIR$/common/models/UserInfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/frontend/controllers/CompanyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/IndexController.php" afterPath="$PROJECT_DIR$/frontend/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/JobController.php" afterPath="$PROJECT_DIR$/frontend/controllers/JobController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/ListController.php" afterPath="$PROJECT_DIR$/frontend/controllers/ListController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/RegisterController.php" afterPath="$PROJECT_DIR$/frontend/controllers/RegisterController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/TouController.php" afterPath="$PROJECT_DIR$/frontend/controllers/TouController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/UserController.php" afterPath="$PROJECT_DIR$/frontend/controllers/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/company/gongsi.html" afterPath="$PROJECT_DIR$/frontend/views/company/gongsi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/index/index.html" afterPath="$PROJECT_DIR$/frontend/views/index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/job/create.html" afterPath="$PROJECT_DIR$/frontend/views/job/create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/job/success.html" afterPath="$PROJECT_DIR$/frontend/views/job/success.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/layouts/header.php" afterPath="$PROJECT_DIR$/frontend/views/layouts/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/layouts/left.php" afterPath="$PROJECT_DIR$/frontend/views/layouts/left.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/list/list.html" afterPath="$PROJECT_DIR$/frontend/views/list/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/register/login.html" afterPath="$PROJECT_DIR$/frontend/views/register/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/resume/create.php" afterPath="$PROJECT_DIR$/frontend/views/resume/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/resume/index.php" afterPath="$PROJECT_DIR$/frontend/views/resume/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/resume/use.php" afterPath="$PROJECT_DIR$/frontend/views/resume/use.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/tou/toudi.html" afterPath="$PROJECT_DIR$/frontend/views/tou/toudi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/user/index.php" afterPath="$PROJECT_DIR$/frontend/views/user/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/user/photo.php" afterPath="$PROJECT_DIR$/frontend/views/user/photo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/user/safe.php" afterPath="$PROJECT_DIR$/frontend/views/user/safe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/main.css" afterPath="$PROJECT_DIR$/frontend/web/gongsi/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/main_22faef3.htm" afterPath="$PROJECT_DIR$/frontend/web/gongsi/main_22faef3.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gongsi/maps" afterPath="$PROJECT_DIR$/frontend/web/gongsi/maps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/style/css/style.css" afterPath="$PROJECT_DIR$/frontend/web/style/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/style/js/jobs.min.js" afterPath="$PROJECT_DIR$/frontend/web/style/js/jobs.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/main_22faef3_data/jquery.js" afterPath="$PROJECT_DIR$/frontend/web/gongsi/main_22faef3_data/jquery_002.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/web/gongsi/main_22faef3_data/jquery_002.js" afterPath="$PROJECT_DIR$/frontend/web/gongsi/main_22faef3_data/jquery.js" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="gongsi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/company/gongsi.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19398">
+              <caret line="1252" column="4" lean-forward="false" selection-start-line="1252" selection-start-column="4" selection-end-line="1252" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/controllers/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompanyController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/controllers/CompanyController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="350" column="12" lean-forward="true" selection-start-line="350" selection-start-column="12" selection-end-line="350" selection-end-column="12" />
+              <folding>
+                <marker date="1490786471514" expanded="true" signature="615:651" ph="select * fro... lg_company" />
+                <marker date="1490786471514" expanded="true" signature="2282:2331" ph="select email... lg_company" />
+                <marker date="1490786471514" expanded="true" signature="3192:3241" ph="select email... lg_company" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/models/Category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-53">
+              <caret line="58" column="65" lean-forward="false" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>user</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/backend/controllers/AuthAssignmentController.php" />
+        <option value="D:/phpStudy/WWW/advanced/common/config/main-local.php" />
+        <option value="$PROJECT_DIR$/common/models/User.php" />
+        <option value="$PROJECT_DIR$/backend/controllers/MyController.php" />
+        <option value="$PROJECT_DIR$/frontend/views/company/gongsi.html" />
+        <option value="$PROJECT_DIR$/frontend/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/frontend/controllers/CompanyController.php" />
+        <option value="$PROJECT_DIR$/common/models/Category.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.eslint.eslintPackage" value="" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aca683e5-4551-4407-8cc1-6e595412f2cf" name="默认的" comment="" />
+      <created>1489728868106</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1489728868106</updated>
+      <workItem from="1489728871937" duration="3065000" />
+      <workItem from="1490412804373" duration="716000" />
+      <workItem from="1490786298360" duration="175000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3956000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19472913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/frontend/views/company/gongsi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/MyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/phpStudy/WWW/advanced/common/config/main-local.php" />
+    <entry file="file://$PROJECT_DIR$/common/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2603">
+          <caret line="137" column="13" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/AuthItemChildController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/AuthAssignmentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/AuthItemChildController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/AuthAssignmentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="190" column="7" lean-forward="true" selection-start-line="190" selection-start-column="7" selection-end-line="190" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/BaseYii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="83" column="26" lean-forward="true" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12934">
+          <caret line="58" column="3" lean-forward="true" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/phpStudy/WWW/advanced/common/config/main-local.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2375">
+          <caret line="137" column="13" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/MyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/company/gongsi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19398">
+          <caret line="1252" column="4" lean-forward="false" selection-start-line="1252" selection-start-column="4" selection-end-line="1252" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/CompanyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="350" column="12" lean-forward="true" selection-start-line="350" selection-start-column="12" selection-end-line="350" selection-end-column="12" />
+          <folding>
+            <marker date="1490786471514" expanded="true" signature="615:651" ph="select * fro... lg_company" />
+            <marker date="1490786471514" expanded="true" signature="2282:2331" ph="select email... lg_company" />
+            <marker date="1490786471514" expanded="true" signature="3192:3241" ph="select email... lg_company" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="58" column="65" lean-forward="false" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

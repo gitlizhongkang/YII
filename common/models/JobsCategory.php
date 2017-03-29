@@ -90,7 +90,7 @@ class JobsCategory extends \yii\db\ActiveRecord
                         $arr[$v['categoryname']][$v1['categoryname']] = array();
                         foreach ($job as $k2 => $v2) {
                             if ($v1['id'] == $v2['parentid']) {
-                                $arr[$v['categoryname']][$v1['categoryname']][] = $v2['categoryname'];
+                                $arr[$v['categoryname']][$v1['categoryname']][$v2['id']] = $v2['categoryname'];
                             }
                         }
                     }

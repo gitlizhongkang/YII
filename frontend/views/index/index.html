@@ -31,7 +31,7 @@ use yii\helpers\Url;
 </div>
 <div class="content">	
 <div id="search_box">
-	<form id="searchForm" name="searchForm" action="list.html" method="get">
+	<form id="searchForm" onsubmit="return false" name="searchForm" action="list.html" method="get">
         <ul id="searchType">
         <li data-searchtype="1" class="type_selected">职位</li>
         	<li data-searchtype="4">公司</li>
@@ -53,6 +53,28 @@ use yii\helpers\Url;
 				
     </form>
 </div>
+<script>
+	$(document).on('click','#search_button',function(){
+	if($("#searchType").children("li").eq(1).html()=="职位"){
+		var keyword=$('#search_input').val();
+		var keyword = $.trim($('#search_input').val());
+		var reg =  /[`~!@\$%\^\&\*\(\)_<>\?:"\{\},\\\/;'\[\]]/ig;
+		var re = /#/g;
+		var r = /\./g;
+		var kw = keyword.replace(reg," ");
+		location.href="index.php?r=list/index&fs=公司&kw="+kw+"&dq=";
+	}else{
+		var keyword=$('#search_input').val();
+		var keyword = $.trim($('#search_input').val());
+		var reg =  /[`~!@\$%\^\&\*\(\)_<>\?:"\{\},\\\/;'\[\]]/ig;
+		var re = /#/g; 
+		var r = /\./g;
+		var kw = keyword.replace(reg," ");
+		location.href="index.php?r=list/index&fs=职位&kw="+kw+"&dq=";
+	}
+	
+})
+</script>
 <style>
 .ui-autocomplete{width:488px;background:#fafafa !important;position: relative;z-index:10;border: 2px solid #91cebe;}
 .ui-autocomplete-category{font-size:16px;color:#999;width:50px;position: absolute;z-index:11; right: 0px;/*top: 6px; */text-align:center;border-top: 1px dashed #e5e5e5;padding:5px 0;}
@@ -62,7 +84,9 @@ use yii\helpers\Url;
 <script type="text/javascript" src="style/js/search.min.js"></script>
 <dl class="hotSearch">
 	<dt>热门搜索：</dt>
-	<dd><a href="">Java</a></dd>
+	<?php foreach($hots as $val){?>
+	<dd><a href="<?=Url::to(['list/index'])?>&fs=<?=$val['way']?>&kw=<?=$val['words']?>"><?=$val['words']?></a></dd>
+	<?php }?>
 </dl>			
 <div id="home_banner">
     <ul class="banner_bg">
@@ -142,7 +166,7 @@ if(count($middle)>=($i+1)){
 	        <li class="clearfix">
 		    <div class="hot_pos_l">
 				<div class="mb10">
-				    <a href="h/jobs/147822.html" target="_blank"><?=$v['jobs_name']?></a> &nbsp;
+				    <a href="<?=Url::to(['tou/index'])?>&id=<?=$v['id']?>" target="_blank"><?=$v['jobs_name']?></a> &nbsp;
 				    <span class="c9"><?=$v['district_cn']?></span>
 				</div>
 	                <span><em class="c7">月薪： </em><?=$v['wage_cn']?></span>
@@ -155,7 +179,7 @@ if(count($middle)>=($i+1)){
 	                <!-- <a  class="wb">分享到微博</a> -->
             </div>
 			<div class="hot_pos_r">
-            	<div class="mb10 recompany"><a href="h/c/399.html" target="_blank"><?=$v['companyname']?></a></div>
+            	<div class="mb10 recompany"><a href="<?=Url::to(['company/gongsi'])?>&id=<?=$v['company_id']?>" target="_blank"><?=$v['companyname']?></a></div>
                 <span><em class="c7">领域：</em> <?=$v['trade_cn']?></span>
                 <span><em class="c7">：</em></span><br />
                 <span><em class="c7">阶段：</em> <?=$v['companyname']?></span>
@@ -189,7 +213,7 @@ if(count($middle)>=($i+1)){
 	                <!-- <a  class="wb">分享到微博</a> -->
             </div>
 			<div class="hot_pos_r">
-            	<div class="mb10 recompany"><a href="h/c/399.html" target="_blank"><?=$v['companyname']?></a></div>
+            	<div class="mb10 recompany"><a href="<?=Url::to(['company/gongsi'])?>&id=<?=$v['company_id']?>" target="_blank"><?=$v['companyname']?></a></div>
                 <span><em class="c7">领域：</em> <?=$v['trade_cn']?></span>
                 <span><em class="c7">：</em></span><br />
                 <span><em class="c7">阶段：</em> <?=$v['companyname']?></span>

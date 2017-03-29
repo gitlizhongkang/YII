@@ -38,6 +38,13 @@ class UserInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['user_id', 'education', 'experience'], 'required'],
+            [['user_id', 'sex', 'province_id', 'city_id', 'district_id', 'marriage', 'reg_time'], 'integer'],
+            [['name', 'birthday'], 'string', 'max' => 30],
+            [['user_id'], 'required'],
+            [['user_id', 'marriage', 'reg_time'], 'integer'],
+            [['name', 'birthday', 'residence'], 'string', 'max' => 30],
+            [['sex'], 'string', 'max' => 3],
             [['user_id'], 'required'],
             [['user_id', 'sex', 'province_id', 'city_id', 'district_id', 'marriage', 'reg_time'], 'integer'],
             [['name', 'birthday'], 'string', 'max' => 30],
@@ -67,9 +74,6 @@ class UserInfo extends \yii\db\ActiveRecord
             'reg_time' => 'Reg Time',
         ];
     }
-
-
-
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -82,5 +86,4 @@ class UserInfo extends \yii\db\ActiveRecord
         $this->setAttributes($arr);
         return $this->save($arr);
     }
-
 }

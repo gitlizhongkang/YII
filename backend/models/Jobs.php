@@ -159,7 +159,7 @@ class Jobs extends \yii\db\ActiveRecord
     //查询单条企业信息
     public function getOne($id)
     {
-        return Jobs::find()->where(['id'=>$id])->one();
+        return Jobs::find()->where(['id'=>$id])->asArray()->one();
     }
     //查询所有职位 不分页
      public function select()

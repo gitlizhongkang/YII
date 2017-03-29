@@ -16,6 +16,8 @@ class TouController extends Controller
 		$id=Yii::$app->request->get('id');
 		$jobs=new Jobs;
 		$arr=$jobs->getOne($id);
+		$place=explode('/',$arr['district_cn']);
+		$arr['city']=$place[1];		
 		$resume=new Resume;
 		$info=$resume->select($user['uid']);
 		$controller=Yii::$app->controller->id;
