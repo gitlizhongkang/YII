@@ -64,6 +64,7 @@ class JobController extends Controller
 				$arr['trade_cn']=$info['trade'];
 				$arr['scale_cn']=$info['scale'];
 				$arr['street_cn']=$info['street'];
+				// print_r($arr);die;
 				$aa=$job->add($arr);
 				//添加职位				
 				if($aa){
