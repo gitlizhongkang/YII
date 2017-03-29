@@ -1,5 +1,4 @@
-﻿
-<div id="container">
+﻿<div id="container">
     <div class="sidebar">
         <a class="btn_create" href="<?= \yii\helpers\Url::to(['resume/create'])?>">创建新简历</a>
         <dl class="company_center_aside">
@@ -11,10 +10,10 @@
                 <a href="<?= \yii\helpers\Url::to(['resume/use'])?>">已投简历</a>
             </dd>
             <dd>
-                <a href="<?= \yii\helpers\Url::to(['resume/index'])?>">收藏的职位</a>
+                <a href="<?= \yii\helpers\Url::to(['user/collect'])?>">收藏的职位</a>
             </dd>
             <dd>
-                <a href="<?= \yii\helpers\Url::to(['resume/index'])?>">订阅职位</a>
+                <a href="<?= \yii\helpers\Url::to(['user/order'])?>">订阅职位</a>
             </dd>
         </dl>
         <dl class="company_center_aside">
