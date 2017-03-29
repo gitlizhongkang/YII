@@ -48,6 +48,17 @@ class IndexController extends Controller
         $HotsModel=new Hots;
         $data['hots']=$HotsModel->GetRankList();
          //热搜
+        if(!empty($cache->get('num'))){
+            $data['num']=$cache->get('num');
+        }else{
+            $model=new Company;
+            $date['count_companys']=$model->find()->select('count(id) as num')->asArray()->one();
+            $date['count_jobs']=$jobs->find()->select('count(id) as num')->asArray()->one();
+            // 值$value 在缓存中最多保留30秒
+            $cache->set('num', $date,3600);//存入缓存
+            $data['num']=$date; 
+            //查询职位分类
+        }
 		return $this->render('index.html',$data);
 	}
 	public function actionCompanyList()
