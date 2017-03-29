@@ -148,7 +148,7 @@ class RegisterController extends Controller
 	//退出
 	public function actionLogout(){
 		$session=Yii::$app->session;
-		$session->destroy();
+		$session->remove('user');
 		return $this->redirect(['register/login']);
 	}
 	//生成验证码
