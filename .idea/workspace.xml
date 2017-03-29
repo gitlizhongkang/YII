@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aca683e5-4551-4407-8cc1-6e595412f2cf" name="默认的" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db502b6e317.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db505ab1fdf.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db5094ad2fb.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db509513238.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db541ab8ce5.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db542e0cf4d.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db5430177ba.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db54408b6f8.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db54454e778.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db54587a6f9.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/runtime/debug/58db547d25be2.data" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/IndexController.php" afterPath="$PROJECT_DIR$/frontend/controllers/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/runtime/debug/index.data" afterPath="$PROJECT_DIR$/frontend/runtime/debug/index.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/runtime/logs/app.log" afterPath="$PROJECT_DIR$/frontend/runtime/logs/app.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,15 +19,39 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="15576ce2607d746.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/web/uploads/15576ce2607d746.jpg">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/controllers/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3439">
+              <caret line="110" column="18" lean-forward="true" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MYXJ_20151207093656_fast.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/web/uploads/MYXJ_20151207093656_fast.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="12107447_980x1200_0.jpg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/web/uploads/12107447_980x1200_0.jpg">
+      <file leaf-file-name="MYXJ_20160819142525_fast.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/web/uploads/MYXJ_20160819142525_fast.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rammus_Splash_4.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/web/uploads/Rammus_Splash_4.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Karthus_Splash_1.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/web/uploads/Karthus_Splash_1.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -60,9 +75,9 @@
         <option value="$PROJECT_DIR$/common/models/User.php" />
         <option value="$PROJECT_DIR$/backend/controllers/MyController.php" />
         <option value="$PROJECT_DIR$/frontend/views/company/gongsi.html" />
-        <option value="$PROJECT_DIR$/frontend/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/CompanyController.php" />
         <option value="$PROJECT_DIR$/common/models/Category.php" />
+        <option value="$PROJECT_DIR$/frontend/controllers/IndexController.php" />
       </list>
     </option>
   </component>
@@ -103,20 +118,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="advanced" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="advanced" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="advanced" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -254,15 +255,15 @@
       <updated>1489728868106</updated>
       <workItem from="1489728871937" duration="3065000" />
       <workItem from="1490412804373" duration="716000" />
-      <workItem from="1490786298360" duration="808000" />
+      <workItem from="1490786298360" duration="1563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4589000" />
+    <option name="totallyTimeSpent" value="5344000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19472913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -428,14 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/uploads/149037389042.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -511,12 +504,40 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/uploads/12107447_980x1200_0.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/uploads/15576ce2607d746.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/uploads/12107447_980x1200_0.jpg">
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3439">
+          <caret line="110" column="18" lean-forward="true" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/uploads/MYXJ_20151207093656_fast.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/uploads/MYXJ_20160819142525_fast.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/uploads/Rammus_Splash_4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/uploads/Karthus_Splash_1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>

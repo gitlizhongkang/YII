@@ -335,6 +335,20 @@ if(count($middle)>=($i+1)){
 
 <!-- <script src="style/js/wb.js" type="text/javascript" charset="utf-8"></script>
  -->
+ <script>
+ 	$(document).ready(function(){
+ 		<?php
+ 		$session=\Yii::$app->session;
+		$user=$session->get('user');
+ 			if($user){
+ 		?>
+ 		$('#bbb').hide();
+ 		<?php
+ 			}
+ 		?>
+ 	})
+ </script>
+ <div id="bbb">
  <link rel="stylesheet" type="text/css" href="css/footer.css"/>
  <div id="loginToolBar" class="loginToolBar" style="bottom: 0px;">
 <div>
@@ -353,6 +367,7 @@ if(count($middle)>=($i+1)){
 <a id="bar_register" class="bar_register" rel="nofollow" href="<?=Url::to(['register/index'])?>" target="_blank" data-lg-tj-id="4t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
 <i></i>
 </a>
+</div>
 </div>
 </div>
 </div>
