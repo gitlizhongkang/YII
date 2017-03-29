@@ -97,9 +97,9 @@ class ResuController extends Controller
         $post=Yii::$app->request->post();
         $info=Resume::find()->where("id in ($post[deliverIds])")->asArray()->all();
         $content="非常荣幸收到您的简历，在我们仔细阅读您的简历之后，却不得不很遗憾的通知您：
-您的简历与该职位的定位有些不匹配，因此无法进入面试。
-但您的信息已录入我司人才储备库，当有合适您的职位开放时我们将第一时间联系您，希望在未来我们有机会成为一起拼搏的同事；
-再次感谢您对我们的信任，祝您早日找到满意的工作。";
+                    您的简历与该职位的定位有些不匹配，因此无法进入面试。
+                    但您的信息已录入我司人才储备库，当有合适您的职位开放时我们将第一时间联系您，希望在未来我们有机会成为一起拼搏的同事；
+                    再次感谢您对我们的信任，祝您早日找到满意的工作。";
         foreach($info as $k=>$v){
             $mail = Yii::$app->mailer->compose();
             $mail->setTo($v['email']);	//接收人邮箱

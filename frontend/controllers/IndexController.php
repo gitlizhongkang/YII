@@ -73,11 +73,6 @@ class IndexController extends Controller
         $data['trade_id']=$trade_id;
         return $this->render("companylist.html",$data);
     }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 867cea59da488c59e3a382f9838aa70a9b68c047
 	//职位分类重新排序
 	public function get_job($job)
     {
@@ -105,8 +100,4 @@ class IndexController extends Controller
  
         return $arr;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 867cea59da488c59e3a382f9838aa70a9b68c047
 }
