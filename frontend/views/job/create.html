@@ -78,35 +78,36 @@ var youdao_conv_id = 271546;
                     <ul class="profile_radio clearfix reset">
                     	<li>男<em></em><input type="radio" name="sex_cn" value="男"></li>
                     	<li>女<em></em><input type="radio" name="sex_cn" value="女"></li>
+                    	<li>不限<em></em><input type="radio" name="sex_cn" value="不限"></li>
                     </ul>
                 </td>
-            </tr>
-             <tr>
-                <td><span class="redstar">*</span></td>
-                <td>年龄</td>
-                <td>
-		            <select name="age1" id="">
-		             <?php for($i=18;$i<=60;$i++){ ?>
-                    	<option value="<?=$i?>"><?=$i?>岁</option>
-                    <?php } ?>
-		            </select>
-		            --
-		            <select name="age2" id="">
-		             <?php for($i=18;$i<=60;$i++){ ?>
-                    	<option value="<?=$i?>"><?=$i?>岁</option>
-                    <?php } ?>
-		            </select>
-                </td>
-            </tr>
-            <tr>
+            </tr> 
+           
                 <td><span class="redstar">*</span></td>
                 <td>月薪范围</td>
                 <td>
-		            <select name="wage_cn" id="">
+		            <select name="wage_cn" id="wage_cn">
 		             <?php foreach($wage as $k=>$v){ ?>
                     	<option value="<?=$v['c_name']?>"><?=$v['c_name']?></option>
                     <?php } ?>
 		            </select>
+                </td>
+            </tr>
+             <tr>
+            	<td><span class="redstar">*</span></td>
+            	<td>年龄</td>
+            	<td>
+                	<div class="salary_range">
+                        <div>
+                            <input type="text" placeholder="最低年龄" value="" id="salaryMin" name="age1"> 
+                            <span></span>
+                        </div>                       
+                        <div>
+                            <input type="text" placeholder="最高年龄" value="" id="salaryMax" name="age2"> 
+                            <span></span>
+                        </div>
+                        <span>只能输入整数</span>
+                    </div>
                 </td>
             </tr>
         	<tr>
@@ -154,7 +155,7 @@ var youdao_conv_id = 271546;
                     <div class="boxUpDown boxUpDown_380 dn" id="box_education" style="display: none;">
                         <ul>
                             <?php foreach($education as $k=>$v){ ?>
-                            	<input type="hidden" id="education" value="<?=$v['c_id']?>" name="education_id">
+                            	<input type="hidden" id="education_id" value="<?=$v['c_id']?>" name="education_id">
                            		<li><?=$v['c_name']?></li>
                            <?php } ?>
                     	</ul>
@@ -165,7 +166,7 @@ var youdao_conv_id = 271546;
             	<td width="25"><span class="redstar">*</span></td>
             	<td width="85">招聘人数</td>
             	<td>
-                    <input type="text" placeholder="请输入招聘人数" value="" name="amount" class="input_520" id="">
+                    <input type="text" placeholder="请输入招聘人数" value="" name="amount" class="input_520" id="amount">
                 </td>
             </tr>
         </tbody></table>                          
@@ -213,7 +214,7 @@ var youdao_conv_id = 271546;
                     	<td width="25"></td>
                     	<td colspan="2">
                         	<input type="submit" value="预览" id="jobPreview" class="btn_32">
-                        	<input type="submit" value="发布" id="formSubmit" class="btn_32">
+                        	<input type="button" value="发布" id="formSubmit" class="btn_32">
                         </td>
                     </tr>
              	</tbody></table>
@@ -356,7 +357,20 @@ $(function(){
 });
 </script>
 <!-- end old -->
+<?php 
+$data1=['count'=>$count+1,'type'=>1] ;
+$data0=['count'=>$count,'type'=>0] ;
+$data2=['count'=>$count,'type'=>2] ;
+$data4=['count'=>$count,'type'=>4] ;
 
+?>
+<script>
+var preview="<?=Url::to(['job/preview'])?>";
+var result1="<?=Url::to(['job/result','count'=>$count+1,'type'=>1])?>";
+var result0="<?=Url::to(['job/result','count'=>$count,'type'=>0])?>";
+var result2="<?=Url::to(['job/result','count'=>$count,'type'=>2])?>";
+var result4="<?=Url::to(['job/result','count'=>$count,'type'=>4])?>";
+</script>
 <script src="style/js/jobs.min.js" type="text/javascript"></script>
 <script src="http://api.map.baidu.com/api?v=2.0&amp;ak=A2c1a1ff1fe0750e3290660295aac602" type="text/javascript"></script><script src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=A2c1a1ff1fe0750e3290660295aac602&amp;services=&amp;t=20140617153133" type="text/javascript"></script>
 <script type="text/javascript">
@@ -499,7 +513,6 @@ $('#city').change(function(){
 			var parentid=option.eq(i).attr('parentid');
 		}
 	}
-	alert(parentid);
 	$.ajax({
 		type:'post',
 		url:"<?=Url::to(['job/district'])?>",

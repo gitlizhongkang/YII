@@ -4476,3 +4476,3031 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1490687207.0583
     'REQUEST_TIME' => 1490687207
 ]
+2017-03-28 13:29:49 [127.0.0.1][-][6p9or369s12o479p7gb99odph5][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)' in D:\xampp\htdocs\nine\YII\common\models\Category.php:57
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 13:29:49 [127.0.0.1][-][6p9or369s12o479p7gb99odph5][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => '472540ee5465d5db.1490599765.1.1490599765.1490599765.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '8ger'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=472540ee5465d5db.1490599765.1.1490599765.1490599765.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '57333'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=job%2Findex'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490700589.017
+    'REQUEST_TIME' => 1490700589
+]
+2017-03-28 15:02:32 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot redeclare frontend\controllers\JobController::$layout' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:239
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:02:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '49672'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490706152.272
+    'REQUEST_TIME' => 1490706152
+]
+2017-03-28 15:03:04 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:239
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:03:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '49694'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490706184.032
+    'REQUEST_TIME' => 1490706184
+]
+2017-03-28 15:04:25 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:239
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:04:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '49775'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490706265.64
+    'REQUEST_TIME' => 1490706265
+]
+2017-03-28 15:05:04 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot redeclare frontend\controllers\JobController::$layout' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:239
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:05:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '49873'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490706304.671
+    'REQUEST_TIME' => 1490706304
+]
+2017-03-28 15:05:32 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'self' (T_STRING), expecting function (T_FUNCTION)' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:239
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:05:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '49913'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490706332.515
+    'REQUEST_TIME' => 1490706332
+]
+2017-03-28 15:05:51 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:239
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:05:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '49924'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490706351.828
+    'REQUEST_TIME' => 1490706351
+]
+2017-03-28 15:06:06 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot redeclare frontend\controllers\JobController::$layout' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:239
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:06:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '49932'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490706366.633
+    'REQUEST_TIME' => 1490706366
+]
+2017-03-28 15:08:02 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: frontend\controllers\JobController::renderpartical()' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(242): yii\base\Component->__call('renderpartical', Array)
+#1 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(242): frontend\controllers\JobController->renderpartical('preview.html', Array)
+#2 [internal function]: frontend\controllers\JobController->actionPreview()
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('preview', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/preview', Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2017-03-28 15:08:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '8ger'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '50195'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490706481.944
+    'REQUEST_TIME' => 1490706481
+]
+2017-03-28 15:22:36 [127.0.0.1][-][6p9or369s12o479p7gb99odph5][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '']?></span>                   ' (T_CONSTANT_ENCAPSED_STRING), expecting ']'' in D:\xampp\htdocs\nine\YII\frontend\views\job\preview.html:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:22:36 [127.0.0.1][-][6p9or369s12o479p7gb99odph5][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '8ger'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '51392'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490707356.348
+    'REQUEST_TIME' => 1490707356
+]
+2017-03-28 15:23:08 [127.0.0.1][-][6p9or369s12o479p7gb99odph5][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '']?></span>                   ' (T_CONSTANT_ENCAPSED_STRING), expecting ']'' in D:\xampp\htdocs\nine\YII\frontend\views\job\preview.html:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-28 15:23:08 [127.0.0.1][-][6p9or369s12o479p7gb99odph5][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '18'
+    'age2' => '24'
+    'wage_cn' => '5000~10000元/月'
+    'province' => '河北省'
+    'city' => '唐山市'
+    'place' => '古冶区'
+    'experience_cn' => '1-3年'
+    'education_cn' => '高中'
+    'education_id' => '73'
+    'amount' => '3'
+    'tag_cn' => [
+        0 => '年终奖'
+        1 => '加班补助'
+        2 => '有补助'
+    ]
+    'require' => [
+        0 => '气质佳'
+        1 => '经验丰富'
+    ]
+    'contents' => 'dfasfdsafasdfas'
+    'address' => '山西省太原市'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '6p9or369s12o479p7gb99odph5'
+    '_csrf-frontend' => 'c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr\";}'
+    'pgv_si' => 's9834637312'
+    'advanced-backend' => '0hfvl4g2gm383mkpsc4af3kk37'
+    '_csrf-backend' => 'c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"GXjR4MP38ai9fJ9vXWmbAoKP7173nVME\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '8ger'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=6p9or369s12o479p7gb99odph5; _csrf-frontend=c8f1c8dcb274979948b67bd5746cf3250b99ccc74f5a4ae0f1586a6afdd5417da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Nq81Gum4Z0bJVeseHURyUxdl9HdwdSdr%22%3B%7D; pgv_si=s9834637312; advanced-backend=0hfvl4g2gm383mkpsc4af3kk37; _csrf-backend=c8ffb72722688aca9720cf978ad828d757a2d1c5a1c70099a8a64314eb5a508fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GXjR4MP38ai9fJ9vXWmbAoKP7173nVME%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '846'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '51404'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490707388.361
+    'REQUEST_TIME' => 1490707388
+]
+2017-03-29 05:36:42 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'MemcachePool::get(): Server localhost (tcp 11211, udp 0) failed with: ������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060)' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\caching\MemCache.php:270
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'MemcachePool::g...', 'D:\\xampp\\htdocs...', 270, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\caching\MemCache.php(270): MemcachePool->get('jobCate')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\caching\Cache.php(114): yii\caching\MemCache->getValue('jobCate')
+#3 D:\xampp\htdocs\nine\YII\frontend\controllers\IndexController.php(34): yii\caching\Cache->get('jobCate')
+#4 [internal function]: frontend\controllers\IndexController->actionIndex()
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#9 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-03-29 05:36:31 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '55795'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nine/YII/frontend/web/'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758591.729
+    'REQUEST_TIME' => 1490758591
+]
+2017-03-29 05:37:52 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined offset: 0' in D:\xampp\htdocs\nine\YII\frontend\views\company\list.html:84
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\views\company\list.html(84): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 84, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(328): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(frontend\controllers\CompanyController))
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('list.html', Array, Object(frontend\controllers\CompanyController))
+#5 D:\xampp\htdocs\nine\YII\frontend\controllers\CompanyController.php(49): yii\base\Controller->render('list.html', Array)
+#6 [internal function]: frontend\controllers\CompanyController->actionIndex()
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#10 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('company/index', Array)
+#11 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-03-29 05:37:52 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'company/index'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '55889'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=company%2Findex'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=company%2Findex'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758672.449
+    'REQUEST_TIME' => 1490758672
+]
+2017-03-29 05:38:11 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: nature_cn' in D:\xampp\htdocs\nine\YII\frontend\views\job\preview.html:56
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\views\job\preview.html(56): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 56, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(328): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(frontend\controllers\JobController))
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(411): yii\base\View->render('preview.html', Array, Object(frontend\controllers\JobController))
+#5 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(242): yii\base\Controller->renderPartial('preview.html', Array)
+#6 [internal function]: frontend\controllers\JobController->actionPreview()
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('preview', Array)
+#10 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/preview', Array)
+#11 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-03-29 05:38:11 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => ''
+    'jobs_name' => ''
+    'age1' => '18'
+    'age2' => '18'
+    'wage_cn' => '1000~1500元/月'
+    'province' => '北京'
+    'city' => ''
+    'place' => ''
+    'experience_cn' => ''
+    'education_cn' => ''
+    'education_id' => '73'
+    'amount' => ''
+    'contents' => ''
+    'address' => ''
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '321'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '55909'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758691.682
+    'REQUEST_TIME' => 1490758691
+]
+2017-03-29 05:39:14 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: category_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:47
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 05:39:14 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'positionType' => '销售管理'
+    'positionName' => '大客户经理'
+    'workYear' => '3-5年'
+    'education' => '高中'
+    'positionDetail' => 'fdsubhjkftyhbjkm,.'
+    'positionAddress' => '天津市和平区'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '266'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '55946'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758754.298
+    'REQUEST_TIME' => 1490758754
+]
+2017-03-29 05:39:19 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: category_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:47
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 05:39:18 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'positionType' => '销售管理'
+    'positionName' => '大客户经理'
+    'workYear' => '3-5年'
+    'education' => '高中'
+    'positionDetail' => 'fdsubhjkftyhbjkm,.'
+    'positionAddress' => '天津市和平区'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '266'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '55947'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758758.936
+    'REQUEST_TIME' => 1490758758
+]
+2017-03-29 05:39:36 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: category_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:47
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 05:39:35 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'positionType' => '销售管理'
+    'positionName' => '大客户经理'
+    'workYear' => '3-5年'
+    'education' => '高中'
+    'positionDetail' => 'fdsubhjkftyhbjkm,.'
+    'positionAddress' => '天津市和平区'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '266'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '55960'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758775.932
+    'REQUEST_TIME' => 1490758775
+]
+2017-03-29 05:39:43 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: category_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:47
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 05:39:43 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'positionType' => '销售管理'
+    'positionName' => '大客户经理'
+    'workYear' => '3-5年'
+    'education' => '高中'
+    'positionDetail' => 'fdsubhjkftyhbjkm,.'
+    'positionAddress' => '天津市和平区'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '266'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '55966'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758783.224
+    'REQUEST_TIME' => 1490758783
+]
+2017-03-29 05:41:59 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: nature_cn' in D:\xampp\htdocs\nine\YII\frontend\views\job\preview.html:56
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\views\job\preview.html(56): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 56, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(328): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(frontend\controllers\JobController))
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(411): yii\base\View->render('preview.html', Array, Object(frontend\controllers\JobController))
+#5 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(242): yii\base\Controller->renderPartial('preview.html', Array)
+#6 [internal function]: frontend\controllers\JobController->actionPreview()
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('preview', Array)
+#10 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/preview', Array)
+#11 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-03-29 05:41:59 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => ''
+    'jobs_name' => ''
+    'age1' => '18'
+    'age2' => '18'
+    'wage_cn' => '1000~1500元/月'
+    'province' => '北京'
+    'city' => ''
+    'place' => ''
+    'experience_cn' => ''
+    'education_cn' => ''
+    'education_id' => '73'
+    'amount' => ''
+    'contents' => ''
+    'address' => ''
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '321'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '56060'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758919.532
+    'REQUEST_TIME' => 1490758919
+]
+2017-03-29 05:42:04 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: category_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:47
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 05:42:04 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'positionType' => ''
+    'positionName' => ''
+    'workYear' => ''
+    'education' => ''
+    'positionDetail' => ''
+    'positionAddress' => ''
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '81'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '56063'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758924.828
+    'REQUEST_TIME' => 1490758924
+]
+2017-03-29 05:42:04 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: nature_cn' in D:\xampp\htdocs\nine\YII\frontend\views\job\preview.html:56
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\views\job\preview.html(56): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 56, Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(328): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(frontend\controllers\JobController))
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(411): yii\base\View->render('preview.html', Array, Object(frontend\controllers\JobController))
+#5 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(242): yii\base\Controller->renderPartial('preview.html', Array)
+#6 [internal function]: frontend\controllers\JobController->actionPreview()
+#7 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('preview', Array)
+#10 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/preview', Array)
+#11 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-03-29 05:42:04 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/preview'
+]
+
+$_POST = [
+    'category_cn' => ''
+    'jobs_name' => ''
+    'age1' => '18'
+    'age2' => '18'
+    'wage_cn' => '1000~1500元/月'
+    'province' => '北京'
+    'city' => ''
+    'place' => ''
+    'experience_cn' => ''
+    'education_cn' => ''
+    'education_id' => '73'
+    'amount' => ''
+    'contents' => ''
+    'address' => ''
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '321'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '56076'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job%2Fpreview'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fpreview'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758924.854
+    'REQUEST_TIME' => 1490758924
+]
+2017-03-29 05:42:22 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: category_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:47
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 05:42:22 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'positionType' => ''
+    'positionName' => ''
+    'workYear' => ''
+    'education' => ''
+    'positionDetail' => ''
+    'positionAddress' => ''
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '81'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '56086'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758942.547
+    'REQUEST_TIME' => 1490758942
+]
+2017-03-29 05:42:30 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: category_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:47
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 05:42:30 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'positionType' => ''
+    'positionName' => ''
+    'workYear' => ''
+    'education' => ''
+    'positionDetail' => ''
+    'positionAddress' => ''
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '81'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '56106'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490758950.104
+    'REQUEST_TIME' => 1490758950
+]
+2017-03-29 06:19:52 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined offset: 1' in D:\xampp\htdocs\nine\YII\frontend\controllers\TouController.php:20
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\TouController.php(20): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 20, Array)
+#1 [internal function]: frontend\controllers\TouController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('tou/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 06:19:52 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'tou/index'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '57658'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tou/index&id=1'
+    'REQUEST_URI' => '/nine/YII/frontend/web/?r=tou/index&id=1'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490761192.72
+    'REQUEST_TIME' => 1490761192
+]
+2017-03-29 06:37:23 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: category_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:47
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 06:37:23 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'positionType' => '销售管理'
+    'positionName' => '大客户经理'
+    'salaryMin' => '17'
+    'salaryMax' => '29'
+    'workYear' => '1年以下'
+    'education' => '高中'
+    'positionDetail' => 'ddffffff'
+    'positionAddress' => '天津市和平区'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '296'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '58435'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490762243.046
+    'REQUEST_TIME' => 1490762243
+]
+2017-03-29 06:45:23 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: tag_cn' in D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php:50
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\frontend\controllers\JobController.php(50): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 [internal function]: frontend\controllers\JobController->actionIndex()
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/index', Array)
+#6 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-03-29 06:45:23 [127.0.0.1][-][0lkfuce67v06ncaig0p3i0fmr3][info][application] $_GET = [
+    'r' => 'job/index'
+]
+
+$_POST = [
+    'category_cn' => '销售管理'
+    'jobs_name' => '其他销售管理'
+    'nature_cn' => '实习'
+    'sex_cn' => '女'
+    'age1' => '2'
+    'age2' => '5'
+    'workYear' => '1-3年'
+    'education' => '高中'
+    'positionDetail' => 'gffggf'
+    'positionAddress' => '天津市和平区'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'XSRF-TOKEN' => 'eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ=='
+    'laravel_session' => 'eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0='
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'code' => '95un'
+    'user' => [
+        'uid' => 17
+        'type' => 1
+        'email' => '2297554817@qq.com'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'CONTENT_LENGTH' => '317'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; XSRF-TOKEN=eyJpdiI6IjBjK3ZHajdVbjMxK1BYM0NGTlhpWXc9PSIsInZhbHVlIjoiOWZEUCtzRXN4dWVEVG1jZmcyNTdDNVdIM3BIQWtYQVB2Ukw5UXlQRGQrYTNSUTA3eXp0YlgzK2l1eUlnT2wyVWhaSFV0Smd5eUh5Z0FjYlpLVTB0TFE9PSIsIm1hYyI6IjgxNDNjMmUwZDE0YTEyN2RhYzA2MjgxZTY5ZWY4YmY3ZWJkNmQzZjUwNTk2NzNkNGMyMGUzNDVmM2ZjZGMwZmYifQ%3D%3D; laravel_session=eyJpdiI6ImdNZWgySXluZlwvdVdrcGU2bDlCYlBRPT0iLCJ2YWx1ZSI6IlNZRHNQRGU5Z0dLaWthMmVtQUtOdVBNY0N2WWZZZlZZTWptcjFIRlE2ZEhPUmJSVDBPeWx2b2x5STVnY01RZzNVS1kyQVk5OHRodGNTcDM5SVRyQ2RnPT0iLCJtYWMiOiJhNDdlNTMxNDViZGExZTM2ZTJlNjA0Mjc0Zjk5NDkwNTgxNzlhZjBkOGZmMzg4YmVjZDEzOGU0NGMyZTllMmU3In0%3D; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '58707'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=job/index'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job/index'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490762723.784
+    'REQUEST_TIME' => 1490762723
+]
+2017-03-29 08:43:21 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: job/success' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('success', Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/success', Array)
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-29 08:43:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/success'
+    'data' => [
+        'count' => '2'
+        'type' => '1'
+    ]
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '62506'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=job%2Fsuccess&data%5Bcount%5D=2&data%5Btype%5D=1'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fsuccess&data%5Bcount%5D=2&data%5Btype%5D=1'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490769801.008
+    'REQUEST_TIME' => 1490769801
+]
+2017-03-29 08:46:10 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: job/success' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('success', Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/success', Array)
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-29 08:46:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/success'
+    'data' => [
+        'count' => '2'
+        'type' => '1'
+    ]
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '62584'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=job%2Fsuccess&data%5Bcount%5D=2&data%5Btype%5D=1'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fsuccess&data%5Bcount%5D=2&data%5Btype%5D=1'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490769970.483
+    'REQUEST_TIME' => 1490769970
+]
+2017-03-29 08:46:18 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: job/success' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('success', Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/success', Array)
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-29 08:46:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/success'
+    'data' => [
+        'count' => '2'
+        'type' => '1'
+    ]
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '62588'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=job%2Fsuccess&data[count]=2&data[type]=1'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fsuccess&data[count]=2&data[type]=1'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490769978.073
+    'REQUEST_TIME' => 1490769978
+]
+2017-03-29 08:48:13 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: job/success' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('success', Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/success', Array)
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-29 08:48:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/success'
+    'count' => '3'
+    'type' => '1'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '62653'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=job%2Fsuccess&count=3&type=1'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fsuccess&count=3&type=1'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490770093.575
+    'REQUEST_TIME' => 1490770093
+]
+2017-03-29 08:48:52 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: job/success' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('success', Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/success', Array)
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-29 08:48:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/success'
+    'count' => '3'
+    'type' => '1'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/index.php?r=job/index'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '62673'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=job%2Fsuccess&count=3&type=1'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fsuccess&count=3&type=1'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490770132.172
+    'REQUEST_TIME' => 1490770132
+]
+2017-03-29 08:48:54 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: job/success' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('success', Array)
+#1 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('job/success', Array)
+#2 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\xampp\htdocs\nine\YII\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\nine\YII\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-03-29 08:48:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'job/success'
+    'count' => '3'
+    'type' => '1'
+]
+
+$_COOKIE = [
+    'tencentSig' => '6127662080'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490336641,1490405971,1490599665,1490664977'
+    '_ga' => 'GA1.1.139870162.1490093570'
+    'pgv_pvi' => '3167186944'
+    '_pk_ysp_id_' => [
+        'object Object' => 'f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.'
+    ]
+    '_qddaz' => 'QD.usgaak.dt4csc.j0rsm3w7'
+    'advanced-frontend' => '0lkfuce67v06ncaig0p3i0fmr3'
+    '_csrf-frontend' => 'b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'tencentSig=6127662080; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490336641,1490405971,1490599665,1490664977; _ga=GA1.1.139870162.1490093570; pgv_pvi=3167186944; _pk_ysp_id.[object Object].1fff=f3dd6bf8757265c6.1490703956.1.1490703956.1490703956.; _qddaz=QD.usgaak.dt4csc.j0rsm3w7; advanced-frontend=0lkfuce67v06ncaig0p3i0fmr3; _csrf-frontend=b4443a5eb00f1c1336134e2f94de65c93e215e990ee1b233bef267194d593e3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cbLi9aXj4eXH1Oap-IMtmNb8IERxcMxa%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '62675'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=job%2Fsuccess&count=3&type=1'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=job%2Fsuccess&count=3&type=1'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490770134.171
+    'REQUEST_TIME' => 1490770134
+]
