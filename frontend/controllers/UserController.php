@@ -7,7 +7,9 @@ use Yii;
 use common\models\User;
 use common\models\UserInfo;
 use common\models\UserPhoto;
+use common\models\Jobs;
 use common\models\District;
+use backend\models\Company;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\UploadedFile;
@@ -51,7 +53,6 @@ class UserController extends Controller
 
 
 
-
     /**
      * Lists all User models.
      * @return mixed
@@ -59,12 +60,14 @@ class UserController extends Controller
     public function actionIndex()
     {
         //渲染模型
-        $model = UserInfo::findOne($this->userInfo['uid']);//$this->userInfo['uid']
+        $model = UserInfo::findOne($this->userInfo['uid']);
 
 
         //接值入库
-        if($model->load(Yii::$app->request->post()) && $model->save())
+        if(Yii::$app->request->isPost)
         {
+            $model->load(Yii::$app->request->post());
+            $model->save();
             return $this->redirect(['index']);
         }
 
@@ -87,7 +90,12 @@ class UserController extends Controller
     }
 
 
-    //查询地区数据
+
+    /**
+     * @brief查询地区数据
+     * @param $condition
+     * @return array
+     */
     public function findArea($condition)
     {
         $data = District::find()
@@ -105,6 +113,7 @@ class UserController extends Controller
     }
 
 
+
     /**
      * @brief 照片展示
      * @return string
@@ -118,7 +127,6 @@ class UserController extends Controller
         {
             $upload->photo = UploadedFile::getInstances($upload, 'photo');
 
-            //循环入库
             if($fileArr = $upload->upload())
             {
                 //入库
@@ -140,11 +148,9 @@ class UserController extends Controller
 
         //渲染模型
         $model = UserPhoto::find()
-            ->where(['user_id' => $this->userInfo['uid'], 'status' => $status])  //$this->userInfo['uid']
+            ->where(['user_id' => $this->userInfo['uid'], 'status' => $status])
             ->asArray()
             ->all();
-        //print_r($model);die;
-
 
         return $this->render('photo',[
             'model' => $model,
@@ -159,7 +165,7 @@ class UserController extends Controller
      */
     public function actionSafe()
     {
-        $model = User::findOne($this->userInfo['uid']);     //$this->userInfo['uid']
+        $model = User::findOne($this->userInfo['uid']);
 
         if(Yii::$app->request->isPost)
         {
@@ -198,6 +204,7 @@ class UserController extends Controller
     }
 
 
+
     /**
      * @brief 发送绑定邮箱邮件
      * @return array
@@ -206,10 +213,8 @@ class UserController extends Controller
     {
         //返回json数据
         Yii::$app->response->format = Response::FORMAT_JSON;
-
         //接值
         $post = Yii::$app->request->post();
-
 
         //验证邮箱
         $emailValidator = new EmailValidator();
@@ -232,7 +237,7 @@ class UserController extends Controller
 
         //生成密钥
         $code = Yii::$app->getSecurity()->generateRandomString();
-        $user = User::findOne($this->userInfo['uid']);  //$this->userInfo['uid]
+        $user = User::findOne($this->userInfo['uid']);
         $user->setAttribute('code',$code);
         if(!$user->save())
         {
@@ -295,6 +300,65 @@ class UserController extends Controller
         } else {
             return true;
         }
+    }
+
+
+    /**
+ * @brief 收藏的职位
+ * @return string
+ */
+    public function actionCollect()
+    {
+        //获得收藏职位id
+        $collect = UserInfo::find()
+            ->select('collect')
+            ->where(['user_id' => $this->userInfo['uid']])
+            ->one();
+
+        $jobs = [];
+        if(!empty($collect->collect))
+        {
+            $id = $collect->collect;
+            //查询收藏的职位信息
+            $jobs = Jobs::find()
+                ->select('lg_jobs.id,lg_jobs.jobs_name,lg_jobs.companyname,lg_jobs.refreshtime,lg_jobs.click,lg_jobs.nature_cn,lg_jobs.amount,lg_jobs.deadline,lg_jobs.require,lg_company.logo')
+                ->join('INNER JOIN','lg_company','company_id=lg_company.id')
+                ->where("lg_jobs.id in($id)")
+                ->asArray()
+                ->all();
+        }
+
+        return $this->render('collect',['jobs' => $jobs]);
+    }
+
+
+
+    /**
+     * @brief 订阅的职位
+     * @return string
+     */
+    public function actionOrder()
+    {
+        //获得订阅职位分类id
+        $order = UserInfo::find()
+            ->select('order')
+            ->where(['user_id' => $this->userInfo['uid']])
+            ->one();
+
+        $jobs = [];
+        if(!empty($order->order))
+        {
+            $id = explode(',',$order->order);
+            //查询收藏职位分类的职位信息
+            $jobs = Jobs::find()
+                ->select('lg_jobs.id,lg_jobs.jobs_name,lg_jobs.companyname,lg_jobs.refreshtime,lg_jobs.click,lg_jobs.nature_cn,lg_jobs.amount,lg_jobs.deadline,lg_jobs.require,lg_company.logo')
+                ->join('INNER JOIN','lg_company','company_id=lg_company.id')
+                ->where(['lg_jobs.category' => $id, 'lg_jobs.recommend' => 1])  //条件查询推广推荐 赢利点之一
+                ->asArray()
+                ->all();
+        }
+
+        return $this->render('order',['jobs' => $jobs]);
     }
 
 

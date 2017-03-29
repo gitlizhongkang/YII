@@ -88,13 +88,13 @@ $user=$session->get('user');
         </div>
     </div>
 
-    <link href="service/css/lrtk.css" rel="stylesheet" type="text/css" />
+<link href="service/css/lrtk.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="service/js/lrtk.js"></script>
 <div id='cs_box'>
     <span class='cs_title'>在线咨询</span>
     <span class='cs_close'>x</span>
     <div class='cs_img'></div>
-    <span class='cs_info'>有什么可以帮到你</span>
+    <span class='cs_info'>Can I help you?</span>
     <div class='cs_btn'>点击咨询</div>
 </div>
 <script type="text/javascript">

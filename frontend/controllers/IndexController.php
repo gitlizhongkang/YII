@@ -115,4 +115,11 @@ class IndexController extends Controller
  
         return $arr;
     }
+<<<<<<< HEAD
+=======
+
+    public function actionAbout(){
+        return $this->render('about.html');
+    }
+>>>>>>> 253cea3df0a931bb31eb3783bfb44bd829ac4de5
 }
