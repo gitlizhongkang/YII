@@ -75,7 +75,7 @@ class Ad extends \yii\db\ActiveRecord
     {
         if ($this->validate($arr)) {
             foreach ($this->img_url as $file) {
-                $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
+                $file->saveAs('../../frontend/web/uploads/' . $file->baseName . '.' . $file->extension);
             }
             return true;
         } else {
