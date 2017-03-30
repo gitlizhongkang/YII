@@ -38,7 +38,7 @@ class UserInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'education', 'experience'], 'required'],
+            [['user_id'], 'required'],
             [['user_id', 'sex', 'province_id', 'city_id', 'district_id', 'marriage', 'reg_time'], 'integer'],
             [['name', 'birthday'], 'string', 'max' => 30],
             [['user_id'], 'required'],
