@@ -326,14 +326,14 @@ $('#add_job').click(function(){
 			success:function(msg){
 				if(msg==1){
 					alert('投递成功！');
-					location.href="<?=Url::to(['tou/index'])?>";
+					location.href="<?=Url::to(['tou/index','id'=>$jobs['id']])?>";
 					$('#"cboxClose').close();
 				}else if(msg==2){
 					alert('您已经投递过了！');
-					location.href="<?=Url::to(['tou/index'])?>";
+					location.href="<?=Url::to(['tou/index','id'=>$jobs['id']])?>";
 				}else{
 					alert('投递失败！');
-					location.href="<?=Url::to(['tou/index'])?>";
+					location.href="<?=Url::to(['tou/index','id'=>$jobs['id']])?>";
 				}				
 			}
 		})

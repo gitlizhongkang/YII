@@ -15,6 +15,8 @@ class ListController extends Controller
 	public function actionIndex(){	
 		$JoBModel=new jobs;
 		if($arr=Yii::$app->request->get()){
+			$zf=isset($arr['zf'])?$arr['zf']:"";//职位分类
+			$zw=isset($arr['zw'])?$arr['zw']:"";//职位
 			$kw=isset($arr['kw'])?$arr['kw']:"";
 			$fs=isset($arr['fs'])?$arr['fs']:"";
 			$yx=isset($arr['yx'])?$arr['yx']:"";
@@ -26,7 +28,13 @@ class ListController extends Controller
 			if($dq==""){$dq="全国";}
 			$dateStr = date('Y-m-d', time());
 			$time = strtotime($dateStr);  
-			$where="1=1 and deadline > $time";
+			$where="1=1 and audit = 2 and deadline > $time";
+			//职位
+			if($zw==""){
+				$where.="";
+			}else{
+				$where.=" and jobs_name = '$zw'";
+			}
 			//搜索方式
 			if($kw==""){
 				$where.="";
@@ -37,11 +45,17 @@ class ListController extends Controller
 					$where.=" and jobs_name like '%$kw%'";
 				}
 			}
+			//职位分类
+			if($zf==""){
+				$where.="";
+			}else{
+				$where.=" and category_cn = '$zf'";
+			}
 			//地区
 			if($dq=="全国"){
 				$where.="";
 			}else{
-				$where.=" and district_cn like '$dq'";
+				$where.=" and district_cn like '%$dq%'";
 			}
 			//月薪
 			if($yx==""){
@@ -80,6 +94,7 @@ class ListController extends Controller
 				$where.="";
 			}
 			$where.=" order by addtime desc";
+			// print_r($where);die;
 			$jobs=$JoBModel->getAll($where);
 			$HotsModel=new Hots;
 			$HotsWhere="way = '$fs' and words = '$kw'";

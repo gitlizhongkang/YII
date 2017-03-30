@@ -1,9 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<div class="content">
 <title>{#$title#}</title>
-<link rel="shortcut icon" href="favicon.ico" />
-
 <link href="css/user_common.css" rel="stylesheet" type="text/css" />
 <link href="css/user_company.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.js" type="text/javascript" language="javascript"></script>
@@ -12,17 +8,13 @@
 $(document).ready(function()
 {
   //计算获得积分数量
-  $("#week").keyup(function(){  
-    if((/^(\+|-)?\d+$/.test($(this).val())))
-    { 
-    $("#show_val").html("<strong>"+$(this).val()*{#$advinfo.expense#}+"</strong>");
-    $("#expense_input").val($(this).val()*{#$advinfo.expense#});
-    {#if $QISHI.operation_mode=="1" || $QISHI.operation_mode=="3"#}
-    $("#points_expense").show();
-    $("#points_expense_input").val($(this).val()*{#$advinfo.expense#}*{#$QISHI.payment_rate#});
-    $("#show_points_val").html("<strong>"+$(this).val()*{#$advinfo.expense#}*{#$QISHI.payment_rate#}+"</strong>");
-    {#/if#}
-    } 
+  $("#week").keyup(function(){
+    money = $(this).val();
+    $("#show_val").html(money*10)
+    $("#show_m").val(money*10)
+// 这段代码可以给ID为someElement的元素增加属性anyAttribute 属性值为anyValue
+// 属性名字随便写都可以 想写什么都行 如果属性名字存在会修改里面的值 否则就新加属性
+
   });
   $("#Form1").validate({
  //debug: true,
@@ -61,13 +53,12 @@ $(document).ready(function()
 </script>
 </head>
 <body {#if $QISHI.body_bgimg#}style="background:url({#$QISHI.site_domain#}{#$QISHI.site_dir#}data/{#$QISHI.updir_images#}/{#$QISHI.body_bgimg#}) repeat-x center 38px;"{#/if#}>
-{#include file="user/header.htm"#}
 
 <div class="page_location link_bk">当前位置：<a href="{#$QISHI.site_dir#}">首页</a> > <a href="{#$userindexurl#}">会员中心</a> > 增值服务</div>
 
 <div class="usermain">
   <div class="leftmenu  com link_bk">
-  	 {#include file="member_company/left.htm"#}
+  	 
   </div>
 
 <div class="rightmain">
@@ -92,14 +83,16 @@ $(document).ready(function()
   				<p>提交订单</p>
   			</div>
   		</div>
-      <form id="Form1" name="Form1" method="post" action="?act=order_adv_add_save" enctype="multipart/form-data" >
+      <form id="Form1" name="Form1" method="post" action="index.php?r=category/add" enctype="multipart/form-data" >
   		<div class="intrgration_box" style="margin:0 30px">
   			<table>
   				<tbody>
   					<tr>
   						<td height="30" width="100">广告位名称：</td>
-  						<td><strong>{#$advinfo.categoryname#}</strong>
-               <input type="hidden" name="advid" id="advid" value="{#$advinfo.id#}">
+  						<td><strong><?= $category_name?></strong>
+  <input type="hidden"  name="guanggao" id="guanggao" value="<?= $category_name?>">
+              
+
               </td>
   					</tr>
   					<tr>
@@ -108,38 +101,29 @@ $(document).ready(function()
   					</tr>
             <tr id="count">
               <td height="30" width="100">应付金额：</td>
-              <td><span id="show_val">0</span> 元 <span style="display:none" id="points_expense">(<span id="show_points_val">0</span> 积分)</span></td>
-              <input type="hidden" name="expense_input" id="expense_input">
-              <input type="hidden" name="points_expense_input" id="points_expense_input">
+              <td><span id="show_val" name='show_val'>0</span> 元 <span style="display:none" id="points_expense">(<span id="show_points_val">0</span> 积分)</span></td>
+              <input type="hidden" name="show_m" id="show_m" >
+              
             </tr>
   				</tbody>
   			</table>
   			<table>
-  				<tbody>
-            {#if $QISHI.operation_mode=="1" || $QISHI.operation_mode=="3"#}
-  					<tr>
-  						<td height="30" width="100">支付方式：</td>
-  						<td width="150"><input type="radio" name="payment_name" value="points" checked/>&nbsp;&nbsp;账户积分</td>
-  						<td><p>(您的账户剩余<span>{#$points#}</span>点积分)</p></td>
-  					</tr>
-            {#section name=payment loop=$payment#}
-  					<tr>
-  						<td></td>
-  						<td width="150"><input type="radio" name="payment_name" value="{#$payment[payment].typename#}" id="payment_name" />&nbsp;&nbsp;<img src="{#$QISHI.site_dir#}include/payment/logo/{#$payment[payment].typename#}.gif" alt="" width="88" height="30"/></td>
-              <td> <p>({#$payment[payment].p_introduction#})</p></td>
-  					</tr>
-            {#/section#}
-            {#else#}
-            {#section name=payment loop=$payment#}
+<tbody>
+<td height="30" width="100">支付方式：</td>
+<td width="150"><input type="radio" name="payment_name" value="points" checked/>&nbsp;&nbsp;账户积分</td>
+<?php foreach ($arr as $key => $value): ?>
+<td>
+  <p>(您的账户剩余<span><?= $value['points']?></span>点积分)</p>
+</td>
+<?php endforeach ?>
+            <?php foreach ($data as $key => $value): ?>
             <tr>
-              <td height="30" width="100">{#if $smarty.section.payment.index==0#}充值方式：{#/if#}</td>
-              <td width="150"><input {#if $smarty.section.payment.index==0#}checked{#/if#} type="radio" name="payment_name" value="{#$payment[payment].typename#}" id="payment_name" />&nbsp;&nbsp;<img src="{#$QISHI.site_dir#}include/payment/logo/{#$payment[payment].typename#}.gif" alt="" width="88" height="30"/></td>
-              <td> <p>({#$payment[payment].p_introduction#})</p></td>
+            <td></td>
+              <td width="150"><input type="radio" name="payment_name" value="<?= $value['typename']?>" id="payment_name" />&nbsp;&nbsp;<img src="logo/<?= $value['typename']?>.gif" alt="" width="88" height="30"/></td>
+              <td> <p>(<?= $value['p_introduction']?>)</p></td>
             </tr>
-            {#/section#}
-            {#/if#}
-
-  				</tbody>
+             <?php endforeach ?>
+</tbody>
   			</table>
   			<input class="but130lan intrgration_but" type="submit" name="submit" value="充值">
   		</div> 
@@ -148,6 +132,5 @@ $(document).ready(function()
   </div>
   <div class="clear"></div>
 </div>
-{#include file="user/footer.htm"#}
 </body>
 </html>

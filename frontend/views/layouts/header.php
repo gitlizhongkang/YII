@@ -100,7 +100,7 @@ $user=$session->get('user');
 <script type="text/javascript">
     myEvent(window,'load',function(){
         cs_box.set({
-            img_path : 'service/images/lx.jpg',   //设置图片路径
+            img_path : 'service/images/xixi.jpg',   //设置图片路径
             qq : '632179652',   //设置QQ号码
         });
     });

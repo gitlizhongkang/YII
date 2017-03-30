@@ -15,10 +15,10 @@ use yii\helpers\Url;
 		<div class="menu_sub dn">
 		<?php foreach($v as $k1=>$v1){ ?>
 			<dl class="reset">
-				<dt><a href="h/jobs/list_后端开发?labelWords=label"><?=$k1?></a></dt>
+				<dt><a href="<?=Url::to(['list/index','zf'=>$k1])?>"><?=$k1?></a></dt>
 				<dd>
 				<?php foreach($v1 as $k2=>$v2){ ?>
-					<a href="h/jobs/list_Java?labelWords=label"><?=$v2?></a>					
+					<a href="<?=Url::to(['list/index','zw'=>$v2])?>"><?=$v2?></a>					
 				<?php } ?>		
 				</dd>
 			</dl>
@@ -95,11 +95,11 @@ use yii\helpers\Url;
     if(count($lun)>=($i+1)){
     ?>
     	<li  class="banner_bg_<?=$i?> current" >
-            <a href="" target="_blank"><img src="../../backend/web/<?=$lun[$i]['img_url']?>" width="612" height="160" alt="<?=$lun[$i]['title']?>" /></a>
+            <a href="<?=Url::to(['company/gongsi','id'=>$lun[$i]['company_id']])?>" target="_blank"><img src="<?=$lun[$i]['img_url']?>" width="612" height="160" alt="<?=$lun[$i]['title']?>" /></a>
         </li>
 	<?php }else{ ?>
 		<li  class="banner_bg_<?=$i?>" >
-            <a href="" target="_blank"><img src="style/images/kong.png" width="612" height="160" alt="空缺" /></a>
+            <a href="javascript:;" target="_blank"><img src="style/images/kong.png" width="612" height="160" alt="空缺" /></a>
         </li>
      
     <?php } } ?>
@@ -113,7 +113,7 @@ use yii\helpers\Url;
 	    ?>
         	<li  class="thumbs_<?=$i?> current" >
                 <i></i>
-                <img src="../../backend/web/<?=$lun[$i]['img_url']?>" width="113" height="42" />
+                <img src="<?=$lun[$i]['img_url']?>" width="113" height="42" />
             </li>
         <?php }else{ ?>
         	<li  class="thumbs_<?=$i?> current" >
@@ -130,8 +130,8 @@ for($i=0;$i<6;$i++){
 if(count($middle)>=($i+1)){
 ?>
 	<li >
-        <a href="" target="_blank">
-            <img src="../../backend/web/<?=$middle[$i]['img_url']?>" width="113" height="113" alt="联想" />
+        <a href="<?=Url::to(['company/gongsi','id'=>$middle[$i]['company_id']])?>" target="_blank">
+            <img src="<?=$middle[$i]['img_url']?>" width="113" height="113" alt="联想" />
             <div class="hot_info">
             	<h2 title="<?=$middle[$i]['title']?>"><?=$middle[$i]['title']?></h2>
                 <em></em>
@@ -143,7 +143,7 @@ if(count($middle)>=($i+1)){
     </li>
     <?php }else{ ?>
     <li >
-        <a href="" target="_blank">
+        <a href="javascript:;" target="_blank">
             <img src="style/images/kong.png" width="113" height="113" alt="联想" />
             <div class="hot_info">
             	<h2 title="空缺">空缺</h2>
@@ -335,6 +335,41 @@ if(count($middle)>=($i+1)){
 
 <!-- <script src="style/js/wb.js" type="text/javascript" charset="utf-8"></script>
  -->
- 
+ <script>
+ 	$(document).ready(function(){
+ 		<?php
+ 		$session=\Yii::$app->session;
+		$user=$session->get('user');
+ 			if($user){
+ 		?>
+ 		$('#bbb').hide();
+ 		<?php
+ 			}
+ 		?>
+ 	})
+ </script>
+ <div id="bbb">
+ <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+ <div id="loginToolBar" class="loginToolBar" style="bottom: 0px;">
+<div>
+<em></em>
+<img src="//www.lgstatic.com/www/static/common/widgets/login_toolbar/img/footbar_logo_cccc78d.png" height="45" width="138">
+<span class="companycount">
+<?=$num['count_companys']['num']?>
+</span>
+<span class="positioncount">
+<?=$num['count_jobs']['num']?>
+</span>
+<a class="bar_login passport_login_pop" href="<?=url::to(['register/login'])?>">
+<i></i>
+</a>
+<div class="right">
+<a id="bar_register" class="bar_register" rel="nofollow" href="<?=Url::to(['register/index'])?>" target="_blank" data-lg-tj-id="4t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+<i></i>
+</a>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>	

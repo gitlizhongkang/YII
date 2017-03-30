@@ -1,6 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<div class="content">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta name="renderer" content="webkit"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
@@ -60,77 +58,49 @@
 <div class="account-top-block ">
 	<div class="account-state f-left">账户状态</div>
 	<div class="a-state-content f-left">
-		<span class="account-type last">当前积分：<span>100</span>点
+	<?php foreach ($arr as $key => $value): ?>
+	<span class="account-type last">当前积分：<span><?= $value['points']?></span>点
+	<?php endforeach ?>
 		<a href="index.php?r=category%2Findent" class="underline">积分充值</a></span>
 
 	</div>
 </div>
 					</div>
 					<div class="account-ctrl-bar clearfix">
-						<h3 class="f-left">积分消费明细</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-						<a href="company_service.php?act=j_account" class="f-right underline">积分规则</a>
+						<h3 class="f-left">积分规则</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#" class="f-right underline">积分消费明细</a>
 					</div>
-<!-- <div class="company-data-list">
-<div class="c-data-top account-d clearfix">
-<div class="item f-left top-item1">操作类型</div>
-<div class="item f-left top-item2">
-<div class="data-filter span4">
-	<span class="filter-span">{#if $c_type!=''#}{#$c_type#}{#else#}收支状态{#/if#}<i class="filter-icon"></i></span>
-	<ul class="filter-down select_ul">
-		<li type="cid" data="0"><a href="company_service.php?act=j_account&detail=1&cid=0&settr={#$smarty.get.settr#}">全部</a></li>
-		<li type="cid" data="1"><a href="company_service.php?act=j_account&detail=1&cid=1&settr={#$smarty.get.settr#}">消耗</a></li>
-		<li type="cid" data="2"><a href="company_service.php?act=j_account&detail=1&cid=2&settr={#$smarty.get.settr#}">增加</a></li>
-	</ul>
-</div>
-</div>
-<div class="item f-left top-item3">积分变化</div>
-<div class="item f-left top-item4">
-<div class="data-filter span4">
-	<span class="filter-span">
-		{#if $settr=='3'#}三天内{#elseif $settr=='7'#}一周内{#elseif $settr=='30'#}一个月{#else#}操作时间{#/if#}
-		<i class="filter-icon"></i>
-	</span>
-	<ul class="filter-down select_ul">
-		<li type="tid" data="0"><a href="company_service.php?act=j_account&detail=1&cid={#$smarty.get.cid#}&settr=0">全部</a></li>
-		<li type="tid" data="3"><a href="company_service.php?act=j_account&detail=1&cid={#$smarty.get.cid#}&settr=3">三天内</a></li>
-		<li type="tid" data="7"><a href="company_service.php?act=j_account&detail=1&cid={#$smarty.get.cid#}&settr=7">一周内</a></li>
-		<li type="tid" data="30"><a href="company_service.php?act=j_account&detail=1&cid={#$smarty.get.cid#}&settr=30">一个月</a></li>
-	</ul>
-</div>
-</div>
-<div class="item f-left top-item5">操作</div>
-</div>
+<div class="company-data-list">
 
-{#foreach from=$report item=list#}
+<?php foreach ($info as $key => $value): ?>
 <div class="c-data-row">
 <div class="c-data-content account-d clearfix">
-	<div class="c-item f-left content1">{#$list.log_op_type_cn#}</div>
+	<div class="c-item f-left content1"><?= $value['log_value']?></div>
+	<div class="c-item f-left content3"><span class="lost-number {#if $list.log_op_used>=0#}add{#else#}less{#/if#}"></span></div>
+	<div class="c-item f-left content4"><span class="data-time"></span></div>
+	<div class="c-item f-left content5"><a href="javascript:;" class="data-ctrl underline check-detail" log_value="{#$list.log_value#}"></a></div>
 	<div class="c-item f-left content2">
-		{#if $list.log_op_used>=0#}增加{#else#}消耗{#/if#}
+	<?php
+		if($value['log_ismoney'] ==0){
+			echo "消耗";
+		}else{
+			echo "增加";
+		}
+	?>
 	</div>
-	<div class="c-item f-left content3"><span class="lost-number {#if $list.log_op_used>=0#}add{#else#}less{#/if#}">{#$list.log_op_used#}</span></div>
-	<div class="c-item f-left content4"><span class="data-time">{#$list.log_addtime|date_format:"%Y-%m-%d"#}</span></div>
-	<div class="c-item f-left content5"><a href="javascript:;" class="data-ctrl underline check-detail" log_value="{#$list.log_value#}">查看</a></div>
 </div>
 </div>
-{#/foreach#}
-{#if $page#}
+<?php endforeach ?>
 <table border="0" align="center" cellpadding="0" cellspacing="0" class="link_bk">
-<tr>
-	<td height="50" align="center"> <div class="page link_bk">{#$page#}</div></td>
-</tr>
 </table>
-{#/if#}
-{#else#} -->
-							<div class="emptytip">没有找到对应的信息！</div>
-						<!-- {#/if#} -->
+
+
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
 	</div>
-	
+	</div>
 </body>
 </html>

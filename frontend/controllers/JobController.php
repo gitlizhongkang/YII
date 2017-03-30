@@ -39,7 +39,7 @@ class JobController extends Controller
 			$members= new Members;
 			$point=$members->getPoint($id);
 			if($point['points']<10){
-				return $this->render('success.html',['count'=>$count,'type'=>4]);
+				return 4;
 				//积分不足
 			}else{
 				if($count<5){
@@ -47,8 +47,8 @@ class JobController extends Controller
 				$category_cn=$arr['category_cn'];
 				$cateId=JobsCategory::find()->select('id')->where(['categoryname'=>$category_cn])->asArray()->one();
 				$arr['category']=$cateId['id'];
-				$arr['tag_cn']=implode(',',$arr['tag_cn']);
-				$arr['require']=implode(',',$arr['require']);
+				// $arr['tag_cn']=implode(',',$arr['tag_cn']);
+				// $arr['require']=implode(',',$arr['require']);
 				$arr['district_cn']=$arr['province'].'/'.$arr['city'].'/'.$arr['place'];
 				$arr['age']=$arr['age1'].'-'.$arr['age2'];
 				unset($arr['province'],$arr['city'],$arr['place'],$arr['age1'],$arr['age2']);
@@ -64,6 +64,7 @@ class JobController extends Controller
 				$arr['trade_cn']=$info['trade'];
 				$arr['scale_cn']=$info['scale'];
 				$arr['street_cn']=$info['street'];
+				// print_r($arr);die;
 				$aa=$job->add($arr);
 				//添加职位				
 				if($aa){
@@ -77,14 +78,15 @@ class JobController extends Controller
 					$aa=$log->add($logs);
 					//添加日志					
 					$members->updatePoint($id);
-					//修改积分					
-					return $this->render('success.html',['count'=>$count1,'type'=>1]);
-					//发布职位成功
+					//修改积分
+					return 1;					
+					//成功
 				}else{
-					return $this->render('success.html',['count'=>$count1,'type'=>3]);
+					return 0;
+					//失败
 				}								
 			}else{				
-					return $this->render('success.html',['count'=>$count,'type'=>2]);
+					return 2;
 					//已达上线
 				}				
 			}						
@@ -144,15 +146,18 @@ class JobController extends Controller
 		$resumeJob=new ResumeJob;
 		$resume=$resumeJob->groupJob($info['id']);
 		foreach ($arr['list'] as $k => $v) {
-			foreach ($resume as $k1 => $v1) {
-				if($v1['job_id']==$v['id']){
-					$arr['list'][$k]['count']=$v1["count('id')"];
-				}else{
-					$arr['list'][$k]['count']='0';
-				}
-			}			
+			if(empty($resume)){
+				$arr['list'][$k]['count']='0';
+			}else{
+				foreach ($resume as $k1 => $v1) {
+					if($v1['job_id']==$v['id']){
+						$arr['list'][$k]['count']=$v1["count('id')"];
+					}else{
+						$arr['list'][$k]['count']='0';
+					}
+				}	
+			}					
 		}
-		// print_r($arr['list']);die;
 		return $this->render('positions.html',['arr'=>$arr,'count'=>$count,'type'=>$type]);
 	}
 	//删除职位
@@ -234,5 +239,15 @@ class JobController extends Controller
 			$data['arr']=$arr;
 			return $this->render('update.html',$data);
 		}											
+	}
+	//预览简历
+	// public $layout=false;
+	public function actionPreview(){
+		$arr=Yii::$app->request->post();
+		return $this->renderpartial('preview.html',['arr'=>$arr]);
+	}
+	public function actionResult(){
+		$data=yii::$app->request->get();
+		return $this->render('success.html',$data);
 	}
 }

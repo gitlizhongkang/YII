@@ -40,10 +40,16 @@ var youdao_conv_id = 271546;
 						<?php if($companyinfo['audit']==1){ ?>
 							<span class="va dn">拉勾认证企业</span>
 							<a target="_blank" class="applyC" >已认证</a>
-						<?php }else{ ?>
+						<?php }else if($companyinfo['audit']==0){ ?>
 							<span class="va dn">拉勾未认证企业</span>
 							<a target="_blank" class="applyC" href="<?= Url::to(['company/apply','companyid'=>$companyinfo['id']]) ?>">申请认证</a>
-						<?php } ?>
+						<?php }else if($companyinfo['audit']==2){ ?>
+							<span class="va dn">拉勾认证企业</span>
+							<a target="_blank" class="applyC" >审核中</a>
+							<?php }else{ ?>
+							<span class="va dn">拉勾认证企业</span>
+							<a target="_blank" class="applyC" href="<?= Url::to(['company/apply','companyid'=>$companyinfo['id']]) ?>">审核未通过</a>
+							<?php } ?>
 						<div class="clear"></div>
 						<h1 title="<?php echo $companyinfo['companyname']?>" class="fullname"><?php echo $companyinfo['companyname']?></h1>
 						<form class="clear editDetail dn" id="editDetailForm">
@@ -205,12 +211,12 @@ var youdao_conv_id = 271546;
 	        	 		        	<!--无招聘职位-->
 						<dl id="noJobs" class="c_section">
 		                	<dt>
-		                    	<h2><em></em>招聘职位</h2>
+		                    	<h2><em></em>管理中心</h2>
 		                    </dt>
 		                    <dd>
 		                    	<div class="addnew">
-		                        	发布需要的人才信息，让伯乐和千里马尽快相遇……<br>
-		                            <a href="<?= Url::to(['job/index'])?>">+添加招聘职位</a>
+		                        	点击进入管理中心<br>
+		                            <a href="<?= Url::to(['job/index'])?>">进入管理中心</a>
 		                        </div>
 		                    </dd>
 		                </dl>

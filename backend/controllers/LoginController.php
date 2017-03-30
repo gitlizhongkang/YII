@@ -25,6 +25,7 @@ class LoginController extends Controller
 		    if($arr=$model->checkLogin($admin_name,$pwd)){
 		    	$session->set('admin_name',$admin_name);
 		    	$session->set('admin_id',$arr['admin_id']);
+		    	$session->remove('code');
 		    	return $this->redirect(['index/index']);
 		    }else{
 		    	echo '用户名或密码不正确';
@@ -51,8 +52,6 @@ class LoginController extends Controller
 		}
 		$session=Yii::$app->session;
 		$session->set('code',$captch_code);
-		// $_SESSION['code']=$captch_code;
-		// echo $_SESSION['code'];
 		//加点干扰
 		for($i=0;$i<200;$i++){
 			$pointcolor=imagecolorallocate($image,rand(50,200),rand(50,200),rand(50,200));
@@ -65,5 +64,11 @@ class LoginController extends Controller
 		}
 		header('content-type:image/png');
 		imagepng($image);
+	}
+	public function actionLogout(){
+		$session=Yii::$app->session;
+		$session->remove('admin_name');
+		$session->remove('admin_id');
+		return $this->redirect(['login/index']);
 	}
 }

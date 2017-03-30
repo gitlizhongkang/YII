@@ -10,7 +10,7 @@ $user=$session->get('user');
 <link  media="handheld" rel="alternate">
 <!-- end 云适配 -->
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>发布新职位-招聘服务-拉勾网-最专业的互联网招聘平台</title>
+<title></title>
 <meta content="23635710066417756375" property="qc:admins">
 <meta name="description" content="拉勾网是3W旗下的互联网领域垂直招聘网站,互联网职业机会尽在拉勾网">
 <meta name="keywords" content="拉勾,拉勾网,拉勾招聘,拉钩, 拉钩网 ,互联网招聘,拉勾互联网招聘, 移动互联网招聘, 垂直互联网招聘, 微信招聘, 微博招聘, 拉勾官网, 拉勾百科,跳槽, 高薪职位, 互联网圈子, IT招聘, 职场招聘, 猎头招聘,O2O招聘, LBS招聘, 社交招聘, 校园招聘, 校招,社会招聘,社招">
@@ -36,7 +36,7 @@ console.log(1);
     			<img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘" />
     		</a>
     		<ul class="reset" id="navheader">
-    			<li class="current"><a href="index.html">首页</a></li>
+    			<li class="current"><a href="<?=Url::to(['index/index'])?>">首页</a></li>
                 <li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
                 <li ><a href="<?=Url::to(['list/index'])?>" target="_blank">招聘中心</a></li>
 	    	</ul>
@@ -76,15 +76,13 @@ console.log(1);
 		<dl class="company_center_aside">
 			<dt>我发布的职位</dt>
 			<dd><a href="<?=Url::to(['job/job','type'=>'1'])?>">有效职位</a></dd>
-			<dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">充值订单</a></dd>
-            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">增值服务</a></dd>
-            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">企业模板</a></dd>
+            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">已下线职位</a></dd>
 		</dl>
         <dl class="company_center_aside">
             <dt>会员服务</dt>
             <dd><a href="<?=Url::to(['category/account'])?>">我的账户</a></dd>
-            <dd><a href="<?=Url::to(['category/indent'])?>">充值订单</a></dd>
             <dd><a href="<?=Url::to(['category/advert'])?>">增值服务</a></dd>
+            <dd><a href="<?=Url::to(['category/indent'])?>">充值订单</a></dd>
         </dl>
     	<div class="subscribe_side mt20">
 			<div class="f14">想收到更多更好的简历？</div>

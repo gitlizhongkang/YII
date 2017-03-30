@@ -65,7 +65,7 @@ class Members extends \yii\db\ActiveRecord
     }
     public function getList($where)
     {
-        $arr=Members::find()->where($where);
+        $arr=Members::find()->select("*")->join("inner join","lg_company as c","c.u_id=lg_members.uid")->where($where);
         $pages = new Pagination(['totalCount' => $arr->count(),'pageSize'=>2]);
         $list=$arr->offset($pages->offset)->limit($pages->limit)->asArray()->all();
         $info['pages']=$pages;

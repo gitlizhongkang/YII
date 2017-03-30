@@ -56,7 +56,7 @@ class ResumeJob extends \yii\db\ActiveRecord
     }
     //查询某一用户的职位按照职位id分组
     public function groupJob($id){
-        $sql="select job_id,count('id') from lg_resume_job where company_id=5 group by job_id";
+        $sql="select job_id,count('id') from lg_resume_job where company_id=$id group by job_id";
         $connect=Yii::$app->db;
         $command=$connect->createCommand($sql);
         return $command->queryAll(); 
