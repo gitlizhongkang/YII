@@ -164,12 +164,12 @@ class Jobs extends \yii\db\ActiveRecord
     //查询所有职位 不分页
      public function select()
     {
-        return Jobs::find()->offset('0')->limit('5')->all();       
+        return Jobs::find()->where('audit = 2')->offset('0')->limit('5')->all();       
     }
     //查询最新职位 不分页
      public function select1()
     {
-        return $this->find()->offset('0')->limit('5')->orderBy('addtime DESC')->all();       
+        return $this->find()->where('audit = 2')->offset('0')->limit('5')->orderBy('addtime DESC')->all();       
     }
     //查询一个用户的职位数量
     public function jobCount($id){
