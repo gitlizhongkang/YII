@@ -76,11 +76,7 @@ console.log(1);
 		<dl class="company_center_aside">
 			<dt>我发布的职位</dt>
 			<dd><a href="<?=Url::to(['job/job','type'=>'1'])?>">有效职位</a></dd>
-<<<<<<< HEAD
-            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">企业模板</a></dd>
-=======
             <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">已下线职位</a></dd>
->>>>>>> 364e35aaee084960cb76454f496ccbf27ee8177b
 		</dl>
         <dl class="company_center_aside">
             <dt>会员服务</dt>

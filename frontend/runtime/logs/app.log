@@ -9134,3 +9134,118 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1490856362.686
     'REQUEST_TIME' => 1490856362
 ]
+2017-03-30 09:24:06 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)' in D:\xampp\htdocs\nine\YII\frontend\controllers\IndexController.php:87
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-30 09:24:06 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '7ermva4nil8blv0nr6it4r7kb4'
+    '_ga' => 'GA1.1.1493250242.1490857712'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490599665,1490664977,1490792485,1490857712'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490857727'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=7ermva4nil8blv0nr6it4r7kb4; _ga=GA1.1.1493250242.1490857712; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490599665,1490664977,1490792485,1490857712; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490857727'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '61627'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nine/YII/frontend/web/'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490858646.926
+    'REQUEST_TIME' => 1490858646
+]
+2017-03-30 09:24:54 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)' in D:\xampp\htdocs\nine\YII\common\models\Category.php:57
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-30 09:24:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/company-list'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '7ermva4nil8blv0nr6it4r7kb4'
+    '_ga' => 'GA1.1.1493250242.1490857712'
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490599665,1490664977,1490792485,1490857712'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490857727'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/nine/YII/frontend/web/'
+    'HTTP_COOKIE' => 'advanced-frontend=7ermva4nil8blv0nr6it4r7kb4; _ga=GA1.1.1493250242.1490857712; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490599665,1490664977,1490792485,1490857712; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490857727'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\Git\\cmd;D:\\xampp\\mysql\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\DCMainWin.exe;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\xampp\\php;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/nine/YII/frontend/web/index.php'
+    'REMOTE_PORT' => '61799'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Fcompany-list'
+    'REQUEST_URI' => '/nine/YII/frontend/web/index.php?r=index%2Fcompany-list'
+    'SCRIPT_NAME' => '/nine/YII/frontend/web/index.php'
+    'PHP_SELF' => '/nine/YII/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490858694.118
+    'REQUEST_TIME' => 1490858694
+]
