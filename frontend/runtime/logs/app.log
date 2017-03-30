@@ -9249,3 +9249,205 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1490858694.118
     'REQUEST_TIME' => 1490858694
 ]
+2017-03-30 07:56:09 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aduit' in 'where clause'' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\Users\Administrator\Desktop\advanced\backend\models\Jobs.php(167): yii\db\ActiveQuery->all()
+#5 C:\Users\Administrator\Desktop\advanced\frontend\controllers\IndexController.php(40): backend\models\Jobs->select()
+#6 [internal function]: frontend\controllers\IndexController->actionIndex()
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aduit' in 'where clause'
+The SQL being executed was: SELECT * FROM `lg_jobs` WHERE aduit = 3 LIMIT 5' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\Users\Administrator\Desktop\advanced\backend\models\Jobs.php(167): yii\db\ActiveQuery->all()
+#5 C:\Users\Administrator\Desktop\advanced\frontend\controllers\IndexController.php(40): backend\models\Jobs->select()
+#6 [internal function]: frontend\controllers\IndexController->actionIndex()
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'aduit' in 'where clause'
+)
+
+2017-03-30 07:56:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    '_pk_ysp_id_' => [
+        'object Object' => '1f0ab561fe557a85.1490788321.1.1490788321.1490788321.'
+    ]
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490669999,1490760250,1490791455,1490837445'
+    'advanced-frontend' => '05tvr2j41i7j0lds04lctjta53'
+    '_csrf-frontend' => 'ee6db5dee433242218c0a6bd6eccc0e43edeef24b1837d25f8e8100cb167b073a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R98dyIFHOxtqwHPwAvznwG_lZwINFw0h\";}'
+    '_ga' => 'GA1.2.808763677.1490837445'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490847743'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\windowsApps;D:\\phpStudy\\MySQL\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\phpStudy\\php\\php-5.6.27-nts'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1808'
+    'SCRIPT_NAME' => '/web/index.php'
+    'REQUEST_URI' => '/web/index.php?r=index%2Findex'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '14240'
+    'SCRIPT_FILENAME' => 'C:/Users/Administrator/Desktop/advanced/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.frontend.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => '_pk_ysp_id.[object Object].6190=1f0ab561fe557a85.1490788321.1.1490788321.1490788321.; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490669999,1490760250,1490791455,1490837445; advanced-frontend=05tvr2j41i7j0lds04lctjta53; _csrf-frontend=ee6db5dee433242218c0a6bd6eccc0e43edeef24b1837d25f8e8100cb167b073a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R98dyIFHOxtqwHPwAvznwG_lZwINFw0h%22%3B%7D; _ga=GA1.2.808763677.1490837445; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490847743'
+    'HTTP_REFERER' => 'http://www.frontend.com/web/index.php?r=list%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_HOST' => 'www.frontend.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490860569.5946
+    'REQUEST_TIME' => 1490860569
+]
+2017-03-30 07:56:46 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aduit' in 'where clause'' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\Users\Administrator\Desktop\advanced\backend\models\Jobs.php(167): yii\db\ActiveQuery->all()
+#5 C:\Users\Administrator\Desktop\advanced\frontend\controllers\IndexController.php(40): backend\models\Jobs->select()
+#6 [internal function]: frontend\controllers\IndexController->actionIndex()
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aduit' in 'where clause'
+The SQL being executed was: SELECT * FROM `lg_jobs` WHERE aduit = 2 LIMIT 5' in C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\Users\Administrator\Desktop\advanced\backend\models\Jobs.php(167): yii\db\ActiveQuery->all()
+#5 C:\Users\Administrator\Desktop\advanced\frontend\controllers\IndexController.php(40): backend\models\Jobs->select()
+#6 [internal function]: frontend\controllers\IndexController->actionIndex()
+#7 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Administrator\Desktop\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Administrator\Desktop\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'aduit' in 'where clause'
+)
+
+2017-03-30 07:56:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    '_pk_ysp_id_' => [
+        'object Object' => '1f0ab561fe557a85.1490788321.1.1490788321.1490788321.'
+    ]
+    'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490669999,1490760250,1490791455,1490837445'
+    'advanced-frontend' => '05tvr2j41i7j0lds04lctjta53'
+    '_csrf-frontend' => 'ee6db5dee433242218c0a6bd6eccc0e43edeef24b1837d25f8e8100cb167b073a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R98dyIFHOxtqwHPwAvznwG_lZwINFw0h\";}'
+    '_ga' => 'GA1.2.808763677.1490837445'
+    'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6' => '1490847743'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\windowsApps;D:\\phpStudy\\MySQL\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\phpStudy\\php\\php-5.6.27-nts'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1808'
+    'SCRIPT_NAME' => '/web/index.php'
+    'REQUEST_URI' => '/web/index.php?r=index%2Findex'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '14251'
+    'SCRIPT_FILENAME' => 'C:/Users/Administrator/Desktop/advanced/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/Users/Administrator/Desktop/advanced/frontend'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.frontend.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => '_pk_ysp_id.[object Object].6190=1f0ab561fe557a85.1490788321.1.1490788321.1490788321.; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490669999,1490760250,1490791455,1490837445; advanced-frontend=05tvr2j41i7j0lds04lctjta53; _csrf-frontend=ee6db5dee433242218c0a6bd6eccc0e43edeef24b1837d25f8e8100cb167b073a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R98dyIFHOxtqwHPwAvznwG_lZwINFw0h%22%3B%7D; _ga=GA1.2.808763677.1490837445; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1490847743'
+    'HTTP_REFERER' => 'http://www.frontend.com/web/index.php?r=list%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_HOST' => 'www.frontend.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1490860606.4758
+    'REQUEST_TIME' => 1490860606
+]

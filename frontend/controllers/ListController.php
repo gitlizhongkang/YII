@@ -28,7 +28,7 @@ class ListController extends Controller
 			if($dq==""){$dq="全国";}
 			$dateStr = date('Y-m-d', time());
 			$time = strtotime($dateStr);  
-			$where="1=1 and deadline > $time";
+			$where="1=1 and audit = 2 and deadline > $time";
 			//职位
 			if($zw==""){
 				$where.="";
