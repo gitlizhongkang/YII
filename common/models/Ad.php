@@ -75,7 +75,7 @@ class Ad extends \yii\db\ActiveRecord
     {
         if ($this->validate($arr)) {
             foreach ($this->img_url as $file) {
-                $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
+                $file->saveAs('../../frontend/web/uploads/' . $file->baseName . '.' . $file->extension);
             }
             return true;
         } else {
@@ -105,7 +105,7 @@ class Ad extends \yii\db\ActiveRecord
     //广告位轮播图显示
     public function show1(){
         $time=time();
-        return $this->find()->where(['>','deadline',$time])->andWhere(['categoryname'=>'首页图片轮番广告'])->andWhere(['is_display'=>1])->all();
+        return $this->find()->where(['>','deadline',$time])->andWhere(['<','starttime',$time])->andWhere(['categoryname'=>'首页图片轮番广告'])->andWhere(['is_display'=>1])->all();
     }
      //广告位中部格子显示
      public function show2(){

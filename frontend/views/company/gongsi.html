@@ -8,7 +8,6 @@ use yii\helpers\Url;
   <link rel="stylesheet" type="text/css" href="gongsi/style1.css" />
   <style type="text/css">.amap-adinfo-content-wrap,.amap-info-combo{text-align:center}.amap-adinfo-content-wrap .adinfo-select-btn{margin:3px auto}.adinfo-select-btn{margin-left:25px;margin-top:4px;margin-bottom:3px;border:0;color:#fff;cursor:pointer;padding:3px 6px;border-radius:2px;background-color:#0091ff}.amap-info-combo{font-size:12px;line-height:18px;white-space:nowrap}.amap-input-tips{position:fixed;border:1px solid #dadada;width:100px;height:100px}.amap-info-combo table{width:100%;border-spacing:0;margin:4px 0 6px}.amap-info-combo table td{min-width:8px}.amap-info-tabs{overflow:hidden;height:30px;line-height:30px;color:#333;cursor:pointer;background-color:#f2f2f2}.amap-info-combo .tab{border:1px solid #d9d9d9;height:22px;border-right-width:0;padding:0 10px}.amap-info-combo .tab:first-child{border-left-width:0}.amap-info-tabs .tab-icon{width:18px;height:18px;display:inline-block;vertical-align:middle;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) no-repeat}.amap-info-tabs .icon-start{background-position:0 -100px}.amap-info-tabs .icon-end{background-position:0 -50px}.amap-info-tabs .icon-around{background-position:0 1px;border-left:0}.amap-info-combo .selected{background-color:#fefefe;border-bottom:0}.amap-info-combo input:focus{outline:0}.amap-info-combo .input-label{padding:0 5px 0 8px}.amap-info-combo.status-poiSearch .input-label{padding:0 2px}.amap-info-combo.status-poiSearch .keyword-input{border-right:0}.amap-info-combo .keyword{width:90%;height:20px;border:0;padding:0 4px;background-color:#fff}.amap-info-combo .keyword-input{border:1px solid #c9c9c9;line-height:21px;height:22px;width:100%;text-align:left;margin-right:40px;border-radius:2px}.amap-info-combo .search-button{background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) 10px -197px no-repeat #0091ff;border:none;border-top-right-radius:2px;border-bottom-right-radius:2px;color:#FFF;width:30px;height:24px;line-height:24px;padding:0 4px;margin-right:5px;text-indent:-9999em;cursor:pointer}.amap-info-combo .nav-button{padding:2px 2px 2px 8px}.amap-info-combo .nav-icon{padding:4px 3px 4px 20px;border:1px solid #c9c9c9;margin-right:4px;border-radius:2px;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) no-repeat;cursor:pointer}.amap-info-combo .hovered{background-color:#0091ff;border-color:#0091ff;color:#fff}.amap-info-combo .nav-drive{background-position:2px -246px}.amap-info-combo .nav-drive-hover{background-position:2px -396px}.amap-info-combo .nav-bus{background-position:2px -299px}.amap-info-combo .nav-bus-hover{background-position:2px -447px}.amap-info-combo .nav-walk{background-position:6px -347px}.amap-info-combo .nav-walk-hover{background-position:6px -497px}.amap-adcombo-close{position:absolute;top:4px;right:4px;background:url(https://webapi.amap.com/images/close.png) center center no-repeat;width:18px;height:18px;text-indent:-9999em}.amap-adcontent-body{box-shadow:0 0 .5px rgba(0,0,100,.6);background:#fff;border-radius:2px;text-align:left;border:1px solid silver}.amap-combo-sharp{margin:0 auto;bottom:1px;position:relative;background:url(https://webapi.amap.com/theme/v1.3/images/amap-info.png) -5px -564px no-repeat;width:18px;height:9px}.hide{display:none}</style>
   <style type="text/css">.amap-indoor-map .label-canvas{position:absolute;top:0;left:0}.amap-indoor-map .highlight-image-con *{pointer-events:none}.amap-indoormap-floorbar-control{position:absolute;margin:auto 0;bottom:165px;right:12px;width:35px;text-align:center;line-height:1.3em;overflow:hidden;padding:0 2px}.amap-indoormap-floorbar-control .panel-box{background-color:rgba(255,255,255,.9);border-radius:3px;border:1px solid #ccc}.amap-indoormap-floorbar-control .select-dock{position:absolute;top:0;left:0;width:100%;box-sizing:border-box;height:30px;border:solid #4196ff;border-width:0 2px;border-radius:2px;pointer-events:none;background:linear-gradient(to bottom,#f6f8f9 0,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%)}.amap-indoor-map .transition{transition:opacity .2s},.amap-indoormap-floorbar-control .transition{transition:top .2s,margin-top .2s}.amap-indoormap-floorbar-control .select-dock:after,.amap-indoormap-floorbar-control .select-dock:before{content:"";position:absolute;width:0;height:0;left:0;top:10px;border:solid transparent;border-width:4px;border-left-color:#4196ff}.amap-indoormap-floorbar-control .select-dock:after{right:0;left:auto;border-left-color:transparent;border-right-color:#4196ff}.amap-indoormap-floorbar-control.is-mobile{width:37px}.amap-indoormap-floorbar-control.is-mobile .floor-btn{height:35px;line-height:35px}.amap-indoormap-floorbar-control.is-mobile .select-dock{height:35px;top:36px}.amap-indoormap-floorbar-control.is-mobile .select-dock:after,.amap-indoormap-floorbar-control.is-mobile .select-dock:before{top:13px}.amap-indoormap-floorbar-control.is-mobile .floor-list-box{height:105px}.amap-indoormap-floorbar-control .floor-list-item .floor-btn{color:#555;font-family:"Times New Roman",sans-serif,"Microsoft Yahei";font-size:16px}.amap-indoormap-floorbar-control .floor-list-item.selected .floor-btn{color:#000}.amap-indoormap-floorbar-control .floor-btn{height:28px;line-height:28px;overflow:hidden;cursor:pointer;position:relative;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.amap-indoormap-floorbar-control .floor-btn:hover{background-color:rgba(221,221,221,.4)}.amap-indoormap-floorbar-control .floor-minus,.amap-indoormap-floorbar-control .floor-plus{position:relative;text-indent:-1000em}.amap-indoormap-floorbar-control .floor-minus:after,.amap-indoormap-floorbar-control .floor-plus:after{content:"";position:absolute;margin:auto;top:9px;left:0;right:0;width:0;height:0;border:solid transparent;border-width:10px 8px;border-top-color:#777}.amap-indoormap-floorbar-control .floor-minus.disabled,.amap-indoormap-floorbar-control .floor-plus.disabled{opacity:.3}.amap-indoormap-floorbar-control .floor-plus:after{border-bottom-color:#777;border-top-color:transparent;top:-3px}.amap-indoormap-floorbar-control .floor-list-box{max-height:153px;position:relative;overflow-y:hidden}.amap-indoormap-floorbar-control .floor-list{margin:0;padding:0;list-style:none}.amap-indoormap-floorbar-control .floor-list-item{position:relative}.amap-indoormap-floorbar-control .floor-btn.disabled,.amap-indoormap-floorbar-control .floor-btn.disabled *,.amap-indoormap-floorbar-control.with-indrm-loader *{-webkit-pointer-events:none!important;pointer-events:none!important}.amap-indoormap-floorbar-control .with-indrm-loader .floor-nonas{opacity:.5}.amap-indoor-map-moverf-marker{background-color:#FFFEEF;border:1px solid #7E7E7E;padding:3px 6px;font-size:12px;white-space:nowrap;display:inline-block;position:absolute;top:1em;left:1.2em}.amap-indoormap-floorbar-control .amap-indrm-loader{-moz-animation:amap-indrm-loader 1.25s infinite linear;-webkit-animation:amap-indrm-loader 1.25s infinite linear;animation:amap-indrm-loader 1.25s infinite linear;border:2px solid #91A3D8;border-right-color:transparent;box-sizing:border-box;display:inline-block;overflow:hidden;text-indent:-9999px;width:13px;height:13px;border-radius:7px;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0}@-moz-keyframes amap-indrm-loader{0%{-moz-transform:rotate(0);transform:rotate(0)}100%{-moz-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes amap-indrm-loader{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes amap-indrm-loader{0%{-moz-transform:rotate(0);-ms-transform:rotate(0);-webkit-transform:rotate(0);transform:rotate(0)}100%{-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style>
-  <script charset="utf-8" src="gongsi/v.htm"></script>
  <!--  <script async="" src="gongsi/analytics.js"></script> -->
 <!--   <script src="gongsi/hm.js"></script>
  -->  <!-- <script async="" src="gongsi/a.js"></script>  -->
@@ -353,7 +352,7 @@ style.firebugResetStyles {
      <div class="company_main"> 
       <h1> <a href="http://www.huoban.com/" class="hovertips" target="_blank" rel="nofollow" title="<?=$Detail['companyname']?>"><?=$Detail['shortname']?> </a> </h1> 
       <a href="<?=$Detail['website']?>" class="icon-wrap" target="_blank" rel="nofollow" title="<?=$Detail['website']?>"> <i></i> </a> 
-      <a class="identification" title="拉勾认证企业"> <i></i> <span>拉勾认证</span> </a> 
+      <a class="identification" title="跟我走证企业"> <i></i> <span>跟我走认证</span> </a> 
       <div class="company_word">
        <?=$Detail['message']?>
       </div> 
@@ -451,8 +450,7 @@ style.firebugResetStyles {
       </div> 
       <div class="item_content"> 
        <div class="company_intro_text" style="display: block;"> 
-        <span class="company_content"><p>公司已获得红杉资本、晨兴资本两家全球顶级风险投资商的A轮数百万美金的联合投资，实力见证，品质保证！</p> <p>媒体报道：</p> <p>【一见|伙伴云表格】在中小企业的痛点上浇辣椒</p> <p>http://my.tv.sohu.com/pl/9034610/80705074.shtml</p> <p>36kr－论坛引擎 Discuz！团队再次出手，为企业 Excel 重度用户打造协作工具“伙伴云表格”</p> <p>http://36kr.com/p/5035364.html</p> <p>创业邦：伙伴云表格袁兆江：三年磨一剑 创业路上的贪与成</p> <p>http://ww...</p></span> 
-        <span class="text_over" style="background-position: right top;">展开</span> 
+        <span class="company_content"><?=$Detail['contents']?></span> 
        </div> 
        <div class="company_image_gallery"> 
         <div id="imageGallery"> 
@@ -1145,97 +1143,32 @@ style.firebugResetStyles {
        公司位置
       </div> 
       <div class="item_content"> 
-       <div class="item_con_map amap-container" id="addr_map" style="position: relative; background: rgb(252, 249, 242) none repeat scroll 0% 0%; cursor: url(&quot;https://webapi.amap.com/theme/v1.3/openhand.cur&quot;), default;">
-        <object style="display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;" type="text/html" data="gongsi/a"></object>
-        <div class="amap-maps">
-         <div class="amap-drags" style="">
-          <div class="amap-layers" style="transform: translateZ(0px);">
-           <div class="amap-layer" style="position: absolute; z-index: 0; top: 3831px; left: 2447px;">
-            <img src="gongsi/appmaptile.png" style="position: absolute; top: -3681px; left: -2138px; width: 256px; height: 256px; z-index: 15;" />
-            <img src="gongsi/appmaptile_002.png" style="position: absolute; top: -3937px; left: -2138px; width: 256px; height: 256px; z-index: 15;" />
-            <img src="gongsi/appmaptile_004.png" style="position: absolute; top: -3681px; left: -2394px; width: 256px; height: 256px; z-index: 15;" />
-            <img src="gongsi/appmaptile_003.png" style="position: absolute; top: -3937px; left: -2394px; width: 256px; height: 256px; z-index: 15;" />
-            <img src="gongsi/appmaptile_005.png" style="position: absolute; top: -3681px; left: -2650px; width: 256px; height: 256px; z-index: 15;" />
-            <img src="gongsi/appmaptile_006.png" style="position: absolute; top: -3937px; left: -2650px; width: 256px; height: 256px; z-index: 15;" />
-           </div>
-           <canvas class="amap-labels" draggable="false" style="position: absolute; z-index: 99; height: 290px; width: 430px; top: 0px; left: 0px;" width="430" height="290"></canvas>
-           <div class="amap-markers" style="position: absolute; z-index: 120; top: 145px; left: 215px;">
-            <div class="amap-marker" style="top: -31px; left: -9px; z-index: 100; transform: rotate(0deg); transform-origin: 9px 31px 0px; display: block;">
-             <div class="amap-icon" style="position: absolute; width: 19px; height: 33px; opacity: 1;">
-              <img src="gongsi/mark_bs.png" style="width: 19px; height: 33px; top: 0px; left: 0px;" />
-             </div>
-            </div>
-           </div>
-          </div>
-          <div class="amap-overlays" style=""></div>
-         </div>
-        </div>
-        <div style="display: none;">
-         <div class="amap-info" style="position: absolute; left: 12px; top: 155px;">
-          <div style="position: absolute; bottom: 0px; left: 0px;">
-           <div>
-            <div class="amap-adcontent-body">
-             <div class="info-title">
-              交通银行ATM(上地三街)
-             </div>
-             <div class="info-content">
-              地址：上地三街9号金隅嘉华大厦
-              <br />类型：金融保险服务;自动提款机;交通银行ATM
-              <br />
-              <div></div>
-             </div>
-             <div class="amap-info-combo status-origin">
-              <table>
-               <tbody>
-                <tr class="amap-info-tabs">
-                 <td class="tab"><i class="tab-icon icon-around"></i>在附近找</td>
-                 <td class="tab selected"><i class="tab-icon icon-start"></i>这里出发</td>
-                 <td class="tab"><i class="tab-icon icon-end"></i>到这里去</td>
-                </tr>
-               </tbody>
-              </table>
-              <table cellpadding="0">
-               <tbody>
-                <tr>
-                 <td class="input-label">终点</td>
-                 <td>
-                  <div class="keyword-input">
-                   <input class="keyword" type="text" />
-                  </div></td>
-                 <td>
-                  <div class="search-button hide">
-                   搜索
-                  </div>
-                  <div class="nav-button">
-                   <span class="nav-icon nav-drive">驾车</span>
-                   <span class="nav-icon nav-bus">公交</span>
-                   <span class="nav-icon nav-walk">步行</span>
-                  </div></td>
-                </tr>
-               </tbody>
-              </table>
-             </div>
-            </div>
-            <div class="amap-combo-sharp"></div>
-            <a class="amap-adcombo-close" href="javascript:%20void(0)"></a>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="amap-controls">
-         <div class="amap-indoormap-floorbar-control" style="display: none;"></div>
-        </div>
-        <a class="amap-logo" href="http://gaode.com/" target="_blank"><img src="gongsi/autonavi.png" /></a>
-        <div class="amap-copyright" style="display: none;">
-         <!--v1.3.24--> &copy; 2017 AutoNavi 
-         <span class="amap-mcode">- GS(2016)710号</span>
-        </div>
-       </div> 
+
+          <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RuVSCZeiy2nf3OKlFvLgmaZa2XYyhCi1"></script>
+          <div style="width:60%;height: 100%; display: inline-block;float: left;" id="aaa"></div>
+        <script type="text/javascript">
+          // 百度地图API功能
+          var map = new BMap.Map("aaa");
+          var point = new BMap.Point(116.331398,39.897445);
+          map.centerAndZoom(point,12);
+          // 创建地址解析器实例
+          var myGeo = new BMap.Geocoder();
+          map.enableScrollWheelZoom();
+          // 将地址解析结果显示在地图上,并调整地图视野
+          myGeo.getPoint(" <?=$Detail['address']?>", function(point){
+            if (point) {
+              map.centerAndZoom(point, 16);
+              map.addOverlay(new BMap.Marker(point));
+            }else{
+              alert("您选择地址没有解析到结果!");
+            }
+          }, "北京市");
+        </script>
        <div class="item_con_mlist mCustomScrollbar _mCS_5">
         <div class="mCustomScrollBox mCS-dark-2" id="mCSB_5" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
          <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;"> 
           <ul class="con_mlist_ul"> 
-           <li class="mlist_ul_li mlist_li_open" data-locationi="" d="14418"> <p class="mlist_li_title"> <em class="li_title_iconinx">1</em> <span title="北京海淀区" class="li_title_text ellipsis">北京市,海淀区</span> <em class="li_title_corner"></em> </p> <p class="businessarea">上地</p> <p class="mlist_li_desc"> 北京海淀区上地三街9号嘉华大厦B座1107室 </p> </li> 
+           <li class="mlist_ul_li mlist_li_open" data-locationi="" d="14418"> <p class="mlist_li_title"> <em class="li_title_iconinx">1</em> <span title="<?=$Detail['province']?><?=$Detail['city']?>" class="li_title_text ellipsis"><?=$Detail['province']?>,<?=$Detail['city']?></span> <em class="li_title_corner"></em> </p> <p class="businessarea"><?=$Detail['street']?></p> <p class="mlist_li_desc"> <?=$Detail['address']?> </p> </li> 
           </ul> 
           <div class="mlist_total_desc">
             该公司共有 
@@ -1437,32 +1370,7 @@ style.firebugResetStyles {
   <!--
     @require "common/widgets/footer_c/modules/feedback/feedback.less"
 --> 
-  <div id="product-fk"> 
-   <div id="feedback-icon"> 
-    <div class="fb-icon"></div> 
-    <span>我要反馈</span> 
-   </div> 
-  </div> 
-  <div id="footer"> 
-   <div class="wrapper"> 
-    <i class="footer_lagou_icon"></i> 
-    <div class="inner_wrapper"> 
-     <a class="footer_app" href="https://www.lagou.com/app/download.html" rel="nofollow">拉勾APP<span>new</span><img data-delay-src="https://www.lgstatic.com/i/image/M00/8A/35/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" src="gongsi/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" style="display: none; opacity: 1;" height="256" width="256" /></a> 
-     <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a> 
-     <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<img data-delay-src="http://www.lagou.com/image2/M00/18/45/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" src="gongsi/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" style="display: none;" height="242" width="242" /></a> 
-     <a href="https://activity.lagou.com/topic/whatisnew.html" target="_blank" rel="nofollow">版本更新</a> 
-     <a href="https://www.lagou.com/qa.html?t=1" target="_blank" rel="nofollow">帮助中心</a> 
-     <a href="https://www.lagou.com/about.html" target="_blank" rel="nofollow">联系我们</a> 
-     <a href="https://activity.lagou.com/activity/dist/business/index.html" target="_blank" rel="nofollow">招聘解决方案</a> 
-     <span class="tel">服务热线：<em>4006-2828-35 (9:00 -18:00)</em></span> 
-    </div> 
-    <div class="copyright "> 
-     <span><em>&copy;</em>2017 Lagou </span> 
-     <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" rel="nofollow">京ICP备14023790号-2</a> 
-     <span>京公网安备11010802017116号</span> 
-    </div> 
-   </div> 
-  </div> 
+
   <script type="text/javascript" src="gongsi/vendor_e3ddeee.js"></script> 
   <script type="text/javascript">/*resourcemap*/
 require.config({paths:{

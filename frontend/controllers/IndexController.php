@@ -16,11 +16,7 @@ use backend\models\Jobs;
 
 class IndexController extends Controller
 {
-
-
 	public $layout='/header';
-
-
 	//前台首页		
 	public function actionIndex()
 	{
@@ -48,6 +44,17 @@ class IndexController extends Controller
         $HotsModel=new Hots;
         $data['hots']=$HotsModel->GetRankList();
          //热搜
+        if(!empty($cache->get('num'))){
+            $data['num']=$cache->get('num');
+        }else{
+            $model=new Company;
+            $date['count_companys']=$model->find()->select('count(id) as num')->asArray()->one();
+            $date['count_jobs']=$jobs->find()->select('count(id) as num')->asArray()->one();
+            // 值$value 在缓存中最多保留30秒
+            $cache->set('num', $date,3600);//存入缓存
+            $data['num']=$date; 
+            //查询职位分类
+        }
 		return $this->render('index.html',$data);
 	}
 	public function actionCompanyList()
@@ -57,7 +64,7 @@ class IndexController extends Controller
         $trade_id=Yii::$app->request->get("trade_id");
         $where="1=1";
         if($province_id!=''){
-            $where.=" and district_id=$province_id";
+            $where.=" and city='$province_id'";
         }
         if($scale_id!=''){
             $where.=" and scale_id=$scale_id";
@@ -77,7 +84,10 @@ class IndexController extends Controller
         $data['trade_id']=$trade_id;
         return $this->render("companylist.html",$data);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 364e35aaee084960cb76454f496ccbf27ee8177b
 	//职位分类重新排序
 	public function get_job($job)
     {
@@ -105,5 +115,11 @@ class IndexController extends Controller
  
         return $arr;
     }
+<<<<<<< HEAD
 
+=======
+    public function actionAbout(){
+        return $this->render('about.html');
+    }
+>>>>>>> 364e35aaee084960cb76454f496ccbf27ee8177b
 }

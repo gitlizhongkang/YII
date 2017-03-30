@@ -27,7 +27,10 @@ var youdao_conv_id = 271546;
         	<?php if($type==1){ ?>
                 <h2>恭喜你，职位发布成功！</h2>
                 <a target="_blank" href="">预览职位</a><br>
-                <a class="greylink" href="<?=Url::to(['job/index'])?>">继续发布新职位</a><br>           	
+                <a class="greylink" href="<?=Url::to(['job/index'])?>">继续发布新职位</a><br>   
+            <?php }elseif($type==0){ ?>
+        	<h2>对不起，发布职位失败</h2>  
+        	 <a class="greylink" href="<?=Url::to(['job/index'])?>">重新发布新职位</a><br>         	
             <?php }elseif($type==2){ ?>
             	<h2>对不起，您今天发布的职位已经达到上线</h2>            
             <?php }elseif($type==4){ ?>

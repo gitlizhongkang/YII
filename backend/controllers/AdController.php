@@ -8,6 +8,7 @@ use app\models\AdCategory;
 use yii\data\Pagination;
 use yii\web\UploadedFile;
 use yii\helpers\Url;
+use backend\models\Company;
 
 class AdController extends Controller
 {
@@ -106,6 +107,49 @@ class AdController extends Controller
     	}else{
     		echo '<script>alert("修改失败！！！");location.href="'.Url::to(['ad/update-do']).'"</script>';
     	}
+	}
+	//修改状态
+	public function actionUpdateDisplay(){
+		$ad_id=Yii::$app->request->post('ad_id');
+		$is_display=Yii::$app->request->post('is_display');
+		if($is_display==1){
+			$aa=0;
+			$message="对不起，您的广告中含有不可通过的内容，请重新上传logo！！！";
+		}else{
+			$aa=1;
+			$message="恭喜您，您购买的广告位已审核通过，到期会给您展示！！！";
+		}
+		$ad=new Ad;	
+		$re=$ad->find()->where(['ad_id'=>$ad_id])->one();
+		$re->is_display=$aa;
+		if($re->save()){			
+			$mailer = new \yii\swiftmailer\Mailer();
+	        $mailer->transport=[
+	            'class' => 'Swift_SmtpTransport',
+	            'host' => 'smtp.163.com',
+	            'username' => 'mhrmaohongrui@163.com',
+	            'password' => 'mhr553421',
+	            'port' => '25',
+	            'encryption' => 'tls',//    tls | ssl
+	        ];
+	        $mailer->messageConfig=[
+	            'charset'=>'UTF-8',
+	            'from'=>['mhrmaohongrui@163.com'=>'admin']
+	        ];
+	        $mailer->useFileTransport = false;
+	        $mail= $mailer->compose();
+	        $company_id=$re->company_id;
+	        $arr=Company::find()->where(['id'=>$company_id])->asArray()->one();
+	        $email=$arr['email'];
+	        $mail->setTo($email);
+	        $mail->setSubject("广告审核结果");
+	        $mail->setTextBody($message);
+	        if($mail->send()){
+	        		echo 1;
+	        }
+		}else{
+			echo 0;
+		}
 	}
 	//添加广告
 	public function actionAdd(){

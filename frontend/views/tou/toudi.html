@@ -101,23 +101,28 @@ var youdao_conv_id = 271546;
                     </dd>
                     <dd class="job_bt">
                         <h3 class="description">职位描述</h3>
-                        <p><strong>工作职责：</strong>&nbsp;<br>1、挖掘公司互联网产品现有和预期的市场需求；&nbsp; <br>2、负责组织公司互联网新产品开发和产品改进；&nbsp; <br>3、发掘收集竞争对手信息，进行竞争对手分析，制定应对战略；&nbsp; <br>4、在产品运营中倾听用户声音，了解用户潜在需求，并在产品改进中满足；&nbsp; <br>5、在产品运营中整合已有的产品功能、用户资源、推广资源，策划运营活动；&nbsp; <br>6、与市场、运营、UI、开发、测试、公关、法务、客服等人员紧密合作，实现产品目标。 <br>&nbsp; <br> <strong>任职要求：</strong> <br>1、本科及以上学历，英语四级以上，专业不限；&nbsp; <br>2、对互联网产品有敏锐的直觉和良好的市场分析能力；&nbsp; <br>3、有严密的逻辑分析能力，有良好的沟通协作能力；&nbsp; <br>4、有很强的责任心、学习能力、文字表达能力；&nbsp; <br>5、具有很强的团队协助精神，善于总结和分享经验；&nbsp; <br>6、具有互联网产品规划和产品设计经验者优先。</p> 
+                        <p><strong>工作职责：</strong>&nbsp;<br>1、挖掘公司互联网产品现有和预期的市场需求；&nbsp; <br>2、负责组织公司互联网新产品开发和产品改进；&nbsp; <br>3、发掘收集竞争对手信息，进行竞争对手分析，制定应对战略；&nbsp; <br>4、在产品运营中倾听用户声音，了解用户潜在需求，并在产品改进中满足；&nbsp; <br>5、在产品运营中整合已有的产品功能、用户资源、推广资源，策划运营活动；&nbsp; <br>6、与市场、运营、UI、开发、测试、公关、法务、客服等人员紧密合作，实现产品目标。 <br>&nbsp; <br> 
+						<?php $require=explode(',',$jobs['require'])?>
+                        <strong>任职要求：</strong> <br>
+                       <ol>
+                       		<?php foreach($require as $k=>$v){ ?>
+							<li><?=$v?></li>
+							<?php } ?>
+                       </ol>
 						<p>&nbsp;</p> 
 						<p><strong>其他：&nbsp;</strong></p> 
-						<p>1、五险一金、商业综合医疗保险，节日慰问金、生日礼金、结婚礼金、年度体检、旅游；</p> 
-						<p>2、工作时间为5天工作制，享受国家法定节假日、带薪年假7天、带薪病假、产假（陪产假）、婚假、丧假等；</p> 
-						<p>3、每周定期举办足球、羽毛球、篮球及员工深度互动等文体活动。</p>
+						<p><?=$jobs['contents']?></p>
                     </dd>                     
                     <!-- 用户是否激活 0-否；1-是 -->
 	                <dd class="resume resume_web">
 				       <div>
-							<span> 你已有可投递的在线简历：<a title="jason的简历" target="_blank" href="jianli.html"><strong>jason的简历</strong></a></span><br>
-							<span>简历更新于2014-07-01 15:53</span>
+							<span> 你有可投递的在线简历：<a title="<?=$user['email']?>的简历"  href="<?=Url::to(['resume/index'])?>"><strong><?=$user['email']?>的简历</strong></a></span><br>
+							<!-- <span>简历更新于2014-07-01 15:53</span> -->
 				        </div>
-				        <span class="setBtns">
+				       <!--  <span class="setBtns">
 				            <a target="_blank" title="预览" href="h/resume/preview.html">预览</a> |
 				            <a title="修改" target="_blank" href="jianli.html">修改</a>
-				        </span>
+				        </span> -->
 				    </dd>
 					<div class="saoma saoma_btm">
                       	<div class="dropdown_menu">
@@ -169,9 +174,9 @@ var youdao_conv_id = 271546;
                         	<li><span>目前阶段</span> 上市公司</li>
                         </ul>
                        	<h4>工作地址</h4>
-                       	<div><?=$jobs['district_cn'].$jobs['street_cn']?></div>
+                       	<div id='address'><?=$jobs['district_cn'].$jobs['street_cn']?></div>
                        	<div id="smallmap" style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;"><div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: grab;"><div class="BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; width: 280px; height: 200px;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><span style="position: absolute; padding: 0px; margin: 0px; border: 0px none; -moz-user-select: none; cursor: pointer; background: url(style/images/img/blank.gifquot) repeat scroll 0% 0% transparent; width: 19px; height: 25px; left: 130px; top: 75px; z-index: -4626192;" "="" unselectable="on" class="BMap_Marker BMap_noprint" title=""></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"><label class="BMapLabel" unselectable="on" style="position: absolute; -moz-user-select: none; display: none; cursor: inherit; background-color: rgb(190, 190, 190); border: 1px solid rgb(190, 190, 190); padding: 1px; white-space: nowrap; font: 12px arial,simsun,sans-serif; z-index: -20000; color: rgb(190, 190, 190);">shadow</label></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"><span style="position: absolute; padding: 0px; margin: 0px; border: 0px none; width: 0px; height: 0px; -moz-user-select: none; left: 130px; top: 75px; z-index: -4626192;" unselectable="on" class="BMap_Marker"><div style="position: absolute; margin: 0px; padding: 0px; width: 19px; height: 25px; overflow: hidden;"><img style="border:none;margin-left:0px; margin-top:0px; " src="style/images/marker_red_sprite.png"></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;"><span style="position: absolute; padding: 0px; margin: 0px; border: 0px none; width: 20px; height: 11px; -moz-user-select: none; left: 134px; top: 89px;" unselectable="on"><div style="position: absolute; margin: 0px; padding: 0px; width: 20px; height: 11px; overflow: hidden;"><img style="border:none;margin-left:-19px; margin-top:-13px; " src="style/images/marker_red_sprite.png"></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;"><div style="position: absolute; overflow: visible; z-index: -100; left: 140px; top: 100px; display: none;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; display: block;"><div style="position: absolute; overflow: visible; top: 100px; left: 140px; z-index: 0; display: block;"><canvas style="position: absolute; width: 256px; height: 256px; left: -106px; top: -188px; background: none repeat scroll 0% 0% rgb(243, 241, 236);" width="256" height="256" id="_1_bg_12325_2569_16"></canvas><canvas style="position: absolute; width: 256px; height: 256px; left: -362px; top: -188px; background: none repeat scroll 0% 0% rgb(243, 241, 236);" width="256" height="256" id="_1_bg_12324_2569_16"></canvas><canvas style="position: absolute; width: 256px; height: 256px; left: -106px; top: 68px; background: none repeat scroll 0% 0% rgb(243, 241, 236);" width="256" height="256" id="_1_bg_12325_2568_16"></canvas><canvas style="position: absolute; width: 256px; height: 256px; left: -362px; top: 68px; background: none repeat scroll 0% 0% rgb(243, 241, 236);" width="256" height="256" id="_1_bg_12324_2568_16"></canvas></div><div style="position: absolute; overflow: visible; top: 100px; left: 140px; z-index: 10; display: block;"><canvas style="position: absolute; width: 256px; height: 256px; left: -106px; top: -188px;" width="256" height="256" id="_1_poi_12325_2569_16"></canvas><canvas style="position: absolute; width: 256px; height: 256px; left: -362px; top: -188px;" width="256" height="256" id="_1_poi_12324_2569_16"></canvas><canvas style="position: absolute; width: 256px; height: 256px; left: -106px; top: 68px;" width="256" height="256" id="_1_poi_12325_2568_16"></canvas><canvas style="position: absolute; width: 256px; height: 256px; left: -362px; top: 68px;" width="256" height="256" id="_1_poi_12324_2568_16"></canvas></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 3;"></div></div><div style="position: absolute; z-index: 1201; top: 10px; right: 10px; width: 17px; height: 16px; background: url(style/images/img/st-close.pngquot) no-repeat scroll 0% 0% transparent; cursor: pointer; display: none;" title="退出全景"></div><div style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:-moz-grab" id="zoomer"><div style="top:0;left:0;" class="BMap_zoomer"></div><div style="top:0;right:0;" class="BMap_zoomer"></div><div style="bottom:0;left:0;" class="BMap_zoomer"></div><div style="bottom:0;right:0;" class="BMap_zoomer"></div></div><div style="height: 32px; position: absolute; z-index: 30; -moz-user-select: none; bottom: 0px; right: auto; top: auto; left: 1px; display: none;" class=" anchorBL"><a title="到百度地图查看此区域" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: medium none;"><img src="style/images/copyright_logo.png" style="border:none;width:77px;height:32px"></a></div><div unselectable="on" class=" BMap_cpyCtrl BMap_noprint anchorBL" style="cursor: default; white-space: nowrap; -moz-user-select: none; color: black; background: none repeat scroll 0% 0% transparent; font: 11px/15px arial,simsun,sans-serif; bottom: 2px; right: auto; top: auto; left: 4px; position: absolute; z-index: 10;"><span _cid="1" style="display: inline;"><span style="font-size:11px">&copy; 2014 Baidu&nbsp;- Data &copy; <a style="display:inline;" href="http://www.navinfo.com/" target="_blank">NavInfo</a> &amp; <a style="display:inline;" href="http://www.cennavi.com.cn/" target="_blank">CenNavi</a> &amp; <a style="display:inline;" href="http://www.365ditu.com/" target="_blank">道道通</a></span></span></div></div>
-                       	<a id="mapPreview" href="javascript:;">查看完整地图</a>
+                       	<a id="mapPreview" href="#">查看完整地图</a>
                     </dd>
                 </dl>
                 <div id="myRecommend_jd">
@@ -185,7 +190,7 @@ var youdao_conv_id = 271546;
 							</a>
             			</li>
             		</ul>
-            		<a target="_blank" class="more" href="h/jobs/mList.html">更多推荐职位&gt;&gt;</a>
+            		<a class="more" href="<?=Url::to(['list/index'])?>">更多推荐职位&gt;&gt;</a>
             	</div><!--end #myRecommend-->
 				<a class="eventAd" target="_blank" href="h/subject/s_zhouyou.html?utm_source=BD__lagou&amp;utm_medium=&amp;utm_campaign=zhouyou">
                 	<img width="280" height="135" src="style/images/zhouyou.jpg">
@@ -263,7 +268,7 @@ var youdao_conv_id = 271546;
 	    		<td align="center" class="f18 c5">你还没有可以投递的简历呢</td>
 	    	</tr>
 	    	<tr>
-	    		<td align="center" class="c5">去<a href="">创建简历</a>吧~</td>
+	    		<td align="center" class="c5">去<a href="<?=Url::to(['resume/create'])?>">创建简历</a>吧~</td>
 	    	</tr>
 	    	</tbody>
 	</table>
@@ -321,14 +326,14 @@ $('#add_job').click(function(){
 			success:function(msg){
 				if(msg==1){
 					alert('投递成功！');
-					location.href="<?=Url::to(['tou/index'])?>";
+					location.href="<?=Url::to(['tou/index','id'=>$jobs['id']])?>";
 					$('#"cboxClose').close();
 				}else if(msg==2){
 					alert('您已经投递过了！');
-					location.href="<?=Url::to(['tou/index'])?>";
+					location.href="<?=Url::to(['tou/index','id'=>$jobs['id']])?>";
 				}else{
 					alert('投递失败！');
-					location.href="<?=Url::to(['tou/index'])?>";
+					location.href="<?=Url::to(['tou/index','id'=>$jobs['id']])?>";
 				}				
 			}
 		})
@@ -411,36 +416,36 @@ $('#add_job').click(function(){
 <script src="style/js/job_detail.js" type="text/javascript"></script>
 <script src="style/js/count.js" type="text/javascript"></script>
 
-<!-- <script type="text/javascript">
-var options = {
-    	"snsId": "snwb",
-    	"uid": "",
-    	"token": "",
-    	"openId": "",
-    	"appKey": "",
-    	"merchantId": "11253",
-    	"merchantType": "news",
-    	"socialLoginUrl_sina": ctx+"/ologin/auth/sina.html",
-    	"socialLoginUrl_qq": "",
-    	"weiboId_sina": "3619164344010985",
-    	"weiboId_qq": "",
-    	"socialAllUrl": ctx+"/user/hbzx.html",
-    	"productId": "22194",
-    	"productCategory": "",
-    	"productName": "产品经理",
-    	"productArea": "广州",
-    	"productPrice": "",
-    	"productUrl": ctx+"/jobs/22194.html",
-    	"productImage": ctx+"/upload/logo/ff8080814356e881014357741e5910f1.jpg",
-    	"excerpt": "广州 / 全职 / 8k-15k / 经验1-3年 / 本科及以上 / 职位诱惑 : 上市公司，快速发展空间，产品的话语权",
-    	"sendContent":"我觉得这个职位不错，你觉得咋样？",
-    	"shareContent":"请输入你对此职位的评论",
-    	"autoSend": false,
-    	"load": true
-　　}
+<script type="text/javascript">
+// var options = {
+//     	"snsId": "snwb",
+//     	"uid": "",
+//     	"token": "",
+//     	"openId": "",
+//     	"appKey": "",
+//     	"merchantId": "11253",
+//     	"merchantType": "news",
+//     	"socialLoginUrl_sina": ctx+"/ologin/auth/sina.html",
+//     	"socialLoginUrl_qq": "",
+//     	"weiboId_sina": "3619164344010985",
+//     	"weiboId_qq": "",
+//     	"socialAllUrl": ctx+"/user/hbzx.html",
+//     	"productId": "22194",
+//     	"productCategory": "",
+//     	"productName": "产品经理",
+//     	"productArea": "广州",
+//     	"productPrice": "",
+//     	"productUrl": ctx+"/jobs/22194.html",
+//     	"productImage": ctx+"/upload/logo/ff8080814356e881014357741e5910f1.jpg",
+//     	"excerpt": "广州 / 全职 / 8k-15k / 经验1-3年 / 本科及以上 / 职位诱惑 : 上市公司，快速发展空间，产品的话语权",
+//     	"sendContent":"我觉得这个职位不错，你觉得咋样？",
+//     	"shareContent":"请输入你对此职位的评论",
+//     	"autoSend": false,
+//     	"load": true
+// 　　}
 </script>
-<script src="style/js/common.js" type="text/javascript"></script> 
-<script>
+<!-- <script src="style/js/common.js" type="text/javascript"></script>  -->
+<!-- <script>
 $(function(){
 	$('#weibolist .cookietxte').text('推荐本职位给好友');
 	$(document).bind('cbox_complete', function(){ 
@@ -457,15 +462,15 @@ $(function(){
 	});
 			popQR();
 	})
-</script>
+</script> -->
 
-<script src="http://api.map.baidu.com/api?v=2.0&amp;ak=A2c1a1ff1fe0750e3290660295aac602" type="text/javascript"></script><script src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=A2c1a1ff1fe0750e3290660295aac602&amp;services=&amp;t=20140617153133" type="text/javascript"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=A2c1a1ff1fe0750e3290660295aac602" type="text/javascript"></script><script src="http://api.map.baidu.com/getscript?v=2.0&ak=A2c1a1ff1fe0750e3290660295aac602&services=&t=20140617153133" type="text/javascript"></script>
 <script type="text/javascript">
 		//百度地图API功能
 		var sMap = new BMap.Map("smallmap");
 		sMap.enableScrollWheelZoom(true);
 		
-		if($('#positionLat').val() &amp;&amp; $('#positionLng').val()){
+		if($('#positionLat').val() && $('#positionLng').val()){
 			var sPoint = new BMap.Point($('#positionLng').val(),$('#positionLat').val());
 			sMap.centerAndZoom(sPoint,12);
 			sMap.addOverlay(new BMap.Marker(sPoint));              // 将标注添加到地图中
@@ -474,12 +479,13 @@ $(function(){
 			// 创建地址解析器实例
 			var sMyGeo = new BMap.Geocoder();
 			// 将地址解析结果显示在地图上,并调整地图视野
-			sMyGeo.getPoint("广州市天河区科韵路信息港建中路36号裕桥商务大厦", function(sPoint){
+			var address=$('#address').html();
+			sMyGeo.getPoint(address, function(sPoint){
 			  if (sPoint) {
 				  sMap.centerAndZoom(sPoint, 16);
 				  sMap.addOverlay(new BMap.Marker(sPoint));
 			  }
-			}, "广州");
+			}, "<?=$jobs['city']?>");
 		}
 
 		/*弹窗大地图*/
@@ -493,13 +499,13 @@ $(function(){
 		$(function(){
 			$('#mapPreview').bind('click',function(){
 				$.colorbox({inline:true, href:"#baiduMap",title:"公司地址"});
-				var address = "广州市天河区科韵路信息港建中路36号裕桥商务大厦";
-				var city = "广州";
+				var address = $('#address').html();
+				var city = "<?=$jobs['city']?>";
 				var lat = $('#positionLat').val();
 				var lng = $('#positionLng').val();
 			    map.setCurrentCity(city);
 			    map.setZoom(12);
-				if(lat &amp;&amp; lng){
+				if(lat && lng){
 					var p = new BMap.Point(lng, lat);
 					var marker = new BMap.Marker(p);  // 创建标注
 					map.addOverlay(marker);              // 将标注添加到地图中
@@ -542,13 +548,13 @@ $(function(){
 		});
 </script>
 			<div class="clear"></div>
-			<input type="hidden" value="e789f5e7097b4c828e9d40ef39a6baf8" id="resubmitToken">
+			<!-- <input type="hidden" value="e789f5e7097b4c828e9d40ef39a6baf8" id="resubmitToken"> -->
 	    	<a rel="nofollow" title="回到顶部" id="backtop" style="display: inline;"></a>
-	    </div><!-- end #container -->
+	    </div><!-- end #container
 	</div><!-- end #body -->
 	<div id="footer">
 		<div class="wrapper">
-			<a rel="nofollow" target="_blank" href="h/about.html">联系我们</a>
+			<a rel="nofollow" target="_blank" href="<?=Url::to(['index/about'])?>">联系我们</a>
 		    <a target="_blank" href="h/af/zhaopin.html">互联网公司导航</a>
 		    <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
 		    <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>

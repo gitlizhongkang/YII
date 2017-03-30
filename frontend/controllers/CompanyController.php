@@ -176,13 +176,13 @@ class CompanyController extends Controller
             }
         }else{
             $companyid=Yii::$app->request->get("companyid");
-            if(empty($companyid)){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            if(empty($companyid) || empty($userinfo['uid'])){
                 $info['code']=3;
                 $info['msg']='这是什么';
                 return $this->render('success.html',$info);
             }
-            $session = Yii::$app->session;
-            $userinfo = $session->get('user');
             $uid=$userinfo['uid'];
             $data['companyinfo']=Company::find()->where(["u_id"=>$uid])->asArray()->one();
             $data['scalelist']=Category::find()->where("c_alias = 'QS_scale'")->asArray()->all();
@@ -205,7 +205,9 @@ class CompanyController extends Controller
         }
     }else{
         $companyid=Yii::$app->request->get("companyid");
-        if(empty($companyid)){
+        $session = Yii::$app->session;
+        $userinfo = $session->get('user');
+        if(empty($companyid) || empty($userinfo['uid'])){
             $info['code']=3;
             $info['msg']='这是什么';
             return $this->render('success.html',$info);
@@ -228,7 +230,9 @@ class CompanyController extends Controller
             return $this->redirect(['improve4','companyid'=>$post['companyId']]);
         }else{
             $companyid=Yii::$app->request->get("companyid");
-            if(empty($companyid)){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            if(empty($companyid) || empty($userinfo['uid'])){
                 $info['code']=3;
                 $info['msg']='这是什么';
                 return $this->render('success.html',$info);
@@ -250,7 +254,9 @@ class CompanyController extends Controller
             return $this->redirect(['improve5','companyid'=>$post['companyId']]);
         }else{
             $companyid=Yii::$app->request->get("companyid");
-            if(empty($companyid)){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            if(empty($companyid) || empty($userinfo['uid'])){
                 $info['code']=3;
                 $info['msg']='这是什么';
                 return $this->render('success.html',$info);
@@ -276,7 +282,9 @@ class CompanyController extends Controller
             return $this->render('result.html',$data);
         }else{
             $companyid=Yii::$app->request->get("companyid");
-            if(empty($companyid)){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            if(empty($companyid) || empty($userinfo['uid'])){
                 $info['code']=3;
                 $info['msg']='这是什么';
                 return $this->render('success.html',$info);
@@ -302,6 +310,52 @@ class CompanyController extends Controller
         }
         echo json_encode($data);
     }
+    public function actionCheck()
+    {
+        $upload=new UploadedFile(); //实例化上传类
+        $name=$upload->getInstanceByName('myfile'); //获取文件原名称
+        $img=$_FILES['myfile']; //获取上传文件参数
+        $upload->tempName=$img['tmp_name']; //设置上传的文件的临时名称
+        $img_path='uploads/'.$name; //设置上传文件的路径名称(这里的数据进行入库)
+        $arr=$upload->saveAs($img_path); //保存文件
+        if($arr){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            $uid=$userinfo['uid'];
+            $companyinfo=Company::find()->where(["u_id"=>$uid])->one();
+            $companyinfo->certificate_img="$img_path";
+            $companyinfo->audit=2;
+            if($companyinfo->save()){
+                $data['msg']=1;
+                $data['path']=$img_path;
+                $data['id']=$companyinfo['id'];
+            }
+        }else{
+            $data['msg']=2;
+        }
+        echo json_encode($data);
+    }
+    public function actionCheckSuccess()
+    {
+        $data['companyid']=Yii::$app->request->get("companyid");
+        if(empty($data['companyid'])){
+            $info['code']=3;
+            $info['msg']='这是什么';
+            return $this->render('success.html',$info);
+        }
+        return $this->render("applySuccess.html",$data);
+    }
+    public function actionApply()
+    {
+        $data['companyid']=Yii::$app->request->get("companyid");
+        if(empty($data['companyid'])){
+            $info['code']=3;
+            $info['msg']='这是什么';
+            return $this->render('success.html',$info);
+        }
+        return $this->render("apply.html",$data);
+    }
+
     //公司詳細信息
     public function actionGongsi(){
             $CompanyModel=new Company;

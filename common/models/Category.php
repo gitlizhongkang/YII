@@ -54,7 +54,10 @@ class Category extends \yii\db\ActiveRecord
         ];
     }
     //获取分类
+<<<<<<< HEAD
 
+=======
+>>>>>>> 364e35aaee084960cb76454f496ccbf27ee8177b
     public function cate($cate)
     {
         return $this->find()->where(['c_alias' => $cate])->all();

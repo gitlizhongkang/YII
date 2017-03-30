@@ -76,64 +76,71 @@ class RegisterController extends Controller
 	public function actionLogin(){
 		$controller=isset($_GET['controller'])?$_GET['controller']:'';
 		// echo $controller;die;		
-		if(Yii::$app->request->isPost){			
+		if(Yii::$app->request->isPost){		
+			$session=Yii::$app->session;
+			$code=$session->get('code');	
 			$email=Yii::$app->request->post('email');
 			$pwd=Yii::$app->request->post('password');
-			$auto=Yii::$app->request->post('autoLogin');		
-			$user=new User;
-			$res1=$user->checkEmail($email);
-			//验证邮箱				
-			$members=new Members;
-			$res2=$members->checkEmail($email);
-			if(!empty($res1)||!empty($res2)){
-				if(!empty($res1)){
-					$pwd=Yii::$app->security->validatePassword($pwd,$res1['password']);
-					//验证密码
-					$info['uid']=$res1['id'];
-					$info['type']=0;
-					$data['last_login_time']=time();
-					$data['last_login_ip']=$_SERVER['REMOTE_ADDR'];	
-					$user->updateOne($res1['id'],$data);				
-				}elseif(!empty($res2)){
-					$pwd=Yii::$app->security->validatePassword($pwd,$res2['password']);
-					$info['uid']=$res2['uid'];
-					$info['type']=1;
-					if(empty($res2['last_login_ip'])){
-						$log=new Members_charge_log;
-						$logs['log_value']='首次登录自动赠送：(+5)';
-						$logs['log_uid']=$res2['uid'];
-						$logs['log_username']=$email;
-						$logs['log_addtime']=time();
-						$logs['log_amount']=0;
-						$aa=$log->add($logs);
-						//添加日志
+			$auto=Yii::$app->request->post('autoLogin');
+			$checkCode=Yii::$app->request->post('code');
+			if($checkCode==$code){
+				$user=new User;
+				$res1=$user->checkEmail($email);
+				//验证邮箱				
+				$members=new Members;
+				$res2=$members->checkEmail($email);
+				if(!empty($res1)||!empty($res2)){
+					if(!empty($res1)){
+						$pwd=Yii::$app->security->validatePassword($pwd,$res1['password']);
+						//验证密码
+						$info['uid']=$res1['id'];
+						$info['type']=0;
 						$data['last_login_time']=time();
 						$data['last_login_ip']=$_SERVER['REMOTE_ADDR'];	
-						$data['points']=$res2['points']+5;
-						$members->updateOne($res2['uid'],$data);
-						//修改积分
+						$user->updateOne($res1['id'],$data);				
+					}elseif(!empty($res2)){
+						$pwd=Yii::$app->security->validatePassword($pwd,$res2['password']);
+						$info['uid']=$res2['uid'];
+						$info['type']=1;
+						if(empty($res2['last_login_ip'])){
+							$log=new Members_charge_log;
+							$logs['log_value']='首次登录自动赠送：(+5)';
+							$logs['log_uid']=$res2['uid'];
+							$logs['log_username']=$email;
+							$logs['log_addtime']=time();
+							$logs['log_amount']=0;
+							$aa=$log->add($logs);
+							//添加日志
+							$data['last_login_time']=time();
+							$data['last_login_ip']=$_SERVER['REMOTE_ADDR'];	
+							$data['points']=$res2['points']+5;
+							$members->updateOne($res2['uid'],$data);
+							//修改积分
+						}
+					}				
+					if(!$pwd){
+						echo '<script>alert("密码错误");location.href="'.Url::to(['register/login']).'"</script>';
+					}else{					
+						$info['email']=$email;
+						$lifetime=3*24*60*60;
+						session_set_cookie_params($lifetime);
+						$session=Yii::$app->session;
+						$session->open();
+						$session->setTimeout($lifetime);
+						$session->set('user',$info);
+						//存储用户信息
+						if(!empty($controller)){
+							return $this->redirect(["$controller/index"]);
+						}else{
+							return $this->redirect(["index/index"]);
+						}					
 					}
-				}				
-				if(!$pwd){
-					echo '<script>alert("密码错误");location.href="'.Url::to(['register/login']).'"</script>';
-				}else{					
-					$info['email']=$email;
-					$lifetime=3*24*60*60;
-					session_set_cookie_params($lifetime);
-					$session=Yii::$app->session;
-					$session->open();
-					$session->setTimeout($lifetime);
-					$session->set('user',$info);
-					//存储用户信息
-					if(!empty($controller)){
-						return $this->redirect(["$controller/index"]);
-					}else{
-						return $this->redirect(["index/index"]);
-					}					
+				}else{
+						echo '<script>alert("用户名不存在");location.href="'.Url::to(['register/login']).'"</script>';
 				}
 			}else{
-					echo '<script>alert("用户名不存在");location.href="'.Url::to(['register/login']).'"</script>';
-			}			
+				echo '<script>alert("验证码错误");location.href="'.Url::to(['register/login']).'"</script>';
+			}								
 		}else{
 			return $this->render('login.html');
 		}		
@@ -141,8 +148,41 @@ class RegisterController extends Controller
 	//退出
 	public function actionLogout(){
 		$session=Yii::$app->session;
-		$session->destroy();
+		$session->remove('user');
 		return $this->redirect(['register/login']);
+	}
+	//生成验证码
+	public function actionCode(){
+		$image=imagecreatetruecolor(100, 30);
+		$bgcolor=imagecolorallocate($image,255,255,255);
+		imagefill($image,0,0,$bgcolor);
+		$captch_code='';
+		for($i=0;$i<4;$i++){
+			$fontsize=20;
+			$fontcolor=imagecolorallocate($image,rand(0,120),rand(0,120),rand(0,120));
+			$data='abcdefghijklmnpqrstuvwxyz123456789';
+			$fontcontent=substr($data,rand(0,strlen($data)),1);
+			$captch_code.=$fontcontent;
+			$x=($i*100/4)+rand(5,10);
+			$y=rand(5,10);
+			imagestring($image, $fontsize, $x, $y, $fontcontent, $fontcolor);
+		}
+		$session=Yii::$app->session;
+		$session->set('code',$captch_code);
+		// $_SESSION['code']=$captch_code;
+		// echo $_SESSION['code'];
+		//加点干扰
+		for($i=0;$i<200;$i++){
+			$pointcolor=imagecolorallocate($image,rand(50,200),rand(50,200),rand(50,200));
+			imagesetpixel($image, rand(1,99), rand(1,99), $pointcolor);
+		}
+		//加线干扰
+		for($i=0;$i<3;$i++){
+			$linecolor=imagecolorallocate($image,rand(80,220),rand(80,220),rand(80,220));
+			imageline($image, rand(1,99), rand(1,29), rand(1,99),rand(1,29),$linecolor);
+		}
+		header('content-type:image/png');
+		imagepng($image);
 	}
 	//重置密码
 	public function actionReset(){
