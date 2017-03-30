@@ -95,7 +95,7 @@ use yii\helpers\Url;
     if(count($lun)>=($i+1)){
     ?>
     	<li  class="banner_bg_<?=$i?> current" >
-            <a href="" target="_blank"><img src="../../backend/web/<?=$lun[$i]['img_url']?>" width="612" height="160" alt="<?=$lun[$i]['title']?>" /></a>
+            <a href="" target="_blank"><img src="<?=$lun[$i]['img_url']?>" width="612" height="160" alt="<?=$lun[$i]['title']?>" /></a>
         </li>
 	<?php }else{ ?>
 		<li  class="banner_bg_<?=$i?>" >
