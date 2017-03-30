@@ -64,6 +64,7 @@ class JobController extends Controller
 				$arr['trade_cn']=$info['trade'];
 				$arr['scale_cn']=$info['scale'];
 				$arr['street_cn']=$info['street'];
+				// print_r($arr);die;
 				$aa=$job->add($arr);
 				//添加职位				
 				if($aa){
@@ -145,15 +146,18 @@ class JobController extends Controller
 		$resumeJob=new ResumeJob;
 		$resume=$resumeJob->groupJob($info['id']);
 		foreach ($arr['list'] as $k => $v) {
-			foreach ($resume as $k1 => $v1) {
-				if($v1['job_id']==$v['id']){
-					$arr['list'][$k]['count']=$v1["count('id')"];
-				}else{
-					$arr['list'][$k]['count']='0';
-				}
-			}			
+			if(empty($resume)){
+				$arr['list'][$k]['count']='0';
+			}else{
+				foreach ($resume as $k1 => $v1) {
+					if($v1['job_id']==$v['id']){
+						$arr['list'][$k]['count']=$v1["count('id')"];
+					}else{
+						$arr['list'][$k]['count']='0';
+					}
+				}	
+			}					
 		}
-		// print_r($arr['list']);die;
 		return $this->render('positions.html',['arr'=>$arr,'count'=>$count,'type'=>$type]);
 	}
 	//删除职位

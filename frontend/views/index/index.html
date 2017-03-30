@@ -95,7 +95,7 @@ use yii\helpers\Url;
     if(count($lun)>=($i+1)){
     ?>
     	<li  class="banner_bg_<?=$i?> current" >
-            <a href="" target="_blank"><img src="../../backend/web/<?=$lun[$i]['img_url']?>" width="612" height="160" alt="<?=$lun[$i]['title']?>" /></a>
+            <a href="" target="_blank"><img src="<?=$lun[$i]['img_url']?>" width="612" height="160" alt="<?=$lun[$i]['title']?>" /></a>
         </li>
 	<?php }else{ ?>
 		<li  class="banner_bg_<?=$i?>" >
@@ -113,7 +113,7 @@ use yii\helpers\Url;
 	    ?>
         	<li  class="thumbs_<?=$i?> current" >
                 <i></i>
-                <img src="../../backend/web/<?=$lun[$i]['img_url']?>" width="113" height="42" />
+                <img src="<?=$lun[$i]['img_url']?>" width="113" height="42" />
             </li>
         <?php }else{ ?>
         	<li  class="thumbs_<?=$i?> current" >
@@ -131,7 +131,7 @@ if(count($middle)>=($i+1)){
 ?>
 	<li >
         <a href="" target="_blank">
-            <img src="../../backend/web/<?=$middle[$i]['img_url']?>" width="113" height="113" alt="联想" />
+            <img src="<?=$middle[$i]['img_url']?>" width="113" height="113" alt="联想" />
             <div class="hot_info">
             	<h2 title="<?=$middle[$i]['title']?>"><?=$middle[$i]['title']?></h2>
                 <em></em>

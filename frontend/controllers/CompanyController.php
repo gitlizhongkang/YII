@@ -176,13 +176,13 @@ class CompanyController extends Controller
             }
         }else{
             $companyid=Yii::$app->request->get("companyid");
-            if(empty($companyid)){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            if(empty($companyid) || empty($userinfo['uid'])){
                 $info['code']=3;
                 $info['msg']='这是什么';
                 return $this->render('success.html',$info);
             }
-            $session = Yii::$app->session;
-            $userinfo = $session->get('user');
             $uid=$userinfo['uid'];
             $data['companyinfo']=Company::find()->where(["u_id"=>$uid])->asArray()->one();
             $data['scalelist']=Category::find()->where("c_alias = 'QS_scale'")->asArray()->all();
@@ -205,7 +205,9 @@ class CompanyController extends Controller
         }
     }else{
         $companyid=Yii::$app->request->get("companyid");
-        if(empty($companyid)){
+        $session = Yii::$app->session;
+        $userinfo = $session->get('user');
+        if(empty($companyid) || empty($userinfo['uid'])){
             $info['code']=3;
             $info['msg']='这是什么';
             return $this->render('success.html',$info);
@@ -228,7 +230,9 @@ class CompanyController extends Controller
             return $this->redirect(['improve4','companyid'=>$post['companyId']]);
         }else{
             $companyid=Yii::$app->request->get("companyid");
-            if(empty($companyid)){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            if(empty($companyid) || empty($userinfo['uid'])){
                 $info['code']=3;
                 $info['msg']='这是什么';
                 return $this->render('success.html',$info);
@@ -250,7 +254,9 @@ class CompanyController extends Controller
             return $this->redirect(['improve5','companyid'=>$post['companyId']]);
         }else{
             $companyid=Yii::$app->request->get("companyid");
-            if(empty($companyid)){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            if(empty($companyid) || empty($userinfo['uid'])){
                 $info['code']=3;
                 $info['msg']='这是什么';
                 return $this->render('success.html',$info);
@@ -276,7 +282,9 @@ class CompanyController extends Controller
             return $this->render('result.html',$data);
         }else{
             $companyid=Yii::$app->request->get("companyid");
-            if(empty($companyid)){
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            if(empty($companyid) || empty($userinfo['uid'])){
                 $info['code']=3;
                 $info['msg']='这是什么';
                 return $this->render('success.html',$info);
