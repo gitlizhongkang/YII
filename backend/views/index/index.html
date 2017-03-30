@@ -14,12 +14,11 @@ use yii\helpers\Url;
 <div class="public-header-warrp">
 	<div class="public-header">
 		<div class="content">
-			<div class="public-header-logo"><a href=""><i>LOGO</i><h3>拓源网络科技</h3></a></div>
+			<div class="public-header-logo"><a href=""><i>LOGO</i><h3>FOLLOW ME</h3></a></div>
 			<div class="public-header-admin fr">
 				<p class="admin-name"><?=$admin_name?>管理员 您好！</p>
 				<div class="public-header-fun fr">
-					<a href="" class="public-header-man">管理</a>
-					<a href="" class="public-header-loginout">安全退出</a>
+					<a href="<?=Url::to(['login/logout'])?>" class="public-header-loginout">安全退出</a>
 				</div>
 			</div>
 		</div>
