@@ -95,11 +95,11 @@ use yii\helpers\Url;
     if(count($lun)>=($i+1)){
     ?>
     	<li  class="banner_bg_<?=$i?> current" >
-            <a href="" target="_blank"><img src="<?=$lun[$i]['img_url']?>" width="612" height="160" alt="<?=$lun[$i]['title']?>" /></a>
+            <a href="<?=Url::to(['company/gongsi','id'=>$lun[$i]['company_id']])?>" target="_blank"><img src="<?=$lun[$i]['img_url']?>" width="612" height="160" alt="<?=$lun[$i]['title']?>" /></a>
         </li>
 	<?php }else{ ?>
 		<li  class="banner_bg_<?=$i?>" >
-            <a href="" target="_blank"><img src="style/images/kong.png" width="612" height="160" alt="空缺" /></a>
+            <a href="javascript:;" target="_blank"><img src="style/images/kong.png" width="612" height="160" alt="空缺" /></a>
         </li>
      
     <?php } } ?>
@@ -130,7 +130,7 @@ for($i=0;$i<6;$i++){
 if(count($middle)>=($i+1)){
 ?>
 	<li >
-        <a href="" target="_blank">
+        <a href="<?=Url::to(['company/gongsi','id'=>$middle[$i]['company_id']])?>" target="_blank">
             <img src="<?=$middle[$i]['img_url']?>" width="113" height="113" alt="联想" />
             <div class="hot_info">
             	<h2 title="<?=$middle[$i]['title']?>"><?=$middle[$i]['title']?></h2>
@@ -143,7 +143,7 @@ if(count($middle)>=($i+1)){
     </li>
     <?php }else{ ?>
     <li >
-        <a href="" target="_blank">
+        <a href="javascript:;" target="_blank">
             <img src="style/images/kong.png" width="113" height="113" alt="联想" />
             <div class="hot_info">
             	<h2 title="空缺">空缺</h2>
