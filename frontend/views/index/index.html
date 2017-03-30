@@ -15,10 +15,10 @@ use yii\helpers\Url;
 		<div class="menu_sub dn">
 		<?php foreach($v as $k1=>$v1){ ?>
 			<dl class="reset">
-				<dt><a href="h/jobs/list_后端开发?labelWords=label"><?=$k1?></a></dt>
+				<dt><a href="<?=Url::to(['list/index','zf'=>$k1])?>"><?=$k1?></a></dt>
 				<dd>
 				<?php foreach($v1 as $k2=>$v2){ ?>
-					<a href="h/jobs/list_Java?labelWords=label"><?=$v2?></a>					
+					<a href="<?=Url::to(['list/index','zw'=>$v2])?>"><?=$v2?></a>					
 				<?php } ?>		
 				</dd>
 			</dl>

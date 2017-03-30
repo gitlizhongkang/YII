@@ -1,6 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<div class="content">
 <title>{#$title#}</title>
 <link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
 <link href="cas/css/user_common.css" rel="stylesheet" type="text/css" />
@@ -80,10 +78,10 @@ $(document).ready(function() {
 
 			<div class="navs">
         
-        <a href="?act=order_add" class="se">积分充值</a>
+        <a href="index.php?r=category/indent" class="se">积分充值</a>
 
 
-        <a href="?act=order_list">我的订单</a>
+        <a href="index.php?r=category/order_list">我的订单</a>
 				<div class="clear"></div>
 			</div>
 		</div>
@@ -149,6 +147,6 @@ $(document).ready(function() {
   </div>
   <div class="clear"></div>
 </div>
-
+</div>
 </body>
 </html>
