@@ -38,7 +38,7 @@ class Ad extends \yii\db\ActiveRecord
     {
         return [
             [['is_display', 'category_id', 'show_order', 'addtime', 'starttime', 'deadline'], 'integer'],
-            [['category_id',  'title', 'addtime', 'starttime', 'categoryname'], 'required'],
+            [['category_id',  'title', 'addtime', 'starttime', 'categoryname','company_id'], 'required'],
             [['title'], 'string', 'max' => 100],
             [['img_url'], 'string', 'max' => 250],
             [['categoryname','text_content'], 'string', 'max' => 255],
@@ -63,6 +63,7 @@ class Ad extends \yii\db\ActiveRecord
             'img_url' => '广告logo',
             'categoryname' => 'Category Name',
             'text_content'=>'备注',
+            'company_id'=>'公司id',
         ];
     }
     //查询广告位
