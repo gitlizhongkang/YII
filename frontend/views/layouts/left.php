@@ -76,15 +76,13 @@ console.log(1);
 		<dl class="company_center_aside">
 			<dt>我发布的职位</dt>
 			<dd><a href="<?=Url::to(['job/job','type'=>'1'])?>">有效职位</a></dd>
-			<dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">充值订单</a></dd>
-            <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">增值服务</a></dd>
             <dd><a href="<?=Url::to(['job/job','type'=>'2'])?>">企业模板</a></dd>
 		</dl>
         <dl class="company_center_aside">
             <dt>会员服务</dt>
             <dd><a href="<?=Url::to(['category/account'])?>">我的账户</a></dd>
-            <dd><a href="<?=Url::to(['category/indent'])?>">充值订单</a></dd>
             <dd><a href="<?=Url::to(['category/advert'])?>">增值服务</a></dd>
+            <dd><a href="<?=Url::to(['category/indent'])?>">充值订单</a></dd>
         </dl>
     	<div class="subscribe_side mt20">
 			<div class="f14">想收到更多更好的简历？</div>

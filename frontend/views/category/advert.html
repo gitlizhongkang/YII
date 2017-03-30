@@ -1,11 +1,7 @@
 <?php
 use yii\helpers\Url;
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<meta name="renderer" content="webkit"> 
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+<div class="content">
 <title>{#$title#}</title>
 <link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
 <link rel="stylesheet" href="css/user_common.css" />
@@ -53,7 +49,7 @@ use yii\helpers\Url;
     </td>
     <td><?=$value['expense']?>元/周</td>
 
-<td><a href="<?=Url::to(['category/advert_add'])?>&category_id=<?= $value['category_id'];?>">购买</a></td>
+<td><a href="<?=Url::to(['category/advert_add'])?>&category_name=<?= $value['categoryname'];?>">购买</a></td>
   </tr>
  <?php endforeach ?>
             </tbody>
@@ -62,6 +58,7 @@ use yii\helpers\Url;
       </div>
     </div>
     <div class="clear"></div>
+  </div>
   </div>
 </body>
 </html>
