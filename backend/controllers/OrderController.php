@@ -94,18 +94,15 @@ class OrderController extends Controller
         $points=Yii::$app->request->post("points");
         $id=Yii::$app->request->post("id");
         $uid=Yii::$app->request->post("uid");
-        $notes=Yii::$app->request->post("notes");
         $amount=Yii::$app->request->post("amount");
        $res=Order::find()->where(array("id"=>$id))->one();
-       $res->is_paid='2';
+       $res->is_paid=2;
        $res->payment_time=time();
-       $res->notes=$notes;
-       $res->save();
-       if($res){
+       if($res->save()){
            $list=Members::find()->where(array("uid"=>$uid))->asArray()->one();
            $new_points=$list['points']+$points;
            $sql="update lg_members set points=$new_points where uid=$uid";
-           $res1=\Yii::$app->db->createCommand($sql)->query();
+           $res1=Yii::$app->db->createCommand($sql)->query();
            if($res1){
                $order_list=Order::find()->where(array("id"=>$id))->asArray()->one();
                $session=Yii::$app->session;
@@ -114,7 +111,7 @@ class OrderController extends Controller
                $messg="操作人：".$admin.",说明：确认收款。收款金额：".$order_list['amount']." $now"."通过：".$order_list['payment_name']." 成功充值".$order_list['amount'] ."元，(+".$points.")，(剩余:".$new_points."),订单:".$order_list['oid'];
               $data=array(
                   'log_uid'=>$uid,
-                  'log_username'=>$list['username'],
+                  'log_username'=>$list['email'],
                   'log_addtime'=>time(),
                   'log_value'=>$messg,
                   'log_amount'=>$points,
