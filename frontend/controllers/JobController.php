@@ -146,13 +146,17 @@ class JobController extends Controller
 		$resumeJob=new ResumeJob;
 		$resume=$resumeJob->groupJob($info['id']);
 		foreach ($arr['list'] as $k => $v) {
-			foreach ($resume as $k1 => $v1) {
-				if($v1['job_id']==$v['id']){
-					$arr['list'][$k]['count']=$v1["count('id')"];
-				}else{
-					$arr['list'][$k]['count']='0';
-				}
-			}			
+			if(empty($resume)){
+				$arr['list'][$k]['count']='0';
+			}else{
+				foreach ($resume as $k1 => $v1) {
+					if($v1['job_id']==$v['id']){
+						$arr['list'][$k]['count']=$v1["count('id')"];
+					}else{
+						$arr['list'][$k]['count']='0';
+					}
+				}	
+			}					
 		}
 		// print_r($arr['list']);die;
 		return $this->render('positions.html',['arr'=>$arr,'count'=>$count,'type'=>$type]);
