@@ -39,7 +39,6 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['uid', 'pay_type', 'oid', 'amount', 'payment_name', 'points', 'addtime', 'payment_time', 'description', 'setmeal', 'notes', 'week'], 'required'],
             [['uid', 'pay_type', 'is_paid', 'points', 'addtime', 'payment_time', 'setmeal', 'week'], 'integer'],
             [['amount'], 'number'],
             [['oid'], 'string', 'max' => 200],

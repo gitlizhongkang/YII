@@ -62,12 +62,11 @@ use yii\helpers\Url;
       <label id="chkAll"><input type="checkbox" name=" " title="全选/反选" id="chk"/>公司名称</label>
 	  </td>
 	  <td width="12%" class="admin_list_tit">营业执照</td>
-        <td width="7%" align="center" class="admin_list_tit">所属用户</td>
+        <td width="20%" align="center" class="admin_list_tit">所属用户</td>
       <td width="10%" align="center" class="admin_list_tit">认证状态</td>   
-      <td width="7%" align="center" class="admin_list_tit">创建时间</td>
-	  <td width="7%" align="center" class="admin_list_tit">刷新时间</td>
+      <td width="10%" align="center" class="admin_list_tit">创建时间</td>
+	  <td width="10%" align="center" class="admin_list_tit">刷新时间</td>
 	  <td width="7%" align="center" class="admin_list_tit">目前积分</td>
-	  <td width="9%" align="center" class="admin_list_tit">简历处理度</td>
       <td align="center" class="admin_list_tit">操作</td>
     </tr>
     <?php foreach($companyList as $k=>$v){ ?>
@@ -85,7 +84,7 @@ use yii\helpers\Url;
         <?php } ?>
      </td>
           <td  class="admin_list">
-              <?php echo $v['username']?>
+              <?php echo $v['email']?>
           </td>
     <td align="center" class="admin_list">
         <?php if($v['audit']==0){?>
@@ -107,9 +106,7 @@ use yii\helpers\Url;
     <td align="center" class="admin_list">
         <span  style="color: black"><?php echo $v['points']?$v['points']:'0' ?>分</span>
     </td>
-    <td align="center" class="admin_list">
-        <span  style="color: pink"><?php echo $v['resume_processing'] ?>%</span>
-    </td>
+
     <td width="15%" align="center" class="admin_list">
     <a href="<?= Url::to(['company/company-list','audit'=>$audit,'time'=>'360'])?>">日志</a>
     <a href="<?= Url::to(['company/edit-company','id'=>$v['id']])?>">修改</a>
