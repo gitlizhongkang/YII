@@ -16,11 +16,7 @@ use backend\models\Jobs;
 
 class IndexController extends Controller
 {
-
-
 	public $layout='/header';
-
-
 	//前台首页		
 	public function actionIndex()
 	{
@@ -68,7 +64,7 @@ class IndexController extends Controller
         $trade_id=Yii::$app->request->get("trade_id");
         $where="1=1";
         if($province_id!=''){
-            $where.=" and district_id=$province_id";
+            $where.=" and city='$province_id'";
         }
         if($scale_id!=''){
             $where.=" and scale_id=$scale_id";

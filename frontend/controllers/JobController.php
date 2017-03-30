@@ -158,7 +158,6 @@ class JobController extends Controller
 				}	
 			}					
 		}
-		// print_r($arr['list']);die;
 		return $this->render('positions.html',['arr'=>$arr,'count'=>$count,'type'=>$type]);
 	}
 	//删除职位
