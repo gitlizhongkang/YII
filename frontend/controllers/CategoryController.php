@@ -70,7 +70,7 @@ class CategoryController extends Controller
         $arr=Yii::$app->request->post();
         $Order->uid= $arr['uid'];
         $Order->pay_type= '4';
-        $Order->is_paid= '2';
+        $Order->is_paid= '1';
         $Order->oid= $arr['oid'];
         $Order->amount= $arr['show_m'];
         $Order->payment_name= 'fifen';
