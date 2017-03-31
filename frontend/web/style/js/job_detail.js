@@ -494,35 +494,49 @@ $(function(){
 	});
 	
 	//收藏
-	var jobCollection = false;
+	// var jobCollection = false;
 	$('#jobCollection').click(function(e){
 		if(e.target == this){
 			var _this = $(this);
-			if(_this.hasClass('collected') && jobCollection){
-				_this.children('.jd_collection_success').stop(true,true).fadeIn(200).delay(3000).fadeOut(200);
+			if(_this.hasClass('collected')){				
+				var type=0;
 			}else{
-				var id = $('#jobid').val();
-				var resubmitToken = $('#resubmitToken').val();
-				$.ajax({
-					url:ctx+'/mycenter/collectPositoin.json',
+				var type=1;
+			}
+			$.ajax({
+					url:collection,
 					type:'POST',
 					data:{
-						positionId:id,
-						type:1,
-						resubmitToken:resubmitToken
+						job_id:id,
+						type:type
 					},
 					dataType:'json'
 				}).done(function(result){
-					if(result.success){
-			    		$('#resubmitToken').val(result.resubmitToken);
-						_this.addClass('collected');
-						_this.children('.jd_collection_success').stop(true,true).fadeIn(200).delay(3000).fadeOut(200);
-						jobCollection = true;
-					}else{
-						alert(result.msg);
+					if(type==1){
+						if(result==1){
+				    		alert('收藏成功！！！');
+							_this.addClass('collected');
+							_this.children('.jd_collection_success').stop(true,true).fadeIn(200).delay(3000).fadeOut(200);
+							// jobCollection = true;							
+						}else if(result==0){
+							alert('收藏失败！！！');
+						}else if(result==2){
+							alert('登录后才能收藏哦！');
+							location.href=login;
+						}
+					}else if(type==0){
+						if(result==1){
+							alert('取消收藏成功！！！');
+							_this.removeClass('collected');
+						}else if(result==0){
+							alert('取消收藏失败！！！');
+						}else if(result==2){
+							alert('登录后才能收藏哦！');
+							location.href=login;
+						}
 					}
+					
 				});
-			}
 		}
 	});
 	

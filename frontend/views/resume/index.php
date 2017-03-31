@@ -44,12 +44,12 @@
                     <?php foreach ($resume as $key => $val){ ?>
                         <li class="onlineResume" style="border: dotted 1px #cfc7bb">
                             <div class="resumeShow">
-                                <a target="_blank" href="<?= \yii\helpers\Url::to(['view','rid'=>$val['id']]) ?>">
+                                <a target="_blank" href="<?= \yii\helpers\Url::to(['view','id'=>$val['id']]) ?>">
                                     <img src="<?= $val['photo'] ?>">
                                 </a>
                                 <div class="resumeIntro">
                                     <h3 class="unread">
-                                        <a target="_blank" href="<?= \yii\helpers\Url::to(['view','rid'=>$val['id']]) ?>">
+                                        <a target="_blank" href="<?= \yii\helpers\Url::to(['view','id'=>$val['id']]) ?>">
                                             <?= $val['title'] ?>
                                         </a>
                                     </h3>
@@ -65,13 +65,13 @@
                                         <span><?= '现居地：' . $val['residence'] ?></span>
                                     </div>
                                     <div class="jdpublisher">
-                                        <span><?= $val['categoryname'] . '/' . $val['wage'] ?></span>
+                                        <span>期望薪资：<?= $val['wage'] ?></span>
                                     </div>
                                 </div>
                                 <div class="links">
-                                    <a data-deliverid="1686182"  href="javascript:void(0)">修改简历</a>
+                                    <a data-deliverid="1686182"  href="<?= \yii\helpers\Url::to(['create','id'=>$val['id']]) ?>">修改简历</a>
                                     <a data-deliverid="1686182"  href="javascript:void(0)">删除简历</a>
-                                    <a data-deliverid="1686182"  href="javascript:void(0)">查看详情</a>
+                                    <a data-deliverid="1686182" target="_blank" href="<?= \yii\helpers\Url::to(['view','id'=>$val['id']]) ?>">查看详情</a>
                                 </div>
                             </div>
                             <div class="contactInfo">
@@ -91,15 +91,7 @@
     <a rel="nofollow" title="回到顶部" id="backtop"></a>
 </div><!-- end #container -->
 </div><!-- end #body -->
-<div id="footer">
-    <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="about.html">联系我们</a>
-        <a target="_blank" href="http://www.lagou.com/af/zhaopin.html">互联网公司导航</a>
-        <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
-        <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>
-        <div class="copyright">&copy;2013-2014 Lagou <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank">京ICP备14023790号-2</a></div>
-    </div>
-</div>
+
 
 <script src="style/js/core.min.js" type="text/javascript"></script>
 <script src="style/js/popup.min.js" type="text/javascript"></script>

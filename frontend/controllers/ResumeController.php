@@ -3,9 +3,11 @@
 namespace frontend\controllers;
 
 use app\models\ResumeJob;
+use common\models\UserPhoto;
 use Yii;
 use common\models\Resume;
 use common\models\User;
+use common\models\District;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
@@ -17,6 +19,16 @@ use yii\web\Response;
 class ResumeController extends Controller
 {
     public $layout = 'header';
+    private $userInfo ;
+
+    //将user信息存入初始化 整个控制器可以使用 避免频繁读取
+    public function init()
+    {
+        parent::init();
+        $this->userInfo = Yii::$app->session->get('user');
+    }
+
+
 
 
     /**
@@ -25,56 +37,152 @@ class ResumeController extends Controller
      */
     public function actionIndex()
     {
-        //获取登陆的用户
-        $userInfo = Yii::$app->session->get('user');
 
         //查询简历
         $resume = Resume::find()
-            ->select('lg_resume.* , lg_user_photo.photo , lg_jobs_category.categoryname')
+            ->select('lg_resume.* , lg_user_photo.photo')
             ->join('INNER JOIN','lg_user_photo','photo_id = lg_user_photo.id')
-            ->join('INNER JOIN','lg_jobs_category','intention_jobs_id = lg_jobs_category.id')
-            ->where(['uid'=> $userInfo['uid'], 'audit' => 2])   //正式上线   $userInfo['uid']
+            ->where(['uid'=> $this->userInfo['uid']])
+            ->asArray()
+            ->all();
+
+
+        return $this->render('index',[
+            'resume'=>$resume,
+        ]);
+    }
+
+
+    /**
+     * @brief 查看详情
+     */
+    public function actionView()
+    {
+        $this->layout = false;
+
+        $id = Yii::$app->request->get('id');
+        //查询简历
+        $resume = Resume::find()
+            ->select('lg_resume.* , lg_user_photo.photo')
+            ->join('INNER JOIN','lg_user_photo','photo_id = lg_user_photo.id')
+            ->where(['lg_resume.id'=> $id])
+            ->asArray()
+            ->one();
+
+        return $this->render('view',['resume'=>$resume]);
+    }
+
+
+
+
+    /**
+     * @brief 创建
+     * @return string
+     */
+    public function actionCreate()
+    {
+        $id = Yii::$app->request->get('id');
+        if(isset($id))
+        {
+            $user = Resume::find()
+                /*->select('lg_resume.*,lg_user_photo.photo')
+                ->join('INNER JOIN','lg_user_photo','photo_id = lg_user_photo.id')*/
+                ->where(['lg_resume.id' => $id])
+                ->asArray()
+                ->one();
+            $userPhoto = UserPhoto::findOne($user['photo_id']);
+            $user['photo'] = isset($userPhoto->photo)?$userPhoto->photo:'uploads/14.jpg';
+            //print_r($user);die;
+        }
+        else
+        {
+            //查询基本数据填充简历表
+            $user = User::find()
+                ->select('tel,email,lg_user_info.*')
+                ->join('INNER JOIN','lg_user_info','id = user_id')
+                ->where(['id' => $this->userInfo['uid']])
+                ->asArray()
+                ->one();
+        }
+
+        //查询照片
+        $photo = UserPhoto::find()
+            ->select('id,photo')
+            ->where(['user_id' => $this->userInfo['uid'], 'status' => 2])
             ->asArray()
             ->all();
 
         //地区
+        $province = $this->findArea('parentid = 0');
+        $city = $this->findArea('parentid != 0');
+        //print_r($user);die;
 
-        return $this->render('index',['resume'=>$resume]);
-    }
-
-
-
-    //创建
-    public function actionCreate()
-    {
-        //获取session
-        $userInfo = Yii::$app->session->get('user');
-
-
-        //查询基本数据填充简历表
-        $user = User::find()
-            ->select('tel,tel_audit,email,email_audit,head_ic,lg_user_info.*')
-            ->join('INNER JOIN','lg_user_info','id = user_id')
-            ->where(['id' => $userInfo['uid']])  //正式上线   $userInfo['uid']
-            ->asArray()
-            ->one();
-
-        return $this->render('create', ['user' => $user]);
+        return $this->render('create', [
+            'user' => $user,
+            'photo' => $photo,
+            'province' => $province,
+            'city' => $city,
+        ]);
     }
     public function actionAdd()
     {
+        //返回json
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
         $post = Yii::$app->request->post();
-        print_r($post);
+        $post['uid'] = $this->userInfo['uid'];
+        //print_r($post);die;
+
+        $resume = new Resume();
+        //判断是修改还是新增
+        $id = Yii::$app->request->get('id');
+        if(isset($id))
+        {
+           $resume = Resume::findOne($id);
+        }
+        $resume->setAttributes($post);
+
+        if($resume->save())
+        {
+            return ['done' => 1, 'msg' => '添加成功', 'id' => $resume->attributes['id']];
+        }
+        else
+        {
+            return ['done' => 2, 'msg' => '添加失败'];
+        }
+
+    }
+
+    /**
+     * @brief查询地区数据
+     * @param $condition
+     * @return array
+     */
+    public function findArea($condition)
+    {
+        $data = District::find()
+            ->select('id,categoryname')
+            ->where($condition)
+            ->asArray()
+            ->all();
+        $area = [];
+        foreach ($data as $key => $val)
+        {
+            $area[$val['id']] = $val['categoryname'];
+        }
+
+        return $area;
     }
 
 
-    //投递简历状态
+
+
+    /**
+     * @brief 投递简历状态
+     * @return string
+     */
     public function actionUse()
     {
-        //获取session
-        $userInfo = Yii::$app->session->get('user');
-
-
         //状态查询
         $status = Yii::$app->request->get('status');
         if(!isset($status))
@@ -83,10 +191,10 @@ class ResumeController extends Controller
         }
         //查询基本数据填充简历表
         $resumeInfo = Resume::find()
-            ->select('title, wage, companyname, jobs_name, status, add_time, check_time, response_time')
+            ->select('title, wage, lg_jobs.companyname, jobs_name, status, add_time, check_time, response_time')
             ->join('INNER JOIN','lg_resume_job','lg_resume.id = resume_id')
             ->join('INNER JOIN','lg_jobs','lg_jobs.id = job_id')
-            ->where(['uid' => $userInfo['uid'], 'status' => $status])  //正式上线   $userInfo['uid']
+            ->where(['uid' => $this->userInfo['uid'], 'status' => $status])
             ->asArray()
             ->all();
         //echo "<pre>";

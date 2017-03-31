@@ -73,9 +73,10 @@ class Resume extends \yii\db\ActiveRecord
             [[ 'tel', 'major'], 'string', 'max' => 50],
             [['height'], 'string', 'max' => 5],
             [['email'], 'string', 'max' => 60],
-            [['experience', 'education','residence'], 'string', 'max' => 50],
+            [['experience', 'education','residence','intention_jobs'], 'string', 'max' => 50],
             [['good_at'], 'string', 'max' => 250],
             [['specialty'], 'string', 'max' => 200],
+            [['companyName','positionName','startYear','startMonth','endYear','endMonth','projectName','positionName_p','startYear_p','startMonth_p','endYear_p','endMonth_p','projectRemark'], 'string', 'max' => 255],
         ];
     }
 
