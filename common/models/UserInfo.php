@@ -41,15 +41,8 @@ class UserInfo extends \yii\db\ActiveRecord
             [['user_id'], 'required'],
             [['user_id', 'sex', 'province_id', 'city_id', 'district_id', 'marriage', 'reg_time'], 'integer'],
             [['name', 'birthday'], 'string', 'max' => 30],
-            [['user_id'], 'required'],
-            [['user_id', 'marriage', 'reg_time'], 'integer'],
-            [['name', 'birthday', 'residence'], 'string', 'max' => 30],
-            [['sex'], 'string', 'max' => 3],
-            [['user_id'], 'required'],
-            [['user_id', 'sex', 'province_id', 'city_id', 'district_id', 'marriage', 'reg_time'], 'integer'],
-            [['name', 'birthday'], 'string', 'max' => 30],
-            [['height'], 'string', 'max' => 5],
             [['education', 'experience','residence'], 'string', 'max' => 50],
+            [['collect','order'], 'string', 'max' => 255],
         ];
     }
 
@@ -72,6 +65,8 @@ class UserInfo extends \yii\db\ActiveRecord
             'experience' => 'Experience',
             'marriage' => 'Marriage',
             'reg_time' => 'Reg Time',
+            'collect'=>'Collect',
+            'order'=>'Order',
         ];
     }
     /**
