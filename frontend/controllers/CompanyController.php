@@ -17,13 +17,23 @@ use yii\web\UploadedFile;
 class CompanyController extends Controller
 {
     public $layout='/header';
+    public function beforeAction(){
+        $session=Yii::$app->session;
+        $user=$session->get('user');
+        if(!empty($user)){
+            return true;
+        }else{
+            return $this->redirect(['register/login']);
+        }
+    }
     public function actionIndex()
     {
         $session=Yii::$app->session;
         $userinfo=$session->get('user');
-        $uid=$userinfo['uid'];
+        $uid=$userinfo['uid'];    
         $sql="select * from lg_company where u_id=$uid";
         $companyinfo=Yii::$app->db->createCommand($sql)->queryOne();
+      
         if(!isset($companyinfo['id'])){
             return $this->render("bindstep1.html");
         }
