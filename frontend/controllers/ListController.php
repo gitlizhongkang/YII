@@ -115,7 +115,11 @@ class ListController extends Controller
 			$date['QS_jobs_nature']=$CateModel->getArray($cate[4]['c_alias']);
 			$date['QS_education']=$CateModel->getArray($cate[2]['c_alias']);
 			$date['QS_experience']=$CateModel->getArray($cate[3]['c_alias']);
-			return $this->render('list.html',['data'=>$jobs,'dq'=>$dq,'hots'=>$Hots,'jobsList'=>$jobs['list'],'pages'=>$jobs['pages'],'date'=>$date]);
+			$session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            $type=$userinfo['type'];
+            $data['type']=$type;
+			return $this->render('list.html',['data'=>$jobs,'dq'=>$dq,'hots'=>$Hots,'jobsList'=>$jobs['list'],'pages'=>$jobs['pages'],'date'=>$date,'type'=>$data['type']]);
 		}
 	}
 

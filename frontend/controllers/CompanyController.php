@@ -377,9 +377,8 @@ class CompanyController extends Controller
             $date['jobs']=$JobsModel->find()->select('count(company_id) As jobs')->groupBy('company_id')->where(['company_id'=>$id])->asArray()->one();
             $UserModel=new User;
             $date['last_login']=$UserModel->find()->select('last_login_time')->where(['id'=>$date['Detail']['u_id']])->asArray()->one();
-            $cache->set($detail,$date,1800);
-            //存入缓存
             // print_r($date);die;
+            $cache->set($detail,$date,1800);//存入缓存
             return $this->render('gongsi.html',$date);
         }
     public function actionGongsi1(){
@@ -387,6 +386,7 @@ class CompanyController extends Controller
             $CompanyModel=new Company;
             $cache=Yii::$app->cache;
             $detail=$id."gongsi1";
+            // $cache->delete($detail);die;
             if(!empty($cache->get($detail))){
                     $date=$cache->get($detail);
                     return $this->render('gongsi1.html',$date);die;  
@@ -400,6 +400,9 @@ class CompanyController extends Controller
             $UserModel=new User;
             $date['last_login']=$UserModel->find()->select('last_login_time')->where(['id'=>$date['Detail']['u_id']])->asArray()->one();
             // print_r($date);die;
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            $date['type']=$userinfo['type'];
             $cache->set($detail,$date,1800);
             //存入缓存
             return $this->render('gongsi1.html',$date);
