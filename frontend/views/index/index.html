@@ -163,7 +163,7 @@ if(count($middle)>=($i+1)){
     <div id="hotList">
 	    <ul class="hot_pos reset">
 	    <?php foreach($jobs as $k=>$v){?>
-	        <li class="clearfix"  border='1px dashed #fff'>
+	        <li class="clearfix" style="border-bottom:1px dashed #3c3c3c;">
 		    <div class="hot_pos_l">
 				<div class="mb10">
 				    <a href="<?=Url::to(['tou/index'])?>&id=<?=$v['id']?>" target="_blank"><?=$v['jobs_name']?></a> &nbsp;
@@ -197,7 +197,7 @@ if(count($middle)>=($i+1)){
 	</ul>
 	<ul class="hot_pos hot_posHotPosition reset" style="display:none;">
 	    <?php foreach($new as $k=>$v){?>
-	        <li class="clearfix">
+	        <li class="clearfix"  style="border-bottom:1px dashed #3c3c3c;">
 		    <div class="hot_pos_l">
 				<div class="mb10">
 				    <a href="<?=Url::to(['tou/index'])?>&id=<?=$v['id']?>" target="_blank"><?=$v['jobs_name']?></a> &nbsp;
