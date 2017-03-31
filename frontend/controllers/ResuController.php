@@ -24,7 +24,7 @@ class ResuController extends Controller
         if(!empty($user)){
             return true;
         }else{
-            return $this->redirect(['register/login']);
+           $this->redirect(['register/login']);
         }
     }
     public function actionIndex1()
