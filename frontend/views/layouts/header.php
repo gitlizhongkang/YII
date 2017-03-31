@@ -69,7 +69,7 @@ function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){
 } 
 </script> 
 <body style="margin:0;padding:0;font-size:14px;">
-<div id="MyMoveAd" style="background:#ff0;height:19px;overflow:hidden;"> 
+<div id="MyMoveAd" style="background:#50c1bd;height:19px;overflow:hidden;"> 
 <ul> 
  <li>给满分加截图</li> 
  <li>找右侧栏的客服人员</li>
@@ -87,7 +87,7 @@ function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){
 	<div id="header">
     	<div class="wrapper">
     		<a href="index.html" class="logo">
-    			<img src="style/images/follow1.png" width="60" height="50" alt="拉勾招聘-专注互联网招聘"/>
+    			<img src="style/images/logo1.png" width="150" height="45" alt="拉勾招聘-专注互联网招聘"/>
     		</a>
     		<ul class="reset" id="navheader">
     			<li class="current"><a href="<?=Url::to(['index/index'])?>">首页</a></li>
