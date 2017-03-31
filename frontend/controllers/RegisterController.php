@@ -75,6 +75,7 @@ class RegisterController extends Controller
 	//登录页面
 	public function actionLogin(){
 		$controller=isset($_GET['controller'])?$_GET['controller']:'';
+		$id=isset($_GET['id'])?$_GET['id']:'';
 		// echo $controller;die;		
 		if(Yii::$app->request->isPost){		
 			$session=Yii::$app->session;
@@ -130,7 +131,7 @@ class RegisterController extends Controller
 						$session->set('user',$info);
 						//存储用户信息
 						if(!empty($controller)){
-							return $this->redirect(["$controller/index"]);
+							return $this->redirect(["$controller/index",'id'=>$id]);
 						}else{
 							return $this->redirect(["index/index"]);
 						}					

@@ -6,6 +6,7 @@ use yii\web\Controller;
 use common\models\Resume;
 use backend\models\Jobs;
 use app\models\ResumeJob;
+use common\models\UserInfo;
 
 class TouController extends Controller
 {
@@ -13,6 +14,7 @@ class TouController extends Controller
 	public function actionIndex(){
 		$session=\Yii::$app->session;
 		$user=$session->get('user');
+		$uid=$user['uid'];
 		$id=Yii::$app->request->get('id');
 		$jobs=new Jobs;
 		$arr=$jobs->getOne($id);
@@ -21,7 +23,9 @@ class TouController extends Controller
 		$resume=new Resume;
 		$info=$resume->select($user['uid']);
 		$controller=Yii::$app->controller->id;
-		return $this->render('toudi.html',['jobs'=>$arr,'resume'=>$info,'user'=>$user,'controller'=>$controller]);
+		$res=UserInfo::find()->where(['user_id'=>$uid])->asArray()->one();
+		$collect=explode(',',$res['collect']);
+		return $this->render('toudi.html',['jobs'=>$arr,'resume'=>$info,'user'=>$user,'controller'=>$controller,'collect'=>$collect]);
 	}
 	public function actionTou(){
 		$arr=Yii::$app->request->get();
@@ -37,6 +41,40 @@ class TouController extends Controller
 			}else{
 				print_r($resumeJob->errors);
 			}
+		}		
+	}
+	public function actionCollection(){
+		$id=Yii::$app->request->post('job_id');
+		$type=Yii::$app->request->post('type');
+		$session=\Yii::$app->session;
+		$user=$session->get('user');
+		if(empty($user)){
+			return 2;
+		}else{
+			$uid=$user['uid'];
+			// $model=new UserInfo;
+			$arr=UserInfo::find()->where(['user_id'=>$uid])->one();
+			if($type==1){
+				if($arr->collect==''){
+					$arr->collect=$id;
+				}else{
+					$arr->collect=$arr->collect.','.$id;			
+				}
+				
+			}elseif($type==0){
+				$collect=explode(',',$arr->collect);
+				foreach ($collect as $k => $v) {
+					if($v==$id){
+						unset($collect[$k]);
+					}
+				}
+				$arr->collect=implode(',',$collect);
+			}
+			if($arr->save()){
+				return 1;
+			}else{
+				return 0;
+			}		
 		}		
 	}
 }
