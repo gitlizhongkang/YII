@@ -40,7 +40,49 @@ $user=$session->get('user');
         <script type="text/javascript" src="style/js/conv.js"></script>
         <script src="style/js/ajaxCross.json" charset="UTF-8"></script>
     </head>
-<body>
+<!-- JS效果begin -->
+<script type="text/javascript"> 
+var intervalId = null; 
+function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){ 
+  this.stayTime=nStayTime*1000 || 3000; 
+  this.maxHeigth=nMaxHth || 90; 
+  this.minHeigth=nMinHth || 1; 
+  this.state=sState || "down" ; 
+  var obj = document.getElementById(id); 
+  if(intervalId != null)window.clearInterval(intervalId); 
+  function openBox(){ 
+   var h = obj.offsetHeight; 
+   obj.style.height = ((this.state == "down") ? (h + 2) : (h - 2))+"px"; 
+    if(obj.offsetHeight>this.maxHeigth){ 
+    window.clearInterval(intervalId); 
+    intervalId=window.setInterval(closeBox,this.stayTime); 
+    } 
+    if (obj.offsetHeight<this.minHeigth){ 
+    window.clearInterval(intervalId); 
+    obj.style.display="none"; 
+    } 
+  } 
+  function closeBox(){ 
+   slideAd(id,this.stayTime,"up",nMaxHth,nMinHth); 
+  } 
+  intervalId = window.setInterval(openBox,10); 
+} 
+</script> 
+<body style="margin:0;padding:0;font-size:14px;">
+<div id="MyMoveAd" style="background:#ff0;height:19px;overflow:hidden;"> 
+<ul> 
+ <li>给满分加截图</li> 
+ <li>找右侧栏的客服人员</li>
+  <li>领红包~~~Can you understand</li>  
+</ul> 
+</div> 
+<script type="text/javascript"> 
+ <!-- 
+ slideAd('MyMoveAd',2); 
+--> 
+</script> 
+</body> 
+<!-- JS效果end -->
 <div id="body">
 	<div id="header">
     	<div class="wrapper">
@@ -105,6 +147,8 @@ $user=$session->get('user');
         });
     });
 </script>
+
+
     <?php echo $content; ?>
         <div id="footer">
         <div class="wrapper">
