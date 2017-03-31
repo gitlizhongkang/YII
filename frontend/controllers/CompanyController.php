@@ -16,12 +16,21 @@ use yii\web\UploadedFile;
 
 class CompanyController extends Controller
 {
-    public $layout='/header';
+    public $layout="header";
+    public function beforeAction(){
+        $session=Yii::$app->session;
+        $user=$session->get('user');
+        if(!empty($user)){
+            return true;
+        }else{
+             $this->redirect(['register/login']);
+        }
+    }
     public function actionIndex()
     {
         $session=Yii::$app->session;
         $userinfo=$session->get('user');
-        $uid=$userinfo['uid'];
+        $uid=$userinfo['uid'];    
         $sql="select * from lg_company where u_id=$uid";
         $companyinfo=Yii::$app->db->createCommand($sql)->queryOne();
         if(!isset($companyinfo['id'])){
@@ -84,7 +93,11 @@ class CompanyController extends Controller
             $uid=$userinfo['uid'];
             $sql="select email,telphone from lg_company where u_id=$uid";
             $companyinfo=Yii::$app->db->createCommand($sql)->queryOne();
-            return $this->render("bindstep1.html",$companyinfo);
+            if($companyinfo){
+                return $this->render("bindstep1.html",$companyinfo);
+            }else{
+                return $this->render("bindstep1.html");
+            }
         }
     }
     public function actionBlind2()
@@ -104,28 +117,44 @@ class CompanyController extends Controller
                 echo 0;
             }
         }else{
-            return $this->render("bindstep2.html");
+            $session=Yii::$app->session;
+            $userinfo=$session->get('user');
+            $uid=$userinfo['uid'];
+            $sql="select email,telphone,companyname from lg_company where u_id=$uid";
+            $companyinfo=Yii::$app->db->createCommand($sql)->queryOne();
+            if($companyinfo){
+                return $this->render("bindstep2.html",$companyinfo);
+            }else{
+                return $this->render("bindstep1.html");
+            }
         }
     }
     public function actionBlind3()
     {
-        $session = Yii::$app->session;
-        $userinfo = $session->get('user');
-        $uid=$userinfo['uid'];
-        $companyinfo=Company::find()->where(["u_id"=>$uid])->asArray()->one();
-        $test=Company::find()->where(["u_id"=>$uid])->one();
-        $email_code=md5($uid);
-        $test->email_code="$email_code";
-        $res=$test->save();
-        $mail = Yii::$app->mailer->compose();
-        $mail->setTo($companyinfo['email']);	//接收人邮箱
-        $body="点击验证邮箱"."<a href='http://www.front.com/index.php?r=company/check-email&email_code=$email_code'>http://www.front.com/index.php?r=company/check-email&email_code=".$email_code."</a>";
-        $mail->setSubject("邮箱验证");	//邮件标题
-        $mail->setHtmlBody($body);	//发送内容(可写HTML代码)
-        if ($mail->send()){
-            $info['msg']=1;
-        }
-        return $this->render("bindstep3.html",$info);
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            $uid = $userinfo['uid'];
+            $companyinfo = Company::find()->where(["u_id" => $uid])->asArray()->one();
+            if($companyinfo['companyname']==''){
+                return $this->render("bindstep2.html");
+            }
+            if($companyinfo['email']==''){
+                return $this->render("bindstep1.html");
+            }
+            $test = Company::find()->where(["u_id" => $uid])->one();
+            $email_code = md5($uid);
+            $test->email_code = "$email_code";
+            $res = $test->save();
+            $mail = Yii::$app->mailer->compose();
+            $mail->setTo($companyinfo['email']);
+            //接收人邮箱
+            $body = "点击验证邮箱" . "<a href='http://www.front.com/index.php?r=company/check-email&email_code=$email_code'>http://www.front.com/index.php?r=company/check-email&email_code=" . $email_code . "</a>";
+            $mail->setSubject("邮箱验证");    //邮件标题
+            $mail->setHtmlBody($body);    //发送内容(可写HTML代码)
+            if ($mail->send()) {
+                $info['msg'] = 1;
+            }
+            return $this->render("bindstep3.html", $info);
     }
     //验证邮箱
     public function actionCheckEmail()

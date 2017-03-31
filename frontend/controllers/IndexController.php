@@ -62,7 +62,7 @@ class IndexController extends Controller
         $province_id=Yii::$app->request->get("province_id");
         $scale_id=Yii::$app->request->get("scale_id");
         $trade_id=Yii::$app->request->get("trade_id");
-        $where="1=1";
+        $where="audit=1";
         if($province_id!=''){
             $where.=" and city='$province_id'";
         }
