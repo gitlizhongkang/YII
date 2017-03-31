@@ -4,6 +4,7 @@ namespace backend\controllers;
 use Yii;
 use yii\web\Controller;
 use app\models\Admin;
+use yii\helpers\Url;
 
 
 class LoginController extends Controller
@@ -28,10 +29,10 @@ class LoginController extends Controller
 		    	$session->remove('code');
 		    	return $this->redirect(['index/index']);
 		    }else{
-		    	echo '用户名或密码不正确';
+		    	echo "<script>alert('用户名或密码不正确');location.href='".Url::to(['login/index'])."'</script>";
 		    }	 
 		}else{
-			echo '验证码错误！！！';
+			echo "<script>alert('验证码不正确');location.href='".Url::to(['login/index'])."'</script>";
 		}		
 	}
 	//生成验证码

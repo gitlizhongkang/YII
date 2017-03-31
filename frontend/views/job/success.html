@@ -32,16 +32,19 @@ var youdao_conv_id = 271546;
         	<h2>对不起，发布职位失败</h2>  
         	 <a class="greylink" href="<?=Url::to(['job/index'])?>">重新发布新职位</a><br>         	
             <?php }elseif($type==2){ ?>
-            	<h2>对不起，您今天发布的职位已经达到上线</h2>            
+            	<h2>对不起，您今天发布的职位已经达到上线</h2> 
+            <?php }elseif($type==3){ ?>
+                <h2>对不起，请先完善公司信息</h2>
+                <a class="greylink" href="<?=Url::to(['company/apply','companyid'=>$companyid])?>">去完善公司资料吧！</a><br>             
             <?php }elseif($type==4){ ?>
             	<h2>对不起，您积分不足，请先去充值</h2>
             	 <a class="greylink" href="<?=Url::to(['job/index'])?>">去充值吧</a><br>         
             <?php } ?>
-	             <a class="greylink" href=""> 进入我的公司主页</a><br>
+	             <a class="greylink" href="<?=Url::to(['company/index'])?>"> 进入我的公司主页</a><br>
 	            	<div style="float:left;" class="invite_share">
 	                    <!-- JiaThis Button BEGIN -->
 						<div class="jiathis_style_32x32">
-							<a class="jiathis_button_tsina" title="分享到新浪微博"><span class="jiathis_txt jiathis_separator jtico jtico_tsina">分享到新浪微博</span></a>
+							<!-- <a class="jiathis_button_tsina" title="分享到新浪微博"><span class="jiathis_txt jiathis_separator jtico jtico_tsina">分享到新浪微博</span></a> -->
 						</div>
 						<!-- JiaThis Button END -->
 	               	</div>

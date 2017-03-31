@@ -23,9 +23,16 @@ class JobController extends Controller
 		$session=Yii::$app->session;
 		$user=$session->get('user');
 		if(!empty($user)){
-			return true;			
+			$company=new company;
+			$audit=Company::find()->where(['u_id'=>$user['uid']])->asArray()->one();
+			if($audit['audit']==0){
+				$company_id=$audit['id'];
+				echo $this->render('success.html',['type'=>'3','count'=>'0','companyid'=>$company_id]);
+			}else{
+				return true;
+			}						
 		}else{
-			return $this->redirect(['register/login']);
+			echo $this->redirect(['register/login']);
 		}
 	}
 	//发布职位
@@ -33,6 +40,7 @@ class JobController extends Controller
 		$session=Yii::$app->session;
 		$user=$session->get('user');
 		$id=$user['uid'];
+		$company=new company;
 		$job=new Jobs;
 		$count=$job->jobCount($id);
 		if(Yii::$app->request->isPost){
@@ -54,8 +62,7 @@ class JobController extends Controller
 				unset($arr['province'],$arr['city'],$arr['place'],$arr['age1'],$arr['age2']);
 				$arr['u_id']=$id;
 				$arr['addtime']=time();
-				$arr['deadline']=time()+30*24*60*60;
-				$company=new company;
+				$arr['deadline']=time()+30*24*60*60;				
 				$info=$company->get($id);
 				$arr['companyname']=$info['companyname'];
 				$arr['company_id']=$info['id'];
