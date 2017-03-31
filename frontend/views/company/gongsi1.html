@@ -80,8 +80,8 @@ use yii\helpers\Url;
     <div class="company_info"> 
      <div class="company_main"> 
       <h1> <a href="http://www.huoban.com/" class="hovertips" target="_blank" rel="nofollow" title="<?=$Detail['companyname']?>"><?=$Detail['shortname']?> </a> </h1> 
-      <a href="<?=$Detail['website']?>" class="icon-wrap" target="_blank" rel="nofollow" title="<?=$Detail['website']?>"> <i></i> </a> 
-      <a class="identification" title="跟我走认证企业"> <i></i> <span>跟我走认证</span> </a> 
+      <a href="<?=$Detail['website']?>" class="icon-wrap" target="_blank" rel="nofollow" title="<?=$Detail['website']?>"></a> 
+      <a class="identification" title="Follow-Me认证企业"> <i></i> <span>Follow-Me认证</span> </a> 
       <div class="company_word">
        <?=$Detail['message']?>
       </div> 
@@ -89,9 +89,9 @@ use yii\helpers\Url;
      <div class="company_data"> 
       <ul> 
        <li> <strong> <?=$jobs['jobs']?> </strong> <br /> <span class="tipsys" original-title="该公司的在招职位数量"> <span>招聘职位</span><span class="tip"></span> </span> </li> 
-       <li> <strong> 99% </strong> <span class="tipsys" original-title="该公司所有职位收到的简历中，在投递后7天内处理完成的简历所占比例"> <span>简历及时处理率</span><span class="tip"></span> </span> </li> 
-       <li> <strong> 1天 </strong> <br /> <span class="tipsys" original-title="该公司的所有职位管理者完成简历处理的平均用时"> <span>简历处理用时</span><span class="tip"></span> </span> </li> 
-       <li id="mspj" style="cursor:pointer;"> <strong> 136个 </strong> <br /> <span class="tipsys" original-title="该公司收到的面试评价数量"> <span>面试评价</span><span class="tip"></span> </span> </li> 
+       <li> <strong> 99%(暂无) </strong> <span class="tipsys" original-title="该公司所有职位收到的简历中，在投递后7天内处理完成的简历所占比例"> <span>简历及时处理率</span><span class="tip"></span> </span> </li> 
+       <li> <strong> 1天(暂无) </strong> <br /> <span class="tipsys" original-title="该公司的所有职位管理者完成简历处理的平均用时"> <span>简历处理用时</span><span class="tip"></span> </span> </li> 
+       <li id="mspj" style="cursor:pointer;"> <strong> 136个(暂无) </strong> <br /> <span class="tipsys" original-title="该公司收到的面试评价数量"> <span>面试评价</span><span class="tip"></span> </span> </li> 
        <li> <strong><?php
                         $ltime=$last_login['last_login_time'];$ctime=time()-$ltime;
                         if($ctime < 3600*24){echo "今天";}
@@ -111,10 +111,9 @@ use yii\helpers\Url;
     <ul data-pjax=""> 
      <li> <a href="<?=Url::to(['company/gongsi'])?>&id=<?=$Detail['id']?>" data-lg-tj-id="9100" data-lg-tj-no="0001" data-lg-tj-cid="idnull">公司主页</a> </li> 
      <li class="current"> <a href="<?=Url::to(['company/gongsi1'])?>&id=<?=$Detail['id']?>" data-lg-tj-id="9100" data-lg-tj-no="0002" data-lg-tj-cid="idnull">招聘职位（<?=$jobs['jobs']?>）</a> </li> 
-     <li> <a href="https://www.lagou.com/gongsi/q587.html" data-lg-tj-id="9100" data-lg-tj-no="0003" data-lg-tj-cid="idnull">公司问答</a> <i class="icon_new"></i> </li> 
     </ul> 
     <div class="company_share"> 
-     <span>分享</span> 
+     <span>分享(暂缺)</span> 
      <a href="javascript:;" class="share_weibo" rel="nofollow" title="分享到微博"></a> 
      <a href="javascript:;" class="share_weixin" rel="nofollow" title="分享到微信"></a> 
      <div class="share_weixin_success"> 

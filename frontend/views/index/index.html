@@ -163,7 +163,7 @@ if(count($middle)>=($i+1)){
     <div id="hotList">
 	    <ul class="hot_pos reset">
 	    <?php foreach($jobs as $k=>$v){?>
-	        <li class="clearfix">
+	        <li class="clearfix"  border='1px dashed #fff'>
 		    <div class="hot_pos_l">
 				<div class="mb10">
 				    <a href="<?=Url::to(['tou/index'])?>&id=<?=$v['id']?>" target="_blank"><?=$v['jobs_name']?></a> &nbsp;
