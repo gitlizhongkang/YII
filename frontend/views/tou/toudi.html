@@ -59,7 +59,7 @@ var youdao_conv_id = 271546;
                     <i></i>
                 </dt>
                 <?php if($user['type']==0){ ?>
-                    <dd><a rel="nofollow" href="person">个人中心</a></dd>
+                    <dd><a rel="nofollow" href="<?=Url::to(['user/index'])?>">个人中心</a></dd>
                <?php }else{ ?>
                     <dd><a rel="nofollow" href="">企业中心</a></dd>
                 <?php } ?>
