@@ -158,7 +158,7 @@ use yii\helpers\Url;
          <?php foreach($job as $v){?> 
           <li class="con_list_item default_list" data-positionid="2829263" data-salary="20k-40k" data-company="伙伴网" data-positionname="JAVA开发工程师--IM方向"> 
            <div class="item_title_date"> 
-            <a href="https://www.lagou.com/jobs/2829263.html" data-index="0" target="_blank" class="item_title position_link" data-lg-tj-id="9400" data-lg-tj-no="0100" data-lg-tj-cid="587"> <?=$v['jobs_name']?>--<?=$v['trade_cn']?>[ <?=$v['district_cn']?> ] </a> 
+            <a href="<?php if($type=='1'){echo 'javascript:;';}else{echo url::to(['tou/index','id'=>$v['id']]);}?>" data-index="0" class="item_title position_link" data-lg-tj-id="9400" data-lg-tj-no="0100" data-lg-tj-cid="587"> <?=$v['jobs_name']?>--<?=$v['trade_cn']?>[ <?=$v['district_cn']?> ] </a> 
             <input class="erma_codep" value="2829263" type="hidden" /> 
             <input class="hr_portrait" value="image2/M00/0B/BA/CgqLKVYaCXKAU4QQAAB6kKooX3s044.jpg" type="hidden" /> 
             <input class="hr_name" value="袁兆江" type="hidden" /> 
@@ -188,10 +188,10 @@ use yii\helpers\Url;
      </div> 
      <div class="item_content"> 
       <ul> 
-       <li> <i class="type"></i> <span>企业服务</span> </li> 
-       <li> <i class="process"></i> <span>A轮</span> </li> 
-       <li> <i class="number"></i> <span>50-150人</span> </li> 
-       <li> <i class="address"></i> <span>北京</span> </li> 
+       <li> <i class="type"></i> <span>行业：<?=$Detail['trade']?></span> </li> 
+       <li> <i class="process"></i> <span><a href="<?=$Detail['website']?>">企业邮箱:</a></span> </li> <li> <i class="process"></i> <span><a href="<?=$Detail['website']?>"><?=$Detail['website']?></a></span> </li> 
+       <li> <i class="number"></i> <span>规模：<?=$Detail['scale']?></span> </li> 
+       <li> <i class="address"></i> <span>城市：<?=$Detail['city']?></span> </li> 
       </ul> 
      </div> 
     </div> 
@@ -205,6 +205,11 @@ use yii\helpers\Url;
      </div> 
      <div class="company_mangers_item"> 
       <div class="managelist_wrap"> 
+      <?php 
+          if($leader==""){
+          echo "暂未上传创始人信息";
+          }else{
+      ?>
        <ul class="manager_list" style="width: 500px; left: 0px;"> 
         <li class="item_has rotate_item  rotate_active " style="float: left;"> <img class="item_manger_photo_show" src="<?=$leader[0]['photo']?>" alt="创始人头像" height="118" width="118" /> <p class="item_manager_name"> <span><?=$leader[0]['name']?></span> </p> <p class="item_manager_title"><?=$leader[0]['position']?></p> 
          <div class="item_manager_content mCustomScrollbar _mCS_3">
@@ -223,7 +228,10 @@ use yii\helpers\Url;
           </div>
          </div> 
         </li>
-       </ul> 
+       </ul>
+      <?php
+          }
+      ?>
       </div> 
       <div class="managers-switch-line"> 
        <div class="managers-switch-wrapper no_select"> 
