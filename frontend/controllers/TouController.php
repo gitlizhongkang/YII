@@ -15,6 +15,9 @@ class TouController extends Controller
 	public function actionIndex(){
 		$session=\Yii::$app->session;
 		$user=$session->get('user');
+		if(empty($user)){
+			return $this->redirect(['register/login']);
+		}
 		$uid=$user['uid'];
 		$id=Yii::$app->request->get('id');
 		$jobs=new Jobs;
