@@ -4,7 +4,6 @@
     <list default="true" id="aca683e5-4551-4407-8cc1-6e595412f2cf" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/main-local.php" afterPath="$PROJECT_DIR$/common/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/frontend/controllers/CompanyController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,20 +25,20 @@
               <caret line="150" column="41" lean-forward="false" selection-start-line="150" selection-start-column="41" selection-end-line="150" selection-end-column="41" />
               <folding>
                 <element signature="e#38#65#0#PHP" expanded="true" />
-                <marker date="1491009802398" expanded="true" signature="861:897" ph="select * fro... lg_company" />
-                <marker date="1491009802398" expanded="true" signature="2528:2577" ph="select email... lg_company" />
-                <marker date="1491009802398" expanded="true" signature="3438:3487" ph="select email... lg_company" />
-                <marker date="1491009802398" expanded="true" signature="4467:4528" ph="select email... lg_company" />
+                <marker date="1491011614166" expanded="true" signature="861:897" ph="select * fro... lg_company" />
+                <marker date="1491011614166" expanded="true" signature="2528:2577" ph="select email... lg_company" />
+                <marker date="1491011614166" expanded="true" signature="3438:3487" ph="select email... lg_company" />
+                <marker date="1491011614166" expanded="true" signature="4467:4528" ph="select email... lg_company" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bindStep3.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bindStep3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/company/bindStep3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2377">
-              <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+            <state relative-caret-position="1248">
+              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
@@ -85,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-local.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main-local.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="264">
+              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -258,6 +257,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -341,12 +358,12 @@
       <workItem from="1490786298360" duration="6779000" />
       <workItem from="1490836931806" duration="12721000" />
       <workItem from="1490944427717" duration="15111000" />
-      <workItem from="1491009553082" duration="1935000" />
+      <workItem from="1491009553082" duration="3847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40327000" />
+    <option name="totallyTimeSpent" value="42239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
@@ -734,10 +751,10 @@
           <caret line="150" column="41" lean-forward="false" selection-start-line="150" selection-start-column="41" selection-end-line="150" selection-end-column="41" />
           <folding>
             <element signature="e#38#65#0#PHP" expanded="true" />
-            <marker date="1491009802398" expanded="true" signature="861:897" ph="select * fro... lg_company" />
-            <marker date="1491009802398" expanded="true" signature="2528:2577" ph="select email... lg_company" />
-            <marker date="1491009802398" expanded="true" signature="3438:3487" ph="select email... lg_company" />
-            <marker date="1491009802398" expanded="true" signature="4467:4528" ph="select email... lg_company" />
+            <marker date="1491011614166" expanded="true" signature="861:897" ph="select * fro... lg_company" />
+            <marker date="1491011614166" expanded="true" signature="2528:2577" ph="select email... lg_company" />
+            <marker date="1491011614166" expanded="true" signature="3438:3487" ph="select email... lg_company" />
+            <marker date="1491011614166" expanded="true" signature="4467:4528" ph="select email... lg_company" />
           </folding>
         </state>
       </provider>
@@ -750,18 +767,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/company/bindStep3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2377">
-          <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        <state relative-caret-position="1248">
+          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
@@ -772,6 +781,14 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
