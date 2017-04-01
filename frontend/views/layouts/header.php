@@ -72,7 +72,7 @@ $user=$session->get('user');
                     <i></i>
                 </dt>
                 <?php if($user['type']==0){ ?>
-                    <dd><a rel="nofollow" href="<?=Url::to(['resume/index'])?>">个人中心</a></dd>
+                    <dd><a rel="nofollow" href="<?=Url::to(['user/index'])?>">个人中心</a></dd>
                <?php }else{ ?>
                     <dd><a rel="nofollow" href="<?=Url::to(['company/index'])?>">企业中心</a></dd>
                 <?php } ?>

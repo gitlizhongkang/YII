@@ -43,6 +43,7 @@ class UserInfo extends \yii\db\ActiveRecord
             [['name', 'birthday'], 'string', 'max' => 30],
             [['education', 'experience','residence'], 'string', 'max' => 50],
             [['collect','order'], 'string', 'max' => 255],
+            [['height'], 'string', 'max' => 5],
         ];
     }
 

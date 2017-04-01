@@ -91,8 +91,49 @@ use yii\widgets\ActiveForm;
                         <td><span class="redstar">*</span></td>
                         <td>籍贯</td>
                         <td>
-                            <?= $form->field($model, 'province_id')->dropDownList($province,['prompt'=>'请选择','style'=>'width: 100px;height: 40px;border: solid 2px #f2f2f2'])->label(false) ?>
-                            <?= $form->field($model, 'city_id')->dropDownList($city,['prompt'=>'请选择','style'=>'width: 100px;height: 40px;border: solid 2px #f2f2f2'])->label(false) ?>
+                            <select name="UserInfo[province_id]" id="userinfo-province_id" style="width: 100px;height: 40px;border: solid 2px #f2f2f2">
+                                <?php foreach($province as $k=>$v){
+                                    if($model->province_id == $k) {
+                                        echo "<option value=$k parentid=$k selected>$v</option>";
+                                    } else{
+                                        echo "<option value=$k parentid=$k >$v</option>";
+                                    }
+
+                                 } ?>
+                            </select>
+                            <select name="UserInfo[city_id]" id="userinfo-city_id" style='width: 100px;height: 40px;border: solid 2px #f2f2f2'>
+                                <option value="" id='aa'>请选择</option>
+                                <?= !empty($city) ? "<option value=$city[id] selected>$city[categoryname]</option>" : null ?>
+                            </select>
+                            <script>
+                                //城市联动
+                                $('#userinfo-province_id').change(function()
+                                {
+                                    $('#aa').nextAll().remove();
+                                    var option=$('#userinfo-province_id option');
+                                    for(var i=0;i<option.length;i++){
+                                        if(option.eq(i).prop('selected')){
+                                            var parentid=option.eq(i).attr('parentid');
+                                        }
+                                    }
+                                    $.ajax({
+                                        type:'post',
+                                        url:"<?=\yii\helpers\Url::to(['user/district'])?>",
+                                        data:{
+                                            'parentid':parentid
+                                        },
+                                        dataType:'json',
+                                        success:function(msg){
+                                            var str='';
+                                            $.each(msg,function(k,v){
+                                                str+='<option value="'+v.id+'" parentid="'+v.id+'">'+v.categoryname+'</option>';
+                                            })
+                                            $('#aa').after(str);
+                                        }
+                                    })
+                                })
+
+                            </script>
                         </td>
                     </tr>
                     <tr>
