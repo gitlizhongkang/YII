@@ -37,10 +37,10 @@ var youdao_conv_id = 271546;
                     <a class="greylink" href="<?= Url::to(['company/improve1','companyid'=>$companyid])?>">完善公司资料</a>
 					<?php }else if($code==2) { ?>
 					<h4><?php echo $msg;?></h4>
-					<a class="greylink" href="create.html">点击重新验证</a>
+					<a class="greylink" href="javascript:;">点击重新验证</a>
 					<?php }else{ ?>
 					<h4><?php echo $msg;?></h4>
-					<a class="greylink" href="create.html">回首页</a>
+					<a class="greylink" href="<?= Url::to(['index/index'])?>">回首页</a>
 					<?php } ?>
                 </dd>
             </dl>

@@ -27,7 +27,7 @@ use yii\helpers\Url;
 	</div>
 	<?php } ?>
 </div>
-<a class="subscribe" href="subscribe.html" target="_blank">订阅职位</a>
+<a class="subscribe" href="javascript:;">订阅职位</a>
 </div>
 <div class="content">	
 <div id="search_box">
@@ -99,7 +99,7 @@ use yii\helpers\Url;
         </li>
 	<?php }else{ ?>
 		<li  class="banner_bg_<?=$i?>" >
-            <a href="javascript:;" target="_blank"><img src="style/images/kong.png" width="612" height="160" alt="空缺" /></a>
+            <a href="javascript:;"><img src="style/images/kong.png" width="612" height="160" alt="空缺" /></a>
         </li>
      
     <?php } } ?>
@@ -143,7 +143,7 @@ if(count($middle)>=($i+1)){
     </li>
     <?php }else{ ?>
     <li >
-        <a href="javascript:;" target="_blank">
+        <a href="javascript:;">
             <img src="style/images/kong.png" width="113" height="113" alt="联想" />
             <div class="hot_info">
             	<h2 title="空缺">空缺</h2>
@@ -163,7 +163,7 @@ if(count($middle)>=($i+1)){
     <div id="hotList">
 	    <ul class="hot_pos reset">
 	    <?php foreach($jobs as $k=>$v){?>
-	        <li class="clearfix">
+	        <li class="clearfix" style="border-bottom:1px dashed #3c3c3c;">
 		    <div class="hot_pos_l">
 				<div class="mb10">
 				    <a href="<?=Url::to(['tou/index'])?>&id=<?=$v['id']?>" target="_blank"><?=$v['jobs_name']?></a> &nbsp;
@@ -197,10 +197,10 @@ if(count($middle)>=($i+1)){
 	</ul>
 	<ul class="hot_pos hot_posHotPosition reset" style="display:none;">
 	    <?php foreach($new as $k=>$v){?>
-	        <li class="clearfix">
+	        <li class="clearfix"  style="border-bottom:1px dashed #3c3c3c;">
 		    <div class="hot_pos_l">
 				<div class="mb10">
-				    <a href="h/jobs/147822.html" target="_blank"><?=$v['jobs_name']?></a> &nbsp;
+				    <a href="<?=Url::to(['tou/index'])?>&id=<?=$v['id']?>" target="_blank"><?=$v['jobs_name']?></a> &nbsp;
 				    <span class="c9"><?=$v['district_cn']?></span>
 				</div>
 	                <span><em class="c7">月薪： </em><?=$v['wage_cn']?></span>

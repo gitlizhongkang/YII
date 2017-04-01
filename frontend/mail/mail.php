@@ -10,7 +10,7 @@ use yii\helpers\Url;
 </head>
 <body>
 <p>您好：</p>
-<p>拉勾已经收到了你的找回密码请求，请点击<a href="http://localhost/nine/YII/frontend/web/index.php?r=register/update-pwd&code=<?=$code?>">此链接重置密码。</a></p>
+<p>拉勾已经收到了你的找回密码请求，请点击<a href="http://192.168.1.11/nine/YII/frontend/web/index.php?r=register/update-pwd&code=<?=$code?>">此链接重置密码。</a></p>
 <p>（本链接将在1天后失效）</p>
  <p>拉勾团队 </p>
 <p><?=date('Y-m-d',time())?></p>

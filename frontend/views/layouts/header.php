@@ -12,7 +12,7 @@ $user=$session->get('user');
         <link rel="alternate" media="handheld"  />
         <!-- end 云适配 -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>拉勾网-最专业的互联网招聘平台</title>
+        <title>Follow Me</title>
         <meta property="qc:admins" content="23635710066417756375" />
         <meta content="" name="description">
         <meta content="" name="keywords">
@@ -40,12 +40,54 @@ $user=$session->get('user');
         <script type="text/javascript" src="style/js/conv.js"></script>
         <script src="style/js/ajaxCross.json" charset="UTF-8"></script>
     </head>
-<body>
+<!-- JS效果begin -->
+<script type="text/javascript"> 
+var intervalId = null; 
+function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){ 
+  this.stayTime=nStayTime*1000 || 3000; 
+  this.maxHeigth=nMaxHth || 90; 
+  this.minHeigth=nMinHth || 1; 
+  this.state=sState || "down" ; 
+  var obj = document.getElementById(id); 
+  if(intervalId != null)window.clearInterval(intervalId); 
+  function openBox(){ 
+   var h = obj.offsetHeight; 
+   obj.style.height = ((this.state == "down") ? (h + 2) : (h - 2))+"px"; 
+    if(obj.offsetHeight>this.maxHeigth){ 
+    window.clearInterval(intervalId); 
+    intervalId=window.setInterval(closeBox,this.stayTime); 
+    } 
+    if (obj.offsetHeight<this.minHeigth){ 
+    window.clearInterval(intervalId); 
+    obj.style.display="none"; 
+    } 
+  } 
+  function closeBox(){ 
+   slideAd(id,this.stayTime,"up",nMaxHth,nMinHth); 
+  } 
+  intervalId = window.setInterval(openBox,10); 
+} 
+</script> 
+<body style="margin:0;padding:0;font-size:14px;">
+<div id="MyMoveAd" style="background:#50c1bd;height:19px;overflow:hidden;"> 
+<ul> 
+ <li>给满分加截图</li> 
+ <li>找右侧栏的客服人员</li>
+  <li>领红包~~~Can you understand</li>  
+</ul> 
+</div> 
+<script type="text/javascript"> 
+ <!-- 
+ slideAd('MyMoveAd',2); 
+--> 
+</script> 
+</body> 
+<!-- JS效果end -->
 <div id="body">
 	<div id="header">
     	<div class="wrapper">
     		<a href="index.html" class="logo">
-    			<img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘" />
+    			<img src="style/images/logo1.png" width="150" height="45" alt="拉勾招聘-专注互联网招聘"/>
     		</a>
     		<ul class="reset" id="navheader">
     			<li class="current"><a href="<?=Url::to(['index/index'])?>">首页</a></li>
@@ -105,6 +147,8 @@ $user=$session->get('user');
         });
     });
 </script>
+
+
     <?php echo $content; ?>
         <div id="footer">
         <div class="wrapper">

@@ -16,12 +16,21 @@ use yii\web\UploadedFile;
 
 class CompanyController extends Controller
 {
-    public $layout='/header';
+    public $layout="header";
+    public function beforeAction(){
+        $session=Yii::$app->session;
+        $user=$session->get('user');
+        if(!empty($user)){
+            return true;
+        }else{
+             $this->redirect(['register/login']);
+        }
+    }
     public function actionIndex()
     {
         $session=Yii::$app->session;
         $userinfo=$session->get('user');
-        $uid=$userinfo['uid'];
+        $uid=$userinfo['uid'];    
         $sql="select * from lg_company where u_id=$uid";
         $companyinfo=Yii::$app->db->createCommand($sql)->queryOne();
         if(!isset($companyinfo['id'])){
@@ -84,7 +93,11 @@ class CompanyController extends Controller
             $uid=$userinfo['uid'];
             $sql="select email,telphone from lg_company where u_id=$uid";
             $companyinfo=Yii::$app->db->createCommand($sql)->queryOne();
-            return $this->render("bindstep1.html",$companyinfo);
+            if($companyinfo){
+                return $this->render("bindstep1.html",$companyinfo);
+            }else{
+                return $this->render("bindstep1.html");
+            }
         }
     }
     public function actionBlind2()
@@ -104,28 +117,44 @@ class CompanyController extends Controller
                 echo 0;
             }
         }else{
-            return $this->render("bindstep2.html");
+            $session=Yii::$app->session;
+            $userinfo=$session->get('user');
+            $uid=$userinfo['uid'];
+            $sql="select email,telphone,companyname from lg_company where u_id=$uid";
+            $companyinfo=Yii::$app->db->createCommand($sql)->queryOne();
+            if($companyinfo){
+                return $this->render("bindstep2.html",$companyinfo);
+            }else{
+                return $this->render("bindstep1.html");
+            }
         }
     }
     public function actionBlind3()
     {
-        $session = Yii::$app->session;
-        $userinfo = $session->get('user');
-        $uid=$userinfo['uid'];
-        $companyinfo=Company::find()->where(["u_id"=>$uid])->asArray()->one();
-        $test=Company::find()->where(["u_id"=>$uid])->one();
-        $email_code=md5($uid);
-        $test->email_code="$email_code";
-        $res=$test->save();
-        $mail = Yii::$app->mailer->compose();
-        $mail->setTo($companyinfo['email']);	//接收人邮箱
-        $body="点击验证邮箱"."<a href='http://www.front.com/index.php?r=company/check-email&email_code=$email_code'>http://www.front.com/index.php?r=company/check-email&email_code=".$email_code."</a>";
-        $mail->setSubject("邮箱验证");	//邮件标题
-        $mail->setHtmlBody($body);	//发送内容(可写HTML代码)
-        if ($mail->send()){
-            $info['msg']=1;
-        }
-        return $this->render("bindstep3.html",$info);
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            $uid = $userinfo['uid'];
+            $companyinfo = Company::find()->where(["u_id" => $uid])->asArray()->one();
+            if($companyinfo['companyname']==''){
+                return $this->render("bindstep2.html");
+            }
+            if($companyinfo['email']==''){
+                return $this->render("bindstep1.html");
+            }
+            $test = Company::find()->where(["u_id" => $uid])->one();
+            $email_code = md5($uid);
+            $test->email_code = "$email_code";
+            $res = $test->save();
+            $mail = Yii::$app->mailer->compose();
+            $mail->setTo($companyinfo['email']);
+            //接收人邮箱
+            $body = "点击验证邮箱" . "<a href='http://www.front.com/index.php?r=company/check-email&email_code=$email_code'>http://www.front.com/index.php?r=company/check-email&email_code=" . $email_code . "</a>";
+            $mail->setSubject("邮箱验证");    //邮件标题
+            $mail->setHtmlBody($body);    //发送内容(可写HTML代码)
+            if ($mail->send()) {
+                $info['msg'] = 1;
+            }
+            return $this->render("bindstep3.html", $info);
     }
     //验证邮箱
     public function actionCheckEmail()
@@ -358,8 +387,16 @@ class CompanyController extends Controller
 
     //公司詳細信息
     public function actionGongsi(){
-            $CompanyModel=new Company;
             $id=yii::$app->request->get("id");
+            $cache=Yii::$app->cache;
+            $detail=$id."gongsi";
+            // $cache->delete($detail1);
+            // $cache->delete($detail);die;
+            if(!empty($cache->get($detail))){
+                    $date=$cache->get($detail);
+                    return $this->render('gongsi.html',$date);die;  
+            }
+            $CompanyModel=new Company;
             $date['Detail']=$CompanyModel->getOne1($id);
             $LeaderModel=new CompanyLeader();
             $date['leader']=$LeaderModel->find()->where("companyId = $id")->asArray()->all();
@@ -370,11 +407,19 @@ class CompanyController extends Controller
             $UserModel=new User;
             $date['last_login']=$UserModel->find()->select('last_login_time')->where(['id'=>$date['Detail']['u_id']])->asArray()->one();
             // print_r($date);die;
+            $cache->set($detail,$date,1800);//存入缓存
             return $this->render('gongsi.html',$date);
         }
     public function actionGongsi1(){
-            $CompanyModel=new Company;
             $id=yii::$app->request->get("id");
+            $CompanyModel=new Company;
+            $cache=Yii::$app->cache;
+            $detail=$id."gongsi1";
+            // $cache->delete($detail);die;
+            if(!empty($cache->get($detail))){
+                    $date=$cache->get($detail);
+                    return $this->render('gongsi1.html',$date);die;  
+            }
             $date['Detail']=$CompanyModel->getOne1($id);
             $LeaderModel=new CompanyLeader();
             $date['leader']=$LeaderModel->find()->where("companyId = $id")->asArray()->all();
@@ -384,6 +429,11 @@ class CompanyController extends Controller
             $UserModel=new User;
             $date['last_login']=$UserModel->find()->select('last_login_time')->where(['id'=>$date['Detail']['u_id']])->asArray()->one();
             // print_r($date);die;
+            $session = Yii::$app->session;
+            $userinfo = $session->get('user');
+            $date['type']=$userinfo['type'];
+            $cache->set($detail,$date,1800);
+            //存入缓存
             return $this->render('gongsi1.html',$date);
         }
 }

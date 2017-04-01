@@ -12,10 +12,10 @@ $user=$session->get('user');
 <link  media="handheld" rel="alternate">
 <!-- end 云适配 -->
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>产品经理-广州百田-拉勾网-最专业的互联网招聘平台</title>
+<title><?=$jobs['jobs_name']?>-<?=$jobs['companyname']?>-follow me-最专业的互联网招聘平台</title>
 <meta content="23635710066417756375" property="qc:admins">
-<meta name="description" content="产品经理 广州 本科 1-3年 全职 产品经理 上市公司，快速发展空间，产品的话语权 广州百田 广州百田信息科技有限公司 专注于儿童互联网市场的发展和创新，为中国少年儿童提供互联网互动娱乐和学习服务。 拉勾网-最专业的互联网招聘平台">
-<meta name="keywords" content="产品经理 广州 本科 1-3年 全职 产品经理 上市公司，快速发展空间，产品的话语权 广州百田 广州百田信息科技有限公司 专注于儿童互联网市场的发展和创新，为中国少年儿童提供互联网互动娱乐和学习服务。 拉勾网-最专业的互联网招聘平台">
+<meta name="description" content="">
+<meta name="keywords" content="">
 <meta content="QIQ6KC1oZ6" name="baidu-site-verification">
 
 
@@ -44,10 +44,10 @@ var youdao_conv_id = 271546;
 	<div id="header">
     	<div class="wrapper">
     		<a href="index.html" class="logo">
-    			<img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘" />
+    			<img src="style/images/logo1.png" width="150" height="45" alt="拉勾招聘-专注互联网招聘" />
     		</a>
     		<ul class="reset" id="navheader">
-    			<li class="current"><a href="<?=Url::to(['index/index'])?>">首页</a></li>
+    			<li ><a href="<?=Url::to(['index/index'])?>">首页</a></li>
     			<li ><a href="<?=Url::to(['index/company-list'])?>" >公司</a></li>
     			<li ><a href="<?=Url::to(['list/index'])?>">招聘中心</a></li>
 	    	</ul>
@@ -59,7 +59,7 @@ var youdao_conv_id = 271546;
                     <i></i>
                 </dt>
                 <?php if($user['type']==0){ ?>
-                    <dd><a rel="nofollow" href="person">个人中心</a></dd>
+                    <dd><a rel="nofollow" href="<?=Url::to(['user/index'])?>">个人中心</a></dd>
                <?php }else{ ?>
                     <dd><a rel="nofollow" href="">企业中心</a></dd>
                 <?php } ?>
@@ -152,8 +152,8 @@ var youdao_conv_id = 271546;
             <div class="content_r">
                 <dl class="job_company">
                     <dt>
-                    	<a target="_blank" href="h/c/5004.html">
-                            <img width="80" height="80" alt="广州百田信息科技有限公司" src="style/images/ff8080814356e881014357741e5910f1.jpg" class="b2">
+                    	<a target="_blank" href="<?=Url::to(['company/gongsi','id'=>$jobs['company_id']])?>">
+                            <img width="80" height="80" alt="" src="<?=$logo?>" class="b2">
                             <div>
                                 <h2 class="fl"><?=$jobs['companyname']?>
 	                                <img width="15" height="19" alt="拉勾认证企业" src="style/images/valid.png"> 
@@ -168,7 +168,7 @@ var youdao_conv_id = 271546;
                         	<li><span>规模</span> <?=$jobs['scale_cn']?></li>
                         	<li>
                         		<span>主页</span> 
-                        		<a rel="nofollow" title="http://www.100bt.com" target="_blank" href="http://www.100bt.com">http://www.100bt.com</a>
+                        		<a rel="nofollow" title="http://www.100bt.com" target="_blank" href="<?=Url::to(['company/gongsi','id'=>$jobs['company_id']])?>">公司主页</a>
            					</li>
                         </ul>                       
                         <h4>发展阶段</h4>
@@ -183,18 +183,9 @@ var youdao_conv_id = 271546;
                 </dl>
                 <div id="myRecommend_jd">
             		<h2>可能适合你的职位 <i>匹配度</i></h2>
-            		<ul class="reset">
-            			<li>
-            				<a target="_blank" href="h/jobs/148004.html">
-								<span class="f14">产品经理</span>
-								<span class="c7">短讯神州</span>
-								<em>92%</em>
-							</a>
-            			</li>
-            		</ul>
             		<a class="more" href="<?=Url::to(['list/index'])?>">更多推荐职位&gt;&gt;</a>
             	</div><!--end #myRecommend-->
-				<a class="eventAd" target="_blank" href="h/subject/s_zhouyou.html?utm_source=BD__lagou&amp;utm_medium=&amp;utm_campaign=zhouyou">
+				<a class="eventAd" href="javascript:;">
                 	<img width="280" height="135" src="style/images/zhouyou.jpg">
                 </a>
             </div>
@@ -519,10 +510,10 @@ $(function(){
 					},1000);
 					map.setCenter(p);
 					map.setZoom(15);
-					var sContent =
-						"&lt;h4 style='margin:0 0 5px 0;padding:0.2em 0'&gt;"+city+"&lt;/h4&gt;" + 
-						"&lt;p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'&gt;"+address+"&lt;/p&gt;" + 
-						"&lt;/div&gt;";
+					var sContent =address;
+						// "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>"+city+"</h4>" + 
+						// "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>"+address+"</p>" + 
+						// "</div>";						
 					 var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
 				 	//图片加载完毕重绘infowindow
 			 		marker.openInfoWindow(infoWindow);
@@ -536,10 +527,10 @@ $(function(){
 									map.centerAndZoom(p, 15);
 								},1000);
 								map.setZoom(14);
-								var sContent =
-									"&lt;h4 style='margin:0 0 5px 0;padding:0.2em 0'&gt;"+city+"&lt;/h4&gt;" + 
-									"&lt;p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'&gt;"+address+"&lt;/p&gt;" + 
-									"&lt;/div&gt;";
+								var sContent =address;
+									// "&lt;h4 style='margin:0 0 5px 0;padding:0.2em 0'&gt;"+city+"&lt;/h4&gt;" + 
+									// "&lt;p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'&gt;"+address+"&lt;/p&gt;" + 
+									// "&lt;/div&gt;";
 								 var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
 							 	//图片加载完毕重绘infowindow
 						 		marker.openInfoWindow(infoWindow);

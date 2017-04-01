@@ -7,6 +7,7 @@ use common\models\Resume;
 use backend\models\Jobs;
 use app\models\ResumeJob;
 use common\models\UserInfo;
+use backend\models\Company;
 
 class TouController extends Controller
 {
@@ -19,13 +20,16 @@ class TouController extends Controller
 		$jobs=new Jobs;
 		$arr=$jobs->getOne($id);
 		$place=explode('/',$arr['district_cn']);
-		$arr['city']=$place[1];		
+		$arr['city']=$place[1];	
+		$company_id=$arr['company_id'];
+		$aa=Company::find()->select('logo')->where(['id'=>$company_id])->asArray()->one();
+		$logo=$aa['logo'];
 		$resume=new Resume;
 		$info=$resume->select($user['uid']);
 		$controller=Yii::$app->controller->id;
 		$res=UserInfo::find()->where(['user_id'=>$uid])->asArray()->one();
 		$collect=explode(',',$res['collect']);
-		return $this->render('toudi.html',['jobs'=>$arr,'resume'=>$info,'user'=>$user,'controller'=>$controller,'collect'=>$collect]);
+		return $this->render('toudi.html',['jobs'=>$arr,'resume'=>$info,'user'=>$user,'controller'=>$controller,'collect'=>$collect,'logo'=>$logo]);
 	}
 	public function actionTou(){
 		$arr=Yii::$app->request->get();
