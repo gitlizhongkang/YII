@@ -41,10 +41,10 @@ class CompanyController extends Controller
         }
         if($companyinfo['check_email']==0){
             if($companyinfo['email_code']==''){
-                return $this->render("bindstep3.html");
+                return $this->render("bindStep2.html");
             }else{
                 $info['msg']=1;
-                return $this->render("bindstep3.html",$info);
+                return $this->render("bindStep3.html",$info);
             }
         }
         if($companyinfo['logo']==''){
