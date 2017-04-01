@@ -63,7 +63,7 @@
                                         <?= $val['nature_cn'] ?>
                                     </span><br>
                                         <span>
-                                            <?= '招聘人数：' . $val['amount'] ?>/<?= $val['deadline'] <= time() ? '(<span style="color: green">正在招聘</span>))' : '(<span style="color: red">职位已过期</span>)'; ?>
+                                            <?= '招聘人数：' . $val['amount'] ?>/<?= $val['deadline'] >= time() ? '(<span style="color: green">正在招聘</span>))' : '(<span style="color: red">职位已过期</span>)'; ?>
                                             <br>
                                             <?= '要求：' . $val['require'] ?>
                                         </span>
@@ -74,8 +74,8 @@
                                 </div>
                             </div>
                             <div class="contactInfo">
-                                <span class="c9">电话：</span>&nbsp;&nbsp;&nbsp;
-                                <span class="c9">邮箱：</span><a href="mailto:"></a>
+                                <span class="c9"></span>&nbsp;&nbsp;&nbsp;
+                                <span class="c9"></span><a href="mailto:"></a>
                             </div>
                         </li>
                     <?php } ?>
