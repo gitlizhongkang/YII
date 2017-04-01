@@ -89,21 +89,10 @@ use yii\captcha\Captcha;
                 <form id="relationForm">
                     <table class="savePassword">
                         <tr>
-                            <td>登录账号</td>
-                            <td class="c7"><?= $model->account?></td>
-                        </tr>
-                        <tr>
                             <td>登录邮箱</td>
                             <td class="c7">
                                 <?= $model->email?>
                                 <?= $model->email_audit == 1 ? "<span style='color: blue'>已绑定</span>" : "<a id=email style='color: red'>未绑定(点击绑定)</a>" ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>登录手机</td>
-                            <td class="c7">
-                                <?= $model->tel?>
-                                <?= $model->tel_audit == 1 ? "<span style='color: blue'>已绑定</span>" : "<a id=tel style='color: red'>未绑定(点击绑定)</a>" ?>
                             </td>
                         </tr>
                     </table>
@@ -118,7 +107,7 @@ use yii\captcha\Captcha;
             <table style="padding: 10px 20px">
                 <tr>
                     <td>邮箱账号</td>
-                    <td><input type="text" id="relEmail" style="width: 80%"></td>
+                    <td><input type="text" id="relEmail" value="<?= $model->email?>" readonly style="width: 80%"></td>
                 </tr>
                 <tr>
                     <td>验证码</td>

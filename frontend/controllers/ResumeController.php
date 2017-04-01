@@ -3,11 +3,13 @@
 namespace frontend\controllers;
 
 use app\models\ResumeJob;
+use common\models\UserInfo;
 use common\models\UserPhoto;
 use Yii;
 use common\models\Resume;
 use common\models\User;
 use common\models\District;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
@@ -21,6 +23,7 @@ class ResumeController extends Controller
     public $layout = 'header';
     private $userInfo ;
 
+
     //将user信息存入初始化 整个控制器可以使用 避免频繁读取
     public function init()
     {
@@ -28,6 +31,16 @@ class ResumeController extends Controller
         $this->userInfo = Yii::$app->session->get('user');
     }
 
+    //非法登陆
+    public function beforeAction($action)
+    {
+        if(empty($this->userInfo))
+        {
+            $this->redirect(['register/login']);
+            return false;
+        }
+        return true;
+    }
 
 
 
@@ -68,8 +81,17 @@ class ResumeController extends Controller
             ->where(['lg_resume.id'=> $id])
             ->asArray()
             ->one();
+        //查询籍贯
+        $areaId = [$resume['province_id'],$resume['city_id']];
+        $area = District::find()
+            ->where(['id' => $areaId])
+            ->asArray()
+            ->all();
 
-        return $this->render('view',['resume'=>$resume]);
+        return $this->render('view',[
+            'resume'=>$resume,
+            'area'=>$area,
+        ]);
     }
 
 
@@ -81,6 +103,35 @@ class ResumeController extends Controller
      */
     public function actionCreate()
     {
+        //判断个人信息完整
+        $checkInfo = UserInfo::find()
+            ->where(['user_id' => $this->userInfo['uid']])
+            ->asArray()
+            ->one();
+        unset($checkInfo['order']);
+        unset($checkInfo['collect']);
+        unset($checkInfo['district_id']);
+
+        if(in_array('',$checkInfo,true))
+        {
+            $url = Url::to(['user/index']);
+            echo "<script>alert('请完善个人信息后，再创建简历');location.href='$url'</script>";
+        }
+
+        //判断个人头像完整
+        $checkPhoto = UserPhoto::find()
+            ->where(['user_id' => $this->userInfo['uid'], 'status' =>2])
+            ->asArray()
+            ->one();
+
+        if(empty($checkPhoto))
+        {
+            $url = Url::to(['user/photo']);
+            echo "<script>alert('上传简历头像，再创建简历');location.href='$url'</script>";
+        }
+
+
+        //创建简历
         $id = Yii::$app->request->get('id');
         if(isset($id))
         {
@@ -111,10 +162,16 @@ class ResumeController extends Controller
             ->where(['user_id' => $this->userInfo['uid'], 'status' => 2])
             ->asArray()
             ->all();
+        //print_r($photo);die;
 
         //地区
         $province = $this->findArea('parentid = 0');
-        $city = $this->findArea('parentid != 0');
+        $cityId = $user['city_id'];
+        $city = District::find()
+            ->where(['id' => $cityId])
+            ->asArray()
+            ->one();
+        //$city = $this->findArea('parentid != 0');
         //print_r($user);die;
 
         return $this->render('create', [

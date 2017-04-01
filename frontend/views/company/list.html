@@ -85,10 +85,11 @@ var youdao_conv_id = 271546;
                 	<div class="c_breakline"></div>
        
        				<div id="Product">
+
 						<div class="product_wrap">
-							<?php if(!isset($productinfo['id'])){ ?>
+							<?php if(!isset($productinfo[0])){ ?>
 							<!--无产品 -->
-							<dl class="c_section ">
+							<dl class="c_section">
 								<dt>
 									<h2><em></em>公司产品</h2>
 								</dt>
@@ -122,13 +123,13 @@ var youdao_conv_id = 271546;
 								                        	<!--<span>更换产品图片<br>380*220px 小于5M</span>-->
 								                        <!--</div>-->
 							                        <!--<input type="file" title="支持jpg、jpeg、gif、png格式，文件小于5M" onchange="product_check(this,'http://www.lagou.com/c/upload.json','productNo','productShow','type','productInfos');" name="myfiles" id="myfiles0">-->
-							                    	<!--<input type="hidden" value="3" name="type" class="type"> -->
-							                    	<!--<input type="hidden" value="images/product_default.png" name="productPicUrl" class="productInfos">   -->
+							                    	<!--<input type="hidden" value="3" name="type" class="type">-->
+							                    	<!--<input type="hidden" value="images/product_default.png" name="productPicUrl" class="productInfos">-->
 							                    <!--</div>-->
-					                            <!---->
+
 					                            <!--<div class="cp_intro">-->
-					                               	<!--<input type="text" placeholder="请输入产品名称" value="发大发" name="product">	-->
-					                                <!--<input type="text" placeholder="请输入产品网址" value="http://www.weimob.com" name="productUrl">	-->
+					                               	<!--<input type="text" placeholder="请输入产品名称" value="发大发" name="product">-->
+					                                <!--<input type="text" placeholder="请输入产品网址" value="http://www.weimob.com" name="productUrl">-->
 					                                <!--<textarea placeholder="请简短描述该产品定位、产品特色、用户群体等" maxlength="500" value="" class="s_textarea" name="productProfile"></textarea>-->
 					                                <!--<div class="word_count fr">你还可以输入 <span>500</span> 字</div>-->
 					                                <!--<div class="clear"></div>-->
@@ -139,8 +140,7 @@ var youdao_conv_id = 271546;
 											<!--</form>-->
 					                    <!--</dd>-->
 					                <!--</dl>-->
-							<?php }else{ ?>
-							<?php foreach($productinfo as $k=>$v ){ ?>
+							<?php }else{ foreach($productinfo as $k=>$v ){ ?>
 					                <!--有产品-->
 					                <dl class="c_product">
 					                	<dt>
@@ -164,7 +164,7 @@ var youdao_conv_id = 271546;
 					<div class="profile_wrap">
 						<?php if($companyinfo['contents']==''){ ?>
 					             <!--无介绍 -->
-									<dl class="c_section ">
+									<dl class="c_section dn">
 					                	<dt>
 					                    	<h2><em></em>公司介绍</h2>
 					                    </dt>
@@ -186,23 +186,24 @@ var youdao_conv_id = 271546;
 					                   		<a title="编辑公司介绍" id="editIntro" class="c_edit" href="javascript:void(0)"></a>
 					                   	</dd>
 					               	</dl>
-				         <?php } ?>
-					</div>
-						<!--编辑介绍-->
-						<dl class="c_section newIntro dn">
-							<dt>
-							<h2><em></em>公司介绍</h2>
-							</dt>
-							<dd>
-								<form id="companyDesForm">
-									<textarea placeholder="请分段详细描述公司简介、企业文化等" name="companyProfile" id="companyProfile"></textarea>
-									<div class="word_count fr">你还可以输入 <span>1000</span> 字</div>
-									<div class="clear"></div>
-									<input type="submit" value="保存" id="submitProfile" class="btn_small">
-									<a id="delProfile" class="btn_cancel_s" href="javascript:void(0)">取消</a>
-								</form>
-							</dd>
-						</dl>
+						<?php } ?>
+				            </div>
+
+						<!--&lt;!&ndash;编辑介绍&ndash;&gt;-->
+						<!--<dl class="c_section newIntro dn">-->
+							<!--<dt>-->
+							<!--<h2><em></em>公司介绍</h2>-->
+							<!--</dt>-->
+							<!--<dd>-->
+								<!--<form id="companyDesForm">-->
+									<!--<textarea placeholder="请分段详细描述公司简介、企业文化等" name="companyProfile" id="companyProfile"></textarea>-->
+									<!--<div class="word_count fr">你还可以输入 <span>1000</span> 字</div>-->
+									<!--<div class="clear"></div>-->
+									<!--<input type="submit" value="保存" id="submitProfile" class="btn_small">-->
+									<!--<a id="delProfile" class="btn_cancel_s" href="javascript:void(0)">取消</a>-->
+								<!--</form>-->
+							<!--</dd>-->
+						<!--</dl>-->
 	     			</div><!-- end #Profile -->
 
 	        	 		        	<!--无招聘职位-->
@@ -308,9 +309,9 @@ var youdao_conv_id = 271546;
 							</dt>
 		                    <dd>
 			       					<div class="member_wrap">
-			       						<?php if(!isset($leaderinfo['id'])){ ?>
+			       						<?php if(!isset($leaderinfo[0])){ ?>
 				                        <!-- 无创始人 -->
-				                        <div class="member_info addnew_right ">
+				                        <div class="member_info addnew_right">
 				                        	展示公司的领导班子，<br>提升诱人指数！<br>
 				                            <a class="member_edit" href="javascript:void(0)">+添加成员</a>
 				                        </div>
@@ -331,35 +332,35 @@ var youdao_conv_id = 271546;
 										</div>
 										<?php }} ?>
 				                        <!-- 编辑创始人 -->
-		                        		<!--<div class="member_info newMember dn">-->
-			                        		<!--<form class="memberForm">-->
-					                            <!--<div class="new_portrait">-->
-						                            <!--<div class="portrait_upload dn portraitNo">-->
-						                                <!--<span>上传创始人头像</span>-->
-						                            <!--</div>-->
-						                            <!--<div class="portraitShow">-->
-						                            	<!--<img width="120" height="120" src="style/images/leader_default.png">-->
-							                        	<!--<span>更换头像</span>-->
-							                        <!--</div>-->
-							                        <!--<input type="file" value="" title="支持jpg、jpeg、gif、png格式，文件小于5M" onchange="member_check(this,'http://www.lagou.com/c/upload.json','portraitNo','portraitShow','type','leaderInfos');" name="myfiles" id="profiles0">-->
-							                    	<!--<input type="hidden" value="7" name="type" class="type">-->
-							                    	<!--<input type="hidden" value="images/leader_default.png" name="photo" class="leaderInfos">-->
-						                            <!--<em>-->
-												                                <!--尺寸：120*120px <br> 	-->
-												                                <!--大小：小于5M-->
-						                            <!--</em>-->
-						                        <!--</div>-->
-						                        <!--<input type="text" placeholder="请输入创始人姓名" value="孙泰英" name="name">	-->
-					                            <!--<input type="text" placeholder="请输入创始人当前职位" value="ceo" name="position">	-->
-					                            <!--<input type="text" placeholder="请输入创始人新浪微博地址" value="http://weimob.weibo.com" name="weibo">	-->
-					                            <!--<textarea placeholder="请输入创始人个人简介" maxlength="500" class="s_textarea" name="remark">发放的发达范德萨范德萨范德萨发的复大发大水发生的</textarea>	-->
-					                            <!--<div class="word_count fr">你还可以输入 <span>500</span> 字</div>-->
-					                            <!--<div class="clear"></div>-->
-					                            <!--<input type="submit" value="保存" class="btn_small">-->
-				                                <!--<a class="btn_cancel_s member_delete" href="javascript:void(0)">删除</a>-->
-				                        		<!--<input type="hidden" value="11493" class="leader_id">-->
-				                        	<!--</form>-->
-				                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+		                        		<div class="member_info newMember dn">
+			                        		<form class="memberForm">
+					                            <div class="new_portrait">
+						                            <div class="portrait_upload dn portraitNo">
+						                                <span>上传创始人头像</span>
+						                            </div>
+						                            <div class="portraitShow">
+						                            	<img width="120" height="120" src="style/images/leader_default.png">
+							                        	<span>更换头像</span>
+							                        </div>
+							                        <input type="file" value="" title="支持jpg、jpeg、gif、png格式，文件小于5M" onchange="member_check(this,'http://www.lagou.com/c/upload.json','portraitNo','portraitShow','type','leaderInfos');" name="myfiles" id="profiles0">
+							                    	<input type="hidden" value="7" name="type" class="type">
+							                    	<input type="hidden" value="images/leader_default.png" name="photo" class="leaderInfos">
+						                            <em>
+												                                尺寸：120*120px <br>
+												                                大小：小于5M
+						                            </em>
+						                        </div>
+						                        <input type="text" placeholder="请输入创始人姓名" value="孙泰英" name="name">
+					                            <input type="text" placeholder="请输入创始人当前职位" value="ceo" name="position">
+					                            <input type="text" placeholder="请输入创始人新浪微博地址" value="http://weimob.weibo.com" name="weibo">
+					                            <textarea placeholder="请输入创始人个人简介" maxlength="500" class="s_textarea" name="remark">发放的发达范德萨范德萨范德萨发的复大发大水发生的</textarea>
+					                            <div class="word_count fr">你还可以输入 <span>500</span> 字</div>
+					                            <div class="clear"></div>
+					                            <input type="submit" value="保存" class="btn_small">
+				                                <a class="btn_cancel_s member_delete" href="javascript:void(0)">删除</a>
+				                        		<input type="hidden" value="11493" class="leader_id">
+				                        	</form>
+				                        </div>
 
 
 				                     </div><!-- end .member_wrap -->
@@ -416,6 +417,16 @@ avatar.uploadComplate = function( data ){
 	    	<a rel="nofollow" title="回到顶部" id="backtop" style="display: inline;"></a>
 	    </div><!-- end #container -->
 	</div><!-- end #body -->
+	<div id="footer">
+		<div class="wrapper">
+			<a rel="nofollow" target="_blank" href="about.html">联系我们</a>
+		    <a target="_blank" href="http://www.lagou.com/af/zhaopin.html">互联网公司导航</a>
+		    <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
+		    <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>
+			<div class="copyright">&copy;2013-2014 Lagou <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank">京ICP备14023790号-2</a></div>
+		</div>
+	</div>
+
 <script src="style/js/core.min.js" type="text/javascript"></script>
 <script src="style/js/popup.min.js" type="text/javascript"></script>
 

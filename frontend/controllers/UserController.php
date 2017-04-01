@@ -33,6 +33,17 @@ class UserController extends Controller
         $this->userInfo = Yii::$app->session->get('user');
     }
 
+    //非法登陆
+    public function beforeAction($action)
+    {
+        if(empty($this->userInfo))
+        {
+            $this->redirect(['register/login']);
+            return false;
+        }
+        return true;
+    }
+
 
     /**
      * @brief 重写actions验证码
@@ -59,6 +70,7 @@ class UserController extends Controller
      */
     public function actionIndex()
     {
+
         //渲染模型
         $model = UserInfo::findOne($this->userInfo['uid']);
 
@@ -66,7 +78,9 @@ class UserController extends Controller
         //接值入库
         if(Yii::$app->request->isPost)
         {
-            $model->load(Yii::$app->request->post());
+            //print_r(Yii::$app->request->post());die;
+            $post = Yii::$app->request->post();
+            $model->load($post);
             $model->save();
             return $this->redirect(['index']);
         }
@@ -78,7 +92,12 @@ class UserController extends Controller
 
         //地区
         $province = $this->findArea('parentid = 0');
-        $city = $this->findArea('parentid != 0');
+        $city = District::find()
+            ->select('id,categoryname')
+            ->where(['id'=>$model->city_id])
+            ->asArray()
+            ->one();
+        //print_r($city);die;
 
 
         return $this->render('index', [
@@ -87,6 +106,15 @@ class UserController extends Controller
                 'province' => $province,
                 'city' => $city,
             ]);
+    }
+
+    //城市联动
+    public function actionDistrict(){
+        $parentid=Yii::$app->request->post('parentid');
+        $district=new District;
+        $area=$district->child($parentid);
+        // print_r($area);die;
+        echo json_encode($area);
     }
 
 
@@ -175,9 +203,11 @@ class UserController extends Controller
             //验证是新密码否相等
             $password = $post['password'];
             $comfirmpassword = $post['comfirmpassword'];
+            $url = Url::to(['user/safe']);
             if( !$this->compare($password,$comfirmpassword) )  //不能传入全局变量
             {
-                die("新密码不一致");
+                echo "<script>alert('新密码不一致');location.href='$url'</script>";
+                die;
             }
 
             //验证旧密码是否一致
@@ -185,7 +215,8 @@ class UserController extends Controller
 
             if( !Yii::$app->security->validatePassword($post['oldpassword'],$oldpassword) )
             {
-                die("输入正确的原密码");
+                echo "<script>alert('输入正确的原密码');location.href='$url'</script>";
+                die;
             }
 
             //修改
