@@ -52,7 +52,7 @@
                        <?= date('Y',time()) - $resume['birthday'] ?>岁 |
                        <?= $resume['marriage'] == 1 ? '已婚': '未婚'?>
                        <br>
-                        籍贯：<?= $resume['province_id'] . $resume['city_id'] . $resume['district_id'] ?>
+                        籍贯：<?= $area[0]['categoryname'] . '-' . $area[1]['categoryname']?>
                        <br>
                        <?= $resume['education'] ?>学历 |
                        <?= $resume['experience'] ?>工作经验
@@ -70,7 +70,7 @@
         <div class="profile_box" id="expectJob">
             <h2>期望工作</h2>
             <div class="expectShow">
-                地点：<?= $resume['residence'] ?>，<br>
+                地点：<?= $resume['residence'] ?><br>
                 工作性质：<?php
                 if($resume['nature'] == 1) {
                     echo '全职';
@@ -79,8 +79,8 @@
                 }else{
                     echo '实习';
                 }
-                    ?>，<br>
-                职位：<?= $resume['intention_jobs'] ?>，<br>
+                    ?><br>
+                职位：<?= $resume['intention_jobs'] ?><br>
                 薪资：<?= $resume['wage'] ?>
             </div><!--end .expectShow-->
         </div><!--end #expectJob-->
@@ -90,7 +90,7 @@
             <div class="experienceShow">
                 <ul class="wlist clearfix">
                     <li class="clear">
-                        <span class="c9"><?= $resume['startYear'] ?>.<?= $resume['startMonth'] ?>-<?= $resume['endYear'] ?></span>
+                        <span class="c9"><?= $resume['startYear'] ?>.<?= $resume['startMonth'] ?>-<?= $resume['endYear'] ?>.</span>
                         <div>
                             <img width="56" height="56" src="style/images/logo_default.png">
                             <h3><?= $resume['positionName'] ?></h3>
@@ -108,7 +108,7 @@
                     <li class="noborder">
                         <div class="projectList">
                             <div class="f16 mb10">
-                                <?= $resume['projectName'] ?><span class="c9">（<?= $resume['startYear_p'] ?>.<?= $resume['startMonth_p'] ?>-<?= $resume['endYear_p'] ?>）</span>
+                                <?= $resume['projectName'] ?><span class="c9">（<?= $resume['startYear_p'] ?>.<?= $resume['startMonth_p'] ?>-<?= $resume['endYear_p'] ?>.）</span>
                             </div>
                             <div class="dl1"></div>
                         </div>

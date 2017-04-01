@@ -148,7 +148,7 @@ class CompanyController extends Controller
             $mail = Yii::$app->mailer->compose();
             $mail->setTo($companyinfo['email']);
             //接收人邮箱
-            $body = "点击验证邮箱" . "<a href='http://www.front.com/index.php?r=company/check-email&email_code=$email_code'>http://www.front.com/index.php?r=company/check-email&email_code=" . $email_code . "</a>";
+            $body = "点击验证邮箱" . "<a href='http://192.168.1.11/nine/YII/frontend/web/index.php?r=company/check-email&email_code=$email_code'>http://www.front.com/index.php?r=company/check-email&email_code=" . $email_code . "</a>";
             $mail->setSubject("邮箱验证");    //邮件标题
             $mail->setHtmlBody($body);    //发送内容(可写HTML代码)
             if ($mail->send()) {

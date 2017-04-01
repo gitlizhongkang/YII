@@ -86,7 +86,7 @@ function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){
 <div id="body">
 	<div id="header">
     	<div class="wrapper">
-    		<a href="index.html" class="logo">
+    		<a href="<?=Url::to(['index/index'])?>" class="logo">
     			<img src="style/images/logo1.png" width="150" height="45" alt="拉勾招聘-专注互联网招聘"/>
     		</a>
     		<ul class="reset" id="navheader">
@@ -114,7 +114,7 @@ function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){
                     <i></i>
                 </dt>
                 <?php if($user['type']==0){ ?>
-                    <dd><a rel="nofollow" href="<?=Url::to(['resume/index'])?>">个人中心</a></dd>
+                    <dd><a rel="nofollow" href="<?=Url::to(['user/index'])?>">个人中心</a></dd>
                <?php }else{ ?>
                     <dd><a rel="nofollow" href="<?=Url::to(['company/index'])?>">企业中心</a></dd>
                 <?php } ?>

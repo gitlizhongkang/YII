@@ -28,7 +28,7 @@
 
             <div class="profile_box" id="basicInfo">
                 <h2>基本信息</h2>
-                <?= isset($user['photo']) ? null : '<span style="color: red;">请先确认保存此信息(此信息从个人信息获取未保存)</span>' ?>
+                <?= isset($user['photo']) ? null : '<span style="color: red;">[第一步]请先确认保存此信息(此信息从个人信息获取未保存)</span>' ?>
                 <span class="c_edit"></span>
                 <div class="basicShow">
                     <span>
@@ -37,8 +37,6 @@
                         <?= $user['height'] ?> |
                         <?= date('Y',time()) - $user['birthday'] ?>岁 |
                         <?= $user['marriage'] == 3 ? '已婚': '未婚'?>
-                        <br>
-                        籍贯：<?= $user['province_id'] . $user['city_id'] . $user['district_id'] ?>
                         <br>
                         <?= $user['education'] ?>学历 |
                         <?= $user['experience'] ?>工作经验
@@ -170,28 +168,51 @@
                                     <span class="redstar">*</span>
                                 </td>
                                 <td colspan="3">
-                                    <select style="width: 100px;height: 40px;border: solid 2px #f2f2f2" name="province_id">
+                                    <select style="width: 100px;height: 40px;border: solid 2px #f2f2f2" name="province_id" id="userinfo-province_id">
                                         <?php
                                         foreach ($province as $key=>$val) {
                                             if($user['province_id'] == $key) {
-                                                echo "<option value=$key selected>$val</option>";
+                                                echo "<option value=$key parentid=$key selected>$val</option>";
                                             } else {
-                                                echo "<option value=$key>$val</option>";
+                                                echo "<option value=$key parentid=$key>$val</option>";
                                             }
                                         }
                                         ?>
                                     </select>
-                                    <select style="width: 100px;height: 40px;border: solid 2px #f2f2f2" name="city_id">
-                                        <?php
-                                        foreach ($city as $key=>$val) {
-                                            if($user['city_id'] == $key) {
-                                                echo "<option value=$key selected>$val</option>";
-                                            } else {
-                                                echo "<option value=$key>$val</option>";
-                                            }
-                                        }
-                                        ?>
+
+                                    <select name="city_id" id="userinfo-city_id" style='width: 100px;height: 40px;border: solid 2px #f2f2f2'>
+                                        <option value="" id='aa'>请选择</option>
+                                        <?= !empty($city) ? "<option value=$city[id] selected>$city[categoryname]</option>" : null ?>
                                     </select>
+                                    <script>
+                                        //城市联动
+                                        $('#userinfo-province_id').change(function()
+                                        {
+                                            $('#aa').nextAll().remove();
+                                            var option=$('#userinfo-province_id option');
+                                            for(var i=0;i<option.length;i++){
+                                                if(option.eq(i).prop('selected')){
+                                                    var parentid=option.eq(i).attr('parentid');
+                                                }
+                                            }
+                                            $.ajax({
+                                                type:'post',
+                                                url:"<?=\yii\helpers\Url::to(['user/district'])?>",
+                                                data:{
+                                                    'parentid':parentid
+                                                },
+                                                dataType:'json',
+                                                success:function(msg){
+                                                    var str='';
+                                                    $.each(msg,function(k,v){
+                                                        str+='<option value="'+v.id+'" parentid="'+v.id+'">'+v.categoryname+'</option>';
+                                                    })
+                                                    $('#aa').after(str);
+                                                }
+                                            })
+                                        })
+
+                                    </script>
                                 </td>
                             </tr>
                             <tr>
@@ -1101,27 +1122,9 @@
 
         <div class="content_r">
             <div class="mycenterR" id="myInfo">
-                <h2>我的信息</h2>
-                <a target="_blank" href="<?= \yii\helpers\Url::to(['resume/index'])?>">我的简历</a><br>
-                <a target="_blank" href="<?= \yii\helpers\Url::to(['resume/use'])?>">已投简历</a><br>
-                <a target="_blank" href="<?= \yii\helpers\Url::to(['user/collect'])?>">我收藏的职位</a><br>
-                <a target="_blank" href="<?= \yii\helpers\Url::to(['user/order'])?>">我订阅的职位</a>
+                <h1><a target="_blank"  style="color: green" href="<?= \yii\helpers\Url::to(['resume/index'])?>">返回个人中心</a></h1>
             </div><!--end #myInfo-->
 
-            <div class="mycenterR" id="myResume">
-                <h2>我的附件简历
-                    <a title="上传附件简历" href="#uploadFile" class="inline cboxElement">上传简历</a>
-                </h2>
-                <div class="resumeUploadDiv">
-                    暂无附件简历
-                </div>
-            </div><!--end #myResume-->
-
-
-            <div class="mycenterR" id="myShare">
-                <h2>当前每日投递量：10个</h2>
-                <a target="_blank" href="#">邀请好友，提升投递量</a>
-            </div><!--end #myShare-->
 
 
             <div class="greybg qrcode mt20">

@@ -32,7 +32,7 @@ console.log(1);
 <div id="body">
 	<div id="header">
     	<div class="wrapper">
-    		<a href="index.html" class="logo">
+    		<a href="<?=Url::to(['index/index'])?>" class="logo">
     			<img src="style/images/logo1.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘" />
     		</a>
     		<ul class="reset" id="navheader">
