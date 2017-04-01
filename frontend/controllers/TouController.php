@@ -29,7 +29,7 @@ class TouController extends Controller
 		$controller=Yii::$app->controller->id;
 		$res=UserInfo::find()->where(['user_id'=>$uid])->asArray()->one();
 		$collect=explode(',',$res['collect']);
-		return $this->render('toudi.html',['jobs'=>$arr,'resume'=>$info,'user'=>$user,'controller'=>$controller,'collect'=>$collect,'logo'=>$logo]);
+		return $this->render('toudi.html',['jobs'=>$arr,'resume'=>$info,'user'=>$user,'controller'=>$controller,'collect'=>$collect,'logo'=>$logo,'type'=>$user['type']]);
 	}
 	public function actionTou(){
 		$arr=Yii::$app->request->get();

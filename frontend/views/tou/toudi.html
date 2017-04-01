@@ -61,7 +61,7 @@ var youdao_conv_id = 271546;
                 <?php if($user['type']==0){ ?>
                     <dd><a rel="nofollow" href="<?=Url::to(['user/index'])?>">个人中心</a></dd>
                <?php }else{ ?>
-                    <dd><a rel="nofollow" href="">企业中心</a></dd>
+                    <dd><a rel="nofollow" href="<?=Url::to(['company/index'])?>">企业中心</a></dd>
                 <?php } ?>
                     <dd class="logout"><a rel="nofollow" href="<?=Url::to(['register/logout'])?>">退出</a></dd>
             </dl>
@@ -144,7 +144,9 @@ var youdao_conv_id = 271546;
                     </div>
                 	<dd>
                     <!-- 用户是否激活 0-否；1-是 -->
+                    <?php if($type==0){ ?>
 		            <a title="投个简历" class="btn fr btn_apply inline cboxElement" href="#setResumeApply">投个简历</a>
+		             <?php } ?>
 					</dd>
                 </dl>
                 <div id="weibolist"></div>
